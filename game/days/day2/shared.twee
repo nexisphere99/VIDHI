@@ -59,7 +59,7 @@ Meera. After six months. A way.
 <<run setup.flag("arjun_received_call")>>
 <<run setup.stat("rel_arjun_kavya", 5, "arjun")>>
 <<run setup.stat("rel_arjun_meera", 2, "arjun")>>
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_pooja_whatsapp
@@ -74,13 +74,13 @@ Meera. After six months. A way.
 
 You reply that the formula's right, the signs are right, and you're fine   just didn't sleep. She fires back: //your typing speed increased which means you're nervous. I AM A DETECTIVE.// Then: //whatever it is, be careful. I don't want Colonel uncle to yell at you.//
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_sunset_energy
 Five-thirty. The light goes the colour of weak chai. The restlessness that's been building all day crests   you need to //move,// to //do,// to //prepare.// Set the alarm. Choose the shirt. Scout the temple. Anything but sit still with the size of tomorrow.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_aai_call
@@ -141,7 +141,7 @@ You pick up anyway.
 Click. You sit in the dark a while. Tomorrow you leave your body.
 
 <<run setup.stat("rel_arjun_kavya", 2, "arjun")>>
-<<goto "Hub">>\
+<<hubreturn>>
 <<else>>\
 <<img "arjun_anticipation_night.png" "PG room, 9 PM">>
 Rohit's at the gym   leg day, so he won't be back before 10:30. The phone buzzes. Unknown number. Same one.
@@ -176,14 +176,14 @@ She hangs up. For the second time today you sit in the aftermath of a Kavya Iyer
 
 <<run setup.flag("full_briefing_done")>>
 <<run setup.stat("rel_arjun_kavya", 5, "arjun")>>
-<<goto "Hub">>
+<<hubreturn>>
 <</if>>
 
 
 :: EV_a2_priya_class
 Priya scoops up her bag at 6:50. "Kavya, Pathak sir ka lecture. Tu aa rahi hai?"<span class="gloss-en">Pathak sir's lecture. You coming?</span> You mumble something about catching up. The door closes. Footsteps recede. Meera's hand is already on the bolt.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_papa_whatsapp
@@ -197,7 +197,7 @@ Priya scoops up her bag at 6:50. "Kavya, Pathak sir ka lecture. Tu aa rahi hai?"
 
 Three messages, zero questions about how you are. You lock the Samsung. The Redmi in your other pocket holds the life you actually live.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_github_issue
@@ -207,7 +207,7 @@ On the Redmi: //Issue #89   Hindi compound-word tokenization fails on Sanskrit l
 
 Tomorrow, in Arjun's body, you could join a video call. Show a face. A male voice, male hands, and nobody would question KV_Codes. The irony is layered enough to be a thesis.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_meera_reminder
@@ -215,19 +215,19 @@ Meera passes you in the corridor and doesn't slow down. Sideways, barely moving 
 
 <div class="dialogue">"Call him tonight. After Priya leaves for the common room. Everything depends on it."</div>
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_priya_gossip
 Priya bursts back from her jog sweating and vibrating with narrative. Something about Room 308, Anjali, a boyfriend, and a window. She's dying to tell you the whole thing   go find her in the room.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_a2_priya_common
 8:15. Priya grabs a packet of chips and heads for the common room   //Sasural Simar Ka// rerun. "Kavya aa na!" You wave her off. The door closes. Meera looks at you. It's time to call him.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: Kavya2DayEnd [nobr]

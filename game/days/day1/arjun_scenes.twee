@@ -12,6 +12,7 @@ You lie still for a minute, the phone glow on your face, thumb hovering over a l
 
 
 :: arjun_mirror_scene
+<<img "arjun_room_mirror.png" "the wardrobe-door mirror">>
 The mirror on the wardrobe door shows you a version of yourself that's been through a few bad parallel dimensions. Wheat complexion, a shade darker from evenings on the Pulsar. Two days of stubble. Dark circles like someone thumbed bruises under your eyes. Hair curling behind your ears   Meera liked it long. //Tere baal aise hi rakhna. You look like a poet.//<span class="gloss-en">Keep your hair like this.</span> You keep it long.
 
 <<th "One hundred and eighty-three days since Colonel Kulkarni landed at that hostel and ran a reconnaissance mission on his own daughter's life.">>
@@ -20,6 +21,7 @@ The mirror on the wardrobe door shows you a version of yourself that's been thro
 
 
 :: clothing_choice
+<<img "arjun_get_dressed.png" "jeans, black t-shirt, the everyday armour">>
 Jeans. Black t-shirt. The everyday armour. There's exactly one kurta in the wardrobe and it's for festivals.
 
 You pull the t-shirt over your head and for one second you catch your own eye in the mirror. This body. These shoulders. This face Meera used to cup between her palms like it was worth holding.
@@ -39,6 +41,7 @@ You're dressed   but you haven't so much as looked at your phone yet. //Check it
 
 
 :: dbms_status
+<<img "arjun_dbms_notebook.png" "line 47 of a query that won't resolve">>
 VS Code, still open from last night. Line 47 of a SQL query. A three-table join with a subquery   should be simple. It isn't, because your brain keeps inserting Meera into the logic.
 
 `SELECT * FROM my_life WHERE happiness IS NOT NULL;`
@@ -50,6 +53,7 @@ Due tomorrow. Krishnan wants it printed, not emailed, because he's living in 200
 
 
 :: katraj_morning_view
+<<img "katraj_window_view.png" "Katraj waking up">>
 Grey light over Katraj. A tempo unloading milk crates. The landlord's dog barking at a scooter. Somewhere below, Raju bhaiya's stove is already roaring   you can smell the first chai from here.
 
 <<hubreturn>>
@@ -74,18 +78,21 @@ You type `ping meera` into the terminal. `ping: meera: Name or service not known
 
 
 :: arjun_bathroom_mirror
+<<img "arjun_bathroom_mirror.png" "the scratched bathroom mirror">>
 The mirror is so scratched it shows three of you, all disappointed. You lean in and actually look, for once. Jaw that needs shaving. Purple-brown under the eyes. You look like a man running on Maggi and melancholy, because you are.
 
 <<hubreturn>>
 
 
 :: morning_routine
+<<img "arjun_brush_teeth.png" "Colgate, the red one">>
 Colgate, the red one   Aai sends it in bulk because she doesn't trust you to buy your own toothpaste. The foam tastes like mint and morning breath and the accumulated sadness of being twenty-one.
 
 <<hubreturn>>
 
 
 :: shaving_scene
+<<img "arjun_shave.png" "two days of stubble, slow strokes">>
 Two days of stubble off in slow strokes, the razor tugging where the beard's thickest along the jaw. A nick under the ear. You press tissue to it until it stops.
 
 Cleaner. Marginally more like someone who has his life together.

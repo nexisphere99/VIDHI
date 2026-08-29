@@ -1103,9 +1103,8 @@ setup.atom = function (a, who) {
   /* Arjun may not leave for the swap-back until he's had real time alone with Meera   the whole point of the day. Kavya is unaffected. */
   if (a === "arjun_had_meera_time") return who !== "arjun" || !!S.flags.meera_close_d3;
   /* Day 3 swap-back is a shared finale: neither thread can trigger it until BOTH
-     have finished their day's work AND both have reconvened at Pataleshwar. */
+     have finished their day's essential work. */
   if (a === "day3_both_done") return !!(S.flags.arjun_day_survived_d3 && S.flags.meera_close_d3 && S.flags.real_coding_done);
-  if (a === "day3_both_at_temple") return !!(S.flags.arjun_ready_swapback_d3 && S.flags.kavya_ready_swapback_d3);
   if (a === "has_bike_keys") return setup.hasItem("bike_keys");
   if (a === "has_biscuit") return setup.hasItem("biscuit");
   if (a === "has_redmi_phone") return setup.hasItem("redmi_phone");
@@ -1310,7 +1309,7 @@ setup.dayStart = {
        "arjun_received_call", "arjun_briefed", "full_briefing_done",
        "arjun_at_temple_d3", "kavya_at_temple_d3", "arjun_dressed_predawn_d3",
        "kavya_dressed_predawn_d3", "kavya_signed_out_predawn_d3", "day3_briefed",
-       "arjun_ready_swapback_d3", "kavya_ready_swapback_d3", "swap_complete", "swap_back_complete"
+       "swap_complete", "swap_back_complete"
       ].forEach(function (f) { delete S.flags[f]; });
       S.mood.arjun = "terrified, electric";
       S.mood.kavya = "clinical, alive";
@@ -1637,7 +1636,7 @@ setup.actionTime = function (trigger) {
     /* ---- Day 3 ---- */
     arjun_predawn_d3: 15, arjun_ride_temple_d3: 25, kavya_predawn_d3: 15,
     kavya_chowkidar_lie_d3: 8, kavya_walk_temple_d3: 30, day3_briefing: 20,
-    day3_swap: 15, day3_swapback: 15, day3_temple_wait: 20,
+    day3_swap: 15, day3_swapback: 15, day3_temple_wait: 20, day3_temple_wait_back: 20,
     arjun_first_kavya_body: 10, arjun_hair_d3: 3, arjun_dupatta_d3: 3, arjun_walk_d3: 5, arjun_stairs_d3: 3,
     chowkidar_d3: 5, signin_d3: 3, signout_d3: 3, arjun_corridor_d3: 5, sneha_d3: 15,
     meera_reunion_d3: 25, arjun_sees_kavya_face: 5, arjun_cupboard_d3: 10,
@@ -1693,10 +1692,6 @@ setup.travel = function (toId, mins, method) {
   if (toId === "vit_library") setup.flag("visited_vit_library");
   if (toId === "hostel_common_room") setup.flag("visited_common_room");
   if (toId === "jm_road") setup.flag("visited_jm_road");
-  /* Day 3: arriving back at Pataleshwar in the evening = "ready for the swap-back" */
-  if (toId === "pataleshwar_temple_d3" && S.day === 3 && S.flags.swap_complete && !S.flags.swap_back_complete) {
-    setup.flag(S.pov === "arjun" ? "arjun_ready_swapback_d3" : "kavya_ready_swapback_d3");
-  }
   setup.advanceTime(mins || 2);
   return "";
 };
@@ -1724,9 +1719,7 @@ setup.exitLock = function (x, who) {
   });
   if (hide) return null;
   if (dest && dest.available && !setup.locAvailable(dest, who)) {
-    var w = dest.available.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/);
-    notes.push(w ? "open " + setup.fmtHM(setup.parseHM(w[1])) + "–" + setup.fmtHM(setup.parseHM(w[2]))
-                 : "closed now");
+    notes.push(/\d/.test(dest.available) ? "open " + setup.fmtWindows(dest.available) : "closed now");
   }
   notes = notes.filter(function (n, i) { return notes.indexOf(n) === i; });   /* dedupe */
   return notes.length ? notes.join(" · ") : "";
@@ -2623,8 +2616,9 @@ setup.phoneTab = function (which, tab) {
     description: "1,500-year-old basalt, carved gods peering from the rock. Kavya scouted the quiet hours for a reason   pre-dawn and the lull before evening aarti the courtyard empties out, no priest, no devotees, just one perpetual lamp. The universe is about to invert.",
     objects: [
       { id: "swap_circle", action: "Sit in the kumkum circle. Begin.", triggers: "day3_swap", quest: "main", unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3 AND not swap_complete" },
-      { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND not swap_back_complete AND time >= 17:30 AND day3_both_at_temple" },
-      { id: "temple_wait", action: "Wait. Watch the sky. Don't think.", triggers: "day3_temple_wait", unlockCondition: "not swap_complete" }
+      { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND not swap_back_complete AND time >= 17:30 AND day3_both_done" },
+      { id: "temple_wait", action: "Wait. Watch the sky. Don't think.", triggers: "day3_temple_wait", unlockCondition: "not swap_complete" },
+      { id: "temple_wait_back", action: "Sit on the steps and wait for the other one", triggers: "day3_temple_wait_back", unlockCondition: "swap_complete AND not swap_back_complete AND not day3_both_done" }
     ],
     npcs: [],
     exits: [],
@@ -2633,9 +2627,9 @@ setup.phoneTab = function (which, tab) {
   L.arjun.pataleshwar_temple_d3 = temple;
   /* kavya's temple view needs its own exits list back into her world */
   L.kavya.pataleshwar_temple_d3 = Object.assign({}, temple, {
-    exits: [ { to: "katraj_street_d3", label: "Ride back to Katraj", unlockCondition: "swap_back_complete" } ]
+    exits: [ { to: "katraj_street_d3", label: "Ride back down (come back by 5:30)", unlockCondition: "not swap_back_complete" } ]
   });
-  temple.exits = [ { to: "hostel_entrance_d3", label: "Walk back to the hostel", unlockCondition: "swap_back_complete" } ];
+  temple.exits = [ { to: "hostel_entrance_d3", label: "Walk back down (come back by 5:30)", unlockCondition: "not swap_back_complete" } ];
 
   /* ---- ARJUN (in Kavya's body): the hostel & B.J. Medical world ---- */
   Object.assign(L.arjun, {
@@ -2882,7 +2876,7 @@ setup.phoneTab = function (which, tab) {
       exits: [ { to: "pg_stairs_d3", label: "To the PG" } ],
       travelDestinations: [
         { to: "vit_gate_d3", travelTime: 15, method: "pulsar", label: "Ride to VIT (15 min)" },
-        { to: "pataleshwar_temple_d3", travelTime: 20, method: "pulsar", label: "Ride to Pataleshwar (swap-back)", unlockCondition: "day3_both_done AND time >= 17:00" }
+        { to: "pataleshwar_temple_d3", travelTime: 20, method: "pulsar", label: "Ride to Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" }
       ]
     },
     "vit_gate_d3": {
@@ -2995,8 +2989,8 @@ setup.phoneTab = function (which, tab) {
   function add(pov, loc, arr) { var o = L[pov][loc].objects || (L[pov][loc].objects = []); arr.forEach(function (x) { o.push(x); }); }
 
   /* swap-back reachable from the hostel entrance / campus path too */
-  L.arjun.hostel_entrance_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND day3_both_done AND time >= 17:00" });
-  L.arjun.bj_campus_path_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND day3_both_done AND time >= 17:00" });
+  L.arjun.hostel_entrance_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" });
+  L.arjun.bj_campus_path_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" });
 
   /* ---- OBJECTIVES ---- */
   var A = setup.objectives.arjun, K = setup.objectives.kavya;
@@ -3032,11 +3026,11 @@ setup.phoneTab = function (which, tab) {
       reward: { rel_meera: 8, trust_meera: 3 },
       lockNote: "Wait for Priya to leave for the library   early afternoon.",
       hint: { where: "Room 304, door bolted.", when: "Afternoon, Priya out (~1:15 onward).", who: "Meera. Six months of not being in a room together.", how: "Bolt the door and stop performing. Talk. Be held. Let it be slow   you can't leave for the swap-back until you've had this." } },
-    { id: "a3_obj_swapback", title: "Reconvene for the swap-back", pov: "arjun", day: 3,
-      description: "5:30 PM. Pataleshwar. Twelve hours to the minute. But the circle only works once you're //both// there and both done.",
+    { id: "a3_obj_swapback", title: "Return for the swap-back", pov: "arjun", day: 3,
+      description: "5:30 PM. Pataleshwar. Twelve hours to the minute. The circle only reverses once //both// of your days are done.",
       unlockCondition: "day3_both_done AND time >= 17:00", completionTrigger: "swap_back_complete",
-      lockNote: "Once BOTH of you have finished the day (you: survived + Meera; Kavya: her coding). Then ride to Pataleshwar   the other one has to come too.",
-      hint: { where: "Leave for Pataleshwar from the hostel gate or the campus path once it unlocks.", when: "From 5 PM, when both threads are done   circle reverses at 5:30.", who: "Kavya, patting herself down.", how: "If the ride's locked, switch POV and finish Kavya's day. Then get both of you to the temple and sit in the circle." } }
+      lockNote: "Unlocks once BOTH of you have finished the day   you: survived + your time with Meera; Kavya: her real coding session. From 5 PM.",
+      hint: { where: "From 5 PM, the hostel gate and the campus path both get a 'Leave for Pataleshwar' option. Ride there and sit in the circle.", when: "Circle reverses at 5:30. If it's still locked at the temple, Kavya's day isn't finished   switch POV.", who: "Kavya, patting herself down.", how: "Sit in the circle. Reverse the chant." } }
   );
   A.side.push(
     { id: "a3_sq_meera_coach", title: "Meera's crash course", pov: "arjun", day: 3,
@@ -3105,11 +3099,11 @@ setup.phoneTab = function (which, tab) {
       unlockCondition: "cs_lecture_attended_d3", completionTrigger: "real_coding_done",
       reward: { coding_skill: 10 },
       hint: { where: "VIT CS lab (after 2 PM), or the PG room once Rohit leaves for the gym around 2:15.", when: "Early-to-mid afternoon   you want to be riding for the temple by 5.", who: "Nobody   flow state.", how: "Build the thing you've been building on a ₹3,000 phone for three years, properly, once." } },
-    { id: "k3_obj_swapback", title: "Reconvene for the swap-back", pov: "kavya", day: 3,
-      description: "5:30 PM. Pataleshwar. Twelve hours to the minute. Give the body back   but only once Arjun's done his day too and both of you are at the temple.",
+    { id: "k3_obj_swapback", title: "Return for the swap-back", pov: "kavya", day: 3,
+      description: "5:30 PM. Pataleshwar. Twelve hours to the minute. The circle only reverses once //both// of your days are done.",
       unlockCondition: "day3_both_done AND time >= 17:00", completionTrigger: "swap_back_complete",
-      lockNote: "Once BOTH threads are finished (Kavya: coding done; Arjun: survived + time with Meera). Then ride to Pataleshwar   Arjun has to come too.",
-      hint: { where: "Ride to Pataleshwar from Katraj Main Road once it unlocks.", when: "From 5 PM, both threads done   circle reverses at 5:30. Later than 6 and Kavya's late back to the hostel.", who: "Arjun.", how: "If the ride's locked, switch POV and finish Arjun's day. Then get both of you to the temple and sit in the circle." } }
+      lockNote: "Unlocks once BOTH threads are finished   Kavya: your real coding session; Arjun: survived + his time with Meera. From 5 PM.",
+      hint: { where: "From 5 PM, Katraj Main Road gets a 'Ride to Pataleshwar (swap-back)' option. Ride there and sit in the circle.", when: "Circle reverses at 5:30. If it's still locked at the temple, Arjun's day isn't finished   switch POV. Later than 6 and Kavya's late back to the hostel.", who: "Arjun.", how: "Sit in the circle. Reverse the chant." } }
   );
   K.side.push(
     { id: "k3_sq_library", title: "The CS section of the library", pov: "kavya", day: 3,

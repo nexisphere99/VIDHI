@@ -501,17 +501,13 @@ use("pg_explore_body_d3");                       // k3_sq_explore_m
 console.log("  kavya thread done; day3_both_done =", setup.cond("day3_both_done"));
 if (!setup.cond("day3_both_done")) fail("day3_both_done should be true once both threads are finished");
 
-// --- Shared finale: BOTH ride to Pataleshwar, then one swap-back reverses everything ---
-console.log("\n--- Swap-back (both reconvene) ---");
-pov("arjun"); S.time.arjun = 17 * 60 + 5;
-go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
-go("pataleshwar_temple_d3");                     // sets arjun_ready_swapback_d3
-if (!S.flags.arjun_ready_swapback_d3) fail("arjun_ready_swapback_d3 not set on temple arrival");
-pov("kavya"); S.time.kavya = 17 * 60 + 5;
+// --- Shared finale: both days done, one character rides back and reverses everything ---
+console.log("\n--- Swap-back (both days done) ---");
+pov("kavya"); S.time.kavya = 17 * 60 + 40;       // evening
 go("pg_stairs_d3"); go("katraj_street_d3");
-go("pataleshwar_temple_d3");                     // sets kavya_ready_swapback_d3
-if (!S.flags.kavya_ready_swapback_d3) fail("kavya_ready_swapback_d3 not set on temple arrival");
-wait(17 * 60 + 40);                              // circle reverses at 5:30
+go("pataleshwar_temple_d3");                     // the "Ride to Pataleshwar (swap-back)" option
+const circK = findObj("kavya", "pataleshwar_temple_d3", "swap_back_circle");
+if (!circK || !setup.objVisible(circK)) fail("swap_back_circle should be visible once both days are done + 5:30");
 use("swap_back_circle");                         // day3_swapback   completes BOTH threads
 ["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_meera_time","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
 ["k3_obj_gethere","k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);

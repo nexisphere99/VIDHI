@@ -25,6 +25,21 @@ You sit on the cold steps and watch the sky do the thing skies do just before da
 <<hubreturn "Sit in the circle">>
 
 
+:: day3_temple_wait_back
+<<img "pataleshwar_dawn.png" "Pataleshwar, waiting">>
+You've made it back to the courtyard, but the circle won't do anything yet   the ritual needs both of you here, and both of your days actually finished.
+
+<<if $pov is "arjun">>You sit on the warm evening stone in Kavya's body and wait, re-pinning the dupatta, watching the road for a headlight that isn't coming yet. Somewhere across the city there's still a version of your own face with things left to do today.
+
+<div class="thought arjun">Switch over. Get Kavya's day done   the coding, whatever's left   and bring her here.</div>
+<<else>>You sit on the steps in Arjun's body, legs sprawled wide the way his want to, and wait. No maroon salwar coming up the path yet. Arjun still has a day to close out over there   Meera, the last of it.
+
+<div class="thought kavya">Switch over. Finish Arjun's day, get him to the temple, then this works.</div>
+<</if>>
+
+<<hubreturn>>
+
+
 :: day3_swap
 <div class="intimate"><span class="tag">The swap</span>
 <<img "pataleshwar_dawn.png" "the kumkum circle">>

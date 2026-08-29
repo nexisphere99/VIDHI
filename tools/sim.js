@@ -357,7 +357,7 @@ const D3 = {
   kavya_predawn_d3: () => { setup.flag("kavya_at_temple_d3"); S.loc.kavya = "pataleshwar_temple_d3"; S.time.kavya = 290; },
   day3_swap: () => {
     setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
-    setup.flag("swap_complete"); S.swapActive = true; setup.doSwap();
+    setup.flag("swap_complete"); setup.doSwap(); S.swapActive = true;
     setup.removeItem("bike_keys", "arjun"); setup.addItem("bike_keys", "kavya");
     setup.removeItem("redmi_phone", "kavya"); setup.addItem("redmi_phone", "arjun");
     S.time.arjun = 330; S.time.kavya = 330;
@@ -365,10 +365,11 @@ const D3 = {
   },
   day3_swapback: () => {
     setup.setBody("arjun", "arjun"); setup.setBody("kavya", "kavya");
-    setup.flag("swap_back_complete");
+    setup.flag("swap_back_complete"); S.swapActive = false;
     setup.removeItem("bike_keys", "kavya"); setup.addItem("bike_keys", "arjun");
     setup.removeItem("redmi_phone", "arjun"); setup.addItem("redmi_phone", "kavya");
-    setup.flag(S.pov === "arjun" ? "arjun_day3_complete" : "kavya_day3_complete");
+    setup.flag("arjun_day3_complete"); setup.flag("kavya_day3_complete");
+    S.time.arjun = 1085; S.time.kavya = 1085;
   },
   arjun_first_kavya_body: () => setup.flag("arjun_first_kavya_body"),
   chowkidar_d3: () => setup.flag("chowkidar_passed"),
@@ -449,7 +450,7 @@ use("anatomy_table_d3");                         // in_dissection_d3, anatomy_do
 use("anatomy_specimen_d3");                      // a3_sq_specimen
 if (!S.flags.arjun_day_survived_d3) fail("arjun_day_survived_d3 not derived");
 assertObj("a3_obj_survive");
-// afternoon with Meera, then swap-back
+// afternoon with Meera (Arjun does NOT swap back yet   it's a shared finale)
 go("bj_campus_path_d3"); go("hostel_entrance_d3");
 S.time.arjun = 14 * 60 + 5; drainEvents();       // priya_out event
 go("hostel_stairs_d3"); go("hostel_corridor_d3"); go("hostel_room_304_d3");
@@ -458,22 +459,12 @@ assertObj("a3_obj_meera_time");
 use("room304_arjun_wet");                        // a3_sq_meera_arousal
 use("room304_manuscript_d3");                    // a3_sq_manuscript
 go("hostel_corridor_d3"); go("hostel_terrace_d3"); use("terrace_meera_d3"); // a3_sq_terrace
-S.time.arjun = 17 * 60 + 5;                      // leave for the temple ~5 PM
-go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
-go("pataleshwar_temple_d3");
-wait(17 * 60 + 30);                              // circle reverses at 5:30
-use("swap_back_circle");                         // day3_swapback
-["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_meera_time","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
-console.log("  arjun body now:", S.body.arjun, "| fem_comfort", S.stats.a_femComfort, "| discoveries", (S.discoveries.arjun || []).length);
+console.log("  arjun thread done; day3_both_done =", setup.cond("day3_both_done"));
 
-// --- Kavya in Arjun's body ---
-// (sim walks threads sequentially; re-arm the swap for Kavya's thread)
+// --- Kavya in Arjun's body (swap still active, she still has the keys) ---
 console.log("\n--- Kavya (in Arjun's body) ---");
 pov("kavya");
-setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
-setup.addItem("bike_keys", "kavya"); setup.removeItem("bike_keys", "arjun");
-S.swapActive = true; S.flags.swap_back_complete = false;
-S.loc.kavya = "pulsar_ride_d3"; S.time.kavya = 330;
+if (!setup.hasItem("bike_keys", "kavya")) fail("Kavya lost the Pulsar keys before her thread");
 use("ride_body_check");                          // kavya_first_arjun_body
 use("ride_clutch");                              // ride_complete_d3
 assertObj("k3_obj_ride");
@@ -507,13 +498,25 @@ go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3"); go("pg_stairs_d3
 S.time.kavya = 15 * 60;
 use("pg_browse_d3");                             // k3_sq_popup
 use("pg_explore_body_d3");                       // k3_sq_explore_m
-S.time.kavya = 17 * 60 + 5;                      // leave for the temple ~5 PM
+console.log("  kavya thread done; day3_both_done =", setup.cond("day3_both_done"));
+if (!setup.cond("day3_both_done")) fail("day3_both_done should be true once both threads are finished");
+
+// --- Shared finale: BOTH ride to Pataleshwar, then one swap-back reverses everything ---
+console.log("\n--- Swap-back (both reconvene) ---");
+pov("arjun"); S.time.arjun = 17 * 60 + 5;
+go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
+go("pataleshwar_temple_d3");                     // sets arjun_ready_swapback_d3
+if (!S.flags.arjun_ready_swapback_d3) fail("arjun_ready_swapback_d3 not set on temple arrival");
+pov("kavya"); S.time.kavya = 17 * 60 + 5;
 go("pg_stairs_d3"); go("katraj_street_d3");
-go("pataleshwar_temple_d3");
-wait(17 * 60 + 30);                              // circle reverses at 5:30
-use("swap_back_circle");                         // day3_swapback
+go("pataleshwar_temple_d3");                     // sets kavya_ready_swapback_d3
+if (!S.flags.kavya_ready_swapback_d3) fail("kavya_ready_swapback_d3 not set on temple arrival");
+wait(17 * 60 + 40);                              // circle reverses at 5:30
+use("swap_back_circle");                         // day3_swapback   completes BOTH threads
+["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_meera_time","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
 ["k3_obj_gethere","k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);
-console.log("  kavya body now:", S.body.kavya, "| masc_comfort", S.stats.k_mascComfort,
+if (!setup.dayFullyDone()) fail("dayFullyDone() should be true after the shared swap-back");
+console.log("  arjun body:", S.body.arjun, "| kavya body:", S.body.kavya, "| fem_comfort", S.stats.a_femComfort,
   "| k_coding", S.stats.k_coding, "| symposium", !!S.flags.research_symposium_invited);
 
 function sideReport(who) {

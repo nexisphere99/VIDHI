@@ -178,7 +178,12 @@ sequence (`arjun_predawn_d3` -> `arjun_ride_temple_d3`, `kavya_predawn_d3` ->
 needs **both** flags, so the player has to run both threads to the temple. `day3_swap`
 flips `$body` via `setup.setBody()`, swaps the Pulsar keys / Redmi between the two
 inventories, then routes through `day3_briefing` (the two of them coaching each
-other on the day ahead); `day3_swapback` reverses it. `$swapActive` gates the
+other on the day ahead). The **swap-back is a shared finale, same shape as the
+forward swap**: `swap_back_circle` needs `day3_both_done` (both threads' essential
+work finished) *and* `day3_both_at_temple` (both `*_ready_swapback_d3` flags, set
+by `setup.travel` when each rides back to Pataleshwar), so neither player can
+strand the other by reversing early; `day3_swapback` then un-swaps both bodies,
+restores both inventories, and sets **both** `*_day3_complete` flags. `$swapActive` gates the
 sidebar body-discovery log and the extra Day-3 suspicion rows. Every `*_d3`
 location is auto-tagged `dayOnly: 3`, and both the **📱 phone** buttons and the
 **🗺 Places** guide are day-3-aware: on Day 3 the header shows *the other

@@ -78,8 +78,8 @@ Black.
 <<run setup.setBody("arjun", "kavya")>>\
 <<run setup.setBody("kavya", "arjun")>>\
 <<run setup.flag("swap_complete")>>\
-<<set $swapActive to true>>\
 <<run setup.doSwap()>>\
+<<set $swapActive to true>>\
 <<run setup.removeItem("bike_keys", "arjun")>>\
 <<run setup.addItem("bike_keys", "kavya")>>\
 <<run setup.removeItem("redmi_phone", "kavya")>>\
@@ -329,7 +329,10 @@ You both laugh. Real laughter, in your own voices, bouncing off 1,500-year-old s
 <<run setup.addItem("bike_keys", "arjun")>>\
 <<run setup.removeItem("redmi_phone", "arjun")>>\
 <<run setup.addItem("redmi_phone", "kavya")>>\
-<<if $pov is "arjun">><<run setup.flag("arjun_day3_complete")>><<else>><<run setup.flag("kavya_day3_complete")>><</if>>\
+<<run setup.flag("arjun_day3_complete")>>\
+<<run setup.flag("kavya_day3_complete")>>\
+<<run $time.arjun = 1085>>\
+<<run $time.kavya = 1085>>\
 <<run setup.stat("rel_arjun_kavya", 5, "arjun")>>\
 <<run setup.stat("rel_kavya_arjun", 5, "kavya")>>
 <div class="continue-nav">[[Ride home. Sleep, if you can.|DayWrap]]</div>

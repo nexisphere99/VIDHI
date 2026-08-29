@@ -42,6 +42,7 @@
 <<set $arjunOutfit to "">>
 <<set $arjunToldRohit to "">>
 <<set $kavyaJournal to false>>
+<<set $debug to setup.debugFromHash()>>
 <<run setup.refreshObjectives()>>
 
 
@@ -251,3 +252,11 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<link "💾 Save / Load">><<run UI.saves()>><</link>>\
 <<link "⟲ Restart">><<run UI.restart()>><</link>>\
 </div>
+<<if $debug>>\
+<h3>Debug</h3>
+<div class="sys-btns">\
+<<link "🔧 Restart this day">><<run setup.restartDay()>><<goto "Hub">><</link>>\
+<<link "Debug off">><<set $debug to false>><<goto "Hub">><</link>>\
+</div>
+<p class="obj-empty">Day <<= $day>> · debug mode on</p>\
+<</if>>

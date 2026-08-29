@@ -1258,6 +1258,13 @@ setup.profileImgSrc = function (who) {
 
 /* advance to a new day and wipe the previous day's tracker (no going back) */
 setup.dayStart = {
+  1: {
+    pov: "arjun",
+    loc: { arjun: "katraj_pg_room", kavya: "hostel_room_304" },
+    time: { arjun: 392, kavya: 330 },   /* 06:32 / 05:30 */
+    mood: { arjun: "melancholy", kavya: "guarded" },
+    povUnlocked: { arjun: true, kavya: false }
+  },
   2: {
     pov: "arjun",
     loc: { arjun: "katraj_pg_room", kavya: "hostel_room_304" },
@@ -1271,6 +1278,38 @@ setup.dayStart = {
     mood: { arjun: "no turning back", kavya: "no turning back" }
   }
 };
+
+/* DEBUG: hard-reset the current day (flags, objectives, tracker, clocks,
+   locations) back to its opening state. Gated behind $debug in the UI. */
+setup.restartDay = function () {
+  var S = V(), d = S.day;
+  S.flags = {};
+  S.objectives = {};
+  S.sideDiscovered = [];
+  S.firedEvents = [];
+  S.eventQueue = [];
+  S.doneActions = {};
+  S.inventory = { arjun: [], kavya: [] };
+  S.habit = { arjun: { self: 0, porn: 0 }, kavya: { self: 0, porn: 0 } };
+  S._phonePending = null;
+  var ds = setup.dayStart[d] || setup.dayStart[1];
+  S.pov = ds.pov || "arjun";
+  S.loc = { arjun: ds.loc.arjun, kavya: ds.loc.kavya };
+  S.time = { arjun: ds.time.arjun, kavya: ds.time.kavya };
+  S.mood = { arjun: ds.mood.arjun, kavya: ds.mood.kavya };
+  S.povUnlocked = ds.povUnlocked ? { arjun: !!ds.povUnlocked.arjun, kavya: !!ds.povUnlocked.kavya }
+                                 : { arjun: true, kavya: true };
+  setup.refreshObjectives();
+  setup.toast("swap", "DEBUG — Day " + d + " reset to its opening state.");
+  return "";
+};
+
+/* true if the page was opened with #debug in the URL */
+setup.debugFromHash = function () {
+  try { return String(window.location.hash || "").toLowerCase().indexOf("debug") !== -1; }
+  catch (e) { return false; }
+};
+>>>>>>> 1513f50 (Add $debug flag + "Restart this day" debug button)
 
 setup.beginDay = function (n) {
   var S = V();

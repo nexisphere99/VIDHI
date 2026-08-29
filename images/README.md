@@ -153,7 +153,9 @@ images/
         ├── kavya_terrace_watertank.png   IMG-159  (hidden_terrace_spot)
         ├── kavya_terrace_coding.png      IMG-160  (terrace_phone_use)
         ├── kavya_phone_shop.png          IMG-161  (phone_shop_scene)
-        └── kavya_juice_stall.png         IMG-162  (juice_vendor_npc)
+        ├── kavya_juice_stall.png         IMG-162  (juice_vendor_npc)
+        ├── night_sleep_arjun_rohit.png   IMG-108  (arjun_night_end)
+        └── scenic_route_meera_call_try.png IMG-109  (meera_call_attempt_sinhagad)
 ```
 
 ## Recommended specs

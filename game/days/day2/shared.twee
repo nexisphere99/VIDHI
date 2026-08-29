@@ -139,13 +139,21 @@ Rohit's at the gym   leg day, back no earlier than 10:30. The unknown number lig
 
 You don't remember picking up. Eleven minutes. Kavya does most of it, in the flat clean voice of someone reading out a lab protocol: a fourteenth-century palm-leaf manuscript, a Sanskrit ritual, a test she ran with Meera last night   ninety seconds in each other's bodies. //Deha-vinimaya.// Body exchange. She says it's real the way you'd say water is wet.
 
-Then the part that stops your breathing: tomorrow it's you and her. You go into the hostel in Kavya's body. She rides your Pulsar to VIT. Meera gets the boyfriend the Colonel took from her. You get   a woman's body for a day, and Meera at the end of it.
+Then the part that stops your breathing: tomorrow it's you and her. You go into the hostel in Kavya's body. She rides your Pulsar to VIT   //"bring it, I can handle it, I've wanted to ride a proper bike for years,"// she says, and it's the only sentence all call that sounds like a person and not a protocol. Meera gets the boyfriend the Colonel took from her. You get   a woman's body for a day, and Meera at the end of it.
 
-"Deal," you hear yourself say, before your brain has finished objecting.
+Your brain has objections stacked up like a failing code review. This is a folie à deux between two sleep-starved women and a rotting leaf. Bodies do not swap. You believe none of it.
 
-<div class="dialogue">"There are rules   Meera helped write them, you'll get them tomorrow. 5 AM. Pataleshwar. Don't be late, and don't sleep too well. Nothing about tomorrow will feel the way tired feels tonight."</div>
+So you ask the only question that actually matters. "Meera. Six months. How is she   really."
 
-Click. You sit on the floor with your back against the cot, phone still warm in your hand, and try to hold a plan that shouldn't be physically possible. By sunrise you will not be in this body.
+A pause. Kavya, quieter, off-script for the first time: "Not good. Better today, because of this. Her father hasn't said one word to her since November, Arjun. She still carries the ticket stub from your play in her wallet."
+
+That lands where the manuscript and the ninety-second test didn't.
+
+"I don't think this will work," you say. "I want to be honest about that. But if there's a five per cent chance of being in a room with her   I'm at Pataleshwar at 5. Even if all that happens is I get to sit with her roommate for an hour and hear how she's been."
+
+<div class="dialogue">"That's enough of a reason. It's the same one Meera's doing it for. There are rules   she helped write them, you'll get them tomorrow. 5 AM. Pataleshwar. Don't be late, and don't sleep too well. Nothing about tomorrow will feel the way tired feels tonight."</div>
+
+Click. You sit on the floor with your back against the cot, phone still warm in your hand, holding a plan you're certain is impossible and going anyway. Because impossible or not, at 5 AM someone is finally going to tell you about Meera.
 
 <<run setup.flag("arjun_briefed")>>
 <<run setup.flag("full_briefing_done")>>

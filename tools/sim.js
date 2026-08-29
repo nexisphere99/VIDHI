@@ -43,7 +43,7 @@ Object.assign(S, {
   loc: { arjun: "katraj_pg_room", kavya: "hostel_room_304" },
   povUnlocked: { arjun: true, kavya: false },
   flags: {}, objectives: {}, sideDiscovered: [], firedEvents: [], eventQueue: [],
-  inventory: [], intimateSeen: [], swapCount: 0, swapActive: false, barrierIntegrity: 100,
+  inventory: { arjun: [], kavya: [] }, intimateSeen: [], swapCount: 0, swapActive: false, barrierIntegrity: 100,
   mood: { arjun: "melancholy", kavya: "guarded" },
   stats: {
     money_arjun: 500, money_kavya: 800,
@@ -227,6 +227,17 @@ function sideReport(who) {
 }
 console.log("\n--- side quest summary ---");
 sideReport("arjun"); sideReport("kavya");
+
+/* inventory is per-character and must not bleed across */
+(() => {
+  const a = S.inventory.arjun || [], k = S.inventory.kavya || [];
+  console.log("  arjun bag: {" + a.join(", ") + "}");
+  console.log("  kavya bag: {" + k.join(", ") + "}");
+  if (!a.includes("bike_keys")) fail("Arjun should be carrying bike_keys");
+  if (a.includes("redmi_phone")) fail("Arjun should NOT have Kavya's redmi_phone");
+  if (!k.includes("redmi_phone")) fail("Kavya should be carrying redmi_phone");
+  if (k.includes("bike_keys")) fail("Kavya should NOT have Arjun's bike_keys");
+})();
 
 console.log("\n" + (failures ? "✗ " + failures + " FAILURE(S)" : "✓ full critical path completes for both characters"));
 process.exit(failures ? 1 : 0);

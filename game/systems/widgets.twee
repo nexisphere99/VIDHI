@@ -11,7 +11,7 @@
 <</widget>>
 
 <<widget "th">>
-	<div class="thought <<= State.variables.pov>>"><<= $args[0]>></div>
+	<div @class="'thought ' + State.variables.pov"><<= $args[0]>></div>
 <</widget>>
 
 <<widget "beat">>

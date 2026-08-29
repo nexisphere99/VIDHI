@@ -20,15 +20,14 @@ Across from you, your own body   wheat skin, stubble, those long lashes   wears 
 "Like being on the wrong side of a mirror."
 
 <div class="thought arjun">Twelve hours. You can survive anything for twelve hours. Probably.</div>
-</div>
-
-<<run setup.flag("arjun_first_kavya_body")>>
-<<run setup.discover("no penis", "arjun")>>
-<<run setup.discover("breasts", "arjun")>>
-<<run setup.discover("hair", "arjun")>>
-<<run setup.discover("voice", "arjun")>>
-<<run setup.discover("height loss", "arjun")>>
-<<run setup.stat("fem_comfort", 4, "arjun")>>
+</div>\
+<<run setup.flag("arjun_first_kavya_body")>>\
+<<run setup.discover("no penis", "arjun")>>\
+<<run setup.discover("breasts", "arjun")>>\
+<<run setup.discover("hair", "arjun")>>\
+<<run setup.discover("voice", "arjun")>>\
+<<run setup.discover("height loss", "arjun")>>\
+<<run setup.stat("fem_comfort", 4, "arjun")>>\
 <<run setup.stat("sex_f", 3, "arjun")>>
 <<hubreturn "Start walking">>
 
@@ -47,7 +46,7 @@ A rectangle of fabric that obeys gravity and nothing else. Off the left shoulder
 
 :: arjun_walk_d3
 You try to walk straight, like you, and look like a robot. You try Kavya's efficient stride and look like a robot doing an impression. The pelvis has opinions   a lateral tilt that swings the opposite hip forward. You let it do what it wants. Shorter steps. Less forward lean.
-<<run setup.discover("hips", "arjun")>>
+<<run setup.discover("hips", "arjun")>>\
 <<run setup.stat("fem_comfort", 2, "arjun")>>
 <<hubreturn>>
 
@@ -63,7 +62,6 @@ Your thighs brush together on every step   soft skin against soft skin, and the 
 Dusky skin. The beauty mark below the left eye. Dark circles   hers, from three years of 2 AM debugging, not yours. Wavy black hair that fights every comb.
 
 But the eyes. Meera said it and she's right: the eyes are still you. Somehow. Through the different colour, the different shape   you look out of Kavya's face and it's Arjun looking.
-
 <<run setup.discover("your own borrowed face", "arjun")>>
 <<hubreturn>>
 
@@ -74,8 +72,7 @@ Salwar kameez, ironed, Papa-approved. Printed medical PDFs. And behind the false
 Kavya Iyer, the one she'd be if anyone had ever asked her. You close it carefully, the way you'd close someone's diary.
 
 <div class="thought arjun">You have a double life in a locked phone. She has one in a cupboard. You should have expected that.</div>
-
-<<run setup.flag("arjun_cupboard_seen_d3")>>
+<<run setup.flag("arjun_cupboard_seen_d3")>>\
 <<run setup.stat("rel_arjun_kavya", 3, "arjun")>>
 <<hubreturn>>
 
@@ -85,7 +82,6 @@ Kavya Iyer, the one she'd be if anyone had ever asked her. You close it carefull
 You sit on a bench under a neem tree and let the panic settle. White coats stream past. Nobody looks twice   this face has walked this path a thousand times. You're furniture in a familiar room.
 
 Your heart is running at a higher RPM than yours does. Kavya's cardiovascular system, lighter, faster. You breathe. Smaller lungs. Less air per breath. You get up.
-
 <<hubreturn>>
 
 
@@ -96,25 +92,72 @@ The only truly private space in the building. You lean on the railing. City ligh
 You take an inventory the way you'd check a bike. The weight on your chest, constant. The hair. The tear ducts with no latency   you'd cried three times today before you decided to. The amplified touch, more sensation per square inch of everything. The absence, still surprising you every time you shift your weight.
 
 Twelve hours in, and you're not counting them down any more. You're just... in it.
-
-<<run setup.discover("crying easily", "arjun")>>
+<<run setup.discover("crying easily", "arjun")>>\
 <<run setup.stat("fem_comfort", 3, "arjun")>>
 <<hubreturn>>
 
 
 :: mess_eating_d3
 <<img "arjun_anatomy_horror.png" "the mess hall">>
-Mess Didi Savita ladles poha onto your steel plate with the precision of a woman serving institutional food since before liberalisation. "Kavya! Aaj zyada kha. Tu bahut patli ho rahi hai." An extra spoonful. Non-negotiable.
+Mess Didi Savita ladles poha onto your steel plate with the precision of a woman serving institutional food since before liberalisation.
+
+<div class="dialogue">"Kavya! Aaj zyada kha. Tu bahut patli ho rahi hai."<span class="gloss-en">Kavya! Eat more today. You're getting so thin.</span></div>
+
+An extra spoonful. Non-negotiable.
 
 You sit. Eat. And it's //different//   Kavya's taste buds register more. The poha, which you'd have labelled "generic," has identifiable notes: cumin, turmeric, the faint sweetness of onion. The chai has a cardamom undertone your palate would have missed entirely.
 
-Meera slides in beside you. "How's the food?"
+Meera slides in beside you. <div class="dialogue">"How's the food?"</div>
 
 "It's a full sensory report. In my body it's 'good' or 'edible.'"
 
 <div class="dialogue">"Women have more taste buds. Higher olfactory receptors. Enjoy the DLC."</div>
-
-<<run setup.flag("mess_ate_d3")>>
-<<run setup.discover("the flavour expansion pack", "arjun")>>
+<<run setup.flag("mess_ate_d3")>>\
+<<run setup.discover("the flavour expansion pack", "arjun")>>\
 <<run setup.stat("energy", 4, "arjun")>>
 <<hubreturn>>
+
+
+:: arjun_predawn_d3
+<div class="intimate"><span class="tag">Pre-dawn · Day 3</span>
+<<img "katraj_pg_night.png" "PG Room 12, 4:00 AM">>
+The alarm is a five-second buzz against your palm   you slept with the phone in your hand for exactly this. You kill it before the second pulse. Across the room Rohit doesn't move, one leg out of the sheet, the snore rolling on undisturbed.
+
+You dress by feel. Jeans off the chair, the black t-shirt, the riding jacket. Socks located by touch. You've laid all of it out the night before like a man packing for a flight he's afraid to miss.
+
+The Redmi buzzes once, screen-down, and you turn it over. Kavya:
+
+<div class="dialogue">"Awake. Leaving now. Meera's already gone to open the side gate. Don't you dare oversleep."</div>
+
+You can tell she typed something sharper first and deleted it. You send back one word   //Riding//   and pocket both phones, Kavya's Redmi in the inside zip where it won't fall out at sixty.
+
+At the door you stop and look back at Rohit for a second. Two years in this room. Tomorrow you'll be lying to him with your own face. Tonight he's just asleep, and you're just leaving for a temple, and that's still technically true.
+
+<div class="thought arjun">Keys. Wallet. Both phones. The printed mantra in the jacket pocket. Go.</div>
+</div>\
+<<run setup.stat("energy", -1, "arjun")>>
+<div class="continue-nav"><<link "Wheel the Pulsar out to the road">><<goto "arjun_ride_temple_d3">><</link>></div>
+
+
+:: arjun_ride_temple_d3
+<div class="intimate"><span class="tag">Pre-dawn · the ride</span>
+<<img "pataleshwar_approach.png" "Katraj to Pataleshwar, before dawn">>
+You push the Pulsar in neutral all the way past the watchman's chair and out the gate   forty metres of dead weight and held breath   before you thumb the starter. The engine catches loud in the empty lane and you're moving before it can echo.
+
+Pune at 4:15 is a city with its face slack in sleep. No autos, no horns, the signals blinking amber to nobody. Just you, a stray dog trotting across Katraj chowk like it owns the hour, and the milk vans beginning their rounds. The air is cold enough through the jacket that your knuckles ache on the grips. You take the ghat road up toward the caves faster than you should, because slowing down means thinking.
+
+You park in the gravel below the temple. Kavya's Pulsar   //your// Pulsar, for a few more minutes. You pat the tank once, stupidly, like it's a horse.
+
+Up the worn steps. The courtyard opens out, 1,500-year-old basalt breathing centuries of stored dark. A single oil lamp burns by the inner shrine. And on the cold stone steps, maroon salwar, dupatta wound tight, the printed transliteration in her lap: Kavya, exactly where she said she'd be, looking up at you with an expression that's one part terror and three parts //let's get this done//.
+
+<div class="dialogue">"You took the ghat road fast."</div>
+
+"I always take the ghat road fast."
+
+<div class="dialogue">"Not in my body you won't. Sit down."</div>
+</div>\
+<<run $loc.arjun to "pataleshwar_temple_d3">>\
+<<run $time.arjun to 288>>\
+<<run setup.flag("arjun_at_temple_d3")>>\
+<<run setup.stat("rel_arjun_kavya", 2, "arjun")>>
+<<hubreturn "Cross into the courtyard">>

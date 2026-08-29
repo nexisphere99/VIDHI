@@ -218,7 +218,21 @@ kavya_first_arjun_body.png   IMG-202    kavya_pulsar_ride.png        IMG-203
 meera_reunion.png            IMG-204    arjun_anatomy_horror.png     IMG-205
 kavya_cs_lecture.png         IMG-206    kavya_coding_joy.png         IMG-207
 kavya_rohit_canteen.png      IMG-208    room_304_arjun_pov.png       IMG-210
-pg_room_kavya_pov.png        IMG-211
+pg_room_kavya_pov.png        IMG-211    katraj_pg_night.png          IMG-212
+hostel_304_night.png         IMG-213    pataleshwar_approach.png     IMG-214
+day3_briefing.png            IMG-215
 ```
 Note: the swap and all body-discovery scenes are text-only. The images capture
 the emotional moments (reunion, coding joy, the ride), not the physical.
+
+Pre-dawn / handover additions:
+- `katraj_pg_night.png`   Arjun's dark PG room at 4 AM, Rohit a mound under a
+  blanket, riding jacket on the chair, keys in hand. Cold blue night light.
+- `hostel_304_night.png`   Room 304 at 3:55 AM, two roommates asleep, Meera's
+  bed empty and made, a folded salwar on the chair. Same cold palette.
+- `pataleshwar_approach.png`   the empty ghat road up to the cave temple before
+  dawn, a single headlight / a lone walking figure, sodium streetlights, sky
+  just starting to thin. Used for both the ride and the walk.
+- `day3_briefing.png`   two figures sitting knee-to-knee in the kumkum circle
+  just after the swap, each wearing the other's face, mid-conversation. The
+  fifteen-minute handover.

@@ -1291,8 +1291,8 @@ setup.dayStart = {
   },
   3: {
     pov: "arjun", title: "Pehla Badlav", startPassage: "Day3Start",
-    loc: { arjun: "pataleshwar_temple_d3", kavya: "pataleshwar_temple_d3" },
-    time: { arjun: 290, kavya: 290 },   /* 04:50 AM   ten minutes early */
+    loc: { arjun: "katraj_predawn_d3", kavya: "hostel_predawn_d3" },
+    time: { arjun: 240, kavya: 235 },   /* 04:00 / 03:55   still dark */
     mood: { arjun: "no turning back", kavya: "no turning back" },
     onBegin: function (S) {
       /* Day 3 opens BEFORE the swap: both are still in their own bodies at
@@ -1301,7 +1301,9 @@ setup.dayStart = {
       S.swapActive = false;
       S.discoveries = { arjun: [], kavya: [] };
       ["signed_out_hostel", "priya_left_for_class", "priya_in_common_room",
-       "arjun_received_call", "arjun_briefed", "full_briefing_done"
+       "arjun_received_call", "arjun_briefed", "full_briefing_done",
+       "arjun_at_temple_d3", "kavya_at_temple_d3", "arjun_dressed_predawn_d3",
+       "kavya_dressed_predawn_d3", "kavya_signed_out_predawn_d3", "day3_briefed"
       ].forEach(function (f) { delete S.flags[f]; });
       S.mood.arjun = "terrified, electric";
       S.mood.kavya = "clinical, alive";
@@ -1626,6 +1628,8 @@ setup.actionTime = function (trigger) {
     arjun_bed_selfplay_d2: 20, kavya_bed_selfplay_d2: 20,
     arjun_porn_d2: 25, kavya_porn_d2: 25,
     /* ---- Day 3 ---- */
+    arjun_predawn_d3: 15, arjun_ride_temple_d3: 25, kavya_predawn_d3: 15,
+    kavya_chowkidar_lie_d3: 8, kavya_walk_temple_d3: 30, day3_briefing: 20,
     day3_swap: 15, day3_swapback: 15, day3_temple_wait: 20,
     arjun_first_kavya_body: 10, arjun_hair_d3: 3, arjun_dupatta_d3: 3, arjun_walk_d3: 5, arjun_stairs_d3: 3,
     chowkidar_d3: 5, signin_d3: 3, signout_d3: 3, arjun_corridor_d3: 5, sneha_d3: 15,
@@ -2581,7 +2585,7 @@ setup.phoneTab = function (which, tab) {
     available: "04:00-06:00,19:00-22:00",
     description: "1,500-year-old basalt, carved gods peering from the rock. Pune's light pollution bleeds a sick orange into a sky that never goes fully black. The universe is about to invert.",
     objects: [
-      { id: "swap_circle", action: "Sit in the kumkum circle. Begin.", triggers: "day3_swap", quest: "main", unlockCondition: "not swap_complete" },
+      { id: "swap_circle", action: "Sit in the kumkum circle. Begin.", triggers: "day3_swap", quest: "main", unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3 AND not swap_complete" },
       { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND time >= 19:30 AND not swap_back_complete" },
       { id: "temple_wait", action: "Wait. Watch the sky. Don't think.", triggers: "day3_temple_wait", unlockCondition: "not swap_complete" }
     ],
@@ -2903,6 +2907,30 @@ setup.phoneTab = function (which, tab) {
     }
   });
 
+  /* ---- PRE-DAWN: both still in their own bodies, converging on Pataleshwar ---- */
+  L.arjun.katraj_predawn_d3 = {
+    name: "PG Room 12   4:00 AM",
+    available: "00:00-06:30",
+    description: "The alarm went off under your pillow so it wouldn't reach Rohit. It didn't   he's still a mound of slow breathing in the other bed. Your jacket's on the chair, the Pulsar keys already in your fist and warm from holding them. Across the city Kavya is doing this same arithmetic: one last hour inside your own skin.",
+    objects: [
+      { id: "predawn_go_a", action: "Get up. Dress in the dark. Go.", triggers: "arjun_predawn_d3", quest: "main", unlockCondition: "not arjun_at_temple_d3" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "katraj_pg_night.png"
+  };
+  L.kavya.hostel_predawn_d3 = {
+    name: "Room 304   3:55 AM",
+    available: "00:00-06:30",
+    description: "Priya and Anjali breathe in the dark. Meera's bed is already empty, the sheet pulled straight   she left twenty minutes ago to unlatch the temple's side gate. Your salwar is folded on the chair, the dupatta on top. In an hour you won't be the one wearing them.",
+    objects: [
+      { id: "predawn_go_k", action: "Dress. Go down. Get past the chowkidar.", triggers: "kavya_predawn_d3", quest: "main", unlockCondition: "not kavya_at_temple_d3" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "hostel_304_night.png"
+  };
+
   /* ---- helpers (same as day2) ---- */
   function add(pov, loc, arr) { var o = L[pov][loc].objects || (L[pov][loc].objects = []); arr.forEach(function (x) { o.push(x); }); }
 
@@ -2914,10 +2942,15 @@ setup.phoneTab = function (which, tab) {
   var A = setup.objectives.arjun, K = setup.objectives.kavya;
 
   A.main.push(
-    { id: "a3_obj_swap", title: "Complete the swap", pov: "arjun", day: 3, status: "active",
+    { id: "a3_obj_gethere", title: "Get to Pataleshwar before dawn", pov: "arjun", day: 3, status: "active",
+      description: "4 AM. Dress without waking Rohit. Take the Pulsar. Meet Kavya at the cave temple.",
+      completionTrigger: "arjun_at_temple_d3",
+      hint: { where: "Out of the PG, onto the Pulsar, up to Pataleshwar.", when: "Now   just past 4 AM.", who: "Rohit, asleep. Keep it that way.", how: "One quiet exit and a dark ride. Kavya is walking there from the hostel." } },
+    { id: "a3_obj_swap", title: "Complete the swap", pov: "arjun", day: 3,
       description: "5 AM. Pataleshwar. Sit in the circle. Chant. Become someone else.",
-      completionTrigger: "swap_complete",
-      hint: { where: "The kumkum circle in the temple courtyard.", when: "Now   4:50 AM.", who: "Kavya, already there, dupatta wound like armour.", how: "Sit in the circle. There's one last chance to back out inside; you won't take it." } },
+      unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3", completionTrigger: "swap_complete",
+      lockNote: "Both of you have to reach the temple first   switch POV and walk Kavya there too.",
+      hint: { where: "The kumkum circle in the temple courtyard.", when: "Around 5 AM, once you're both there.", who: "Kavya, dupatta wound like armour.", how: "Sit in the circle. There's one last chance to back out inside; you won't take it." } },
     { id: "a3_obj_hostel", title: "Get into the hostel as Kavya", pov: "arjun", day: 3,
       description: "Walk past the chowkidar. Sign the register in a hand that isn't yours. Don't trip on the dupatta.",
       unlockCondition: "swap_complete", completionTrigger: "entered_hostel_d3",
@@ -2967,10 +3000,15 @@ setup.phoneTab = function (which, tab) {
   );
 
   K.main.push(
-    { id: "k3_obj_swap", title: "Complete the swap", pov: "kavya", day: 3, status: "active",
+    { id: "k3_obj_gethere", title: "Slip out to Pataleshwar", pov: "kavya", day: 3, status: "active",
+      description: "Before 4. Dress, wind the dupatta, get past Ramesh with a lie about early puja, and walk to the cave temple.",
+      completionTrigger: "kavya_at_temple_d3",
+      hint: { where: "Down the stairs, past the chowkidar's booth, out the gate and along the dark road.", when: "Now   3:55 AM.", who: "Chowkidar Ramesh. Tell him early-morning puja. Meera's already gone ahead.", how: "Sign the register, say it plain, don't hurry. Then walk." } },
+    { id: "k3_obj_swap", title: "Complete the swap", pov: "kavya", day: 3,
       description: "Become Arjun. Take his keys, his bike, his life for twelve hours.",
-      completionTrigger: "swap_complete",
-      hint: { where: "The kumkum circle.", when: "Now.", who: "Arjun, hands shaking on the handlebars.", how: "Sit. Chant. Brace for the wrench." } },
+      unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3", completionTrigger: "swap_complete",
+      lockNote: "Arjun has to reach the temple too   switch POV and ride him there.",
+      hint: { where: "The kumkum circle.", when: "Around 5 AM, once you're both there.", who: "Arjun, hands shaking on the handlebars.", how: "Sit. Chant. Brace for the wrench." } },
     { id: "k3_obj_ride", title: "Ride the Pulsar to civilisation", pov: "kavya", day: 3,
       description: "150cc, manual clutch, a body six inches taller. Don't drop it. Arjun will kill you.",
       unlockCondition: "swap_complete", completionTrigger: "ride_complete_d3",
@@ -3064,7 +3102,9 @@ setup.phoneTab = function (which, tab) {
     "meera_reunion.png": "scenes/day3", "arjun_anatomy_horror.png": "scenes/day3",
     "kavya_cs_lecture.png": "scenes/day3", "kavya_coding_joy.png": "scenes/day3",
     "kavya_rohit_canteen.png": "scenes/day3", "room_304_arjun_pov.png": "scenes/day3",
-    "pg_room_kavya_pov.png": "scenes/day3"
+    "pg_room_kavya_pov.png": "scenes/day3", "katraj_pg_night.png": "scenes/day3",
+    "hostel_304_night.png": "scenes/day3", "pataleshwar_approach.png": "scenes/day3",
+    "day3_briefing.png": "scenes/day3"
   });
   setup._restLocs.arjun.push("hostel_room_304_d3", "hostel_terrace_d3", "bj_campus_path_d3", "pataleshwar_temple_d3");
   setup._restLocs.kavya.push("katraj_pg_room_d3", "tapri_chai_d3", "vit_canteen_d3", "pataleshwar_temple_d3");

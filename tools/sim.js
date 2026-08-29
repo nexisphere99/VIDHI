@@ -349,10 +349,12 @@ console.log("\n=== DAY 3   beginDay(3) ===");
 setup.beginDay(3);
 console.log("  day", S.day, "pov", S.pov, "arjun@", S.loc.arjun, setup.clockStr("arjun"),
   "| kavya@", S.loc.kavya, setup.fmtHM(S.time.kavya), "| bodies", JSON.stringify(S.body));
-if (S.loc.arjun !== "pataleshwar_temple_d3" || S.loc.kavya !== "pataleshwar_temple_d3")
-  fail("Day 3 should start both at the temple");
+if (S.loc.arjun !== "katraj_predawn_d3" || S.loc.kavya !== "hostel_predawn_d3")
+  fail("Day 3 should start both pre-dawn in their own rooms");
 
 const D3 = {
+  arjun_predawn_d3: () => { setup.flag("arjun_at_temple_d3"); S.loc.arjun = "pataleshwar_temple_d3"; S.time.arjun = 288; },
+  kavya_predawn_d3: () => { setup.flag("kavya_at_temple_d3"); S.loc.kavya = "pataleshwar_temple_d3"; S.time.kavya = 290; },
   day3_swap: () => {
     setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
     setup.flag("swap_complete"); S.swapActive = true; setup.doSwap();
@@ -406,10 +408,19 @@ const D3 = {
 };
 Object.assign(EFFECTS, D3);
 
+// --- Pre-dawn: both converge on Pataleshwar (swap needs both there) ---
+console.log("\n--- Pre-dawn: getting to the temple ---");
+pov("arjun");
+use("predawn_go_a");                             // arjun_at_temple_d3
+assertObj("a3_obj_gethere");
+pov("kavya");
+use("predawn_go_k");                             // kavya_at_temple_d3
+assertObj("k3_obj_gethere");
+
 // --- Arjun in Kavya's body ---
 console.log("\n--- Arjun (in Kavya's body) ---");
 pov("arjun");
-use("swap_circle");                              // -> day3_swap
+use("swap_circle");                              // -> day3_swap (both at temple)
 assertObj("a3_obj_swap");
 use("walk_body_check");                          // arjun_first_kavya_body
 go("hostel_entrance_d3"); use("chowkidar_pass"); use("signin_d3");
@@ -440,7 +451,7 @@ S.time.arjun = 19 * 60 + 35;
 go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
 go("pataleshwar_temple_d3");
 use("swap_back_circle");                         // day3_swapback
-["a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
+["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
 console.log("  arjun body now:", S.body.arjun, "| fem_comfort", S.stats.a_femComfort, "| discoveries", (S.discoveries.arjun || []).length);
 
 // --- Kavya in Arjun's body ---
@@ -484,7 +495,7 @@ S.time.kavya = 19 * 60 + 35;
 go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3");
 go("pataleshwar_temple_d3");
 use("swap_back_circle");                         // day3_swapback
-["k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);
+["k3_obj_gethere","k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);
 console.log("  kavya body now:", S.body.kavya, "| masc_comfort", S.stats.k_mascComfort,
   "| k_coding", S.stats.k_coding, "| symposium", !!S.flags.research_symposium_invited);
 

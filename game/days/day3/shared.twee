@@ -3,14 +3,14 @@
 <div class="th">पहला बदलाव</div>
 <div class="te">Day 3   Pehla Badlav · First Change</div>
 
-<p class="lede">4:50 AM. The Pataleshwar courtyard is 1,500-year-old basalt and pre-dawn dark, the kind of dark that ancient rock accumulates over centuries and releases slowly, like stored patience.</p>
+<p class="lede">4:00 AM. Two rooms on opposite sides of Pune, two alarms muffled under two pillows. Arjun in PG Room 12 with Rohit snoring an arm's length away. Kavya in Room 304 with Meera's bed already empty.</p>
 
-<p class="lede">Arjun's Pulsar ticks as it cools. Kavya is already on the steps in her maroon salwar, dupatta wound tight across her chest like armour, the Redmi in one hand.</p>
+<p class="lede">Today they trade bodies for twelve hours   the first full swap, the one every rehearsal was for. But first each of them has to get out of their room without waking anyone, and across the city to a 1,500-year-old cave temple, before the sky thins.</p>
 
-<p class="lede">In ten minutes each of them will be looking at the world from the other one's eyes. You play both threads   the header toggle switches whose day you're living.</p>
+<p class="lede">You play both threads. The header toggle up top switches whose pre-dawn you're living   and the ritual can't start until they're <i>both</i> at Pataleshwar.</p>
 
 <div class="start-btn">
-<<link "Begin   the kumkum circle">><<goto "Hub">><</link>>
+<<link "4:00 AM   get up">><<goto "Hub">><</link>>
 </div>
 </div>
 
@@ -28,11 +28,13 @@ You sit on the cold steps and watch the sky do the thing skies do just before da
 :: day3_swap
 <div class="intimate"><span class="tag">The swap</span>
 <<img "pataleshwar_dawn.png" "the kumkum circle">>
-You sit cross-legged, knees almost touching, inside a circle of red kumkum drawn on the stone. Kavya loops the kalava thread around both your right wrists and pulls it taut.
+You sit cross-legged, knees almost touching, inside a circle of red kumkum drawn on the stone. <<if $pov is "arjun">>Kavya loops the kalava thread around both your right wrists and pulls it taut.<<else>>You loop the kalava thread around both your right wrists   yours and Arjun's   and pull it taut.<</if>>
 
-<div class="dialogue">"Last chance to back out."</div>
+<<if $pov is "arjun">><div class="dialogue">"Last chance to back out."</div>
 
-"No." The word is immediate. Behind it: Meera. Always Meera.
+"No." The word is immediate. Behind it: Meera. Always Meera.<<else>>You say it out loud, testing whether either of you means it: <div class="dialogue">"Last chance to back out."</div>
+
+Arjun shakes his head. "No." Immediate. Behind it, you both know, is Meera.<</if>>
 
 The chant begins   her voice leading, precise Sanskrit, each syllable a struck bell; the other stumbling behind, corrected with impatient tongue-clicks. The voices layer. Find rhythm. The courtyard fills.
 
@@ -44,26 +46,54 @@ Not physical   essential. Something grabs the substrate of //you// and yanks it 
 
 Black.
 </div>
-
-<<run setup.setBody("arjun", "kavya")>>
-<<run setup.setBody("kavya", "arjun")>>
-<<run setup.flag("swap_complete")>>
-<<set $swapActive to true>>
-<<run setup.doSwap()>>
-<<run setup.removeItem("bike_keys", "arjun")>>
-<<run setup.addItem("bike_keys", "kavya")>>
-<<run setup.removeItem("redmi_phone", "kavya")>>
-<<run setup.addItem("redmi_phone", "arjun")>>
-<<run setup.stat("rel_arjun_kavya", 3, "arjun")>>
-<<run setup.stat("rel_kavya_arjun", 3, "kavya")>>
-<<run $time.arjun = 310>>
-<<run $time.kavya = 310>>
-<<run $loc.arjun = "hostel_walk_d3">>
-<<run $loc.kavya = "pulsar_ride_d3">>
-<<set $mood.arjun to "on the wrong side of a mirror">>
+\
+<<run setup.setBody("arjun", "kavya")>>\
+<<run setup.setBody("kavya", "arjun")>>\
+<<run setup.flag("swap_complete")>>\
+<<set $swapActive to true>>\
+<<run setup.doSwap()>>\
+<<run setup.removeItem("bike_keys", "arjun")>>\
+<<run setup.addItem("bike_keys", "kavya")>>\
+<<run setup.removeItem("redmi_phone", "kavya")>>\
+<<run setup.addItem("redmi_phone", "arjun")>>\
+<<run setup.stat("rel_arjun_kavya", 3, "arjun")>>\
+<<run setup.stat("rel_kavya_arjun", 3, "kavya")>>\
+<<run $time.arjun = 310>>\
+<<run $time.kavya = 310>>\
+<<run $loc.arjun = "hostel_walk_d3">>\
+<<run $loc.kavya = "pulsar_ride_d3">>\
+<<set $mood.arjun to "on the wrong side of a mirror">>\
 <<set $mood.kavya to "admin access after three years of read-only">>
 
-<div class="continue-nav"><<link "Open your eyes">><<goto "Hub">><</link>></div>
+<div class="continue-nav"><<link "Sit up. Look at each other.">><<goto "day3_briefing">><</link>></div>
+
+
+:: day3_briefing
+<div class="intimate"><span class="tag">The handover</span>
+<<img "day3_briefing.png" "two strangers wearing familiar faces">>
+The wrench recedes. You're both sitting in the kumkum circle, breathing hard, staring at your own face on someone else's neck. The priest has withdrawn to the inner shrine. There is maybe fifteen minutes before either of you has to move.
+
+Kavya   in Arjun's body, voice pitched low and strange   goes first, because of course she does. She has a list.
+
+<div class="dialogue">"Hostel. Ramesh calls you 'didi,' don't flinch. Sign the register slow   my hand is round, yours is block capitals, split the difference. Priya is the danger: she's a planted observer and she reads posture. Sit like you're annoyed. Kavya is annoyed by default."</div>
+
+<div class="dialogue">"Bathroom is not optional, and it's the squat kind   brace a foot on the door. Wipe front to back, I mean it, a UTI in my body is a war crime. Sneha will quiz you on pathology in the corridor; apoptosis shrinks, necrosis swells, that's all you need. And the dupatta lives on the left shoulder. It will not stay there. Accept this."</div>
+
+You nod, filing it. Then it's your turn, and your voice comes out of your own throat aimed back at you.
+
+<div class="dialogue">"Rohit. He's the sensor   two years of living with me, he'll clock any behavioural delta. Keep answers short, shrug a lot, blame lack of sleep. Do <i>not</i> be brilliant in Krishnan's class. One clever line is a YouTube tutorial; a full optimisation is a knowledge bomb you can't walk back."</div>
+
+<div class="dialogue">"Pooja texts fast and reads everything   reply in three words or not at all. Aai will hear something under the voice; keep the call short. The Pulsar's clutch bites high and bucks once on the first release. Wallet's in the left pocket, ID in the wallet, and the free chai at Raju's is real, take it."</div>
+
+<<if $pov is "arjun">>Kavya stands   your legs, unfolding to a height she keeps misjudging. "Twelve hours. Temple, here, 7:30. Don't lose my body and I won't lose yours."
+<<else>>You stand   Arjun's legs, and the ground arrives later than you expect. "Twelve hours," you tell him. "Back here, 7:30. Try not to cry with my tear ducts. They file paperwork."<</if>>
+
+You touch your own borrowed face once, to confirm it's really there, and walk out of the temple in opposite directions.
+</div>
+\
+<<run setup.flag("day3_briefed")>>\
+<<run setup.discover("a fifteen-minute crash course in a life", $pov)>>\
+<div class="continue-nav"><<link "Open your eyes on the day">><<goto "Hub">><</link>></div>
 
 
 :: EV_a3_priya_out
@@ -121,10 +151,10 @@ You look at Kavya's hands. The silver ring. The short shaped nails. Twelve hours
 <div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">💬 Pooja Pagal 🙄</div>
 
 <div class="chat-log">
-<div class="msg them">Bhaiya Sunday confirm? Aai ne mutton le liya. Also sheera. She's cooking like you're coming back from war</div>
-<div class="msg me">Haan confirm. Tell Aai not to cook for army.</div>
+<div class="msg them">Bhaiya Sunday confirm? Aai ne mutton le liya. Also sheera. She's cooking like you're coming back from war<span class="gloss-en">Brother, is Sunday confirmed? Aai bought mutton.</span></div>
+<div class="msg me">Haan confirm. Tell Aai not to cook for army.<span class="gloss-en">Yes, confirmed.</span></div>
 <div class="msg them">omg you replied in MINUTES. Usually you take HOURS</div>
-<div class="msg them">Also you said "not to cook for army." You usually say "Aai ko bol zyada mat banana." Same meaning, different words.</div>
+<div class="msg them">Also you said "not to cook for army." You usually say "Aai ko bol zyada mat banana." Same meaning, different words.<span class="gloss-en">You'd normally say "tell Aai not to make too much."</span></div>
 <div class="msg them">I'm watching you 👀</div>
 </div>
 
@@ -139,15 +169,15 @@ A seventeen-year-old just flagged a linguistic anomaly in your impersonation wit
 
 You can't not answer. Arjun always answers his mother.
 
-<div class="dialogue">"Beta, kha liya? ... Sirf dosa? Ande kha, protein chahiye. ... Sunday confirm hai na? Pooja ne bola tu jaldi reply kar raha hai. Kuch hua kya?"</div>
+<div class="dialogue">"Beta, kha liya? ... Sirf dosa? Ande kha, protein chahiye. ... Sunday confirm hai na? Pooja ne bola tu jaldi reply kar raha hai. Kuch hua kya?"<span class="gloss-en">Son, have you eaten? ... Just a dosa? Eat eggs, you need protein. ... Sunday's confirmed, right? Pooja says you're replying fast. Did something happen?</span></div>
 
-"Kuch nahi Aai. Bas class mein free tha."
+"Kuch nahi Aai. Bas class mein free tha."<span class="gloss-en">Nothing, Aai. Just had a free period.</span>
 
-<div class="dialogue">"Hmm. Tera voice thoda alag lag raha hai. Sardi toh nahi lagi?"</div>
+<div class="dialogue">"Hmm. Tera voice thoda alag lag raha hai. Sardi toh nahi lagi?"<span class="gloss-en">Hmm. Your voice sounds a little different. You haven't caught a cold?</span></div>
 
 Same vocal cords. Same pitch. But a mother is hearing something underneath   the cadence, the faintly Tamil syntax you build Hindi sentences with. Mothers are debugging tools, and this one just logged a warning.
 
-"Voice theek hai, Aai. Neend puri nahi hui."
+"Voice theek hai, Aai. Neend puri nahi hui."<span class="gloss-en">My voice is fine, Aai. Didn't sleep enough.</span>
 
 <<run setup.stat("aai_suspicion", 1, "kavya")>>
 <<hubreturn>>
@@ -180,9 +210,9 @@ Black. White. Colours resolving.
 
 And, strangely, a flicker of loss. Kavya's body was terrifying and alien and also a country you'd barely entered, a language you spoke for twelve hours and were just starting to understand.
 
-"Tera dissection class bhayanak hai," you tell Kavya, who's patting herself down   face, chest, hips, the body-audit of a woman reclaiming her property.
+"Tera dissection class bhayanak hai,"<span class="gloss-en">Your dissection class is horrifying.</span> you tell Kavya, who's patting herself down   face, chest, hips, the body-audit of a woman reclaiming her property.
 
-<div class="dialogue">"Tere Rohit ko control karo. Also your bike's in VIT lot B, keys in your jacket. I didn't scratch it."</div>
+<div class="dialogue">"Tere Rohit ko control karo. Also your bike's in VIT lot B, keys in your jacket. I didn't scratch it."<span class="gloss-en">Get your Rohit under control.</span></div>
 <<else>>You open your eyes and your breasts are BACK   two familiar masses dropping into position, the Clovia underwire clamping down. Twelve hours flat-chested and free, and now the whole production returns.
 
 The world rises. You're looking up at the Nandi statue again. Small again. And between your legs: the absence where a warm, present, slightly ridiculous weight used to be. Not wrong. Familiar. But the familiarity has a new texture now.
@@ -193,21 +223,19 @@ The world rises. You're looking up at the Nandi statue again. Small again. And b
 <</if>>
 
 You both laugh. Real laughter, in your own voices, bouncing off 1,500-year-old stone. Tomorrow you do this again. The thought is terrifying and inevitable in equal measure.
-</div>
-
-<<run setup.setBody("arjun", "arjun")>>
-<<run setup.setBody("kavya", "kavya")>>
-<<run setup.flag("swap_back_complete")>>
-<<run setup.doSwap()>>
-<<set $swapActive to false>>
-<<run setup.removeItem("bike_keys", "kavya")>>
-<<run setup.addItem("bike_keys", "arjun")>>
-<<run setup.removeItem("redmi_phone", "arjun")>>
-<<run setup.addItem("redmi_phone", "kavya")>>
-<<if $pov is "arjun">><<run setup.flag("arjun_day3_complete")>><<else>><<run setup.flag("kavya_day3_complete")>><</if>>
-<<run setup.stat("rel_arjun_kavya", 5, "arjun")>>
+</div>\
+<<run setup.setBody("arjun", "arjun")>>\
+<<run setup.setBody("kavya", "kavya")>>\
+<<run setup.flag("swap_back_complete")>>\
+<<run setup.doSwap()>>\
+<<set $swapActive to false>>\
+<<run setup.removeItem("bike_keys", "kavya")>>\
+<<run setup.addItem("bike_keys", "arjun")>>\
+<<run setup.removeItem("redmi_phone", "arjun")>>\
+<<run setup.addItem("redmi_phone", "kavya")>>\
+<<if $pov is "arjun">><<run setup.flag("arjun_day3_complete")>><<else>><<run setup.flag("kavya_day3_complete")>><</if>>\
+<<run setup.stat("rel_arjun_kavya", 5, "arjun")>>\
 <<run setup.stat("rel_kavya_arjun", 5, "kavya")>>
-
 <div class="continue-nav">[[Ride home. Sleep, if you can.|DayWrap]]</div>
 
 

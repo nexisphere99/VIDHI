@@ -76,8 +76,8 @@ game/
     arjun_scenes.twee  arjun_npc.twee   the wrong body
     kavya_scenes.twee  kavya_npc.twee
     intimate.twee       first-time body-discovery scenes (both directions)
-    shared.twee         Day3Start, day3_swap / day3_swapback, EV_a3_* events,
-                        Day3Complete, PH_a3_* chats
+    shared.twee         Day3Start, day3_swap / day3_briefing / day3_swapback,
+                        EV_a3_* events, Day3Complete, PH_a3_* chats
 
 images/                    OUTSIDE game/ so tweego never bundles it; build.sh
     mandala.svg            copies the tree to dist/images/
@@ -169,11 +169,17 @@ literals are untouched.
 **Day 3 is special** — the swap is active, so each player navigates the *other*
 character's world. The day-3 module adds a fresh set of `*_d3` locations: the
 hostel / B.J. Medical ones go under `setup.locations.arjun` (Arjun is in Kavya's
-body there), the PG / VIT ones under `setup.locations.kavya`. `setup.dayStart[3]`
-puts both at `pataleshwar_temple_d3`; `day3_swap` flips `$body` via
-`setup.setBody()` and swaps the Pulsar keys / Redmi between the two inventories,
-`day3_swapback` reverses it. `$swapActive` gates the sidebar body-discovery log
-and the extra Day-3 suspicion rows.
+body there), the PG / VIT ones under `setup.locations.kavya`. Day 3 opens
+*before* the swap: `setup.dayStart[3]` puts each character in their own room at
+4 AM (`katraj_predawn_d3` / `hostel_predawn_d3`); a short scripted wake -> travel
+sequence (`arjun_predawn_d3` -> `arjun_ride_temple_d3`, `kavya_predawn_d3` ->
+`kavya_chowkidar_lie_d3` -> `kavya_walk_temple_d3`) sets `arjun_at_temple_d3` /
+`kavya_at_temple_d3` and drops them at `pataleshwar_temple_d3`. The `swap_circle`
+needs **both** flags, so the player has to run both threads to the temple. `day3_swap`
+flips `$body` via `setup.setBody()`, swaps the Pulsar keys / Redmi between the two
+inventories, then routes through `day3_briefing` (the two of them coaching each
+other on the day ahead); `day3_swapback` reverses it. `$swapActive` gates the
+sidebar body-discovery log and the extra Day-3 suspicion rows.
 
 Mechanics that make it work:
 - **`o.dayOnly`** on a location object → `setup.objVisible` hides it on other days.

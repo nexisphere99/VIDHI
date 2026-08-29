@@ -1,6 +1,5 @@
 :: arjun_first_pee_female
 <div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
-
 The urgency builds with the inevitability of a compile error. Kavya's body has been awake since 4 AM, hydrated by temple chai, and the bladder   smaller than yours, you can feel the difference   is announcing itself.
 
 Three stalls. Wet tiles. A fluorescent tube that strobes like a nightmare. You lock the third stall   the one Kavya uses, the bolt that needs a specific jiggle. Push, lift, slide.
@@ -26,19 +25,17 @@ At the sink you wash your hands. The mirror: Kavya's face, dark circles, beauty 
 Fourteen washes. Your hands are raw.
 
 "Get it together," you tell the mirror, in Kavya's voice. The voice you're starting to recognise as yours, temporarily, conditionally, until 8 PM.
-</div>
-
-<<run setup.flag("arjun_first_pee_female")>>
-<<run setup.discover("how a female body pees", "arjun")>>
-<<run setup.discover("involuntary sensitivity", "arjun")>>
-<<run setup.stat("fem_comfort", 5, "arjun")>>
+</div>\
+<<run setup.flag("arjun_first_pee_female")>>\
+<<run setup.discover("how a female body pees", "arjun")>>\
+<<run setup.discover("involuntary sensitivity", "arjun")>>\
+<<run setup.stat("fem_comfort", 5, "arjun")>>\
 <<run setup.stat("sex_f", 2, "arjun")>>
 <<hubreturn>>
 
 
 :: arjun_shower_female_d3
 <div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
-
 You've been sweating since dawn. Kavya's body needs a wash, and that means everything.
 
 The stall. You peel off the salwar kameez, then reach back for the bra   three hooks, and your fingers fumble for a full minute before the first one gives. Then the second, third, and the compression //releases//, the straps falling away, the breasts settling free into their own weight for the first time all day. The relief is startling. So is the new awareness   nothing holding them now, they move with everything.
@@ -52,11 +49,10 @@ Drying: the towel catches on curves it didn't used to.
 And then the bra back on. This is worse than taking it off. You can't see the hooks. You do it the way you've watched a hundred times in a hundred films and never once paid attention   behind the back, blind, the two ends refusing to meet. You give up, hook it in front at your stomach, and rotate it round. Then the straps up. Then the adjustment. Then the kameez over your head, catching on the underwire bump.
 
 Four minutes for Kavya. Twelve for you. The body as logistics.
-</div>
-
-<<run setup.flag("arjun_showered_d3")>>
-<<run setup.discover("the bra, off and on", "arjun")>>
-<<run setup.stat("fem_comfort", 5, "arjun")>>
+</div>\
+<<run setup.flag("arjun_showered_d3")>>\
+<<run setup.discover("the bra, off and on", "arjun")>>\
+<<run setup.stat("fem_comfort", 5, "arjun")>>\
 <<run setup.stat("sex_f", 1, "arjun")>>
 <<hubreturn>>
 
@@ -67,14 +63,12 @@ The bathroom mirror, clouded, at the wrong height for you   made for someone sho
 Kavya's whole face, close. You've spent a day behind it. You try her expressions   the deadpan, the raised eyebrow, the rare grin   and they come out slightly wrong, an actor who's studied the tape but never lived the part.
 
 <div class="thought arjun">She's going to spend today learning your body. You're learning hers. Tonight you'll both hand them back with notes in the margins.</div>
-
 <<run setup.discover("wearing her expressions", "arjun")>>
 <<hubreturn>>
 
 
 :: kavya_first_pee_male
 <div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
-
 You've been holding it since the PG. Three hours. Kavya's bladder complains early; Arjun's is larger, more stoic, but even stoic has limits.
 
 The men's bathroom. Urinals line one wall   white porcelain, no partitions. Three boys already standing there, casual, phones in one hand, the other managing the business below with the nonchalance of a daily task no more remarkable than brushing teeth.
@@ -96,19 +90,17 @@ At the sink you wash your hands, thoroughly. The other three zipped and walked s
 The whole transaction took forty-five seconds. In your body: three minutes, minimum. You stop yourself calculating the lifetime differential. You're not ready to reduce the gendered experience to a bathroom-time optimisation problem.
 
 But also: forty-five seconds.
-</div>
-
-<<run setup.flag("kavya_peed_male_d3")>>
-<<run setup.discover("aiming (badly, then better)", "kavya")>>
-<<run setup.discover("forty-five seconds", "kavya")>>
-<<run setup.stat("masc_comfort", 5, "kavya")>>
+</div>\
+<<run setup.flag("kavya_peed_male_d3")>>\
+<<run setup.discover("aiming (badly, then better)", "kavya")>>\
+<<run setup.discover("forty-five seconds", "kavya")>>\
+<<run setup.stat("masc_comfort", 5, "kavya")>>\
 <<run setup.stat("sex_m", 2, "kavya")>>
 <<hubreturn>>
 
 
 :: kavya_shower_male_d3
 <div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
-
 Under the water. Arjun's body, broad shoulders catching the stream. You soap the flat chest, the abs   sparse chest hair, the nipples smaller and flatter and far less responsive to touch than yours.
 
 You reach the cock. Wash it, the foreskin, pulling it back   the head is sensitive under the water, and it shifts slightly at the contact, a small semi-response you note and move past. The testicles tighten in the heat, then relax as it evens out.
@@ -116,17 +108,15 @@ You reach the cock. Wash it, the foreskin, pulling it back   the head is sensiti
 The ease of it is the striking thing. No breasts to lift and wash under. No complex folds. The male body is a simpler cleaning problem, and you resent, a little, how much time that gives back.
 
 Four minutes. Towel. Done.
-</div>
-
-<<run setup.flag("kavya_showered_male_d3")>>
-<<run setup.discover("a body that's simple to wash", "kavya")>>
+</div>\
+<<run setup.flag("kavya_showered_male_d3")>>\
+<<run setup.discover("a body that's simple to wash", "kavya")>>\
 <<run setup.stat("masc_comfort", 3, "kavya")>>
 <<hubreturn>>
 
 
 :: kavya_shaving_d3
 <div class="intimate"><span class="tag">Intimate · body discovery</span>
-
 Arjun's stubble is two days deep and starting to look like a statement. You've never held a razor to a face.
 
 Foam from the can. It goes on cold. You drag the razor along the jaw   too fast, the wrong angle   and it tugs where the beard's thickest. A nick under the left ear. You press tissue to it until it stops.
@@ -134,16 +124,14 @@ Foam from the can. It goes on cold. You drag the razor along the jaw   too fast,
 Slow strokes after that. Down the cheeks, careful around the mouth, the awkward under-the-nose bit. The face that emerges is cleaner, marginally more like someone who has his life together.
 
 <div class="thought kavya">Arjun will feel the nick when he gets his face back tonight. Consider it a receipt.</div>
-
-<<run setup.flag("kavya_shaved_d3")>>
-<<run setup.discover("shaving, and one nick", "kavya")>>
+<<run setup.flag("kavya_shaved_d3")>>\
+<<run setup.discover("shaving, and one nick", "kavya")>>\
 <<run setup.stat("masc_comfort", 3, "kavya")>>
 <<hubreturn>>
 
 
 :: kavya_explore_body_d3
 <div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
-
 Rohit's at the gym. The door is locked. This is reconnaissance, not recreation.
 
 You stand in front of the mirror and pull Arjun's t-shirt over your head. His chest   flat, lean, pectorals defined. No bra-strap groove. No breast weight. You run your hands across it: the skin is slightly rougher, sparse hair on the chest, the nipples smaller and flatter and far less responsive than yours when you brush a thumb over them. You flex; the muscles answer more visibly than yours ever did.
@@ -155,12 +143,11 @@ You pull your hand back. //Not now. Not today.// You've logged the data: the wei
 Jeans back up. Shirt on. You sit at the laptop.
 
 <div class="thought kavya">A body is a body is a system. You have twelve hours to read the spec. You are not going to waste them being shy about it   but you're also not going to be the person who did more than reconnaissance in someone else's skin on the first day.</div>
-</div>
-
-<<run setup.flag("kavya_explored_body_d3")>>
-<<run setup.discover("carrying genitalia on the outside", "kavya")>>
-<<run setup.discover("a semi-erection from pure stimulus", "kavya")>>
-<<run setup.stat("masc_comfort", 10, "kavya")>>
+</div>\
+<<run setup.flag("kavya_explored_body_d3")>>\
+<<run setup.discover("carrying genitalia on the outside", "kavya")>>\
+<<run setup.discover("a semi-erection from pure stimulus", "kavya")>>\
+<<run setup.stat("masc_comfort", 10, "kavya")>>\
 <<run setup.stat("sex_m", 3, "kavya")>>
 <<hubreturn>>
 
@@ -171,6 +158,5 @@ The scratched PG mirror. You lean in, at a height that's still surprising.
 You practise Arjun's grin until it stops looking like a grimace. Loosen the shoulders. Let the jaw hang a fraction. Take up space   men take up space without deciding to.
 
 <div class="thought kavya">Twelve hours to learn a body it took him twenty-one years to stop noticing. You're a fast learner. You'll have to be.</div>
-
 <<run setup.discover("wearing his face", "kavya")>>
 <<hubreturn>>

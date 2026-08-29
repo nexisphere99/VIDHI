@@ -18,15 +18,14 @@ And between your legs: weight. Mass. Presence. Warm, soft, constant. Your female
 "Like having admin access. After three years of read-only."
 
 <div class="thought kavya">Twelve hours. Do not waste a minute of them.</div>
-</div>
-
-<<run setup.flag("kavya_first_arjun_body")>>
-<<run setup.discover("flat chest", "kavya")>>
-<<run setup.discover("penis and testicles", "kavya")>>
-<<run setup.discover("height", "kavya")>>
-<<run setup.discover("a voice in the collarbones", "kavya")>>
-<<run setup.discover("hand span", "kavya")>>
-<<run setup.stat("masc_comfort", 4, "kavya")>>
+</div>\
+<<run setup.flag("kavya_first_arjun_body")>>\
+<<run setup.discover("flat chest", "kavya")>>\
+<<run setup.discover("penis and testicles", "kavya")>>\
+<<run setup.discover("height", "kavya")>>\
+<<run setup.discover("a voice in the collarbones", "kavya")>>\
+<<run setup.discover("hand span", "kavya")>>\
+<<run setup.stat("masc_comfort", 4, "kavya")>>\
 <<run setup.stat("sex_m", 3, "kavya")>>
 <<hubreturn "Get on the bike">>
 
@@ -35,9 +34,8 @@ And between your legs: weight. Mass. Presence. Warm, soft, constant. Your female
 First attempt: you release the clutch too fast. The bike lurches, front wheel lifting an inch   a micro-wheelie. Arjun's flat stomach launches into your throat. The adrenaline spike is different in this body: sharper, centred in the chest not the gut. The testicles attempt to migrate upward, a reflexive retraction you feel distinctly and file under //male biology, subcategory: surprising//.
 
 Second attempt: easier. The clutch point is higher than a scooty's   more resistance, more power, and Arjun's wrist is stronger, the forearm managing the throttle with torque your wrists never had. You roll it gently. The bike moves.
-
-<<run setup.flag("ride_complete_d3")>>
-<<run setup.discover("the clutch, and the retraction reflex", "kavya")>>
+<<run setup.flag("ride_complete_d3")>>\
+<<run setup.discover("the clutch, and the retraction reflex", "kavya")>>\
 <<run setup.stat("masc_comfort", 3, "kavya")>>
 <<hubreturn>>
 
@@ -50,9 +48,9 @@ Pune at 5:25   near-empty, streetlights on damp asphalt. You lean into it. The w
 You open the throttle. The Pulsar responds and for one exhilarating moment   engine screaming in second, speedo past forty, dawn painting the sky Pune-orange   you feel what this body was built for. Motion. Velocity. A body that takes up space and moves through it with a confidence that has nothing to do with the mind driving it.
 
 Freedom tastes like morning air and engine exhaust and a face nobody is watching.
-</div>
-<<run setup.flag("ride_complete_d3")>>
-<<run setup.discover("a body built for machines", "kavya")>>
+</div>\
+<<run setup.flag("ride_complete_d3")>>\
+<<run setup.discover("a body built for machines", "kavya")>>\
 <<run setup.stat("masc_comfort", 4, "kavya")>>
 <<hubreturn>>
 
@@ -64,7 +62,6 @@ Wheat skin. Two days of stubble you'll have to deal with. Dark circles   his, fr
 You try Arjun's relaxed half-smile and your face does it wrong   too controlled, too precise. A dancer's posture in a swimmer's body. You'll have to loosen everything. Slouch. Take up space like you own it.
 
 The eyes, though. Meera would say the eyes are still you. You lean in and look. Maybe. Sharp where his are soft.
-
 <<run setup.discover("your own borrowed face", "kavya")>>
 <<hubreturn>>
 
@@ -78,8 +75,7 @@ Your fingers   Arjun's fingers   settle on the home row. F and J, the dimples un
 You don't code yet. You just rest your hands there for a minute, on a real machine, in a body that fits it, and let one tear escape   Arjun's single, reluctant, bureaucratically-processed tear.
 
 Then you notice a folder on the desktop: <b>Important Documents</b>. And you notice you want to open it.
-
-<<run setup.flag("kavya_curious_d3")>>
+<<run setup.flag("kavya_curious_d3")>>\
 <<run setup.stat("k_coding", 1, "kavya")>>
 <<hubreturn>>
 
@@ -88,8 +84,7 @@ Then you notice a folder on the desktop: <b>Important Documents</b>. And you not
 Jeans. Black t-shirts, four identical. One festival kurta. A hoodie. That's the entire decision tree   no dupatta to drape, no salwar to tie, no shape to minimise or reveal. You pick a t-shirt. It takes four seconds.
 
 <div class="thought kavya">A t-shirt and jeans on a male body invites exactly zero commentary. Nobody will check the tightness of this. Nobody will comment on how you sit. The absence of surveillance is the loudest thing in the room.</div>
-
-<<run setup.discover("getting dressed in four seconds", "kavya")>>
+<<run setup.discover("getting dressed in four seconds", "kavya")>>\
 <<run setup.stat("masc_comfort", 2, "kavya")>>
 <<hubreturn>>
 
@@ -99,7 +94,6 @@ Jeans. Black t-shirts, four identical. One festival kurta. A hoodie. That's the 
 You walk in and it feels like walking into a cathedral where the religion is the one you actually believe in. The CS dept noticeboard. A hackathon poster. Students with laptops open on benches, arguing about time complexity.
 
 Three years you've watched this campus on a ₹3,000 phone. Now you're standing in it, and nobody here knows KV_Codes is the medical student who flinches at formalin. Today, for twelve hours, you just belong.
-
 <<run setup.stat("k_coding", 1, "kavya")>>
 <<hubreturn>>
 
@@ -109,7 +103,9 @@ Three years you've watched this campus on a ₹3,000 phone. Now you're standing 
 <<img "kavya_cs_lecture.png" "Room C-204">>
 Room C-204. Tiered seating. A wide clean whiteboard. The smell of dry-erase markers, which   unlike formalin   makes this borrowed heart sing.
 
-You sit in Arjun's seat, third row from the back, left, near the window. Rohit drops in beside you. "Bhai, tera face glow kar raha hai. Kya kha ke aaya?"
+You sit in Arjun's seat, third row from the back, left, near the window. Rohit drops in beside you.
+
+<div class="dialogue">"Bhai, tera face glow kar raha hai. Kya kha ke aaya?"<span class="gloss-en">Bro, your face is glowing. What did you eat?</span></div>
 
 "Chai." But the glow is real. Arjun's face is smiling and you can't stop it.
 
@@ -118,9 +114,8 @@ Prof. Krishnan enters   mid-fifties, sharp eyes, the posture of a man who treats
 Your brain ignites. The neural pathways that have starved on phone screens and stolen library sessions light up like a grid after a blackout. The six deletion cases. Double-black resolution. Sibling analysis. Rotation sequences. You've solved these   on paper during pharmacology, on LeetCode at 2 AM, on the back of an anatomy worksheet during Dr. Sharma's spot quiz.
 
 You sit through the whole ninety minutes with your hand twitching in your lap, a mind that knows the answer and has spent three years forbidden from raising its hand.
-
-<<run setup.flag("in_lecture_d3")>>
-<<run setup.flag("cs_lecture_attended_d3")>>
+<<run setup.flag("in_lecture_d3")>>\
+<<run setup.flag("cs_lecture_attended_d3")>>\
 <<run setup.stat("k_coding", 5, "kavya")>>
 <<hubreturn>>
 
@@ -147,13 +142,12 @@ Four minutes. The blood retreats, the tissue softens, the penis returns to rest 
 //This happens to boys randomly? Regularly? Without warning? How do they attend lectures? How do they ride motorcycles?//
 
 You file it under //male biology, subcategory: design flaws// and keep coding. By 7:30 the project has a functional training pipeline, evaluation metrics, and documentation. More clean deployable code in one afternoon than three months on a phone. Your eyes sting. One tear   Arjun's single, bureaucratic tear   escapes.
-</div>
-
-<<run setup.flag("real_coding_done")>>
-<<run setup.flag("kavya_first_erection_d3")>>
-<<run setup.discover("a random erection", "kavya")>>
-<<run setup.discover("Arjun's bureaucratic tear ducts", "kavya")>>
-<<run setup.stat("k_coding", 10, "kavya")>>
+</div>\
+<<run setup.flag("real_coding_done")>>\
+<<run setup.flag("kavya_first_erection_d3")>>\
+<<run setup.discover("a random erection", "kavya")>>\
+<<run setup.discover("Arjun's bureaucratic tear ducts", "kavya")>>\
+<<run setup.stat("k_coding", 10, "kavya")>>\
 <<run setup.stat("sex_m", 4, "kavya")>>
 <<hubreturn>>
 
@@ -170,9 +164,63 @@ You build the medical-imaging classifier you've been carrying around in your hea
 One tear escapes. You wipe it with the back of a hand that's bigger than your face used to be.
 
 <div class="thought kavya">You will lose this at 8 PM. You know that. You're doing it anyway, as hard and as fast as you can, because a thing you did once is a thing you did.</div>
-</div>
-
-<<run setup.flag("real_coding_done")>>
-<<run setup.discover("what your work feels like on real hardware", "kavya")>>
+</div>\
+<<run setup.flag("real_coding_done")>>\
+<<run setup.discover("what your work feels like on real hardware", "kavya")>>\
 <<run setup.stat("k_coding", 10, "kavya")>>
 <<hubreturn>>
+
+
+:: kavya_predawn_d3
+<div class="intimate"><span class="tag">Pre-dawn · Day 3</span>
+<<img "hostel_304_night.png" "Room 304, 3:55 AM">>
+Your phone vibrates once under the pillow. You're already awake   you've been awake since three, watching the ceiling crack that looks like a river delta.
+
+Priya sleeps flat on her back, mouth open, pathology notes still on her chest. Anjali is a comma under two blankets. Meera's bed is empty and pulled straight; she left at 3:30 to walk down and get the temple's side gate unlatched, the way you planned it on paper four times.
+
+You dress in the dark you know by heart. The maroon salwar kameez   Papa-approved, unremarkable, the one nobody looks at twice. You wind the dupatta across your chest and pin it at the left shoulder, tight, armour. Redmi in one hand. The folded transliteration of the mantra in the kameez pocket, soft at the creases now from handling.
+
+<div class="thought kavya">Twelve hours from now a boy will be standing in this room wearing this body, and Priya will be watching him. Leave the room the way Kavya leaves it. Straight back. Annoyed face. Go.</div>
+
+You slip your feet into your chappals at the door and ease it shut on its hinge, the one spot that doesn't creak.
+</div>
+<div class="continue-nav"><<link "Down the stairs, to the gate">><<goto "kavya_chowkidar_lie_d3">><</link>></div>
+
+
+:: kavya_chowkidar_lie_d3
+Chowkidar Ramesh is awake   he's always awake, that's the job   transistor radio low, a glass of chai going cold on the ledge. He looks up as your chappals hit the last step.
+
+<div class="dialogue">"Didi? Itni subah?"<span class="gloss-en">Sister? This early?</span></div>
+
+You keep your voice flat, a little bored, the register of someone doing a chore.
+
+<div class="dialogue">"Pataleshwar. Aaj Monday hai   Mahadev ki puja. Meera didi pehle nikal gayi, main late ho gayi."<span class="gloss-en">Pataleshwar. It's Monday   prayers for Shiva. Meera left ahead, I'm running late.</span></div>
+
+He nods like this is the most ordinary sentence in the world, because for a medical hostel full of homesick girls, it is. He turns the register toward you.
+
+<div class="dialogue">"Naam, time, jagah. Aur savdhaan jaana, andhera hai."<span class="gloss-en">Name, time, place. And go carefully, it's dark.</span></div>
+
+You write it in your own round hand   //K. Iyer · 3:58 · Pataleshwar temple//   the last time for a while that this handwriting will come off this hand. He lifts the bamboo barrier. You step through into the dark and the cold.
+
+<div class="dialogue">"Prasad laana didi!"<span class="gloss-en">Bring back some prasad, sister!</span></div>
+
+"Haan, Ramesh kaka."<span class="gloss-en">Yes, uncle Ramesh.</span>
+<div class="continue-nav"><<link "Walk to Pataleshwar">><<goto "kavya_walk_temple_d3">><</link>></div>
+
+
+:: kavya_walk_temple_d3
+<div class="intimate"><span class="tag">Pre-dawn · the walk</span>
+<<img "pataleshwar_approach.png" "the road up to the caves, before dawn">>
+The road is yours alone. A pack of street dogs lifts their heads at you from a shuttered shopfront and decides you're not worth it. One milk van, headlights swinging. A single share-auto idles at the corner, but the driver shakes his head   <<t "itni door nahi jaa raha, madam" "not going that far">>   so you walk, dupatta pulled up over your head against the cold, chappals slapping a rhythm on empty tarmac.
+
+Twenty-five minutes uphill. Your calves burn. Your body   the small efficient one you've spent twenty-one years in, that flinches at formalin and cries at poha   carries you up the ghat past the last streetlight and into the trees, and you think, with a strange grief you weren't expecting: //this is one of the last hours I'll spend being exactly this.//
+
+The temple steps. Meera is a shape by the unlatched side gate, lifting a hand. The courtyard is old dark and one oil lamp. You sit on the cold stone to wait   and a few minutes later a headlight comes sawing up the ghat road too fast, and you know without looking that it's Arjun on the Pulsar, taking the bends the way he always does.
+
+<div class="thought kavya">He's here. Meera's here. The circle's drawn. There is exactly one way this morning goes now.</div>
+</div>\
+<<run $loc.kavya to "pataleshwar_temple_d3">>\
+<<run $time.kavya to 290>>\
+<<run setup.flag("kavya_at_temple_d3")>>\
+<<run setup.discover("grieving your own body a little, in advance", "kavya")>>
+<<hubreturn "Wait for him on the steps">>

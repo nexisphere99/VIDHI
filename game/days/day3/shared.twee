@@ -28,6 +28,22 @@ You sit on the cold steps and watch the sky do the thing skies do just before da
 :: day3_swap
 <div class="intimate"><span class="tag">The swap</span>
 <<img "pataleshwar_dawn.png" "the kumkum circle">>
+<<if $pov is "arjun">>Before the circle, the handover you rehearsed on the phone. You zip the Pulsar key into the left pocket of the riding jacket and pat it once.
+
+"You can actually ride? Properly, not just sit on it?"
+
+<div class="dialogue">"Activa since I was fifteen. Milk runs, gas cylinder runs   the whole family's errand girl. A clutch is just a fourth limb."</div> Kavya's already looking at the bike over your shoulder. <div class="dialogue">"I've wanted to get on a real one for years. Let me have the one good part of today."</div>
+
+"It bucks in first if you drop the clutch. Key's in the jacket   which is about to be your jacket."
+<<else>>Before the circle, the handover you rehearsed on the phone. Arjun zips the Pulsar key into the left pocket of the riding jacket and pats it once.
+
+<div class="dialogue">"You can actually ride? Properly, not just sit on it?"</div>
+
+"Activa since I was fifteen. Milk runs, gas cylinder runs   the whole family's errand girl. A clutch is just a fourth limb." You're already looking past him at the bike. "I've wanted to get on a real one for years. Let me have the one good part of today."
+
+<div class="dialogue">"It bucks in first if you drop the clutch. Key's in the jacket   which is about to be your jacket."</div>
+<</if>>
+
 You sit cross-legged, knees almost touching, inside a circle of red kumkum drawn on the stone. <<if $pov is "arjun">>Kavya loops the kalava thread around both your right wrists and pulls it taut.<<else>>You loop the kalava thread around both your right wrists   yours and Arjun's   and pull it taut.<</if>>
 
 <<if $pov is "arjun">><div class="dialogue">"Last chance to back out."</div>

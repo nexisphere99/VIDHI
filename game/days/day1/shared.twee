@@ -11,7 +11,7 @@ You pick up. "Haan Aai?"<span class="gloss-en">Yes, Ma?</span>
 
 She hangs up. Your chest aches   the specific ache of being loved aggressively by a woman who expresses care in calories.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_nikhil_whatsapp
@@ -25,7 +25,7 @@ She hangs up. Your chest aches   the specific ache of being loved aggressively b
 
 You reply that it's {A, B} because C is functionally determined by A, and remind him the foreign key on table 3 is also wrong in the problem sheet. He sends back a single 🙏.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_sunset_melancholy
@@ -33,7 +33,7 @@ The light goes the colour of weak chai. 5 PM. Somewhere across the city a girl y
 
 You don't know that yet. You just feel the day tilt toward evening and the familiar weight settle back onto your chest.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_papa_missed_call
@@ -43,7 +43,7 @@ The Samsung buzzed against your hip through the whole of the brachial plexus dis
 
 You'll have to call back during the break. He'll ask about Erb's point and the waiter's-tip deformity and whether you're eating, and he'll see through the answer to the last one, the way he always does   through the medical-student mask, through the dutiful daughter. What he has never once looked for is the code running underneath.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_github_notification
@@ -55,7 +55,7 @@ On the Redmi, if you have it out: PR #247 to the NLP library   //merged//. Three
 <<run setup.flag("github_checked")>>
 <<else>>The Samsung can't see any of this. You'll have to dig the Redmi out from under the mattress.<</if>>
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_meera_whisper
@@ -65,7 +65,7 @@ Meera passes you in the corridor and doesn't slow down. Her voice arrives sidewa
 
 Then she's gone, spine straight, every step measured.
 
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: EV_priya_leaves_jog
@@ -76,7 +76,7 @@ The door closes. Her footsteps recede down the corridor.
 <div class="thought kavya">The window is open. Meera is in the room, and she has that look   the one that means the dam is about to come down.</div>
 
 <<run setup.flag("priya_out_jogging")>>
-<<goto "Hub">>
+<<hubreturn>>
 
 
 :: KavyaDayEnd

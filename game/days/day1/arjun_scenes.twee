@@ -141,6 +141,7 @@ You wedge the Pulsar between Rohit's Enfield and the immortal Splendor. The camp
 
 
 :: vit_notices
+<<img "vit_campus_notices.png" "the VIT notice wall">>
 **VIT NOTICE WALL**   Placement drive (TCS, Persistent) next month. Cultural fest committee auditions Friday. "DBMS extra class   Krishnan   Friday 4 PM   confirm on group." Someone has drawn a sad face next to it.
 
 <<hubreturn>>
@@ -185,18 +186,21 @@ You photograph seven pages. His handwriting doesn't need zoom.
 
 
 :: water_cooler_encounter
+<<img "arjun_water_cooler.png" "the corridor water cooler">>
 The cooler dribbles rust-flecked water. A first-year fills a bottle beside you and says, unprompted, "Bhaiya, third year mein bhi itni tension hoti hai?"<span class="gloss-en">Brother, is there this much stress in third year too?</span> You tell him yes. He looks devastated. Good. Better he knows now.
 
 <<hubreturn>>
 
 
 :: cs_notices
+<<img "arjun_cs_notices.png" "CS department notice board">>
 CS department board: internship postings, a hackathon in Bangalore, a handwritten card   //Peer tutoring: DS & Algo, contact Nikhil//. Of course.
 
 <<hubreturn>>
 
 
 :: corridor_rest
+<<img "arjun_corridor_bench.png" "the corridor bench">>
 You sit on the bench. The corridor smells of chalk and Dettol. Students stream past in both directions, all of them apparently certain where they're going.
 
 <<hubreturn>>
@@ -233,6 +237,7 @@ You almost laugh. Almost. "Bribe accepted."
 
 
 :: arjun_alone_canteen
+<<img "arjun_canteen_alone.png" "the corner table">>
 You take the corner table. Canteen Anna   sixties, Kannada-accented Hindi that turns every sentence into a melody   brings a masala dosa without being asked. "Beta, kha raha hai toh theek hai. Jab khaana band karta hai, tab tension hota hai mujhe."<span class="gloss-en">Son, as long as you're eating, it's fine. It's when you stop eating that I worry.</span>
 
 You eat. It tastes like nothing. Everything tastes like nothing lately.
@@ -241,12 +246,14 @@ You eat. It tastes like nothing. Everything tastes like nothing lately.
 
 
 :: canteen_tv
+<<img "vit_canteen_tv.png" "the canteen TV">>
 The TV plays last night's cricket highlights to an audience of nobody. A boundary. A wicket. A replay of the boundary. The universe, indifferent and looping.
 
 <<hubreturn>>
 
 
 :: lab_coding_session
+<<img "arjun_lab_terminal.png" "a lab terminal">>
 <<if not setup.has("dbms_assignment_submitted")>>\
 You sit at a terminal. Real keyboard, real screen. The three-table join resolves itself in about forty minutes   subquery, aggregate, the foreign-key fix Nikhil flagged. It runs. It returns the correct output.
 <<run setup.flag("dbms_assignment_submitted")>>
@@ -259,42 +266,49 @@ You mess around with a side project for a while. The lab assistant watches you l
 
 
 :: print_dbms
+<<img "arjun_lab_print.png" "the lab printer">>
 The lab printer wheezes out six pages of SQL. You staple them. Krishnan will be pleased that you've respected the year 2003.
 
 <<hubreturn>>
 
 
 :: library_cs_browse
+<<img "vit_library_cs_shelf.png" "the CS shelves">>
 Cool air   actual working AC, a campus miracle. You pull a database systems text off the shelf, read a paragraph on query optimisation, and put it back. You already know this. Knowing things has stopped feeling like enough.
 
 <<hubreturn>>
 
 
 :: library_study_session
+<<img "arjun_library_desk.png" "a library desk">>
 Thirty minutes at a desk with the notebook open. You get through half the BCNF material before your mind wanders back to a third-floor window across the city.
 
 <<hubreturn>>
 
 
 :: phone_charging
+<<img "arjun_phone_charging.png" "charging point behind the CS section">>
 You plug the phone into the wall point behind the CS section. While it charges you scroll to Meera's chat and read the last message again. //Don't forget me.// As if that were the risk.
 
 <<hubreturn>>
 
 
 :: basketball_scene
+<<img "vit_ground_hoops.png" "the basketball court">>
 You shoot a few hoops with the ground boys. Your jump shot is rusty. One of them says "Bhai pehle toh acche khelte the"<span class="gloss-en">Bro, you used to play well before</span> and you don't have an answer for that either.
 
 <<hubreturn>>
 
 
 :: arjun_ground_reflection
+<<img "arjun_ground_bench.png" "the bench at the edge of the ground">>
 You sit on the bench at the edge of the ground. A couple two benches over is pretending to study. The light's gone gold and long. Seventeen months ago Meera watched you play an inter-department match from these exact stands and told you afterward that you ran like you were apologising to the ball.
 
 <<hubreturn>>
 
 
 :: smoking_spot_encounter
+<<img "vit_ground_stands.png" "behind the stands">>
 Behind the stands, the usual crowd, the usual haze. Someone offers you a cigarette. You shake your head. "Tu kabhi nahi leta,"<span class="gloss-en">You never take one,</span> he says, not unkindly. "Health-conscious." If only he knew it was just that Meera hated the smell.
 
 <<hubreturn>>

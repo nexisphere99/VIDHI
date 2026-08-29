@@ -99,7 +99,10 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <h3>Go</h3>
 <div class="action-list">\
 <<for _x range _L.exits>><<capture _x>>\
-<<if setup.cond(_x.unlockCondition)>><<link `_x.label`>><<if setup.travel(_x.to, _x.travelTime ? _x.travelTime : 2, _x.method) neq "block">><<goto "Hub">><</if>><</link>><</if>>\
+<<set _xl to setup.exitLock(_x)>>\
+<<if _xl is "">><<link `_x.label`>><<if setup.travel(_x.to, _x.travelTime ? _x.travelTime : 2, _x.method) neq "block">><<goto "Hub">><</if>><</link>>\
+<<elseif _xl isnot null>><span class="exit-locked"><<= _x.label>> <span class="exit-lock-note">🔒 <<= _xl>></span></span>\
+<</if>>\
 <</capture>><</for>>\
 </div>
 <<else>>\
@@ -133,10 +136,16 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <h3>Go</h3>
 <div class="action-list">\
 <<for _x range _L.exits>><<capture _x>>\
-<<if setup.cond(_x.unlockCondition)>><<link `_x.label`>><<if setup.travel(_x.to, _x.travelTime ? _x.travelTime : 2, _x.method) neq "block">><<goto "Hub">><</if>><</link>><</if>>\
+<<set _xl to setup.exitLock(_x)>>\
+<<if _xl is "">><<link `_x.label`>><<if setup.travel(_x.to, _x.travelTime ? _x.travelTime : 2, _x.method) neq "block">><<goto "Hub">><</if>><</link>>\
+<<elseif _xl isnot null>><span class="exit-locked"><<= _x.label>> <span class="exit-lock-note">🔒 <<= _xl>></span></span>\
+<</if>>\
 <</capture>><</for>>\
 <<if _L.travelDestinations>><<for _d range _L.travelDestinations>><<capture _d>>\
-<<if setup.cond(_d.unlockCondition)>><<link `_d.label`>><<if setup.travel(_d.to, _d.travelTime ? _d.travelTime : 10, _d.method) neq "block">><<goto "Hub">><</if>><</link>><</if>>\
+<<set _dl to setup.exitLock(_d)>>\
+<<if _dl is "">><<link `_d.label`>><<if setup.travel(_d.to, _d.travelTime ? _d.travelTime : 10, _d.method) neq "block">><<goto "Hub">><</if>><</link>>\
+<<elseif _dl isnot null>><span class="exit-locked"><<= _d.label>> <span class="exit-lock-note">🔒 <<= _dl>></span></span>\
+<</if>>\
 <</capture>><</for>><</if>>\
 </div>
 <</if>>\

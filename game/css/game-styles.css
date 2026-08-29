@@ -234,6 +234,14 @@ body.pov-kavya .pov-face-wrap { border-bottom-color:var(--kavya-purple); }
 }
 a.link-broken { color:var(--danger); }
 
+/* an exit that exists but is shut right now (time gate / opening hours) */
+.action-list .exit-locked {
+  display:block; padding:11px 16px; border:1px dashed rgba(107,107,120,.35);
+  border-radius:var(--radius-md); color:var(--smoke); font-size:.95rem;
+  background:rgba(0,0,0,.015); cursor:default;
+}
+.action-list .exit-lock-note { float:right; margin-left:10px; font-size:.78em; color:var(--whisper); white-space:nowrap; }
+
 /* "pass time" controls   deliberately plainer than the quest actions */
 .wait-row { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 2px; }
 .wait-row a {

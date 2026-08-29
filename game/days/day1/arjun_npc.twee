@@ -119,6 +119,7 @@ You crouch and break the Parle-G into pieces. He approaches low to the ground   
 
 
 :: ananya_library_scene
+<<img "ananya_library.png" "Ananya, library table">>
 <<if setup.has("ananya_conversation_done")>>\
 Ananya lifts her earphone. "Still can't believe I stared at that bug for two days." She goes back to her pathfinding visualiser, nodes blooming across the screen.
 <<hubreturn>>

@@ -1492,6 +1492,37 @@ setup.travel = function (toId, mins, method) {
   return "";
 };
 
+/* Decide how an exit / travel option renders in the Hub:
+     ""     -> open, clickable
+     string -> show it dimmed with this reason (only when the ONLY thing
+               blocking it is a time-of-day gate or the place being shut)
+     null   -> keep it hidden (a real prerequisite / spoiler is missing)   */
+setup.exitLock = function (x, who) {
+  who = who || V().pov;
+  var dest = setup.locations[who] && setup.locations[who][x.to];
+  var notes = [], hide = false;
+  [x.unlockCondition, dest && dest.unlockCondition].forEach(function (expr) {
+    if (!expr || setup.cond(expr, who)) return;
+    String(expr).split(/\s+AND\s+/).forEach(function (raw) {
+      var a = raw.trim(), m;
+      if (setup.atom(a, who)) return;                       /* this part is fine */
+      if ((m = a.match(/^time\s*(>=|>)\s*(\d{1,2}):(\d{2})$/)))
+        notes.push("opens " + setup.fmtHM(+m[2] * 60 + +m[3]));
+      else if ((m = a.match(/^time\s*(<=|<)\s*(\d{1,2}):(\d{2})$/)))
+        notes.push("closes " + setup.fmtHM(+m[2] * 60 + +m[3]));
+      else hide = true;                                     /* a real prerequisite is missing */
+    });
+  });
+  if (hide) return null;
+  if (dest && dest.available && !setup.locAvailable(dest, who)) {
+    var w = dest.available.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/);
+    notes.push(w ? "open " + setup.fmtHM(setup.parseHM(w[1])) + "–" + setup.fmtHM(setup.parseHM(w[2]))
+                 : "closed now");
+  }
+  notes = notes.filter(function (n, i) { return notes.indexOf(n) === i; });   /* dedupe */
+  return notes.length ? notes.join(" · ") : "";
+};
+
 /* ------------------------------------------------------------
    IMAGE HELPER
    Renders <img src="images/<folder>/<file>"> and, if the file
@@ -1535,7 +1566,15 @@ setup.imgDir = {
   "arjun_room_mirror.png": "scenes/common", "arjun_bathroom_mirror.png": "scenes/common",
   "arjun_get_dressed.png": "scenes/common", "arjun_dbms_notebook.png": "scenes/common",
   "katraj_window_view.png": "scenes/common", "arjun_brush_teeth.png": "scenes/common",
-  "arjun_urinal.png": "scenes/common", "arjun_shave.png": "scenes/common"
+  "arjun_urinal.png": "scenes/common", "arjun_shave.png": "scenes/common",
+  "arjun_water_cooler.png": "scenes/common", "arjun_cs_notices.png": "scenes/common",
+  "arjun_corridor_bench.png": "scenes/common", "vit_campus_notices.png": "scenes/common",
+  "arjun_canteen_alone.png": "scenes/common", "vit_canteen_tv.png": "scenes/common",
+  "arjun_lab_terminal.png": "scenes/common", "arjun_lab_print.png": "scenes/common",
+  "vit_library_cs_shelf.png": "scenes/common", "ananya_library.png": "scenes/common",
+  "arjun_library_desk.png": "scenes/common", "arjun_phone_charging.png": "scenes/common",
+  "vit_ground_hoops.png": "scenes/common", "arjun_ground_bench.png": "scenes/common",
+  "vit_ground_stands.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

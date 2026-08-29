@@ -314,16 +314,80 @@ Portrait bust of young Indian woman (Meera   fair skin, braided black hair, larg
 
 ---
 
+## AMBIENT ROOM-ACTION VIGNETTES   `images/scenes/common/`
+
+Small illustrations shown above short "explore the room" scenes. Not tied to a
+single day. Arjun POV, semi-realistic digital illustration, warm/moody tones,
+no text, no on-image people unless noted, no explicit content. Landscape.
+
+### IMG-070: Fill your water bottle
+**File:** `arjun_water_cooler.png`
+**Insertion:** `arjun_scenes.twee → water_cooler_encounter` (VIT C-Block corridor)
+**Prompt:**
+```
+A wall-mounted stainless-steel water cooler in a slightly grimy Indian engineering-college corridor, one tap dribbling rust-flecked water into a translucent plastic bottle held by a young man's hand (lean forearm, black t-shirt sleeve). Beside him a nervous first-year student in a checked shirt fills his own bottle and glances sideways. Chalk-dust light through a barred corridor window, notice-board and closed classroom doors blurred behind. Semi-realistic digital illustration, cool fluorescent-plus-daylight mix, mundane campus texture.
+```
+
+### IMG-071: CS department notices
+**File:** `arjun_cs_notices.png`
+**Insertion:** `arjun_scenes.twee → cs_notices` (VIT C-Block corridor)
+**Prompt:**
+```
+Close-ish view of a cluttered cork-and-whiteboard department notice board in a computer-science building, overlapping printouts: internship postings, a colourful "Hackathon   Bangalore" poster, exam datesheets, and one small hand-written index card that reads as "Peer tutoring: DS & Algo   contact Nikhil". Push-pins, a few torn corners, tape residue. Corridor light from the side. Semi-realistic digital illustration, warm paper tones against grey wall, text suggested/illegible (not sharp). No people.
+```
+
+### IMG-072: Sit on the corridor bench
+**File:** `arjun_corridor_bench.png`
+**Insertion:** `arjun_scenes.twee → corridor_rest` (VIT C-Block corridor)
+**Prompt:**
+```
+A long wooden bench against the wall of a wide college corridor, a single young Indian man (lean, dark circles, long wavy hair, black t-shirt, backpack beside him) sitting slightly slumped, elbows on knees, looking at nothing. Other students pass in both directions as motion-blurred shapes, all purposeful. Smell-of-chalk-and-Dettol atmosphere: pale green walls, tube lights, a barred window throwing bars of light across the floor. Semi-realistic digital illustration, muted institutional palette, the loneliness of being still while everyone else moves.
+```
+
+### IMG-073 to IMG-081: Morning-routine vignettes (already wired)
+Shared frame: PG room / shared bathroom in Katraj, early grey morning light,
+cramped and lived-in. Consistent with IMG-001 (Arjun) and IMG-010 / IMG-021.
+
+- **IMG-073** `arjun_room_mirror.png` (`arjun_mirror_scene`): a full-length mirror on a scratched wardrobe door reflecting a lean young man with two-day stubble and dark circles, wet hair curling behind his ears, standing in a cluttered PG room, ceiling fan above. Reflection slightly warped. Melancholy self-appraisal.
+- **IMG-074** `arjun_bathroom_mirror.png` (`arjun_bathroom_mirror`): a small heavily-scratched bathroom mirror over a stained sink, giving a fractured triple reflection of the same young man's tired face as he leans in close. Cracked tiles "the colour of old teeth", single bulb.
+- **IMG-075** `arjun_get_dressed.png` (`clothing_choice`): the young man pulling a plain black t-shirt over his head, blue jeans already on, in front of an open steel almirah with one festival kurta hanging apart from everyday clothes. Morning light.
+- **IMG-076** `arjun_dbms_notebook.png` (`dbms_status`): an open laptop on a messy desk showing a VS Code window with an unfinished SQL query, sticky notes, a cold cup of chai, a spiral notebook with doodles in the margin. Screen glow. No people.
+- **IMG-077** `katraj_window_view.png` (`katraj_morning_view`): view from a small barred PG window over a waking Katraj lane   a tempo unloading milk crates, a stray dog, wet road, tin roofs, a chai stall's first steam rising below. Grey-blue dawn.
+- **IMG-078** `arjun_brush_teeth.png` (`morning_routine`): the young man brushing his teeth at the cracked bathroom sink, red Colgate tube on the ledge, foam, staring blankly into the middle distance. Single bulb, damp wall.
+- **IMG-079** `arjun_urinal.png` (`arjun_pee_day1`): a plain cracked ceramic wall urinal in a small Indian bathroom, a young man standing at it seen from behind at a discreet distance, fully clothed, one hand on the wall. Tiled, utilitarian, unremarkable   deliberately mundane. No nudity.
+- **IMG-080** `arjun_shave.png` (`shaving_scene`): the young man shaving along his jaw with a razor at the bathroom mirror, half his face still lathered, a small bit of tissue stuck to a nick under one ear. Concentration.
+- **IMG-081** `arjun_looking_at_screen.png` (`laptop_interaction`): the young man's face lit only by a laptop screen in a dim room, expression flat, an Instagram grid and a half-written code query both reflected in his glasses / eyes; a terminal window with a failed command. Blue-white glow, night or curtained day.
+
+### IMG-082 to IMG-093: VIT campus room-action vignettes (already wired)
+Shared frame: VIT Pune engineering campus, daytime, chalk-dust light, worn
+institutional textures. Arjun consistent with IMG-001.
+
+- **IMG-082** `vit_campus_notices.png` (`vit_notices`): a large outdoor notice wall near a college gate, placement-drive posters (TCS, Persistent), a cultural-fest audition flyer, a printed "DBMS extra class" note with a hand-drawn sad face. No people.
+- **IMG-083** `arjun_canteen_alone.png` (`arjun_alone_canteen`): the lean young man alone at a corner canteen table, a masala dosa on a steel plate in front of him, an elderly canteen server in the mid-ground. Warm indoor light, the quiet of eating alone in a loud room.
+- **IMG-084** `vit_canteen_tv.png` (`canteen_tv`): a wall-mounted CRT/LCD TV in a college canteen showing cricket highlights, nobody watching, empty plastic chairs below, afternoon light. No people (or blurred).
+- **IMG-085** `arjun_lab_terminal.png` (`lab_coding_session`): the young man at a Dell workstation in a row of identical monitors in a CS computer lab, focused, a SQL query on screen, a stern lab assistant at a desk by the door. Cool fluorescent light.
+- **IMG-086** `arjun_lab_print.png` (`print_dbms`): a tired laser printer in a lab spitting out stapled pages of code, a hand collecting them. Close, mundane, paper and toner.
+- **IMG-087** `vit_library_cs_shelf.png` (`library_cs_browse`): tall library shelves of computer-science textbooks, one pulled halfway out, cold AC light, a young man's silhouette browsing. Quiet.
+- **IMG-088** `ananya_library.png` (`ananya_library_scene`): a young Indian woman (early 20s, CS student, one earphone in, hoodie, laptop showing a pathfinding-graph visualiser with glowing nodes) at a library table, glancing up. Warm reading-lamp light. She is friendly, curious, not a love interest.
+- **IMG-089** `arjun_library_desk.png` (`library_study_session`): the young man at a library study carrel, open spiral notebook (BCNF / normalisation notes), chin on hand, gaze drifting to a window. Afternoon light.
+- **IMG-090** `arjun_phone_charging.png` (`phone_charging`): a phone plugged into a wall socket behind a library shelf, screen showing a chat thread, the young man crouched nearby waiting. Low angle, socket and cable in frame.
+- **IMG-091** `vit_ground_hoops.png` (`basketball_scene`): a worn outdoor half-court on a college sports ground, a few young men playing, the lean protagonist mid jump-shot looking out of practice. Golden late-afternoon light, long shadows.
+- **IMG-092** `arjun_ground_bench.png` (`arjun_ground_reflection`): the young man sitting alone on a bench at the edge of a sports ground / old spectator stands, gold hour light, a couple pretending to study two benches away. Nostalgic, still.
+- **IMG-093** `vit_ground_stands.png` (`smoking_spot_encounter`): the shaded underside / back of concrete spectator stands, a small group of students in a cigarette haze, one offering a cigarette to the protagonist who is refusing with a head-shake. Backlit, dusty light shafts.
+
+---
+
 ## TOTAL IMAGE COUNT   DAY 1
 
 ```
 Character Reference Sheets:     5  (IMG-001 to IMG-005)
-Location Backgrounds:           10  (IMG-010 to IMG-020)
+Location Backgrounds:           10  (IMG-010 to IMG-020) + pg_bathroom IMG-021
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
+Ambient room-action vignettes: 24  (IMG-070 to IMG-093, scenes/common/)
 ─────────────────────────────────────
-TOTAL:                          49 images
+TOTAL:                          74 images
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

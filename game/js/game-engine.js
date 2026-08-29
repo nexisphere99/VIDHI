@@ -243,7 +243,8 @@ setup.locations = {
         { id: "phone_call_spot", action: "Try calling Meera from here", triggers: "meera_call_attempt_sinhagad" }
       ],
       npcs: ["dhaba_owner", "random_bikers"],
-      exits: [ { to: "katraj_street", label: "Ride back to Katraj" } ]
+      exits: [ { to: "katraj_street", label: "Ride back to Katraj" } ],
+      image: "sinhagad_road.png"
     },
 
     "katraj_snake_park": {
@@ -256,7 +257,8 @@ setup.locations = {
         { id: "ice_cream_wala", action: "Buy an ice cream (₹30)", triggers: "ice_cream_vendor_npc", cost: 30 }
       ],
       npcs: ["morning_jogger_uncle", "college_girls_group", "ice_cream_vendor"],
-      exits: [ { to: "katraj_street", label: "Back to the main road" } ]
+      exits: [ { to: "katraj_street", label: "Back to the main road" } ],
+      image: "katraj_snake_park.png"
     },
 
     "kothrud_home": {
@@ -1524,6 +1526,7 @@ setup.imgDir = {
   "hostel_bathroom.png": "locations", "hostel_mess.png": "locations",
   "hostel_terrace.png": "locations", "bj_campus.png": "locations",
   "anatomy_hall.png": "locations",
+  "katraj_snake_park.png": "locations", "sinhagad_road.png": "locations",
   /* UI mockups                  -> images/ui/ */
   "arjun_phone_ui.png": "ui", "kavya_samsung_ui.png": "ui",
   "kavya_redmi_ui.png": "ui", "arjun_map.png": "ui", "kavya_map.png": "ui",
@@ -1549,7 +1552,14 @@ setup.imgDir = {
   "vit_library_cs_shelf.png": "scenes/common", "ananya_library.png": "scenes/common",
   "arjun_library_desk.png": "scenes/common", "arjun_phone_charging.png": "scenes/common",
   "vit_ground_hoops.png": "scenes/common", "arjun_ground_bench.png": "scenes/common",
-  "vit_ground_stands.png": "scenes/common"
+  "vit_ground_stands.png": "scenes/common",
+  "arjun_stray_dog.png": "scenes/common", "arjun_newspaper.png": "scenes/common",
+  "pg_notice_board.png": "scenes/common", "pg_landlord_sharma.png": "scenes/common",
+  "panwala_bhau.png": "scenes/common", "sinhagad_dhaba.png": "scenes/common",
+  "katraj_jogging_track.png": "scenes/common", "katraj_ice_bar.png": "scenes/common",
+  "katraj_fruit_cart.png": "scenes/common", "kothrud_aai_kitchen.png": "scenes/common",
+  "kothrud_papa_livingroom.png": "scenes/common", "kothrud_pooja_sofa.png": "scenes/common",
+  "kothrud_family_meal.png": "scenes/common", "kothrud_old_bedroom.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

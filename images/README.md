@@ -155,7 +155,9 @@ images/
         ├── kavya_phone_shop.png          IMG-161  (phone_shop_scene)
         ├── kavya_juice_stall.png         IMG-162  (juice_vendor_npc)
         ├── night_sleep_arjun_rohit.png   IMG-108  (arjun_night_end)
-        └── scenic_route_meera_call_try.png IMG-109  (meera_call_attempt_sinhagad)
+        ├── scenic_route_meera_call_try.png IMG-109  (meera_call_attempt_sinhagad)
+        ├── arjun_self_explore.png        IMG-110  (arjun_self_explore · side quest, art pending)
+        └── kavya_self_explore.png        IMG-111  (kavya_self_explore · side quest, art pending)
 ```
 
 ## Recommended specs

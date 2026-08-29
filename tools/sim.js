@@ -60,6 +60,8 @@ setup.refreshObjectives();
    (derived from the .twee content; only the story-critical ones matter) */
 const EFFECTS = {
   clothing_choice: () => setup.flag("morning_routine_complete"),
+  arjun_self_explore: () => setup.flag("arjun_self_explored"),
+  kavya_self_explore: () => setup.flag("kavya_self_explored"),
   "PH_arjun_gallery": () => setup.flag("phone_checked"),
   chai_scene: () => setup.flag("talked_to_raju"),
   raju_phone_sidequest: () => setup.flag("raju_phone_fixed"),
@@ -147,6 +149,7 @@ use("phone"); use("meera_photos");           // phone_checked, gallery
 use("mirror");
 go("pg_bathroom"); use("shower"); use("toothbrush");
 go("katraj_pg_room"); use("wardrobe");        // morning_routine_complete
+go("pg_bathroom"); use("arjun_alone"); go("katraj_pg_room");  // a_sq_self
 use("pulsar_keys");
 assertObj("a_obj_wake");
 go("pg_stairs"); go("tapri_chai");
@@ -190,6 +193,7 @@ use("phone_redmi");                           // github_checked
 use("meera_bed");
 go("hostel_corridor"); go("hostel_bathroom");
 use("period_check"); use("shower_stall");      // kavya_morning_done
+use("kavya_alone");                            // k_sq_self
 go("hostel_corridor"); use("sneha_door");     // talked_to_sneha + sneha_helped
 go("hostel_room_304"); use("build_dosage");   // dosage_app_built
 go("hostel_corridor"); go("hostel_stairs"); go("hostel_entrance"); use("sign_out_register"); // signed_out

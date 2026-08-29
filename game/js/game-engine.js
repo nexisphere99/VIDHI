@@ -302,7 +302,7 @@ setup.locations = {
     "hostel_room_304": {
       name: "Room 304   B.J. Medical Girls Hostel",
       available: "00:00-23:59",
-      description: "Three beds, twenty square metres, three lives colliding. The ceiling crack that looks like a river delta. The water stain shaped like Sri Lanka.",
+      description: "Three steel cots, three almirahs, one fan that ticks on every rotation. Kavya's corner is ruthlessly ordered; Priya's is a landslide of dupattas and charging cables; Meera's is nearly monastic. The one window faces the compound wall. Twenty square metres of a life none of them chose.",
       objects: [
         { id: "phone_samsung", action: "Check the Samsung (official phone)", triggers: "samsung_phone_menu" },
         { id: "phone_redmi", action: "Check the Redmi (secret phone)", triggers: "redmi_phone_menu", unlockCondition: "has_redmi_phone" },

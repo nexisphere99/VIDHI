@@ -60,6 +60,8 @@ game/
     widgets.twee           <<hubreturn>> <<th>> <<img>> <<flag>> <<adv>> ...
     phone.twee             PH_* chat passages
     day_flow.twee          DayWrap (end-of-day routing)
+    intimacy.twee          nightly / early-morning self-play + category-pick
+                           porn scenes (repeatable, phase-branched by swap)
   days/day1/               "Qaid"   the manuscript, the test swap
     arjun_scenes.twee  arjun_npc.twee  kavya_scenes.twee  kavya_npc.twee
     intimate.twee  shared.twee   (EV_* events, Day1Complete)

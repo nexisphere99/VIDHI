@@ -1,0 +1,206 @@
+:: arjun_bed_selfplay
+<div class="intimate"><span class="tag">Intimate · explicit · self</span>
+<<set _am to $time.arjun lt 720>>\
+<<set _ph to setup.intimPhase("arjun")>>\
+<<set _n to setup.habit("arjun").self>>\
+<<img "arjun_bed_selfplay.png" `_am ? "before the alarm" : "after the tube light's off"`>>
+
+<<if _am>>You surface before the alarm, the room a grainy grey, Rohit a mound of blanket and noise on the other cot. That heavy pre-dawn thickness between your legs, blood slow to make up its mind. Twenty minutes before you have to be a person.
+<<else>>Tube light off. Rohit face-down, the chainsaw snore settled into its lowest gear. The fan turns. You lie on your back and the day finally stops asking things of you.<</if>>
+
+Your hand goes under the waistband on autopilot. You're half-hard before you've decided anything   the body quicker than the will, the way it's always been. You take yourself in your fist, thumb spreading the first slick bead down over the head, and settle into the grip you've known since you were fourteen: firm below the crown, a half-twist at the top of the stroke, the pad of your thumb dragging the frenulum on every pull. Slow. Quiet. Your other hand flat on your own chest, feeling it rise and fall.
+
+<<if _ph gte 1>>\
+And tonight there's a new thing in the room with you   a thought you didn't invite. //What will this even be, in six days.// Different hands. Nothing to hold. A whole other circuitry you have no manual for. It should kill the mood. Instead it sits in your chest like a held breath and your hand keeps moving and some traitor part of you is, of all things, //curious.//
+<<run setup.stat("sex_f", 1, "arjun")>>\
+<<else>>\
+It isn't about anyone in particular. Not the folder, not the window twenty minutes across the city. Just your own hand on your own body, the one reliable circuit, and the small mercy that it still works exactly the way it always has.
+<</if>>
+
+Your hips start to lift to meet your fist, small involuntary pushes. You bite the inside of your cheek. Faster now, the wet sound of it, the heat gathering hard behind your pubic bone, balls drawn tight. Two more strokes, three   and it breaks: your spine snapping taut, your cock pulsing in your fist, the release striping warm over your knuckles. Jaw open on a sound you swallow at the last second. Three, four seconds where your head goes completely silent.
+
+<<if _am>>Then the grey ceiling. The alarm you've still got ten minutes on. You wipe your hand on the tissue from the desk and lie still, letting your breathing come down, borrowing the calm for the day ahead.
+<<else>>Then the fan, the snore, the ordinary dark. You clean up, roll onto your side. Sleep comes easier now   the body's oldest trick.<</if>>
+
+<div class="thought arjun"><<if _ph gte 1>>You've done this ten thousand times and always known exactly how. In a week you won't. That should frighten you more than it does.<<elseif _n gte 2>>A habit. A small daily maintenance nobody schedules for you. There's comfort in the one appointment you never miss.<<else>>Nothing profound. Just a body, doing what bodies do, in the ten minutes a day that belong to no one else.<</if>></div>
+</div>
+
+<<run setup.habit("arjun").self++>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: kavya_bed_selfplay
+<div class="intimate"><span class="tag">Intimate · explicit · self</span>
+<<set _am to $time.kavya lt 720>>\
+<<set _ph to setup.intimPhase("kavya")>>\
+<<set _n to setup.habit("kavya").self>>\
+<<img "kavya_bed_selfplay.png" `_am ? "the room still grey" : "past eleven, the white noise up"`>>
+
+<<if _am>>Awake before the others, before the alarm, the room the colour of dishwater. Meera's bed is still   she reads at five most mornings but not yet. Priya a lump of blanket and faint tinny rain from her earphones. A pocket of time nobody has claimed.
+<<else>>Past eleven. Priya went horizontal at ten with the ASMR rain turned up to drown the building. Meera's out cold, the manuscript rising and falling on her chest. The safest the room ever gets.<</if>>
+
+Your hand slides under the nightie, past the pajama drawstring, under the soft washed-thin cotton. The other comes up to your chest   you cup one breast, feel the actual weight of it as //yours// and not a logistics problem, thumb crossing the nipple until it draws tight and a current runs down through your belly. Then lower. Your fingers find yourself already slick, the clit already announcing itself, your body's most efficient processor.
+
+Slow circles, the pressure you calibrated at sixteen, the hood sliding with the motion. You don't go inside. You never have   not the temple exactly, not Amma's warnings folded in before you could argue, just the one line in this whole managed life that stays yours to hold. So it's all the swollen electric outside of it, two fingers flat, the other hand still working the nipple.
+
+<<if _ph gte 1>>\
+And tonight a thought arrives uninvited: //his// body. Hands that aren't these. A different weight, a different ache, equipment you've only ever seen in diagrams and one accidental hostel-corridor glimpse. It comes with a flicker of fear and, underneath it, sharp and unwelcome, a thread of //want//   the arousal of the possibility itself.
+<<run setup.stat("sex_m", 1, "kavya")>>\
+<<else>>\
+You think about nothing and nobody in particular. Just the fact of a locked-enough room and ten minutes that were never on anyone's schedule but your own.
+<</if>>
+
+Your hips tilt up, involuntary. You bite the pillow   necessity, not passion, the walls being architectural suggestions. Faster, the circles tightening. When it comes it's a wave, not a crash: deep in the core, rolling down both thighs, curling your toes against the sheet, your stomach clenching till the muscles ache. Air hisses through your teeth, //nnh//, more relief than pleasure.
+
+<<if _am>>Then the grey ceiling, the river-delta crack, Sri Lanka on the wall. You wipe your fingers on the corner of sheet you'll rinse in the sink later   maintenance   and lie still, borrowing the quiet before the day starts spending you.
+<<else>>Then Priya's breathing, the sandalwood ghost, the cold stone past the bed's edge. You clean up and your eyes close and sleep takes you in under a minute, the body's emergency shutdown.<</if>>
+
+<div class="thought kavya"><<if _ph gte 1>>You have spent twenty-one years learning this body's exact settings. Soon you may have to learn someone else's from scratch   and the part of you that's a scientist is, God help you, interested.<<elseif _n gte 2>>The one appointment nobody made for you and you never miss. A small daily act of ownership in a life run by other people.<<else>>Not rebellion. Upkeep of the one part of this life that was never up for negotiation.<</if>></div>
+</div>
+
+<<run setup.habit("kavya").self++>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: arjun_porn_menu
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+<<set _ph to setup.intimPhase("arjun")>>\
+<<img "arjun_porn_menu.png" "brightness at minimum, held low">>
+
+Brightness at minimum, phone held low against your chest, one earbud in and the other ear listening for Rohit. The private tab. Incognito, history off, the usual hygiene.
+
+<<if _ph gte 1>>Your thumb hovers over the categories longer than it used to. Lately your eye keeps snagging on the one you always used to scroll straight past.<<else>>You know what you like. You've known for years.<</if>>
+
+<div class="choices">
+<div class="q">What do you put on?</div>
+<<link "Amateur   real people, bad lighting">><<goto "arjun_porn_amateur">><</link>>
+<<link "Solo   just her, taking her time">><<goto "arjun_porn_solo">><</link>>
+<<link "Her side of it   shot from her, about her">><<goto "arjun_porn_hers">><</link>>
+<<link "Lock the phone. Not tonight.">><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: arjun_porn_amateur
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+A couple on a phone camera, a ceiling fan in frame, a dog barking somewhere off-screen. No script, no lighting, nobody performing for a industry. It's the realness you go for   two people who actually want each other, in a room that looks like a room you've been in.
+
+Your hand works slow under the blanket, matched to the rhythm on the screen. It doesn't take long. You keep the volume in one ear and your own sound behind your teeth, and when you finish it's into the tissue already waiting, quiet and efficient, the way six months of shared-room living trains into you.
+
+<div class="thought arjun">Familiar. Uncomplicated. You close the tab and the screen goes dark and the room is exactly as lonely as it was.</div>
+</div>
+<<run setup.habit("arjun").porn++>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_porn_solo
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+<<set _ph to setup.intimPhase("arjun")>>\
+
+A woman alone, a locked door, her own hands and her own time. No partner, no plot   just her face and the slow build of someone doing this purely for herself. You've always found that hotter than the couples stuff and never fully examined why.
+
+You keep pace with her. The blanket, the one earbud, the ear on Rohit. When she goes over you're not far behind, biting down, spilling into the tissue, your hips lifting once off the mattress before you catch them.
+
+<<if _ph gte 1>>\
+<div class="thought arjun">Afterward, a strange leftover thought: you were watching //her// experience so closely. In a week you might have a version of it to compare against. You lock the phone before that goes anywhere.</div>
+<<run setup.stat("sex_f", 1, "arjun")>>\
+<<else>>\
+<div class="thought arjun">You lock the phone. Sleep comes, eventually, the way it does.</div>
+<</if>>
+</div>
+<<run setup.habit("arjun").porn++>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_porn_hers
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+<<set _ph to setup.intimPhase("arjun")>>\
+
+The one you usually skip. Shot from her angle, more or less   her hands, her breath on the mic, the camera looking down her own body the way she'd see it. Made for women to watch, mostly. You clicked it half by accident the first time and then didn't close it.
+
+<<if _ph is 0>>\
+It's disorienting in a way you don't have words for. You're used to watching from outside, watching //at//. This asks you to sit inside a sensation you have never had and are not built for. Your hand slows. Part of you is turned on and part of you is oddly unsettled and the two don't resolve. You finish anyway, quieter than usual, and lie there frowning at the ceiling.
+<div class="thought arjun">Weird. You don't know if you liked it. You don't close the tab as fast as you tell yourself you will.</div>
+<<run setup.stat("sex_f", 1, "arjun")>>\
+<<else>>\
+This time you don't fight it. You let the perspective do what it's trying to do   put you behind her eyes, in a body arranged differently, wanting differently. Six days from now this stops being hypothetical, and some cold curious engineer in you wants the reference material. You watch it all the way through, your hand keeping unhurried time, and when you come it's with your eyes still on the screen and a thought you'd never say out loud half-formed behind them.
+<div class="thought arjun">You're not going to interrogate that right now. But you don't pretend, anymore, that you only opened it by accident.</div>
+<<run setup.stat("sex_f", 2, "arjun")>>\
+<</if>>
+</div>
+<<run setup.habit("arjun").porn++>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: kavya_porn_menu
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+<<set _ph to setup.intimPhase("kavya")>>\
+<<img "kavya_porn_menu.png" "the Redmi, screen turned to the wall">>
+
+The Redmi, not the Samsung   the Samsung is Papa's window, and Papa checks. Screen brightness at the floor, turned to the wall, both earphones in, Priya's rain and Meera's breathing as cover.
+
+<<if _ph gte 1>>Your thumb sits on the categories a while. The one you never pick has started to look less like a wrong turn and more like a door.<<else>>You go where you always go.<</if>>
+
+<div class="choices">
+<div class="q">What do you put on?</div>
+<<link "Something with a story   slow, sensual, her pleasure the point">><<goto "kavya_porn_sensual">><</link>>
+<<link "A real couple, one phone camera, no performance">><<goto "kavya_porn_couple">><</link>>
+<<link "From his angle   POV, shot down a man's body">><<goto "kavya_porn_his">><</link>>
+<<link "Lock the Redmi. Sleep.">><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: kavya_porn_sensual
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+Long takes, warm light, a woman whose experience the whole thing is organised around   her face, her pace, her hands guiding. Made, clearly, by someone who assumed a woman would be watching. You always feel met by this stuff in a way the loud algorithmic default never manages.
+
+You touch yourself in time with it, slow, the pillow ready for your mouth. It builds the way you like   unhurried, then not   and you go over quietly, thighs closing around your hand, a long breath leaking out through your teeth.
+
+<div class="thought kavya">Seen. That's the word for what this does. Rare enough that you notice it.</div>
+</div>
+<<run setup.habit("kavya").porn++>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_porn_couple
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+Two people, one phone propped on a dresser, a real bedroom with a clothes-horse in shot. No lighting rig, no script, just two people who want each other on an ordinary night. The unpolished realness of it gets past your defences faster than the produced stuff.
+
+Quiet, efficient, the walls being what they are. You finish with your hand pressed flat and hard, biting down, then lie still listening to make sure the room stayed asleep. It did.
+
+<div class="thought kavya">Ordinary want, ordinarily met. Something you file under //things other people seem to just have//.</div>
+</div>
+<<run setup.habit("kavya").porn++>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_porn_his
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+<<set _ph to setup.intimPhase("kavya")>>\
+
+POV. The camera is his eyes, looking down a male body   forearms, a stomach, further   a hand doing what a hand does. Shot for men to slot themselves into. Not made with you in mind at all, which is exactly why you clicked it.
+
+<<if _ph is 0>>\
+It's strange. You keep noticing the mechanics   the different geometry, the way the pleasure seems to sit in one concentrated place instead of spreading   like reading a manual for a machine you'll never operate. It's clinical and then, without warning, it isn't: some part of you leans //in// to the perspective, and that lean is its own small shock. You finish distracted, half your mind still turning the images over.
+<div class="thought kavya">You don't know what that was. You close the tab and tell yourself it was just curiosity. Mostly you believe it.</div>
+<<run setup.stat("sex_m", 1, "kavya")>>\
+<<else>>\
+This time you don't hold it at arm's length. You let the POV do its job   put you behind his eyes, in a body wired differently, wanting from a different place. In days, maybe, this is research. You watch it through, your own hand keeping slow time in a body that suddenly feels provisional, and you come with your eyes open and a question you're not ready to ask sitting right there in the dark.
+<div class="thought kavya">The scientist in you wants the reference. The rest of you is quiet about why the reference is this interesting.</div>
+<<run setup.stat("sex_m", 2, "kavya")>>\
+<</if>>
+</div>
+<<run setup.habit("kavya").porn++>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>

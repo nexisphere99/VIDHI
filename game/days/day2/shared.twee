@@ -127,6 +127,20 @@ She doesn't push. Which is somehow worse than if she did.
 
 :: EV_a2_full_call
 <<if setup.has("full_briefing_done")>>\
+<<img "arjun_anticipation_night.png" "PG room, 9 PM">>
+The phone buzzes. Unknown number   the same one. You already had this call, an hour ago, from her side of it: the manuscript, the ritual, //deha-vinimaya//, the deal you agreed to before your brain caught up.
+
+You pick up anyway.
+
+<div class="dialogue">"Just confirming you haven't talked yourself out of it. 5 AM. Pataleshwar. Bring the bike."</div>
+
+"I'll be there."
+
+<div class="dialogue">"Sleep if you can. You won't want to, tomorrow, in a body that isn't tired the way you're tired."</div>
+
+Click. You sit in the dark a while. Tomorrow you leave your body.
+
+<<run setup.stat("rel_arjun_kavya", 2, "arjun")>>
 <<goto "Hub">>\
 <<else>>\
 <<img "arjun_anticipation_night.png" "PG room, 9 PM">>

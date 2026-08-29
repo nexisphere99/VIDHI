@@ -310,6 +310,28 @@ She nods. Doesn't ask more. The hostel code.
 
 :: kavya_calls_arjun_d2
 <<img "kavya_calling_arjun.png" "Room 304, the call">>
+<<if setup.has("full_briefing_done")>>\
+Priya's out   //Sasural Simar Ka// rerun. Meera takes up her listening position by the door.
+
+You call the number saved as "VIT Library Reference Desk." He answers before the first ring finishes; his hand was on the phone. You've already laid the whole thing out for him once tonight, from your side of it   the manuscript, the ritual, the deal. This call is shorter.
+
+"Just confirming. 5 AM, Pataleshwar. Bring the bike   I need it for VIT. And Arjun: the rules stand. You will respect my body."
+
+<div class="dialogue">"I will. I swear it. And you'll respect mine."</div>
+
+"Deal. Don't be late. I am doing this against every rational principle I hold."
+
+You hang up. Your hands are trembling. Meera takes one and squeezes. //"Thank you,"// she whispers   an ocean in two words.
+
+"Thank me when your boyfriend navigates a bra hook without dislocating his shoulder."
+
+She laughs, rare and unguarded.
+
+<<run setup.flag("kavya_called_arjun")>>
+<<run setup.stat("rel_arjun", 5, "kavya")>>
+<<run setup.stat("rel_meera", 3, "kavya")>>
+<<hubreturn>>
+<<else>>\
 Priya leaves at 8:15   //Sasural Simar Ka// rerun, the common room, the siren call of a show so melodramatic it makes real life feel understated. Meera moves to the door. Listening position. The sentinel.
 
 You pull out the Redmi. Arjun's number is saved as "VIT Library Reference Desk" because even your contact list has a cover story.
@@ -357,6 +379,7 @@ She laughs   rare and beautiful, unguarded.
 <<run setup.stat("rel_arjun", 8, "kavya")>>
 <<run setup.stat("rel_meera", 3, "kavya")>>
 <<hubreturn>>
+<</if>>
 
 
 :: kavya_shower_d2

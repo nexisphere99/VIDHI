@@ -330,6 +330,22 @@ figure.scene-img.img-missing figcaption .img-frame { display:inline; font-size:1
 .scene-img:not(figure) .img-frame { font-size:1.6rem; opacity:.5; }
 .scene-img:not(figure) .img-cap { font-size:.72rem; font-family:var(--font-mono); }
 
+/* locked-folder photo gallery (PH_arjun_gallery) */
+.gallery-head {
+  font-family:var(--font-mono); font-size:.74rem; letter-spacing:.04em;
+  color:var(--smoke); text-align:center; padding:8px 10px; margin-bottom:1rem;
+  border:1px solid rgba(201,168,76,.3); border-radius:var(--radius-full);
+  background:rgba(201,168,76,.05);
+}
+.gallery-head b { color:var(--maroon); font-weight:600; }
+.photo-strip figure.scene-img { margin-bottom:.4rem; }
+.photo-strip figure.scene-img img { box-shadow:0 6px 22px rgba(0,0,0,.28); }
+.photo-strip > p {
+  margin:0 0 1.6rem; font-style:italic; color:var(--smoke);
+  line-height:1.7; text-align:center; max-width:38rem;
+  margin-left:auto; margin-right:auto;
+}
+
 .swap-fx { text-align:center; padding:24px 0; margin:1.4rem 0; }
 .swap-fx .t { font-family:var(--font-hindi); font-size:1.7rem; color:var(--gold); animation:pulse 2s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:.7;text-shadow:0 0 6px rgba(201,168,76,.3);} 50%{opacity:1;text-shadow:0 0 26px rgba(201,168,76,.6);} }

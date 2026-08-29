@@ -1526,7 +1526,11 @@ setup.imgDir = {
   "sinhagad_viewpoint.png": "scenes/day1", "arjun_night_room.png": "scenes/day1",
   "kavya_wakeup.png": "scenes/day1", "kavya_anatomy.png": "scenes/day1",
   "swap_ritual.png": "scenes/day1", "kavya_night_bed.png": "scenes/day1",
-  "bj_campus_samosa.png": "scenes/day1"
+  "bj_campus_samosa.png": "scenes/day1",
+  /* cross-day / non-day-specific art -> images/scenes/common/ */
+  "Marine_Drive_Green_Dupatta.png": "scenes/common",
+  "Cultural_Fest_Backstage_Green_Silk_Saree.png": "scenes/common",
+  "Bharatanatyam_Video_Locked_Folder_Thumbnail.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

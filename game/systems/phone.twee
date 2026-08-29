@@ -54,13 +54,18 @@
 
 
 :: PH_arjun_gallery
-The locked folder. Thumbprint. Sixteen items, all Meera.
+<div class="gallery-head">🔒 Locked folder · thumbprint · <b>16 items   all Meera</b></div>
 
-Marine Drive   wind catching her green dupatta, the silver thumb ring, laughing at something you said about the sunset looking like God's desktop wallpaper.
+<div class="photo-strip">
+<<img "Marine_Drive_Green_Dupatta.png" "Marine Drive">>
+<p>Wind catching her green dupatta, the silver thumb ring, laughing at something you said about the sunset looking like God's desktop wallpaper.</p>
 
-Backstage at the cultural fest   green silk saree, gold border, kajal slightly smudged from happy tears. Looking at you like you were geography, not weather.
+<<img "Cultural_Fest_Backstage_Green_Silk_Saree.png" "Backstage   cultural fest">>
+<p>Green silk saree, gold border, kajal slightly smudged from happy tears. Looking at you like you were geography, not weather.</p>
 
-The Bharatanatyam video. 206 views. You don't press play right now. Not here, not at this hour of the day.
+<<img "Bharatanatyam_Video_Locked_Folder_Thumbnail.png" "Bharatanatyam   video · 206 views">>
+<p>You don't press play right now. Not here, not at this hour of the day.</p>
+</div>
 
 <<run setup.flag("phone_checked")>>
 <<hubreturn>>

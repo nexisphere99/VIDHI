@@ -1601,7 +1601,8 @@ setup.imgDir = {
   "kavya_priya_asleep.png": "scenes/common", "kavya_phone_shop.png": "scenes/common",
   "kavya_terrace_watertank.png": "scenes/common", "kavya_terrace_coding.png": "scenes/common",
   "kavya_joshi_rounds.png": "scenes/common", "kavya_warden_office.png": "scenes/common",
-  "kavya_manuscript_closeup.png": "scenes/common", "kavya_juice_stall.png": "scenes/common"
+  "kavya_manuscript_closeup.png": "scenes/common", "kavya_juice_stall.png": "scenes/common",
+  "night_sleep_arjun_rohit.png": "scenes/common", "scenic_route_meera_call_try.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

@@ -395,6 +395,8 @@ Also two location backgrounds: `katraj_snake_park.png` (IMG-022) and
 - **IMG-105** `kothrud_pooja_sofa.png` (`pooja_interaction`): a teenage girl sprawled on a sofa, school textbooks shut beside her, phone held up, mid-eye-roll but affectionate. Cluttered homey living room.
 - **IMG-106** `kothrud_family_meal.png` (`home_meal_scene`): a family of four (or three plus an empty-ish place) at a small dining table with steel thalis, an extra serving already on the guest's plate, warm light. The ache of being fed too much love.
 - **IMG-107** `kothrud_old_bedroom.png` (`arjun_childhood_room`): a small bedroom half-converted to a study — cricket trophies still on a shelf, a faded Sachin Tendulkar poster, a framed school photo of a boy at sixteen on the desk. Nostalgic afternoon light. No people.
+- **IMG-108** `night_sleep_arjun_rohit.png` (`arjun_night_end`): a dark PG room past midnight — one young man asleep face-down on a cot with an arm hanging off, the other lying on his back in shorts staring up at a wobbling ceiling fan, tube light off, blue night through the window. Insomniac stillness.
+- **IMG-109** `scenic_route_meera_call_try.png` (`meera_call_attempt_sinhagad`): a young man on a dark mountain-road viewpoint, a black Pulsar parked at the railing, phone lit in his hand with a call screen open and his thumb hovering over the green button, city lights far below. He won't press it.
 
 ### IMG-120 to IMG-154: Kavya's path vignettes (already wired)
 B.J. Medical girls' hostel and campus. Cool blue-grey institutional
@@ -457,10 +459,10 @@ Location Backgrounds:           17  (IMG-010 to IMG-027)
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
-Ambient vignettes (Arjun):     38  (IMG-070 to IMG-107, scenes/common/)
+Ambient vignettes (Arjun):     40  (IMG-070 to IMG-109, scenes/common/)
 Ambient vignettes (Kavya):     43  (IMG-120 to IMG-162, scenes/common/)
 ─────────────────────────────────────
-TOTAL:                         137 images   (Day 1 fully covered)
+TOTAL:                         139 images   (Day 1 fully covered)
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

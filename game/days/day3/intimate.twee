@@ -24,7 +24,7 @@ At the sink you wash your hands. The mirror: Kavya's face, dark circles, beauty 
 
 Fourteen washes. Your hands are raw.
 
-"Get it together," you tell the mirror, in Kavya's voice. The voice you're starting to recognise as yours, temporarily, conditionally, until 8 PM.
+"Get it together," you tell the mirror, in Kavya's voice. The voice you're starting to recognise as yours, temporarily, conditionally, until half past five.
 </div>\
 <<run setup.flag("arjun_first_pee_female")>>\
 <<run setup.discover("how a female body pees", "arjun")>>\
@@ -62,7 +62,7 @@ The bathroom mirror, clouded, at the wrong height for you   made for someone sho
 
 Kavya's whole face, close. You've spent a day behind it. You try her expressions   the deadpan, the raised eyebrow, the rare grin   and they come out slightly wrong, an actor who's studied the tape but never lived the part.
 
-<div class="thought arjun">She's going to spend today learning your body. You're learning hers. Tonight you'll both hand them back with notes in the margins.</div>
+<div class="thought arjun">She's going to spend today learning your body. You're learning hers. By half past five you'll both hand them back with notes in the margins.</div>
 <<run setup.discover("wearing her expressions", "arjun")>>
 <<hubreturn>>
 
@@ -123,7 +123,7 @@ Foam from the can. It goes on cold. You drag the razor along the jaw   too fast,
 
 Slow strokes after that. Down the cheeks, careful around the mouth, the awkward under-the-nose bit. The face that emerges is cleaner, marginally more like someone who has his life together.
 
-<div class="thought kavya">Arjun will feel the nick when he gets his face back tonight. Consider it a receipt.</div>
+<div class="thought kavya">Arjun will feel the nick when he gets his face back this evening. Consider it a receipt.</div>
 <<run setup.flag("kavya_shaved_d3")>>\
 <<run setup.discover("shaving, and one nick", "kavya")>>\
 <<run setup.stat("masc_comfort", 3, "kavya")>>

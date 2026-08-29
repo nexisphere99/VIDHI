@@ -86,8 +86,8 @@ Black.
 <<run setup.addItem("redmi_phone", "arjun")>>\
 <<run setup.stat("rel_arjun_kavya", 3, "arjun")>>\
 <<run setup.stat("rel_kavya_arjun", 3, "kavya")>>\
-<<run $time.arjun = 310>>\
-<<run $time.kavya = 310>>\
+<<run $time.arjun = 330>>\
+<<run $time.kavya = 330>>\
 <<run $loc.arjun = "hostel_walk_d3">>\
 <<run $loc.kavya = "pulsar_ride_d3">>\
 <<set $mood.arjun to "on the wrong side of a mirror">>\
@@ -135,7 +135,7 @@ You fold her page into your pocket. Then it's your turn   you've done the same t
 
 <div class="dialogue">"Good. Same terms the other way; yours is safe with me. Now get up."</div>
 
-Kavya stands   your legs, unfolding to a height she keeps misjudging. "Twelve hours. Here, 7:30. Don't lose my body and I won't lose yours."
+Kavya stands   your legs, unfolding to a height she keeps misjudging. "Twelve hours. Back here, 5:30 sharp   that's the clean window and it's the last time I can walk into the hostel without a story. Don't lose my body and I won't lose yours."
 <<else>>Then you take his wrist   your own wrist now, thick and strange   and hold it until he's looking at his own face gone hard.
 
 "One rule above every other one. You do not touch my body. Not curiosity, not 'just to see,' not one second longer in the shower than washing takes. Wash it, feed it, put it to bed. That is the entire list of what your hands may do in there."
@@ -144,7 +144,7 @@ Kavya stands   your legs, unfolding to a height she keeps misjudging. "Twelve ho
 
 <div class="dialogue">"I understand. I gave my word to Meera, I'm giving it to you   nothing your body doesn't need. I swear it."</div>
 
-"Good. Your body's safe with me   same terms." You stand   Arjun's legs, and the ground arrives later than you expect. "Twelve hours. Here, 7:30. Try not to cry with my tear ducts, they file paperwork."
+"Good. Your body's safe with me   same terms." You stand   Arjun's legs, and the ground arrives later than you expect. "Twelve hours. Back here, 5:30 sharp   any later and I'm signing into the hostel with a lie. Try not to cry with my tear ducts, they file paperwork."
 <</if>>
 
 You touch your own borrowed face once, to confirm it's really there, and walk out of the temple in opposite directions.
@@ -156,7 +156,7 @@ You touch your own borrowed face once, to confirm it's really there, and walk ou
 
 
 :: EV_a3_priya_out
-Priya scoops up her laptop and two pathology textbooks at 1:45 and heads for the library, complaining about apoptosis the whole way to the door. It closes. The lock engages.
+Priya scoops up her laptop and two pathology textbooks at 1:15 and heads for the library, complaining about apoptosis the whole way to the door. It closes. The lock engages.
 
 The room is yours. Meera's already sitting up straighter.
 
@@ -191,7 +191,7 @@ For a moment it's just two people laughing down a phone line in each other's voi
 <div class="msg them">Priya told me you look "relaxed." Careful. Relaxed isn't Kavya's default. Kavya's default is "irritated genius." Practice irritated.</div>
 <div class="msg me">Working on my irritated face. It's hard because I'm happy.</div>
 <div class="msg them">🥺</div>
-<div class="msg them">Tonight. After swap-back. I'll be thinking about today for weeks.</div>
+<div class="msg them">Come up to the terrace before you leave this afternoon. After that I'll be replaying today for weeks.</div>
 </div>
 
 <<run setup.stat("rel_arjun_meera", 2, "arjun")>>
@@ -199,7 +199,7 @@ For a moment it's just two people laughing down a phone line in each other's voi
 
 
 :: EV_a3_swapback_reminder_a
-The Redmi buzzes. Kavya: //Temple. 7:30. Don't be late   I want my hands back and you want yours.//
+The Redmi buzzes. Kavya: //Temple. 5:30   twelve hours on the nose. Don't be late; any later and I can't get back into the hostel clean. I want my hands back and you want yours.//
 
 You look at Kavya's hands. The silver ring. The short shaped nails. Twelve hours of borrowed dexterity, and a small, stupid flicker of something like loss.
 
@@ -251,7 +251,7 @@ The room is yours. The laptop is yours. Two hours.
 
 
 :: EV_a3_swapback_reminder_k
-Arjun's phone buzzes. Meera, via the Samsung: //7:30. Pataleshwar. He needs his body and you need yours. And Kavya   thank you. For the CS classes. For all of it.//
+Arjun's phone buzzes. Meera, via the Samsung: //5:30. Pataleshwar. Twelve hours exactly, and it's the last hour Kavya can slip back into the hostel unnoticed. He needs his body and you need yours. And Kavya   thank you. For the CS classes. For all of it.//
 
 You look at the clock in the corner of the borrowed screen. The keyboard under your hands. Soon this stops.
 
@@ -260,8 +260,8 @@ You look at the clock in the corner of the borrowed screen. The keyboard under y
 
 :: day3_swapback
 <div class="intimate"><span class="tag">The swap-back</span>
-<<img "pataleshwar_dawn.png" "Pataleshwar, evening">>
-The circle again, drawn in the last light. The thread. The mantra in reverse   the wrench comes and this time you brace for it, like jumping into cold water the second time.
+<<img "pataleshwar_dawn.png" "Pataleshwar, late afternoon">>
+The circle again, drawn in the flat gold light of half past five, the courtyard still empty in the lull before evening aarti. The thread. The mantra in reverse   the wrench comes and this time you brace for it, like jumping into cold water the second time.
 
 Black. White. Colours resolving.
 
@@ -329,7 +329,7 @@ You both laugh. Real laughter, in your own voices, bouncing off 1,500-year-old s
 <div class="msg them">how are you holding up in there</div>
 <div class="msg me">the body cries at everything. formalin made me cry. a nice poha made me cry.</div>
 <div class="msg them">higher olfactory density, more tear-duct sensitivity. welcome to the flavour-expansion pack</div>
-<div class="msg them">tonight. terrace. before swap-back. ok?</div>
+<div class="msg them">this afternoon. terrace. before you ride back. ok?</div>
 <div class="msg me">ok</div>
 </div>
 <<hubreturn>>

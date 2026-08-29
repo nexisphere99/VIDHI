@@ -360,7 +360,7 @@ const D3 = {
     setup.flag("swap_complete"); S.swapActive = true; setup.doSwap();
     setup.removeItem("bike_keys", "arjun"); setup.addItem("bike_keys", "kavya");
     setup.removeItem("redmi_phone", "kavya"); setup.addItem("redmi_phone", "arjun");
-    S.time.arjun = 310; S.time.kavya = 310;
+    S.time.arjun = 330; S.time.kavya = 330;
     S.loc.arjun = "hostel_walk_d3"; S.loc.kavya = "pulsar_ride_d3";
   },
   day3_swapback: () => {
@@ -447,9 +447,10 @@ S.time.arjun = 14 * 60 + 5; drainEvents();       // priya_out event
 go("hostel_stairs_d3"); go("hostel_corridor_d3"); go("hostel_room_304_d3");
 use("room304_manuscript_d3");                    // a3_sq_manuscript
 go("hostel_corridor_d3"); go("hostel_terrace_d3"); use("terrace_meera_d3"); // a3_sq_terrace
-S.time.arjun = 19 * 60 + 35;
+S.time.arjun = 17 * 60 + 5;                      // leave for the temple ~5 PM
 go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
 go("pataleshwar_temple_d3");
+wait(17 * 60 + 30);                              // circle reverses at 5:30
 use("swap_back_circle");                         // day3_swapback
 ["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
 console.log("  arjun body now:", S.body.arjun, "| fem_comfort", S.stats.a_femComfort, "| discoveries", (S.discoveries.arjun || []).length);
@@ -461,7 +462,7 @@ pov("kavya");
 setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
 setup.addItem("bike_keys", "kavya"); setup.removeItem("bike_keys", "arjun");
 S.swapActive = true; S.flags.swap_back_complete = false;
-S.loc.kavya = "pulsar_ride_d3"; S.time.kavya = 310;
+S.loc.kavya = "pulsar_ride_d3"; S.time.kavya = 330;
 use("ride_body_check");                          // kavya_first_arjun_body
 use("ride_clutch");                              // ride_complete_d3
 assertObj("k3_obj_ride");
@@ -489,11 +490,12 @@ go("vit_cs_lab_d3");
 use("lab_code_d3");                              // real_coding_done
 assertObj("k3_obj_code");
 go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3"); go("pg_stairs_d3"); go("katraj_pg_room_d3");
-S.time.kavya = 17 * 60 + 30;
+S.time.kavya = 15 * 60;
 use("pg_explore_body_d3");                       // k3_sq_explore_m
-S.time.kavya = 19 * 60 + 35;
-go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3");
+S.time.kavya = 17 * 60 + 5;                      // leave for the temple ~5 PM
+go("pg_stairs_d3"); go("katraj_street_d3");
 go("pataleshwar_temple_d3");
+wait(17 * 60 + 30);                              // circle reverses at 5:30
 use("swap_back_circle");                         // day3_swapback
 ["k3_obj_gethere","k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);
 console.log("  kavya body now:", S.body.kavya, "| masc_comfort", S.stats.k_mascComfort,

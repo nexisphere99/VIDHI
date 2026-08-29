@@ -2582,11 +2582,11 @@ setup.phoneTab = function (which, tab) {
   /* the temple exists under BOTH pov maps (both start here for the swap) */
   var temple = {
     name: "Pataleshwar Cave Temple   Pre-dawn",
-    available: "04:00-06:00,19:00-22:00",
-    description: "1,500-year-old basalt, carved gods peering from the rock. Kavya scouted the quiet hours for a reason   pre-dawn and late evening the courtyard empties out, no priest, no devotees, just one perpetual lamp and a sky Pune's light pollution never lets go fully black. The universe is about to invert.",
+    available: "04:00-06:00,17:00-20:00",
+    description: "1,500-year-old basalt, carved gods peering from the rock. Kavya scouted the quiet hours for a reason   pre-dawn and the lull before evening aarti the courtyard empties out, no priest, no devotees, just one perpetual lamp. The universe is about to invert.",
     objects: [
       { id: "swap_circle", action: "Sit in the kumkum circle. Begin.", triggers: "day3_swap", quest: "main", unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3 AND not swap_complete" },
-      { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND time >= 19:30 AND not swap_back_complete" },
+      { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND time >= 17:30 AND not swap_back_complete" },
       { id: "temple_wait", action: "Wait. Watch the sky. Don't think.", triggers: "day3_temple_wait", unlockCondition: "not swap_complete" }
     ],
     npcs: [],
@@ -2780,8 +2780,8 @@ setup.phoneTab = function (which, tab) {
         { id: "pg_phone_d3", action: "Check Arjun's phone", triggers: "samsung_phone_menu" },
         { id: "pg_meera_folder_d3", action: "Open the folder called 'Important Documents'", triggers: "meera_folder_d3", quest: "side", unlockCondition: "kavya_curious_d3" },
         { id: "pg_poetry_d3", action: "Open the bookmarked text file", triggers: "arjun_poetry_d3", quest: "side", unlockCondition: "meera_folder_seen_d3" },
-        { id: "pg_evening_code_d3", action: "Code, properly, while Rohit's at the gym", triggers: "kavya_evening_coding_d3", quest: "main", intimate: true, unlockCondition: "cs_lecture_attended_d3 AND time >= 17:00 AND not real_coding_done" },
-        { id: "pg_explore_body_d3", action: "Lock the door. Understand what you're wearing.", triggers: "kavya_explore_body_d3", quest: "side", intimate: true, unlockCondition: "cs_lecture_attended_d3 AND time >= 17:00" }
+        { id: "pg_evening_code_d3", action: "Code, properly, while Rohit's at the gym", triggers: "kavya_evening_coding_d3", quest: "main", intimate: true, unlockCondition: "cs_lecture_attended_d3 AND time >= 14:30 AND not real_coding_done" },
+        { id: "pg_explore_body_d3", action: "Lock the door. Understand what you're wearing.", triggers: "kavya_explore_body_d3", quest: "side", intimate: true, unlockCondition: "cs_lecture_attended_d3 AND time >= 14:30" }
       ],
       npcs: ["rohit"],
       exits: [
@@ -2841,7 +2841,7 @@ setup.phoneTab = function (which, tab) {
       exits: [ { to: "pg_stairs_d3", label: "To the PG" } ],
       travelDestinations: [
         { to: "vit_gate_d3", travelTime: 15, method: "pulsar", label: "Ride to VIT (15 min)" },
-        { to: "pataleshwar_temple_d3", travelTime: 20, method: "pulsar", label: "Ride to Pataleshwar (20 min)", unlockCondition: "time >= 19:00" }
+        { to: "pataleshwar_temple_d3", travelTime: 20, method: "pulsar", label: "Ride to Pataleshwar (20 min)", unlockCondition: "time >= 17:00" }
       ]
     },
     "vit_gate_d3": {
@@ -2934,9 +2934,9 @@ setup.phoneTab = function (which, tab) {
   /* ---- helpers (same as day2) ---- */
   function add(pov, loc, arr) { var o = L[pov][loc].objects || (L[pov][loc].objects = []); arr.forEach(function (x) { o.push(x); }); }
 
-  /* swap-back reachable from the hostel entrance / katraj street too */
-  L.arjun.hostel_entrance_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 19:30" });
-  L.arjun.bj_campus_path_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 19:30" });
+  /* swap-back reachable from the hostel entrance / campus path too */
+  L.arjun.hostel_entrance_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" });
+  L.arjun.bj_campus_path_d3.exits.push({ to: "pataleshwar_temple_d3", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" });
 
   /* ---- OBJECTIVES ---- */
   var A = setup.objectives.arjun, K = setup.objectives.kavya;
@@ -2967,9 +2967,9 @@ setup.phoneTab = function (which, tab) {
       lockNote: "After the reunion.",
       hint: { where: "Hostel bathroom, mess, then B.J. anatomy hall (sign out first).", when: "Morning into afternoon.", who: "Dr. Sharma, Sneha, Priya   all people who've known Kavya for years.", how: "Use the bathroom (mandatory), eat in the mess, survive one dissection session. Then you're clear to head back." } },
     { id: "a3_obj_swapback", title: "Return for the swap-back", pov: "arjun", day: 3,
-      description: "8 PM. Pataleshwar. Get your body back. Carry the day home.",
-      unlockCondition: "arjun_day_survived_d3 AND time >= 19:00", completionTrigger: "swap_back_complete",
-      hint: { where: "Ride/leave for Pataleshwar from the hostel gate or campus path.", when: "After 7 PM   the circle reverses after 7:30.", who: "Kavya, patting herself down.", how: "Sit in the circle. Reverse the chant." } }
+      description: "5:30 PM. Pataleshwar. Twelve hours to the minute. Get your body back and carry the day home.",
+      unlockCondition: "arjun_day_survived_d3 AND time >= 17:00", completionTrigger: "swap_back_complete",
+      hint: { where: "Leave for Pataleshwar from the hostel gate or the campus path.", when: "From 5 PM   the circle reverses at 5:30, a clean twelve hours.", who: "Kavya, patting herself down.", how: "Sit in the circle. Reverse the chant." } }
   );
   A.side.push(
     { id: "a3_sq_specimen", title: "The dropped specimen jar", pov: "arjun", day: 3,
@@ -3027,11 +3027,11 @@ setup.phoneTab = function (which, tab) {
       description: "A laptop. A keyboard. VS Code. Dual monitors. Cry if you need to.",
       unlockCondition: "cs_lecture_attended_d3", completionTrigger: "real_coding_done",
       reward: { coding_skill: 10 },
-      hint: { where: "VIT CS lab (after 2 PM), or the PG room in the evening once Rohit's at the gym.", when: "Afternoon or evening.", who: "Nobody   flow state.", how: "Build the thing you've been building on a ₹3,000 phone for three years, properly, once." } },
+      hint: { where: "VIT CS lab (after 2 PM), or the PG room once Rohit leaves for the gym around 2:15.", when: "Early-to-mid afternoon   you want to be riding for the temple by 5.", who: "Nobody   flow state.", how: "Build the thing you've been building on a ₹3,000 phone for three years, properly, once." } },
     { id: "k3_obj_swapback", title: "Return for the swap-back", pov: "kavya", day: 3,
-      description: "8 PM. Pataleshwar. Give the body back. Keep the memory.",
-      unlockCondition: "real_coding_done AND time >= 19:00", completionTrigger: "swap_back_complete",
-      hint: { where: "Ride to Pataleshwar from Katraj Main Road.", when: "After 7 PM.", who: "Arjun.", how: "Sit in the circle. Reverse it. Then grieve the keyboard." } }
+      description: "5:30 PM. Pataleshwar. Twelve hours to the minute. Give the body back and be at the hostel before anyone wonders.",
+      unlockCondition: "real_coding_done AND time >= 17:00", completionTrigger: "swap_back_complete",
+      hint: { where: "Ride to Pataleshwar from Katraj Main Road.", when: "From 5 PM   the circle reverses at 5:30. Later than 6 and Kavya's late back to the hostel.", who: "Arjun.", how: "Sit in the circle. Reverse it. Then grieve the keyboard." } }
   );
   K.side.push(
     { id: "k3_sq_amit", title: "Fix Amit's laptop", pov: "kavya", day: 3,
@@ -3056,9 +3056,9 @@ setup.phoneTab = function (which, tab) {
       hint: { where: "PG or VIT bathroom.", when: "When you can't hold it any longer (~3 hours in).", who: "Other boys, entirely unbothered.", how: "The stream arcs. You are not prepared for the arc. Adjust." } },
     { id: "k3_sq_explore_m", title: "Explore Arjun's body properly", pov: "kavya", day: 3,
       description: "Rohit's at the gym, the door is locked. Reconnaissance, not recreation.",
-      unlockCondition: "cs_lecture_attended_d3 AND time >= 17:00", completionTrigger: "kavya_explored_body_d3",
+      unlockCondition: "cs_lecture_attended_d3 AND time >= 14:30", completionTrigger: "kavya_explored_body_d3",
       reward: { masc_comfort: 10 },
-      hint: { where: "PG room, evening.", when: "After 5 PM, Rohit gone.", who: "Just you.", how: "Mirror, shirt off, jeans down. Log the data. Then there may be an unsolicited notification from the genital subsystem." } },
+      hint: { where: "PG room, afternoon.", when: "After 2:30, once Rohit's left for the gym.", who: "Just you.", how: "Mirror, shirt off, jeans down. Log the data. Then there may be an unsolicited notification from the genital subsystem." } },
     { id: "k3_sq_shave", title: "Try shaving", pov: "kavya", day: 3,
       description: "Arjun's stubble is getting noticeable. You have never held a razor to a face.",
       unlockCondition: "swap_complete", completionTrigger: "kavya_shaved_d3",
@@ -3074,13 +3074,13 @@ setup.phoneTab = function (which, tab) {
   /* ---- TIMED EVENTS ---- */
   setup.timedEvents.push(
     { day: 3, time: "12:30", character: "arjun", event: "a3_checkin", passage: "EV_a3_checkin_arjun" },
-    { day: 3, time: "14:30", character: "arjun", event: "a3_meera_wa", passage: "EV_a3_meera_wa" },
-    { day: 3, time: "13:45", character: "arjun", event: "a3_priya_out", setFlag: "priya_out_d3", passage: "EV_a3_priya_out" },
-    { day: 3, time: "19:30", character: "arjun", event: "a3_swapback_call", setFlag: "swap_back_ready", passage: "EV_a3_swapback_reminder_a" },
+    { day: 3, time: "13:45", character: "arjun", event: "a3_meera_wa", passage: "EV_a3_meera_wa" },
+    { day: 3, time: "13:15", character: "arjun", event: "a3_priya_out", setFlag: "priya_out_d3", passage: "EV_a3_priya_out" },
+    { day: 3, time: "16:45", character: "arjun", event: "a3_swapback_call", setFlag: "swap_back_ready", passage: "EV_a3_swapback_reminder_a" },
     { day: 3, time: "11:00", character: "kavya", event: "k3_pooja_wa", passage: "EV_a3_pooja_wa" },
-    { day: 3, time: "14:00", character: "kavya", event: "k3_aai_call", passage: "EV_a3_aai_call" },
-    { day: 3, time: "17:15", character: "kavya", event: "k3_rohit_gym", setFlag: "rohit_at_gym_d3", passage: "EV_a3_rohit_gym" },
-    { day: 3, time: "19:30", character: "kavya", event: "k3_swapback_call", setFlag: "swap_back_ready", passage: "EV_a3_swapback_reminder_k" }
+    { day: 3, time: "13:30", character: "kavya", event: "k3_aai_call", passage: "EV_a3_aai_call" },
+    { day: 3, time: "14:15", character: "kavya", event: "k3_rohit_gym", setFlag: "rohit_at_gym_d3", passage: "EV_a3_rohit_gym" },
+    { day: 3, time: "16:45", character: "kavya", event: "k3_swapback_call", setFlag: "swap_back_ready", passage: "EV_a3_swapback_reminder_k" }
   );
 
   /* ---- NAMES / IMAGES ---- */

@@ -263,7 +263,7 @@ You tell her about the formalin, about Priya, about the fourteen hand-washes.
 
 :: meera_terrace_d3
 <div class="intimate"><span class="tag">Intimate · choice</span>
-<<img "room_304_arjun_pov.png" "the terrace, evening light">>
+<<img "room_304_arjun_pov.png" "the terrace, afternoon light">>
 Alone. Finally. Under the sky, in a body she doesn't recognise but eyes she does.
 
 Her thumb traces your jaw   Kavya's jaw, softer, rounder. Your breath catches, Kavya's smaller lungs managing less air. Six months you've imagined this, except in every imagination you were in your own body, your own height, your own lips.
@@ -314,7 +314,7 @@ You don't lean in. You put your forehead against hers instead. Her hand finds Ka
 
 "She'd hate that."
 
-You sit like that until the light goes. Her head on your shoulder. Your small arms around her. Six months, and this is enough.
+You sit like that until you have to leave for the temple. Her head on your shoulder. Your small arms around her. Six months, and this is enough.
 </div>\
 <<run setup.flag("meera_terrace_done_d3")>>\
 <<run setup.stat("rel_arjun_meera", 5, "arjun")>>

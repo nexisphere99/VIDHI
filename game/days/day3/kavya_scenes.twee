@@ -122,12 +122,12 @@ You sit through the whole ninety minutes with your hand twitching in your lap, a
 
 :: kavya_evening_coding_d3
 <div class="intimate"><span class="tag">Intimate marker · first erection</span>
-<<img "kavya_coding_joy.png" "PG room, 5:35 PM">>
-Rohit's gone. Door locked. VS Code open. The flow state arrives in ninety seconds   a record. On the Redmi it takes ten minutes of buffering and frustration.
+<<img "kavya_coding_joy.png" "PG room, early afternoon">>
+Rohit's left for the gym. Door locked. VS Code open, and a hard stop at 5   you ride for the temple then, no negotiation. The flow state arrives in ninety seconds   a record. On the Redmi it takes ten minutes of buffering and frustration.
 
 You create the project: <code>ml-medical-imaging</code>. A CNN to classify chest X-rays. Data pipeline first. Then the model   ResNet backbone, custom head, dropout for regularisation. The code pours. Function after function. Arjun's fingers dance and the mechanical switches click and the sound is a percussion section playing to the rhythm of creation.
 
-And then, around 5:35, something else happens.
+And then, maybe an hour in, something else happens.
 
 You become aware of a sensation between your legs. A warmth. A thickening. The penis   soft, resting, unremarkable for twelve hours   is changing. Growing. Not suddenly; gradually, like a slow boot sequence, blood filling tissue in increments. You feel each one. It lifts from its resting position and presses, insistently, against the inside of the jeans.
 
@@ -141,7 +141,7 @@ Four minutes. The blood retreats, the tissue softens, the penis returns to rest 
 
 //This happens to boys randomly? Regularly? Without warning? How do they attend lectures? How do they ride motorcycles?//
 
-You file it under //male biology, subcategory: design flaws// and keep coding. By 7:30 the project has a functional training pipeline, evaluation metrics, and documentation. More clean deployable code in one afternoon than three months on a phone. Your eyes sting. One tear   Arjun's single, bureaucratic tear   escapes.
+You file it under //male biology, subcategory: design flaws// and keep coding. By the time you have to stop and go, the project has a functional training pipeline, evaluation metrics, and documentation   more clean deployable code in one afternoon than three months on a phone. Your eyes sting. One tear   Arjun's single, bureaucratic tear   escapes.
 </div>\
 <<run setup.flag("real_coding_done")>>\
 <<run setup.flag("kavya_first_erection_d3")>>\
@@ -163,7 +163,7 @@ You build the medical-imaging classifier you've been carrying around in your hea
 
 One tear escapes. You wipe it with the back of a hand that's bigger than your face used to be.
 
-<div class="thought kavya">You will lose this at 8 PM. You know that. You're doing it anyway, as hard and as fast as you can, because a thing you did once is a thing you did.</div>
+<div class="thought kavya">You lose this at half past five. You know that. You're doing it anyway, as hard and as fast as you can, because a thing you did once is a thing you did.</div>
 </div>\
 <<run setup.flag("real_coding_done")>>\
 <<run setup.discover("what your work feels like on real hardware", "kavya")>>\
@@ -184,7 +184,7 @@ You dress in the dark you know by heart. The maroon salwar kameez   Papa-approve
 
 "Then don't try. Just be here at six, in your own bed, pretending to wake up." You squeeze her foot through the blanket.
 
-<div class="thought kavya">Twelve hours from now a boy will be standing in this room wearing this body, and Priya will be watching him. Leave the room the way Kavya leaves it. Straight back. Annoyed face. Go.</div>
+<div class="thought kavya">Few hours from now a boy will be standing in this room wearing this body, and Priya will be watching him. Leave the room the way Kavya leaves it. Straight back. Annoyed face. Go.</div>
 
 You slip your feet into your chappals at the door and ease it shut on its hinge, the one spot that doesn't creak.
 </div>

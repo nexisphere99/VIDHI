@@ -1531,7 +1531,11 @@ setup.imgDir = {
   "Marine_Drive_Green_Dupatta.png": "scenes/common",
   "Cultural_Fest_Backstage_Green_Silk_Saree.png": "scenes/common",
   "Bharatanatyam_Video_Locked_Folder_Thumbnail.png": "scenes/common",
-  "arjun_looking_at_screen.png": "scenes/common"
+  "arjun_looking_at_screen.png": "scenes/common",
+  "arjun_room_mirror.png": "scenes/common", "arjun_bathroom_mirror.png": "scenes/common",
+  "arjun_get_dressed.png": "scenes/common", "arjun_dbms_notebook.png": "scenes/common",
+  "katraj_window_view.png": "scenes/common", "arjun_brush_teeth.png": "scenes/common",
+  "arjun_urinal.png": "scenes/common", "arjun_shave.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

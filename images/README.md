@@ -28,7 +28,7 @@ images/
 │
 ├── locations/                      ← reused every day
 │   ├── katraj_pg_room.png          IMG-010
-│   ├── pg_bathroom.png             (no prompt yet   generate one)
+│   ├── pg_bathroom.png             IMG-021
 │   ├── tapri_chai.png              IMG-011
 │   ├── vit_gate.png                IMG-012
 │   ├── vit_lecture_hall.png        IMG-013
@@ -65,7 +65,15 @@ images/
         ├── Marine_Drive_Green_Dupatta.png                  IMG-050  (PH_arjun_gallery)
         ├── Cultural_Fest_Backstage_Green_Silk_Saree.png    IMG-051  (PH_arjun_gallery)
         ├── Bharatanatyam_Video_Locked_Folder_Thumbnail.png IMG-052  (PH_arjun_gallery)
-        └── arjun_looking_at_screen.png                     IMG-053  (laptop_interaction)
+        ├── arjun_looking_at_screen.png                     IMG-053  (laptop_interaction)
+        ├── arjun_room_mirror.png                           IMG-054  (arjun_mirror_scene)
+        ├── arjun_bathroom_mirror.png                       IMG-055  (arjun_bathroom_mirror)
+        ├── arjun_get_dressed.png                           IMG-056  (clothing_choice)
+        ├── arjun_dbms_notebook.png                         IMG-057  (dbms_status)
+        ├── katraj_window_view.png                          IMG-058  (katraj_morning_view)
+        ├── arjun_brush_teeth.png                           IMG-059  (morning_routine)
+        ├── arjun_urinal.png                                IMG-060  (arjun_pee_day1)
+        └── arjun_shave.png                                 IMG-061  (shaving_scene)
 ```
 
 ## Recommended specs

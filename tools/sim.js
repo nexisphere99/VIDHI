@@ -103,7 +103,7 @@ const EFFECTS = {
   EV_a2_unknown_call: () => { setup.flag("arjun_morning_d2"); setup.flag("arjun_received_call"); },
   EV_a2_unknown_call_answer: () => setup.flag("arjun_received_call"),
   EV_a2_aai_call: () => setup.flag("sunday_decision_made"),
-  EV_a2_full_call: () => setup.flag("full_briefing_done"),
+  EV_a2_callback: () => { setup.flag("arjun_briefed"); setup.flag("full_briefing_done"); },
   arjun_shower_d2: () => setup.flag("arjun_morning_d2"),
   os_lecture_d2: () => { setup.flag("os_lecture_done"); setup.flag("vit_day_survived_d2"); },
   nikhil_canteen_d2: () => { setup.flag("os_lecture_done"); setup.flag("icpc_agreed"); },
@@ -284,7 +284,7 @@ console.log("\n--- Arjun Day 2 ---");
 pov("arjun");
 go("pg_bathroom"); use("a2_shower");            // arjun_morning_d2
 assertObj("a2_obj_morning");
-wait(7 * 60 + 55); drainEvents();               // 07:50 unknown call
+wait(8 * 60 + 5); drainEvents();                // 08:00 morning call (Kavya + Meera)
 assertObj("a2_obj_call");
 use("a2_stress_pee");
 go("katraj_pg_room"); use("a2_rohit_morning");
@@ -300,14 +300,14 @@ go("vit_canteen"); use("a2_nikhil_icpc");        // icpc_agreed
 drainEvents();
 go("vit_gate"); go("katraj_street");
 wait(16 * 60 + 30);
-go("pataleshwar_temple"); use("temple_priest");  // visited_pataleshwar
+go("pataleshwar_temple"); use("temple_priest");  // visited_pataleshwar (afternoon recon)
 go("jm_road"); use("jm_bookshop");               // skiena_bought
 go("katraj_street"); go("katraj_pg_room");
+wait(21 * 60 + 15); drainEvents();               // 21:15 callback -> arjun_briefed
 use("a2_alarm"); use("a2_wardrobe");             // preparation_complete
 assertObj("a2_obj_prep");
-wait(18 * 60 + 5); use("a2_rohit_choice");
-wait(21 * 60); drainEvents();                    // 21:00 full call + aai
-wait(22 * 60);
+use("a2_rohit_choice");
+wait(21 * 60 + 45);
 use("a2_night");
 setup.flag("arjun_day2_complete");
 ["a2_obj_morning","a2_obj_call","a2_obj_vit","a2_obj_prep","a2_obj_night"].forEach(assertObj);

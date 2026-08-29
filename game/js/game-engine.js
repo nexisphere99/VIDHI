@@ -2170,10 +2170,10 @@ setup.phoneTab = function (which, tab) {
   ]);
   add("arjun", "katraj_pg_room", [
     { id: "a2_rohit_morning", action: "Talk to Rohit (he's studying you)", triggers: "rohit_reads_change_d2", dayOnly: 2, unlockCondition: "arjun_received_call", quest: "side" },
-    { id: "a2_alarm", action: "Set the alarm for 4 AM", triggers: "arjun_set_alarm_d2", dayOnly: 2, unlockCondition: "vit_day_survived_d2 AND time >= 16:00", quest: "main" },
-    { id: "a2_wardrobe", action: "Choose tomorrow's outfit", triggers: "arjun_wardrobe_d2", dayOnly: 2, unlockCondition: "vit_day_survived_d2 AND time >= 16:00", quest: "main" },
-    { id: "a2_rohit_choice", action: "Rohit wants the truth   decide", triggers: "rohit_choice_d2", dayOnly: 2, unlockCondition: "alarm_set_4am AND time >= 18:00", quest: "side" },
-    { id: "a2_night", action: "Lie down. The longest night.", triggers: "arjun_night_d2", dayOnly: 2, unlockCondition: "preparation_complete AND time >= 22:00 AND not arjun_day2_complete", quest: "main" }
+    { id: "a2_alarm", action: "Set the alarm for 4 AM", triggers: "arjun_set_alarm_d2", dayOnly: 2, unlockCondition: "arjun_briefed", quest: "main" },
+    { id: "a2_wardrobe", action: "Choose tomorrow's outfit", triggers: "arjun_wardrobe_d2", dayOnly: 2, unlockCondition: "arjun_briefed", quest: "main" },
+    { id: "a2_rohit_choice", action: "Rohit wants the truth   decide", triggers: "rohit_choice_d2", dayOnly: 2, unlockCondition: "alarm_set_4am", quest: "side" },
+    { id: "a2_night", action: "Lie down. The longest night.", triggers: "arjun_night_d2", dayOnly: 2, unlockCondition: "preparation_complete AND time >= 21:45 AND not arjun_day2_complete", quest: "main" }
   ]);
   add("arjun", "tapri_chai", [
     { id: "a2_raju_followup", action: "Collect your free chai from Raju", triggers: "raju_followup_d2", dayOnly: 2, unlockCondition: "raju_phone_fixed", quest: "side" }
@@ -2268,16 +2268,16 @@ setup.phoneTab = function (which, tab) {
         who: "Prof. Desai; Rohit and Nikhil in the room.",
         how: "Ride to VIT (Pulsar keys), show ID at the gate, go to C-Block, sit the lecture. Kill time first at the tapri, canteen, gym or general store." } },
     { id: "a2_obj_prep", title: "Prepare for 5 AM", pov: "arjun", day: 2,
-      description: "Set the alarm. Choose what to wear. Scout the temple if you can. Tomorrow you leave your body.",
-      unlockCondition: "vit_day_survived_d2 AND time >= 16:00", completionTrigger: "preparation_complete",
-      lockNote: "Unlocks after the VIT day, from 4:00 PM.",
-      hint: { where: "Your PG room   'Set the alarm' and 'Choose tomorrow's outfit'. Optional: ride to Pataleshwar to scout it.",
-        when: "Evening, after 4 PM.", who: "Rohit will notice the alarm and the shirt.",
-        how: "Both room actions (alarm + outfit) are required. Scouting the temple (a side quest) makes tomorrow smoother but isn't mandatory." } },
+      description: "The 9:15 call laid out the whole impossible thing. Set the alarm. Choose what to wear. Scout the temple if you did it earlier. Tomorrow you leave your body.",
+      unlockCondition: "arjun_briefed", completionTrigger: "preparation_complete",
+      lockNote: "Unlocks after the callback at 9:15 PM, once Kavya and Meera explain the plan.",
+      hint: { where: "Your PG room   'Set the alarm' and 'Choose tomorrow's outfit'.",
+        when: "Late evening, after the 9:15 PM callback.", who: "Rohit will notice the alarm and the shirt.",
+        how: "Both room actions (alarm + outfit) are required. Scouting Pataleshwar earlier (side quest, from 4 PM) makes tomorrow smoother but isn't mandatory." } },
     { id: "a2_obj_night", title: "The longest night", pov: "arjun", day: 2,
       description: "Lie in bed. Do not sleep well. Carry the wanting into tomorrow.",
-      unlockCondition: "preparation_complete AND time >= 22:00", completionTrigger: "arjun_day2_complete",
-      lockNote: "Unlocks once you've prepped and it's past 10 PM.",
+      unlockCondition: "preparation_complete AND time >= 21:45", completionTrigger: "arjun_day2_complete",
+      lockNote: "Unlocks once the alarm and outfit are set, late in the night.",
       hint: { where: "Your PG room → 'Lie down. The longest night.'", when: "After 10 PM.",
         who: "Rohit, asleep by 10:45.", how: "This closes Arjun's Day 2. There's a choice in it about how you spend the last hour." } }
   );
@@ -2424,11 +2424,11 @@ setup.phoneTab = function (which, tab) {
 
   /* ---- DAY 2 TIMED EVENTS ---- */
   setup.timedEvents.push(
-    { day: 2, time: "07:50", character: "arjun", event: "a2_unknown_call", passage: "EV_a2_unknown_call" },
+    { day: 2, time: "08:00", character: "arjun", event: "a2_unknown_call", passage: "EV_a2_unknown_call" },
     { day: 2, time: "13:30", character: "arjun", event: "a2_pooja_whatsapp", passage: "EV_a2_pooja_whatsapp" },
     { day: 2, time: "17:30", character: "arjun", event: "a2_sunset_energy", passage: "EV_a2_sunset_energy" },
     { day: 2, time: "18:30", character: "arjun", event: "a2_aai_call", passage: "EV_a2_aai_call" },
-    { day: 2, time: "21:00", character: "arjun", event: "a2_full_call", passage: "EV_a2_full_call" },
+    { day: 2, time: "21:15", character: "arjun", event: "a2_callback", passage: "EV_a2_callback" },
     { day: 2, time: "07:00", character: "kavya", event: "a2_priya_class", setFlag: "priya_left_for_class", passage: "EV_a2_priya_class" },
     { day: 2, time: "09:30", character: "kavya", event: "a2_papa_whatsapp", passage: "EV_a2_papa_whatsapp" },
     { day: 2, time: "14:00", character: "kavya", event: "a2_github_issue", passage: "EV_a2_github_issue" },

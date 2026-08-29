@@ -18,9 +18,9 @@
 :: EV_a2_unknown_call
 <<img "arjun_call_bathroom.png" "The bathroom call">>
 <<run setup.flag("arjun_morning_d2")>>
-You're at the sink, toothbrush in your mouth, foam on your chin, when the phone buzzes on the shelf. Unknown number.
+You're at the sink, toothbrush in your mouth, foam on your chin, when the phone buzzes on the shelf. Unknown number. 8:00 AM.
 
-Your thumb hovers over the red button. Insurance scams, political robocalls, the gym guy who won't stop with the 6 AM motivational forwards. None of it deserves your attention at 7:50.
+Your thumb hovers over the red button. Insurance scams, political robocalls, the gym guy who won't stop with the 6 AM motivational forwards. None of it deserves your attention this early.
 
 <div class="choices">
 <div class="q">The phone is still buzzing</div>
@@ -38,27 +38,35 @@ It stops. Ten seconds of silence. Then it buzzes again — same number. Some ver
 
 
 :: EV_a2_unknown_call_answer
-<div class="dialogue">"Arjun, yeh Kavya hai. Meera ki roommate."<span class="gloss-en">Arjun, this is Kavya. Meera's roommate.</span></div>
+<div class="dialogue">"Arjun, yeh Kavya hai. Meera ki roommate. Room 304."<span class="gloss-en">Arjun, this is Kavya. Meera's roommate. Room 304.</span></div>
 
 The toothbrush drops from your mouth. It hits the steel basin with a clang like a starter pistol. Foam drips down your chin onto your bare chest. You don't wipe it.
 
 "Kavya? How   how did you get my number?"
 
-<div class="dialogue">"Meera had it memorized. Listen   she needs to talk to you. Not on phone. In person. We have a way."</div>
+<div class="dialogue">"Meera memorised it. Don't talk, just listen   we don't have long before Priya's back."</div>
 
-Four words. //We have a way.// Your heart doesn't beat   it detonates. Blood rushes to your head so fast your vision fogs. Your knees go liquid. You sit down, right there on the bathroom floor, tiles cold against the backs of your thighs.
+A shuffle on the line. A held breath. Then a second voice, low, careful, six months out of reach:
 
-"Kaise? Colonel ke log har jagah hain."<span class="gloss-en">How? The Colonel's people are everywhere.</span>
+<div class="dialogue">"Arjun." Just your name. Meera's mouth around it. "There might be a way. To see each other. To be   together. Kavya found something."</div>
 
-<div class="dialogue">"Trust me. It's not a normal way. It's complicated. Can you come to Pataleshwar temple tomorrow morning? 5 AM. Don't tell anyone. Not even Rohit. And Arjun   keep an open mind. What I'm going to tell you will sound insane."</div>
+Your heart doesn't beat   it detonates. Blood rushes to your head so fast your vision fogs. Your knees go liquid. You sit down, right there on the bathroom floor, tiles cold against the backs of your thighs.
 
-Click. The line dies. Call duration: 1:47. The time it took to tear open the sealed envelope of your life and let light flood in.
+"Kya? Kaise?"<span class="gloss-en">What? How?</span>
 
-Meera. After six months. A way.
+<div class="dialogue">Kavya again, clipped: "Not on a phone. And not yet   we're still working out whether it even holds. Give us today. Keep tonight free, after 8:15   we'll call you back and explain all of it."</div>
+
+<div class="dialogue">"And Arjun   tomorrow, 5 AM, Pataleshwar temple. Bring your bike. Tell Rohit nothing. Come with an open mind, because what Kavya's going to describe tonight is going to sound completely insane."</div>
+
+Meera, one more time, almost too quiet to catch: //"Bas kal tak."// Just until tomorrow.
+
+Click. Call duration: 2:11. The time it took to tear open the sealed envelope of your life and let light flood in.
+
+Six months. A way. Tonight, after 8:15. Tomorrow, 5 AM.
 
 <<run setup.flag("arjun_received_call")>>
-<<run setup.stat("rel_arjun_kavya", 5, "arjun")>>
-<<run setup.stat("rel_arjun_meera", 2, "arjun")>>
+<<run setup.stat("rel_arjun_kavya", 4, "arjun")>>
+<<run setup.stat("rel_arjun_meera", 3, "arjun")>>
 <<hubreturn>>
 
 
@@ -125,59 +133,25 @@ She doesn't push. Which is somehow worse than if she did.
 <<hubreturn>>
 
 
-:: EV_a2_full_call
-<<if setup.has("full_briefing_done")>>\
-<<img "arjun_anticipation_night.png" "PG room, 9 PM">>
-The phone buzzes. Unknown number   the same one. You already had this call, an hour ago, from her side of it: the manuscript, the ritual, //deha-vinimaya//, the deal you agreed to before your brain caught up.
+:: EV_a2_callback
+<<img "arjun_anticipation_night.png" "PG room, 9:14 PM">>
+Rohit's at the gym   leg day, back no earlier than 10:30. The unknown number lights up again at 9:14, exactly as promised.
 
-You pick up anyway.
+You don't remember picking up. Eleven minutes. Kavya does most of it, in the flat clean voice of someone reading out a lab protocol: a fourteenth-century palm-leaf manuscript, a Sanskrit ritual, a test she ran with Meera last night   ninety seconds in each other's bodies. //Deha-vinimaya.// Body exchange. She says it's real the way you'd say water is wet.
 
-<div class="dialogue">"Just confirming you haven't talked yourself out of it. 5 AM. Pataleshwar. Bring the bike."</div>
+Then the part that stops your breathing: tomorrow it's you and her. You go into the hostel in Kavya's body. She rides your Pulsar to VIT. Meera gets the boyfriend the Colonel took from her. You get   a woman's body for a day, and Meera at the end of it.
 
-"I'll be there."
+"Deal," you hear yourself say, before your brain has finished objecting.
 
-<div class="dialogue">"Sleep if you can. You won't want to, tomorrow, in a body that isn't tired the way you're tired."</div>
+<div class="dialogue">"There are rules   Meera helped write them, you'll get them tomorrow. 5 AM. Pataleshwar. Don't be late, and don't sleep too well. Nothing about tomorrow will feel the way tired feels tonight."</div>
 
-Click. You sit in the dark a while. Tomorrow you leave your body.
+Click. You sit on the floor with your back against the cot, phone still warm in your hand, and try to hold a plan that shouldn't be physically possible. By sunrise you will not be in this body.
 
-<<run setup.stat("rel_arjun_kavya", 2, "arjun")>>
-<<hubreturn>>
-<<else>>\
-<<img "arjun_anticipation_night.png" "PG room, 9 PM">>
-Rohit's at the gym   leg day, so he won't be back before 10:30. The phone buzzes. Unknown number. Same one.
-
-You pick up before the first ring completes.
-
-<div class="dialogue">"I'm going to explain something and you're going to think I'm pagal. Don't interrupt."</div>
-
-She talks for eleven minutes. A manuscript   palm-leaf, fourteenth century, Sanskrit. A ritual. A swap   //deha-vinimaya.// She tells you she swapped with Meera. That she was in Meera's body for ninety seconds. That it's real.
-
-<div class="dialogue">"You swap with me. You come into the hostel in my body. Meera gets to be with you. I go out in your body   to VIT. To your CS classes."</div>
-
-The room spins   the actual room, the Maggi tower and the wobbling fan, all of it rotating around an axis through the centre of your skull.
-
-"You want me to be in a woman's body."
-
-<div class="dialogue">"A woman's body, yes, with all the associated equipment. I'm aware. And you would attend my lectures, sleep in my bed, use my bathroom. And I'd have yours   and ride your Pulsar."</div>
-
-"The Pulsar has a manual clutch. It'll throw you."
-
-<div class="dialogue">"Then teach me before the swap."</div>
-
-"Deal." The word is out before your brain approves it.
-
-<div class="dialogue">"We have rules. Your girlfriend helped write them. You will respect my body."</div>
-
-"I will."
-
-<div class="dialogue">"5 AM. Pataleshwar. Don't be late."</div>
-
-She hangs up. For the second time today you sit in the aftermath of a Kavya Iyer phone call feeling like the floor has been replaced with open sky. Tomorrow you leave your body.
-
+<<run setup.flag("arjun_briefed")>>
 <<run setup.flag("full_briefing_done")>>
 <<run setup.stat("rel_arjun_kavya", 5, "arjun")>>
+<<run setup.stat("rel_arjun_meera", 2, "arjun")>>
 <<hubreturn>>
-<</if>>
 
 
 :: EV_a2_priya_class

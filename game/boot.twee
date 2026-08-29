@@ -172,6 +172,7 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<else>><<link "📱 Samsung">><<run setup.openPhone("samsung")>><</link>>\
 <<if setup.hasItem("redmi_phone")>><<link "🔒 Redmi">><<run setup.openPhone("redmi")>><</link>><</if>>\
 <</if>>\
+<<link "🗺 Places">><<run setup.openLocationGuide()>><</link>>\
 <<link "？ Help">><<run setup.openHelp()>><</link>>\
 </span>
 

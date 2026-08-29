@@ -83,6 +83,7 @@ The door closes. Her footsteps recede down the corridor.
 <<run setup.flag("test_swap_complete")>>
 <span class="scene-break"></span>
 
+<<img "kavya_final_beat.png" "“Tonight, Kavya.”">>
 **End of Day 1   Kavya.**
 <div class="thought kavya">Coding <<= $stats.k_coding>> · Medical <<= $stats.k_med>> · Rel Meera <<= $stats.rel_kavya_meera>> · Trust (swap) <<= $stats.trust_meera>> · ₹<<= setup.money("kavya")>> · Mood: <<= $mood.kavya>> · Swap experienced: yes</div>
 

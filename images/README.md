@@ -41,7 +41,10 @@ images/
 │   ├── hostel_mess.png             IMG-020
 │   ├── kothrud_home.png            IMG-039
 │   ├── katraj_snake_park.png       IMG-022
-│   └── sinhagad_road.png           IMG-023
+│   ├── sinhagad_road.png           IMG-023
+│   ├── bj_library.png              IMG-024
+│   ├── hostel_common_room.png      IMG-025
+│   └── hostel_entrance.png         IMG-026
 │
 ├── objects/                        ← interactive-object sprites (none wired yet)
 │
@@ -104,7 +107,44 @@ images/
         ├── kothrud_papa_livingroom.png   IMG-104  (suresh_interaction)
         ├── kothrud_pooja_sofa.png        IMG-105  (pooja_interaction)
         ├── kothrud_family_meal.png       IMG-106  (home_meal_scene)
-        └── kothrud_old_bedroom.png       IMG-107  (arjun_childhood_room)
+        ├── kothrud_old_bedroom.png       IMG-107  (arjun_childhood_room)
+        │
+        │   ── Kavya's path ──
+        ├── kavya_room_mirror.png         IMG-120  (kavya_mirror_scene)
+        ├── kavya_bathroom_mirror.png     IMG-121  (kavya_bathroom_mirror)
+        ├── kavya_window_view.png         IMG-122  (hostel_window_view)
+        ├── kavya_cupboard.png            IMG-123  (kavya_cupboard)
+        ├── kavya_hidden_compartment.png  IMG-124  (secret_clothes_stash)
+        ├── kavya_study_desk.png          IMG-125  (kavya_study_options)
+        ├── kavya_meera_observation.png   IMG-126  (meera_observation)
+        ├── kavya_priya_wakeup.png        IMG-127  (priya_status_check)
+        ├── kavya_after_shower.png        IMG-128  (morning_wash)
+        ├── kavya_toilet.png              IMG-129  (kavya_pee_day1)
+        ├── kavya_period_check.png        IMG-130  (kavya_period_check_day1)
+        ├── kavya_handwash.png            IMG-131  (handwash_scene)
+        ├── kavya_hostel_notices.png      IMG-132  (hostel_notices)
+        ├── kavya_corridor_water.png      IMG-133  (corridor_water)
+        ├── kavya_sneha_visit.png         IMG-134  (sneha_room_visit)
+        ├── kavya_tonight_breakfast.png   IMG-135  (mess_corner_scene)
+        ├── kavya_meera_mess_seat.png     IMG-136  (mess_meera_conversation)
+        ├── hostel_wifi.png               IMG-137  (wifi_check)
+        ├── kavya_horoscope.png           IMG-138  (magazine_browse)
+        ├── hostel_landline.png           IMG-139  (hostel_landline)
+        ├── kavya_signout_register.png    IMG-140  (hostel_sign_out)
+        ├── kavya_chowkidar.png           IMG-141  (chowkidar_interaction)
+        ├── kavya_campus_bench.png        IMG-142  (campus_bench_rest)
+        ├── bj_bookstore.png              IMG-143  (bookstore_scene)
+        ├── kavya_anatomy_wash.png        IMG-144  (anatomy_wash)
+        ├── kavya_meera_note.png          IMG-145  (note_passing_anatomy)
+        ├── kavya_sharma_quiz.png         IMG-146  (dr_sharma_quiz_scene)
+        ├── kavya_expertise.png           IMG-147  (library_study)
+        ├── bj_library_basement.png       IMG-148  (rare_books_section)
+        ├── kavya_kulkarni_library.png    IMG-149  (librarian_npc)
+        ├── kavya_cs229_lecture.png       IMG-150  (library_computer_coding)
+        ├── kavya_canteen_corner.png      IMG-151  (canteen_phone_coding)
+        ├── kavya_teaching_sneha.png      IMG-152  (dosage_build_scene)
+        ├── kavya_priya_instagram.png     IMG-153  (priya_instagram_scene)
+        └── kavya_final_beat.png          IMG-154  (KavyaDayEnd)
 ```
 
 ## Recommended specs

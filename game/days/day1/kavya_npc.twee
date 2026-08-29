@@ -1,4 +1,5 @@
 :: sneha_room_visit
+<<img "kavya_sneha_visit.png" "Sneha asks for pharma help">>
 <<if setup.has("sneha_helped")>>\
 Sneha opens 302 with her Redmi already showing your dosage app. "Yeh app ko patent kara le. Seriously."<span class="gloss-en">Get this app patented. Seriously.</span>
 <<hubreturn>>
@@ -21,6 +22,7 @@ An idea detonates. //Give me an hour.//
 
 
 :: dosage_build_scene
+<<img "kavya_teaching_sneha.png" "Kavya teaching Sneha — the idea begins">>
 <<if setup.has("dosage_app_built")>>\
 The app is live on a Netlify subdomain. Sneha has already sent it to half of Section B. Nobody has asked how a medical student built it.
 <<hubreturn>>
@@ -39,6 +41,7 @@ You slide the Redmi back under the mattress.
 
 
 :: priya_instagram_scene
+<<img "kavya_priya_instagram.png" "Priya, scrolling and watching">>
 <<if setup.has("priya_photos_taken")>>\
 Priya is still editing. "Kavya, thoda aur warm tone?<span class="gloss-en">Kavya, a bit more warm tone?</span> ...actually theek hai.<span class="gloss-en">...actually it's fine.</span> Thanks, you're the BEST." She means it, in the way she means everything, for about a minute.
 <<hubreturn>>
@@ -139,6 +142,7 @@ The shop sells cheap phones and repairs screens   the same shop, probably, where
 
 
 :: hostel_landline
+<<img "hostel_landline.png" "the entrance landline">>
 The entrance landline, in full view of the chowkidar and the sign-out register. You could call home. You could call Sneha. You cannot call anyone who matters without an audience. You don't pick it up.
 
 <<hubreturn>>
@@ -158,12 +162,14 @@ You take the quiet corner sofa, the one with springs that still work, and get tw
 
 
 :: wifi_check
+<<img "hostel_wifi.png" "two bars, in the corner">>
 The router lives here, which is why the room is always full. Two bars in the corner. Enough for WhatsApp. Not enough for a git push   that's a terrace job, or a library-computer job.
 
 <<hubreturn>>
 
 
 :: magazine_browse
+<<img "kavya_horoscope.png" "the horoscope page">>
 A stack of six-month-old //Femina// and //Reader's Digest// and one //Competition Success Review// nobody has ever opened. You read a horoscope. It says a period of transformation is beginning. For once the horoscope is not wrong.
 
 <<hubreturn>>

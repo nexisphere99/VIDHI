@@ -1530,7 +1530,8 @@ setup.imgDir = {
   /* cross-day / non-day-specific art -> images/scenes/common/ */
   "Marine_Drive_Green_Dupatta.png": "scenes/common",
   "Cultural_Fest_Backstage_Green_Silk_Saree.png": "scenes/common",
-  "Bharatanatyam_Video_Locked_Folder_Thumbnail.png": "scenes/common"
+  "Bharatanatyam_Video_Locked_Folder_Thumbnail.png": "scenes/common",
+  "arjun_looking_at_screen.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

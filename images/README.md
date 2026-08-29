@@ -64,7 +64,8 @@ images/
     └── common/                     ← not tied to one day (memories, flashbacks)
         ├── Marine_Drive_Green_Dupatta.png                  IMG-050  (PH_arjun_gallery)
         ├── Cultural_Fest_Backstage_Green_Silk_Saree.png    IMG-051  (PH_arjun_gallery)
-        └── Bharatanatyam_Video_Locked_Folder_Thumbnail.png IMG-052  (PH_arjun_gallery)
+        ├── Bharatanatyam_Video_Locked_Folder_Thumbnail.png IMG-052  (PH_arjun_gallery)
+        └── arjun_looking_at_screen.png                     IMG-053  (laptop_interaction)
 ```
 
 ## Recommended specs

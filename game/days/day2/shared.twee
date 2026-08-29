@@ -233,13 +233,7 @@ Priya bursts back from her jog sweating and vibrating with narrative. Something 
 
 <p class="lede">Side quests: <<= $sideDiscovered.length>> discovered. Swaps so far: <<= $swapCount>> · barrier <<= $barrierIntegrity>>%.<br>Intel carried forward: <<= setup.has("kitchen_route_detailed") ? "kitchen route mapped · " : "">>temple <<= setup.has("temple_scouted") ? "scouted" : "not scouted">>. The Colonel visits Sunday.</p>
 
-<p class="lede"><b>This build covers Days 1–2.</b> Day 3   the swap itself, the first hours in the wrong body, the bra, the Pulsar   begins beyond it.</p>
-
-<div class="version-note">
-<p class="lede"><b>This is the end of the version 0.2 content.</b></p>
-<p class="lede">Thank you for playing VIDHI. If you'd like to see more of this story   or just support the work   you can back the project on Patreon:</p>
-<p class="lede"><a href="https://www.patreon.com/c/vidhidevs" target="_blank" rel="noopener">patreon.com/c/vidhidevs</a></p>
-</div>
+<p class="lede">Tomorrow you wake at 4 AM and drive to a temple to stop being yourself for a day.</p>
 
 <div class="start-btn">
 <<link "Keep exploring Day 2">><<goto "Hub">><</link>>
@@ -248,13 +242,3 @@ Priya bursts back from her jog sweating and vibrating with narrative. Something 
 </div>
 
 
-:: Day3Start [nobr]
-<div class="title-screen">
-<div class="th">तीसरा दिन</div>
-<div class="te">Day 3   the swap</div>
-<p class="lede">Your Day 2 log has been cleared. <b>Day 3 content isn't in this build yet</b>   it opens at 5 AM in the Pataleshwar courtyard, with a brass bell, a red thread, and a boy learning what a bra clasp is from the inside.</p>
-<div class="start-btn">
-<<link "Wander the world (sandbox)">><<goto "Hub">><</link>>
-<<link "Restart from the beginning">><<run UI.restart()>><</link>>
-</div>
-</div>

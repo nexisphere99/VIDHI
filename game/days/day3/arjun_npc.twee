@@ -1,0 +1,312 @@
+:: chowkidar_d3
+Ramesh sits in his booth like a sentry whose war ended thirty years ago. Newspaper folded to the crossword. Thermos. Transistor radio murmuring Marathi news.
+
+He looks up. His eyes do the automated scan of a face that passes him four times a day.
+
+<div class="dialogue">"Good morning, Kavya didi."</div>
+
+Your heart   Kavya's heart, faster RPM   lurches. He said the name. Her name. At you. And his face shows nothing. No squint, no double-take. You're Kavya to him. The disguise is the body itself.
+
+"Good morning," you manage. The vocal cords do the work   the pitch correct, the Tamil undertone in place, the body performing even while the mind screams.
+
+He returns to seven across. You're past.
+
+<<run setup.flag("chowkidar_passed")>>
+<<hubreturn>>
+
+
+:: signin_d3
+The register on the booth ledge. You pick up the pen and realise, with cold terror, that you have to //write//. Kavya's hand is round and flowing. Yours is engineering block-letters, three years of circuit diagrams.
+
+You write //K. Iyer   6:04 AM// slowly, deliberately, rounding the K, curving the I. The result is passable   not hers, not yours, something in between that could be attributed to morning grogginess.
+
+Ramesh doesn't look at the register. He never does. It's a ritual, not a security measure. You exhale and go in.
+
+<<run setup.flag("entered_hostel_d3")>>
+<<run setup.flag("handwriting_risk_d3")>>
+<<hubreturn>>
+
+
+:: signout_d3
+The register again, going the other way. //K. Iyer   out   0745   college.// Ramesh doesn't look up from eight down. Mrs. Joshi's door is shut. You're out.
+
+<<run setup.flag("signed_out_d3")>>
+<<hubreturn>>
+
+
+:: arjun_corridor_d3
+A girl exits 302 in a towel   wet hair, bare shoulders, the murderous expression of someone denied hot water. "Oye Kavya, bathroom khali hai."
+
+You nearly walk into the wall. Your eyes are physically incapable of not registering: a nearly-naked woman, three feet away, no screen mediating. But the body doesn't respond the way yours would   no rush of blood southward, because there's nowhere for it to rush. Instead: a warmth in the lower abdomen. Diffuse. Confusing.
+
+"Haan, thanks," you manage, walking sideways.
+
+Another girl passes in a thin nightie, braless. "Hi Kavya." Gone.
+
+Kavya wouldn't bat an eye. Three years of shared showers and borrowed bras. The female body is her default, her unremarkable. You keep your eyes forward. Don't look. //Don't look.//
+
+<<run setup.discover("the male gaze, from the other side", "arjun")>>
+<<run setup.stat("fem_comfort", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: sneha_d3
+Sneha's copying notes and talking about a pathology viva at the same time. "Kavya, apoptosis versus necrosis   morphology, quick."
+
+A medical question. In a subject you know nothing about.
+
+"Apoptosis   cell shrinks. Necrosis   cell swells." You're guessing from etymology: //apo//, away, orderly, shrink; //necro//, chaotic, swell.
+
+"Haan, obviously." She writes it down. "You okay? You've been weird-calm all morning."
+
+"Didn't sleep."
+
+<<run setup.stat("fem_comfort", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: meera_reunion_d3
+<div class="intimate"><span class="tag">Reunion</span>
+<<img "meera_reunion.png" "Room 304, six months ending">>
+She's on her bed. White kurta, loose hair, no makeup, exactly like every photo you've memorised except real   three-dimensional, breathing, the kajal slightly smudged from sleep. She's biting her lower lip, a nervous habit photos don't capture.
+
+<div class="dialogue">"Arjun?"</div>
+
+You nod. Kavya's throat has sealed shut.
+
+Then the tears come   fast, faster than any tears you've ever produced. Your male body needs a buildup, an emotional levy overtopping. Kavya's body has no delay. The emotion registers and the ducts respond instantly.
+
+"Main yahan hoon," you say. The words crack in the middle.
+
+And then you're holding each other   your small arms around her back, her face in Kavya's hair. Six months of absence compressed into a collision of borrowed skin and real souls. You're shorter now; your face presses to her shoulder instead of the top of her head. The geometry has inverted. She's holding //you//.
+
+<div class="dialogue">"Your eyes." Her hands cup Kavya's face, the beauty mark under her thumb. "The rest is Kavya but the eyes   that's Arjun."</div>
+
+She looks into Kavya's dark eyes and sees you. Love doesn't follow the rules of optics.
+
+Ten minutes. Priya's alarm hasn't gone off yet.
+</div>
+
+<<run setup.flag("meera_reunion_d3")>>
+<<run setup.stat("rel_arjun_meera", 10, "arjun")>>
+<<run setup.stat("fem_comfort", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: manuscript_organize_d3
+Meera spreads the palm leaves in sequence on her bed. Her translation notebook   Sanskrit to Hindi, English annotations, dancer's penmanship.
+
+"This reads like a system architecture document," you say. "The ritual section's the API. The theory's the documentation. And the warnings   "
+
+<div class="dialogue">"The warnings are the error-handling."</div>
+
+You grin. Kavya's grin, which you're told is rare and worth seeing. Two hours. Sections numbered, cross-referenced, warnings in red ink. The intersection of her Sanskrit and your systems thinking.
+
+<div class="dialogue">"You're different in her body. Softer. When you look at me, Kavya looks at me like a friend she's protecting. You look at me like I'm the only thing in the room."</div>
+
+"You are."
+
+She kisses your forehead. You feel it everywhere.
+
+<<run setup.flag("manuscript_organized_d3")>>
+<<run setup.stat("rel_arjun_meera", 5, "arjun")>>
+<<run setup.stat("trust_meera", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: meera_afternoon_d3
+<div class="intimate"><span class="tag">Intimate</span>
+You sit cross-legged on Meera's bed, facing each other   the ritual position without kumkum or thread. She takes both your hands. Kavya's hands are almost the same size as hers; yours would have engulfed them. This is closer. More equal.
+
+<div class="dialogue">"How does it feel? All of it."</div>
+
+"Heavy. Everything is softer   the air, the bed, my skin. More detail, more sensation per square inch. And these   " you glance down. "They never stop being there. How do you //do// this every day?"
+
+<div class="dialogue">"We don't think about it. Like you don't think about yours."</div>
+
+"Had. Past tense."
+
+She reaches forward and touches your cheek. Cool fingers. And the sensation is amplified   Kavya's skin registers touch at a resolution yours doesn't. You feel the whorls of her fingerprints against your cheekbone. Individual. Specific.
+
+<<run setup.flag("meera_afternoon_seen_d3")>>
+<<run setup.stat("rel_arjun_meera", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: priya_room_d3
+Priya's back from the library with pathology and a need to complain. "Kavya, apoptosis aur necrosis mein morphological difference kya hai? Under microscope?"
+
+Deeper than this morning. "Apoptosis mein cell shrink hoti hai   membrane blebbing, nuclear fragmentation. Necrosis mein swell   membrane rupture, inflammation." You're pattern-matching hard now, stitching etymology to the one time Meera explained it.
+
+"Hmm. Makes sense." She writes. Then, not looking up: "Tu aaj bahut alag lag rahi hai. Relaxed. Posture bhi thoda off hai."
+
+You slow down. Right hand. Smaller movements. Less eye contact with Meera. Perform.
+
+<<run setup.stat("priya_suspicion", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: mess_priya_d3
+Priya joins the table with two pieces of bread and jam, phone in one hand, Instagram loaded. She glances at you. "Kavya, tu aaj kuch alag dikh rahi hai."
+
+Your blood turns to ice water. "Kaise alag?" Casual. Level. Kavya's deadpan.
+
+"Tera face relaxed hai. Like kuch accha hua hai." She shrugs. "Or the poha isn't terrible today. Same thing."
+
+Back to Instagram. The moment passes. But //tu aaj alag dikh rahi hai// sits in your gut like swallowed glass. Priya notices things. She was placed here to notice things.
+
+You slow down. Smaller bites. Right hand. Perform. Perform.
+
+<<run setup.stat("priya_suspicion", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: anatomy_horror_d3
+<div class="intimate"><span class="tag">Survival</span>
+<<img "arjun_anatomy_horror.png" "the dissection hall">>
+The formalin hits Kavya's olfactory system like a chemical weapon deployed against civilians. Your male nose endured it in the abstract. This nose //amplifies// it   sharper, more invasive, coating the inside of your nostrils.
+
+You gag. Openly, loudly, doubling forward. Sneha pats your back. "Kavya, teesre saal mein bhi? Tu badal nahi rahi."
+
+You haven't changed. You've been replaced. But the nausea is genuine, and Kavya's zero-latency tear ducts interpret the formalin as emotional stimulus and produce tears at a rate your body reserves for actual grief.
+
+Dr. Sharma: "Thoracic cavity review. Continue your dissections."
+
+You pick up the scalpel. Kavya's hand is steady   the motor cortex remembers this even as your mind recoils. When you stop thinking and let her hand do what it knows, the blade moves with precision along the intercostal space. You understand maybe thirty percent of what you're seeing. Enough to know the stringy white things are nerves.
+
+Meera, three rows ahead, makes a tiny thumbs-up. You return it and feel the breasts shift as you raise your arm. Even a thumbs-up involves breasts in this body. Everything does.
+
+Two hours. You survive them.
+</div>
+
+<<run setup.flag("in_dissection_d3")>>
+<<run setup.flag("anatomy_done_d3")>>
+<<run setup.discover("a female body's competence you don't have the mind for", "arjun")>>
+<<run setup.stat("med_knowledge", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: sharma_handwriting_d3
+Dr. Sharma pauses at your table. Kind eyes, thick glasses, the paternal warmth that makes you want to confess everything.
+
+<div class="dialogue">"Miss Iyer, your notes today are... different. More organised, actually. New pen?"</div>
+
+Organised because you don't understand the content, so you're copying character by character with the deliberation of a calligrapher, instead of Kavya's rapid shorthand.
+
+"New pen, sir. Trying to be more neat." You angle the notebook away   the angle of someone protecting their work, not hiding evidence.
+
+He nods. Studies you one more second   a second that lasts six years   and moves on. You realise Kavya's knuckles are white around the scalpel.
+
+<<run setup.stat("sharma_suspicion", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: specimen_jar_d3
+A crash. Three tables over, a first-year drops a specimen jar. It shatters, formalin-preserved tissue across the stone floor, her face crumbling toward tears.
+
+You're on your feet before you decide to be   not medical instinct, human instinct. You cross the tables, crouch, help the attendant collect the largest glass.
+
+"Theek hai," you tell the first-year, in Kavya's voice, gentler than you expected. "Hota hai. Pehle saal mein sabke saath hota hai."
+
+She sniffles. Nods.
+
+Dr. Sharma watches from across the room, expression complicated. Three years of Kavya's technical precision, and he's never seen her comfort a student with warmth.
+
+<div class="dialogue">"Miss Iyer. That was kind. You showed the human side of medicine today. I'm proud of you."</div>
+
+Later, in the corridor, Meera catches your arm. "That was //you//. Kavya would've kept dissecting. Different is risk."
+
+She's right. But the first-year stopped crying.
+
+<<run setup.flag("specimen_helped_d3")>>
+<<run setup.stat("med_knowledge", 3, "arjun")>>
+<<run setup.stat("rel_kavya_meera", 0, "kavya")>>
+<<run setup.stat("sharma_suspicion", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: anatomy_note_d3
+You fold a scrap of paper and pass it low, below the level of the draped table. //Your handwriting is a war crime// it comes back. Then: //keep going. you're doing amazingly. eyes forward.//
+
+<<hubreturn>>
+
+
+:: check_in_call_d3
+<div class="alert-popup swap" style="position:static;max-width:none;margin-bottom:1rem;">📞 Arjun (VIT Ref. Desk)</div>
+
+"How's VIT?" you ask   using Kavya's voice to ask about the place Kavya has always wanted to be.
+
+<div class="dialogue">"Arjun. I implemented a convolutional neural network for medical image classification. The training pipeline works. I cried. One tear. Your tear ducts are like filing a form to cry."</div>
+
+You tell her about the formalin, about Priya, about the fourteen hand-washes.
+
+<div class="dialogue">"Did you find my hidden cupboard compartment?"</div>
+
+"The jeans. The crop top. The denim jacket."
+
+<div class="dialogue">"Don't judge."</div>
+
+"I'm impressed. You have a double life even in your clothing."
+
+<<run setup.stat("rel_arjun_kavya", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: meera_terrace_d3
+<div class="intimate"><span class="tag">Intimate · choice</span>
+<<img "room_304_arjun_pov.png" "the terrace, evening light">>
+Alone. Finally. Under the sky, in a body she doesn't recognise but eyes she does.
+
+Her thumb traces your jaw   Kavya's jaw, softer, rounder. Your breath catches, Kavya's smaller lungs managing less air. Six months you've imagined this, except in every imagination you were in your own body, your own height, your own lips.
+
+These aren't your lips. They're Kavya's. If you kiss Meera now it's two women's faces pressing together. The geometry is different. Everything is different except the want, which is yours, which doesn't care what body it's housed in.
+
+<div class="choices">
+<div class="q">Rule One is watching.</div>
+<<link "Kiss her">><<goto "meera_terrace_kiss_d3">><</link>>
+<<link "Hold back">><<goto "meera_terrace_hold_d3">><</link>>
+</div>
+</div>
+
+
+:: meera_terrace_kiss_d3
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+You lean forward. She meets you halfway.
+
+Nothing like the backstage kiss fourteen months ago   no stubble friction, no height bending, no angular collision of jaw. It's //soft//. Kavya's fuller lips against Meera's, a larger, gentler contact area. Her lower lip between yours. The taste of her cherry chapstick, the same one always.
+
+Her hand moves to the back of your neck, fingers in Kavya's thick hair, and the scalp sensation cascades down your spine   this body is wired differently, neck and scalp a minefield.
+
+Arousal manifests. Not as hardness   there's nothing to harden. Instead: warmth, deep, spreading, radiating outward from between your legs. A pulse at the clitoris, 8,000 nerve endings announcing themselves like a notification you can't dismiss. Wetness beginning   the body's preparation response, readying for something your conscious mind hasn't approved.
+
+You pull back. Breathing ragged.
+
+<div class="dialogue">"Too much?"</div>
+
+"Not enough." The honesty is involuntary; Kavya's body has weaker emotional firewalls. "But this isn't my body to   Rule One."
+
+She nods. Takes your hand instead. Foreheads touching. For today, this is enough.
+</div>
+<<run setup.flag("meera_terrace_done_d3")>>
+<<run setup.flag("meera_kiss_attempted_d3")>>
+<<run setup.stat("rel_arjun_meera", 5, "arjun")>>
+<<run setup.stat("sex_f", 3, "arjun")>>
+<<run setup.discover("arousal without an erection", "arjun")>>
+<<hubreturn>>
+
+
+:: meera_terrace_hold_d3
+<div class="intimate"><span class="tag">Intimate</span>
+You don't lean in. You put your forehead against hers instead. Her hand finds Kavya's hair and stays there, gentle, no escalation.
+
+"Rule One," you say. "And also   I want the first time I kiss you again to be with my own mouth. Whenever we get to be us."
+
+<div class="dialogue">"That's the most romantic thing you've ever said and you said it in Kavya's voice."</div>
+
+"She'd hate that."
+
+You sit like that until the light goes. Her head on your shoulder. Your small arms around her. Six months, and this is enough.
+</div>
+<<run setup.flag("meera_terrace_done_d3")>>
+<<run setup.stat("rel_arjun_meera", 5, "arjun")>>
+<<hubreturn>>

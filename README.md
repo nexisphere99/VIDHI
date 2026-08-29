@@ -10,6 +10,12 @@ run parallel threads on the same day. Kavya's perspective unlocks after Arjun's
 morning routine; from then on the header toggle switches between them freely.
 Day 1 ends with Kavya's body-swap ritual   the hinge the rest of the story turns on.
 
+> **Version 0.3** covers **Days 1–3**. Day 1 "Qaid", Day 2 "Saazish", and Day 3
+> "Pehla Badlav"   the first full cross-gender swap: Arjun spends the day in
+> Kavya's body at the hostel and B.J. Medical, Kavya spends it in Arjun's body
+> at the PG and VIT. Day 3 closes on the v0.3 end screen. Support the work at
+> <https://www.patreon.com/c/vidhidevs>.
+
 > **Adult content (18+).** Explicit sexual content, nudity and body description are
 > part of the narrative and appear in context as you explore. A content warning
 > gates the start of the game; there is no per-scene toggle.
@@ -62,9 +68,16 @@ game/
   days/day1/               "Qaid"   the manuscript, the test swap
     arjun_scenes.twee  arjun_npc.twee  kavya_scenes.twee  kavya_npc.twee
     intimate.twee  shared.twee   (EV_* events, Day1Complete, Day2Start launcher)
+    intimacy_d2.twee       last-night (pre-swap) self-play + porn scenes
   days/day2/               "Saazish"   the plan, the phone calls, the night before
     arjun_scenes.twee  arjun_npc.twee  kavya_scenes.twee
-    intimate.twee  shared.twee   (EV_a2_* events, Day2Complete, Day3Start stub)
+    intimate.twee  shared.twee   (EV_a2_* events, Day2Complete)
+  days/day3/               "Pehla Badlav"   the first swap, both threads in
+    arjun_scenes.twee  arjun_npc.twee   the wrong body
+    kavya_scenes.twee  kavya_npc.twee
+    intimate.twee       first-time body-discovery scenes (both directions)
+    shared.twee         Day3Start, day3_swap / day3_swapback, EV_a3_* events,
+                        Day3Complete, PH_a3_* chats
 
 images/                    OUTSIDE game/ so tweego never bundles it; build.sh
     mandala.svg            copies the tree to dist/images/
@@ -145,12 +158,22 @@ block, which also handles lines that contain quote characters.
 
 ---
 
-## Day-scoping (how Day 2 is bolted on)
+## Day-scoping (how Days 2–3 are bolted on)
 
-Day 2 is an **additive module** at the end of `game-engine.js` (`(function day2(){…})()`):
-it `Object.assign`s new locations, `.push()`es new objects/objectives/timed-events,
-tags the Day-1 finale objects with `dayOnly: 1`, and wraps `setup.phoneData` for
-Day-2 message lists. Day 1's data literals are untouched.
+Each day past 1 is an **additive module** at the end of `game-engine.js`
+(`(function day2(){…})()`, `(function day3(){…})()`): it `Object.assign`s new
+locations, `.push()`es new objects/objectives/timed-events, tags earlier finale
+objects with `dayOnly: N`, and wraps `setup.phoneData`. The earlier days' data
+literals are untouched.
+
+**Day 3 is special** — the swap is active, so each player navigates the *other*
+character's world. The day-3 module adds a fresh set of `*_d3` locations: the
+hostel / B.J. Medical ones go under `setup.locations.arjun` (Arjun is in Kavya's
+body there), the PG / VIT ones under `setup.locations.kavya`. `setup.dayStart[3]`
+puts both at `pataleshwar_temple_d3`; `day3_swap` flips `$body` via
+`setup.setBody()` and swaps the Pulsar keys / Redmi between the two inventories,
+`day3_swapback` reverses it. `$swapActive` gates the sidebar body-discovery log
+and the extra Day-3 suspicion rows.
 
 Mechanics that make it work:
 - **`o.dayOnly`** on a location object → `setup.objVisible` hides it on other days.
@@ -159,14 +182,15 @@ Mechanics that make it work:
 - **`ev.day`** on a timed event; **`ev.setFlag`** to set a flag when it fires.
 - **`day >= N`** is a valid `unlockCondition` atom (see `setup.atom`).
 - **`setup.beginDay(n)`**   resets `$day`, wipes the objective tracker, clears
-  daily-state flags (sign-out, VIT entry, Priya's whereabouts, morning-done…),
-  and applies `setup.dayStart[n]` (pov / loc / time / mood). Called from the
-  Day-1 and Day-2 end screens.
+  daily-state flags, applies `setup.dayStart[n]` (pov / loc / time / mood /
+  povUnlocked), and runs its optional `onBegin(S)` hook (Day 3 uses it to reset
+  the swap state). Called from each day's end screen and the debug day-jump.
 
-## Adding Day 3+
+## Adding Day 4+
 
-1. New scene passages in `days/day3/`, named exactly by their `triggers` value.
-2. In the day2 module (or a new day3 module) add locations / objects (`dayOnly: 3`)
-   / objectives (`day: 3`) / timed events (`day: 3`), and a `setup.dayStart[3]`.
+1. New scene passages in `days/day4/`, named exactly by their `triggers` value.
+2. A new day module in `game-engine.js`: locations / objects (`dayOnly: 4`) /
+   objectives (`day: 4`) / timed events (`day: 4`), `setup.dayStart[4]`, a
+   `setup.dayEnd[4]` screen.
 3. `node tools/linkcheck.js game`, then `node tools/sim.js` (extend its `EFFECTS`
    map + walkthrough   it already covers Days 1–2).

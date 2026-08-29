@@ -1,0 +1,120 @@
+:: arjun_first_kavya_body
+<div class="intimate"><span class="tag">Intimate · body discovery</span>
+<<img "arjun_first_kavya_body.png" "the wrong side of a mirror">>
+You open your eyes and everything is wrong and everything is real.
+
+You're shorter. The world has risen   temple walls that were at eye level are above you now. Your bare feet touch cold stone; small feet, size six, painted nails mostly chipped away.
+
+<b>Hair.</b> The first overwhelming fact   thick, wavy, black, falling past your shoulders, over your collarbones, into your face. A curtain you can't part. You reach up to push it back and freeze at the hand: smaller, slender, dusky, no Pulsar-grip calluses, a thin silver ring on the middle finger.
+
+<b>Weight on your chest.</b> The second fact. Not painful   constant. A soft, warm, undeniable presence hanging from your ribcage that shifts with every single breath. The maroon kameez drapes over curves that are yours now.
+
+And between your legs: the absence. You'd known. Kavya described it clinically on the phone. But knowing and feeling are different dimensions of the same vertigo   smooth fabric against smooth skin against emptiness. Not empty like a pocket. Empty like a room where a piece of furniture always stood and someone moved it in the night.
+
+"Oh fuck," you whisper, and Kavya's voice comes out of your throat, higher, the Tamil undertone now vibrating in your own larynx. Your Adam's apple is gone. The absence is a missing landmark.
+
+Across from you, your own body   wheat skin, stubble, those long lashes   wears an expression of clinical assessment that has never belonged on your face.
+
+<div class="dialogue">"How does it feel?"</div>
+
+"Like being on the wrong side of a mirror."
+
+<div class="thought arjun">Twelve hours. You can survive anything for twelve hours. Probably.</div>
+</div>
+
+<<run setup.flag("arjun_first_kavya_body")>>
+<<run setup.discover("no penis", "arjun")>>
+<<run setup.discover("breasts", "arjun")>>
+<<run setup.discover("hair", "arjun")>>
+<<run setup.discover("voice", "arjun")>>
+<<run setup.discover("height loss", "arjun")>>
+<<run setup.stat("fem_comfort", 4, "arjun")>>
+<<run setup.stat("sex_f", 3, "arjun")>>
+<<hubreturn "Start walking">>
+
+
+:: arjun_hair_d3
+It's in your mouth. Behind your ears it stays for a while, then slides free. There's a technique to this   a twist, a tuck   that Kavya's hands almost know and your brain keeps overriding.
+<<run setup.discover("managing hair", "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_dupatta_d3
+A rectangle of fabric that obeys gravity and nothing else. Off the left shoulder. Again. You pin it at one shoulder the way you saw in a hundred photos and it holds for a hundred metres.
+<<run setup.discover("the dupatta", "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_walk_d3
+You try to walk straight, like you, and look like a robot. You try Kavya's efficient stride and look like a robot doing an impression. The pelvis has opinions   a lateral tilt that swings the opposite hip forward. You let it do what it wants. Shorter steps. Less forward lean.
+<<run setup.discover("hips", "arjun")>>
+<<run setup.stat("fem_comfort", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_stairs_d3
+Your thighs brush together on every step   soft skin against soft skin, and the absence between your legs makes the space feel vast and exposed, like walking with a window open where a wall used to be.
+<<run setup.discover("thigh contact", "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_sees_kavya_face
+<<img "room_304_arjun_pov.png" "the mirror on the cupboard door">>
+Dusky skin. The beauty mark below the left eye. Dark circles   hers, from three years of 2 AM debugging, not yours. Wavy black hair that fights every comb.
+
+But the eyes. Meera said it and she's right: the eyes are still you. Somehow. Through the different colour, the different shape   you look out of Kavya's face and it's Arjun looking.
+
+<<run setup.discover("your own borrowed face", "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_cupboard_d3
+Salwar kameez, ironed, Papa-approved. Printed medical PDFs. And behind the false back of the bottom shelf: a pair of jeans, two crop tops, a denim jacket. Clothes worn exactly outside   never on campus, never near home.
+
+Kavya Iyer, the one she'd be if anyone had ever asked her. You close it carefully, the way you'd close someone's diary.
+
+<div class="thought arjun">You have a double life in a locked phone. She has one in a cupboard. You should have expected that.</div>
+
+<<run setup.flag("arjun_cupboard_seen_d3")>>
+<<run setup.stat("rel_arjun_kavya", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_campus_bench_d3
+<<img "arjun_anatomy_horror.png" "B.J. campus, white coats">>
+You sit on a bench under a neem tree and let the panic settle. White coats stream past. Nobody looks twice   this face has walked this path a thousand times. You're furniture in a familiar room.
+
+Your heart is running at a higher RPM than yours does. Kavya's cardiovascular system, lighter, faster. You breathe. Smaller lungs. Less air per breath. You get up.
+
+<<hubreturn>>
+
+
+:: arjun_terrace_d3
+<<img "room_304_arjun_pov.png" "the terrace, city below">>
+The only truly private space in the building. You lean on the railing. City lights, the specific orange of Pune haze.
+
+You take an inventory the way you'd check a bike. The weight on your chest, constant. The hair. The tear ducts with no latency   you'd cried three times today before you decided to. The amplified touch, more sensation per square inch of everything. The absence, still surprising you every time you shift your weight.
+
+Twelve hours in, and you're not counting them down any more. You're just... in it.
+
+<<run setup.discover("crying easily", "arjun")>>
+<<run setup.stat("fem_comfort", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: mess_eating_d3
+<<img "arjun_anatomy_horror.png" "the mess hall">>
+Mess Didi Savita ladles poha onto your steel plate with the precision of a woman serving institutional food since before liberalisation. "Kavya! Aaj zyada kha. Tu bahut patli ho rahi hai." An extra spoonful. Non-negotiable.
+
+You sit. Eat. And it's //different//   Kavya's taste buds register more. The poha, which you'd have labelled "generic," has identifiable notes: cumin, turmeric, the faint sweetness of onion. The chai has a cardamom undertone your palate would have missed entirely.
+
+Meera slides in beside you. "How's the food?"
+
+"It's a full sensory report. In my body it's 'good' or 'edible.'"
+
+<div class="dialogue">"Women have more taste buds. Higher olfactory receptors. Enjoy the DLC."</div>
+
+<<run setup.flag("mess_ate_d3")>>
+<<run setup.discover("the flavour expansion pack", "arjun")>>
+<<run setup.stat("energy", 4, "arjun")>>
+<<hubreturn>>

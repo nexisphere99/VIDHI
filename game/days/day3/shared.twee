@@ -1,0 +1,287 @@
+:: Day3Start [nobr]
+<div class="title-screen">
+<div class="th">पहला बदलाव</div>
+<div class="te">Day 3   Pehla Badlav · First Change</div>
+
+<p class="lede">4:50 AM. The Pataleshwar courtyard is 1,500-year-old basalt and pre-dawn dark, the kind of dark that ancient rock accumulates over centuries and releases slowly, like stored patience.</p>
+
+<p class="lede">Arjun's Pulsar ticks as it cools. Kavya is already on the steps in her maroon salwar, dupatta wound tight across her chest like armour, the Redmi in one hand.</p>
+
+<p class="lede">In ten minutes each of them will be looking at the world from the other one's eyes. You play both threads   the header toggle switches whose day you're living.</p>
+
+<div class="start-btn">
+<<link "Begin   the kumkum circle">><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: day3_temple_wait
+<<img "pataleshwar_dawn.png" "Pataleshwar, pre-dawn">>
+You sit on the cold steps and watch the sky do the thing skies do just before dawn   not lightening exactly, just thinning, like paper held up to a lamp.
+
+<<if $pov is "arjun">>Kavya checks the kumkum tin, the thread, the printed transliteration of the mantra, in that order, twice. "Stop staring at the sky," she says without looking up. "Staring at the sky is not preparation."
+<<else>>Arjun's knee is jackhammering. You put a hand on it. It stops for four seconds and starts again. "It's real," you tell him. "I was in Meera's body for ninety seconds. It's real."<</if>>
+
+<<hubreturn "Sit in the circle">>
+
+
+:: day3_swap
+<div class="intimate"><span class="tag">The swap</span>
+<<img "pataleshwar_dawn.png" "the kumkum circle">>
+You sit cross-legged, knees almost touching, inside a circle of red kumkum drawn on the stone. Kavya loops the kalava thread around both your right wrists and pulls it taut.
+
+<div class="dialogue">"Last chance to back out."</div>
+
+"No." The word is immediate. Behind it: Meera. Always Meera.
+
+The chant begins   her voice leading, precise Sanskrit, each syllable a struck bell; the other stumbling behind, corrected with impatient tongue-clicks. The voices layer. Find rhythm. The courtyard fills.
+
+Count 50   heartbeat only. Count 80   the thread warms against skin. Count 90   pressure behind the eyes, a headache arriving at light speed.
+
+Count 97   <b>THE WRENCH.</b>
+
+Not physical   essential. Something grabs the substrate of //you// and yanks it through a drain that exists in the cracks between things. A sound like the universe tearing a page.
+
+Black.
+</div>
+
+<<run setup.setBody("arjun", "kavya")>>
+<<run setup.setBody("kavya", "arjun")>>
+<<run setup.flag("swap_complete")>>
+<<set $swapActive to true>>
+<<run setup.doSwap()>>
+<<run setup.removeItem("bike_keys", "arjun")>>
+<<run setup.addItem("bike_keys", "kavya")>>
+<<run setup.removeItem("redmi_phone", "kavya")>>
+<<run setup.addItem("redmi_phone", "arjun")>>
+<<run setup.stat("rel_arjun_kavya", 3, "arjun")>>
+<<run setup.stat("rel_kavya_arjun", 3, "kavya")>>
+<<run $time.arjun = 310>>
+<<run $time.kavya = 310>>
+<<run $loc.arjun = "hostel_walk_d3">>
+<<run $loc.kavya = "pulsar_ride_d3">>
+<<set $mood.arjun to "on the wrong side of a mirror">>
+<<set $mood.kavya to "admin access after three years of read-only">>
+
+<div class="continue-nav"><<link "Open your eyes">><<goto "Hub">><</link>></div>
+
+
+:: EV_a3_priya_out
+Priya scoops up her laptop and two pathology textbooks at 1:45 and heads for the library, complaining about apoptosis the whole way to the door. It closes. The lock engages.
+
+The room is yours. Meera's already sitting up straighter.
+
+<<hubreturn>>
+
+
+:: EV_a3_checkin_arjun
+<div class="alert-popup swap" style="position:static;max-width:none;margin-bottom:1rem;">📞 Arjun (VIT Ref. Desk)</div>
+
+You call the number. He picks up   your own voice, coming back at you through a phone, wrong and familiar.
+
+<div class="dialogue">"I answered Krishnan's question about red-black tree deletion. Gave a Sedgewick optimisation he hadn't considered. Whole room went silent."</div>
+
+"Too much?"
+
+<div class="dialogue">"Way too much. But Arjun   the //keyboard//. I've written more code today than in three months. I cried. //One// tear. Your tear ducts are bureaucratic."</div>
+
+You tell him about the formalin, about Priya noticing "Kavya" looked relaxed, about washing your hands fourteen times. He tells you the Pulsar is a death machine and he loves it.
+
+For a moment it's just two people laughing down a phone line in each other's voices.
+
+<<run setup.stat("rel_arjun_kavya", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: EV_a3_meera_wa
+<div class="alert-popup objective" style="position:static;max-width:none;margin-bottom:1rem;">💬 Meera</div>
+
+<div class="chat-log">
+<div class="msg them">❤️</div>
+<div class="msg them">Thank you for being here. Even in someone else's skin.</div>
+<div class="msg them">Priya told me you look "relaxed." Careful. Relaxed isn't Kavya's default. Kavya's default is "irritated genius." Practice irritated.</div>
+<div class="msg me">Working on my irritated face. It's hard because I'm happy.</div>
+<div class="msg them">🥺</div>
+<div class="msg them">Tonight. After swap-back. I'll be thinking about today for weeks.</div>
+</div>
+
+<<run setup.stat("rel_arjun_meera", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: EV_a3_swapback_reminder_a
+The Redmi buzzes. Kavya: //Temple. 7:30. Don't be late   I want my hands back and you want yours.//
+
+You look at Kavya's hands. The silver ring. The short shaped nails. Twelve hours of borrowed dexterity, and a small, stupid flicker of something like loss.
+
+<<hubreturn>>
+
+
+:: EV_a3_pooja_wa
+<div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">💬 Pooja Pagal 🙄</div>
+
+<div class="chat-log">
+<div class="msg them">Bhaiya Sunday confirm? Aai ne mutton le liya. Also sheera. She's cooking like you're coming back from war</div>
+<div class="msg me">Haan confirm. Tell Aai not to cook for army.</div>
+<div class="msg them">omg you replied in MINUTES. Usually you take HOURS</div>
+<div class="msg them">Also you said "not to cook for army." You usually say "Aai ko bol zyada mat banana." Same meaning, different words.</div>
+<div class="msg them">I'm watching you 👀</div>
+</div>
+
+A seventeen-year-old just flagged a linguistic anomaly in your impersonation within three messages. You don't reply again. Some tests you fail by continuing.
+
+<<run setup.stat("pooja_suspicion", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: EV_a3_aai_call
+<div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">📞 Aai ❤️</div>
+
+You can't not answer. Arjun always answers his mother.
+
+<div class="dialogue">"Beta, kha liya? ... Sirf dosa? Ande kha, protein chahiye. ... Sunday confirm hai na? Pooja ne bola tu jaldi reply kar raha hai. Kuch hua kya?"</div>
+
+"Kuch nahi Aai. Bas class mein free tha."
+
+<div class="dialogue">"Hmm. Tera voice thoda alag lag raha hai. Sardi toh nahi lagi?"</div>
+
+Same vocal cords. Same pitch. But a mother is hearing something underneath   the cadence, the faintly Tamil syntax you build Hindi sentences with. Mothers are debugging tools, and this one just logged a warning.
+
+"Voice theek hai, Aai. Neend puri nahi hui."
+
+<<run setup.stat("aai_suspicion", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: EV_a3_rohit_gym
+Rohit stands, cracks his back, announces "leg day extension" as if his quads filed a formal request, and leaves. The door closes. His footsteps recede down the stairs.
+
+The room is yours. The laptop is yours. Two hours.
+
+<<hubreturn>>
+
+
+:: EV_a3_swapback_reminder_k
+Arjun's phone buzzes. Meera, via the Samsung: //7:30. Pataleshwar. He needs his body and you need yours. And Kavya   thank you. For the CS classes. For all of it.//
+
+You look at the clock in the corner of the borrowed screen. The keyboard under your hands. Soon this stops.
+
+<<hubreturn>>
+
+
+:: day3_swapback
+<div class="intimate"><span class="tag">The swap-back</span>
+<<img "pataleshwar_dawn.png" "Pataleshwar, evening">>
+The circle again, drawn in the last light. The thread. The mantra in reverse   the wrench comes and this time you brace for it, like jumping into cold water the second time.
+
+Black. White. Colours resolving.
+
+<<if $pov is "arjun">>You open your eyes and the first thing you feel is your cock. Right there. The familiar weight you never once appreciated in twenty-one years. Your chest is flat. Your lungs expand fully. You're taller   the temple walls are back at eye level.
+
+And, strangely, a flicker of loss. Kavya's body was terrifying and alien and also a country you'd barely entered, a language you spoke for twelve hours and were just starting to understand.
+
+"Tera dissection class bhayanak hai," you tell Kavya, who's patting herself down   face, chest, hips, the body-audit of a woman reclaiming her property.
+
+<div class="dialogue">"Tere Rohit ko control karo. Also your bike's in VIT lot B, keys in your jacket. I didn't scratch it."</div>
+<<else>>You open your eyes and your breasts are BACK   two familiar masses dropping into position, the Clovia underwire clamping down. Twelve hours flat-chested and free, and now the whole production returns.
+
+The world rises. You're looking up at the Nandi statue again. Small again. And between your legs: the absence where a warm, present, slightly ridiculous weight used to be. Not wrong. Familiar. But the familiarity has a new texture now.
+
+"Your laptop is beautiful," you tell Arjun, and the tears come, fast, Kavya's zero-latency system firing. "I wrote two thousand lines of production code. I //coded//, Arjun. On a real keyboard."
+
+<div class="dialogue">"Also your Pulsar is a death machine and I love it."</div>
+<</if>>
+
+You both laugh. Real laughter, in your own voices, bouncing off 1,500-year-old stone. Tomorrow you do this again. The thought is terrifying and inevitable in equal measure.
+</div>
+
+<<run setup.setBody("arjun", "arjun")>>
+<<run setup.setBody("kavya", "kavya")>>
+<<run setup.flag("swap_back_complete")>>
+<<run setup.doSwap()>>
+<<set $swapActive to false>>
+<<run setup.removeItem("bike_keys", "kavya")>>
+<<run setup.addItem("bike_keys", "arjun")>>
+<<run setup.removeItem("redmi_phone", "arjun")>>
+<<run setup.addItem("redmi_phone", "kavya")>>
+<<if $pov is "arjun">><<run setup.flag("arjun_day3_complete")>><<else>><<run setup.flag("kavya_day3_complete")>><</if>>
+<<run setup.stat("rel_arjun_kavya", 5, "arjun")>>
+<<run setup.stat("rel_kavya_arjun", 5, "kavya")>>
+
+<div class="continue-nav">[[Ride home. Sleep, if you can.|DayWrap]]</div>
+
+
+:: Day3Complete [nobr]
+<div class="title-screen">
+<div class="th">पहला बदलाव पूरा</div>
+<div class="te">End of Day 3</div>
+
+<p class="lede">Arjun is back in Katraj, in his own body, in a bed that suddenly feels enormous, replaying twelve hours in someone else's skin. Kavya is in Room 304, grieving a keyboard, her own breasts strapped back into their usual argument with gravity.</p>
+
+<p class="lede">The first cross-gender swap is complete. Nobody's cover held perfectly   Pooja clocked a texting anomaly, Aai heard something under the voice, Krishnan is asking about a research symposium, Dr. Sharma noticed "Kavya" being kind. But nobody knows. Not yet.</p>
+
+<div class="thought arjun">ARJUN   Coding <<= $stats.a_coding>> · Fem-comfort <<= $stats.a_femComfort>> · Rel Meera <<= $stats.rel_arjun_meera>> · Rel Kavya <<= $stats.rel_arjun_kavya>> · Drawn to female frame <<= $stats.a_sexF>></div>
+<div class="thought kavya">KAVYA   Coding <<= $stats.k_coding>> · Masc-comfort <<= $stats.k_mascComfort>> · Rel Arjun <<= $stats.rel_kavya_arjun>> · Drawn to male frame <<= $stats.k_sexM>> · Krishnan symposium: <<= setup.has("research_symposium_invited") ? "invited" : "no"></div>
+
+<p class="lede">Swaps: <<= $swapCount>> · barrier <<= $barrierIntegrity>>%. Discoveries logged: <<= ($discoveries.arjun.length + $discoveries.kavya.length)>>. The Colonel still visits Sunday.</p>
+
+<div class="version-note">
+<p class="lede"><b>This is the end of the version 0.3 content.</b></p>
+<p class="lede">Thank you for playing VIDHI. If you'd like to see more of this story   or just support the work   you can back the project on Patreon:</p>
+<p class="lede"><a href="https://www.patreon.com/c/vidhidevs" target="_blank" rel="noopener">patreon.com/c/vidhidevs</a></p>
+</div>
+
+<div class="start-btn">
+<<link "Keep exploring Day 3">><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: PH_a3_meera
+<div class="chat-log">
+<div class="msg them">how are you holding up in there</div>
+<div class="msg me">the body cries at everything. formalin made me cry. a nice poha made me cry.</div>
+<div class="msg them">higher olfactory density, more tear-duct sensitivity. welcome to the flavour-expansion pack</div>
+<div class="msg them">tonight. terrace. before swap-back. ok?</div>
+<div class="msg me">ok</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a3_kavya_checkin
+<div class="chat-log">
+<div class="msg them">KV_Codes reporting from a real machine. mechanical keyboard. dual monitors. i have never been this productive in my life</div>
+<div class="msg them">also i had a random erection during a ResNet implementation and had to think about the Krebs cycle for four minutes</div>
+<div class="msg me">that happens. randomly. regularly. how do you people function</div>
+<div class="msg them">we don't think about it. like you don't think about yours. did. tenses are hard today</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a3_rohit
+<div class="chat-log">
+<div class="msg them">Bhai KAUNSA youtube channel</div>
+<div class="msg them">tu kal tak Krishnan ke questions se bachta tha. aaj tu Stanford transfer lag raha hai</div>
+<div class="msg me">random algo analysis channel. late night recommendation. will send link</div>
+<div class="msg them">"will send link" tune 3 baar bola hai aur kabhi nahi bheja</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a3_pooja
+<div class="chat-log">
+<div class="msg them">bhaiya you're being weird</div>
+<div class="msg them">weird-good tho. like someone lit a lamp in you</div>
+<div class="msg them">Meera bhabhi ka koi update? 👀 ...sorry. love you. come sunday</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a3_nikhil
+<div class="chat-log">
+<div class="msg them">bhai ICPC. Saturday. 4-hour practice. graph algos, DP, strings</div>
+<div class="msg them">after today's lecture i genuinely think we can qualify</div>
+<div class="msg me">i'm in. Kruskal with union-find, and watch for negative-weight traps</div>
+<div class="msg them">...bhai who ARE you</div>
+</div>
+<<hubreturn>>

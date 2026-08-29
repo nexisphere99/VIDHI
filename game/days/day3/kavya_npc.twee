@@ -1,0 +1,268 @@
+:: rohit_morning_d3
+<<img "pg_room_kavya_pov.png" "the PG room, 6:30 AM">>
+Rohit is a geological formation under blankets, the chainsaw snore cycling through its gears. You press a key on the laptop   the screen wakes, VS Code, a mechanical keyboard on USB, dual monitors. One tear escapes. Just one; Arjun's body dispenses tears like a bureaucracy processes refunds.
+
+"Bhai, itni subah?" One eye.
+
+"Morning walk." Arjun's voice, Arjun's phrasing. You practised this sentence fourteen times on the ride.
+
+Both eyes. He stares at you like a man told the sun rises in the west. "Tum? Morning walk? Bhai, tu bimaar hai kya?"
+
+"Neend nahi aayi." You shrug   practised, Arjun-lazy, one shoulder up and down with the casual indifference of a boy who considers effort a philosophical position.
+
+Rohit squints for three seconds. Then collapses. "Pagal ho raha hai tu." Thirty seconds later: snoring.
+
+First test: passed. The body did the acting   the height, the voice, the shrug. Your mind just had to not ruin it.
+
+<<run setup.flag("rohit_pg_passed")>>
+<<run setup.stat("masc_comfort", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: pg_chai_circle_d3
+The PG landing: four plastic chairs, a gas stove, the ₹3 chai operation of engineering students who've decided Raju's ₹15 is an extravagance.
+
+Amit, second-year IT, spectacles: "Oye Arjun, chai peega?"
+
+You take the steel glass. The chai tastes like a chemistry experiment that achieved sentience and begged for mercy. You drink it.
+
+"Bhai, kitne baje aaya subah? 4:45 pe meri alarm baji   tera Pulsar ki awaaz aayi."
+
+"Morning walk." Arjun's casual disregard for explanation.
+
+You stand with them. Legs apart, never crossed. One hand in the left jeans pocket, Arjun's habit. The easy half-lean against the wall. Weight on one foot, hip cocked   //no.// Not hip-cocked. That's yours. You straighten. Both feet. Wider stance.
+
+Nobody questions it. You're invisible in the way Arjun is invisible. No one monitors your clothes, your posture, how you hold your cup. This is what it feels like to not be watched, and it's so intoxicating you almost forget to drink the terrible chai.
+
+<<run setup.flag("pg_chai_done_d3")>>
+<<run setup.discover("not being watched", "kavya")>>
+<<run setup.stat("masc_comfort", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: amit_laptop_d3
+"Arjun bhai, ek problem hai." Amit adjusts his spectacles. "Mera laptop... pop-ups. Ads on browser. Speed gone. Virus lagta hai."
+
+"Dikha." One word. Arjun's economy of speech for tech.
+
+The virus is obvious to your trained eye   browser hijacker, probably from cracked software. Toolbar extensions injecting ads, a startup redirect, registry mods hiding the process from Task Manager.
+
+Command Prompt. Navigate the system folders, kill the malicious executables, strip the registry entries, reset the browser. Twelve minutes.
+
+"Bhai. Tu normally itna technical nahi karta. Aaj kya hua?"
+
+Shit. Arjun would've run a simple antivirus scan. You just did manual malware removal requiring command-line knowledge beyond his demonstrated level. Another brilliance leak.
+
+"YouTube tutorial. Kal raat."
+
+Amit accepts it. "Tu genius hai. Biryani khila dunga." The biryani is never coming, but the trust is banked   Amit will vouch for Arjun's presence in the PG.
+
+<<run setup.flag("amit_laptop_fixed_d3")>>
+<<run setup.stat("k_coding", 2, "kavya")>>
+<<run setup.stat("rel_amit", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: raju_d3
+<<img "pg_room_kavya_pov.png" "Raju's tapri">>
+Raju bhaiya's mustache at its morning apex. The cutting chai slides across the counter before you order   two years of Arjun's patronage encoded in the motion.
+
+"Arjun baba! Free chai ka third day. Enjoy kar."
+
+The chai is perfect. Metallic steel-vessel taste, the depth of leaves boiled not steeped, the sweetness calibrated by fifteen years of practice.
+
+"Raju bhaiya, aaj kuch naya?"
+
+"Naya? Woh fruit wali Tai ka ladka aa raha hai Mumbai se. Bada engineer. Google mein kaam karta hai. Shayad tujhse mil sake. Networking, baba."
+
+A Google engineer. And you're being offered the intro while wearing the body of a CS student who doesn't know you exist. The irony is layered enough to qualify as a thesis.
+
+"Sure. Milwa dena."
+
+"Kal. Subah 8 baje. Yahan. Raju ka tapri   India ka naya LinkedIn."
+
+<<run setup.flag("google_engineer_intro_d3")>>
+<<run setup.stat("energy", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: patil_d3
+Guard Patil. The man who's checked Arjun's ID six hundred times and still squints every morning as if today's the day.
+
+You flash the card. He takes it. Squints at it. Squints at you. Squints at it. The ritual is identical regardless of the face behind it.
+
+"Arjun Deshmukh. CSE. Third year." He reads it aloud. Pauses. "Aaj jaldi aaya."
+
+"Haan, sir." Arjun doesn't elaborate at gates.
+
+He stamps the invisible air-stamp of his authority. "Ja."
+
+You park the Pulsar   an operation involving the kickstand's opinions about angles, the lean, and the positioning between a Royal Enfield and an immortal Splendor. The bike survives. You lock the disc brake. Walking into VIT feels like walking into a cathedral for a religion you actually believe in.
+
+<<run setup.flag("entered_vit_d3")>>
+<<hubreturn>>
+
+
+:: kavya_brilliant_answer_d3
+<div class="intimate"><span class="tag">Kavya's triumph · risk</span>
+<<img "kavya_cs_lecture.png" "the answer">>
+Krishnan presents the problem, asks for approaches.
+
+Arjun's hand   your hand   shoots up before your brain can intervene. The motor cortex just //fires//.
+
+"Arjun?"
+
+You stand. Six feet of lean engineering student. Arjun's voice rises from Arjun's chest and shapes itself around your solution: the Sedgewick simplification for case-3 deletion, plus a time-complexity optimisation using lazy propagation of the double-black marker   worst-case rebalancing from O(log n) rotations to O(1) amortised.
+
+The room goes silent.
+
+<div class="dialogue">"Arjun?" Krishnan's eyebrows have achieved escape velocity, chalk forgotten mid-air. "Yeh... tum?"</div>
+
+Twenty-seven heads turn. Rohit has rotated fully, mouth open, pav bhaji suspended mid-trajectory. Nikhil leans forward like a man witnessing a miracle.
+
+You catch yourself. Too much. You've detonated a knowledge bomb where the expected calibre is a firecracker.
+
+"Watched some YouTube tutorials last night, sir." You sit. Fast. And Arjun's face does something you can't control   it //blushes//, blood rushing to his cheeks. You didn't know this body could blush.
+
+Krishnan stares two more seconds. Then a slow, genuine smile. "Whatever channel that was, send me the link."
+
+Rohit, leaning over: "Bhai, KAUNSA YouTube channel? Mujhe bhi bata."
+
+Nikhil, across the aisle: "ICPC ke liye sochle. Seriously."
+
+You're already thinking about it. In this body, with these hands, on these keyboards   you could //win//.
+
+<<run setup.flag("krishnan_answered_d3")>>
+<<run setup.discover("this body blushing", "kavya")>>
+<<run setup.stat("k_coding", 5, "kavya")>>
+<<run setup.stat("rel_krishnan", 5, "kavya")>>
+<<run setup.stat("rohit_suspicion", 3, "kavya")>>
+<<run setup.stat("krishnan_suspicion", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: krishnan_corridor_d3
+"Arjun." Krishnan has followed you from the lecture hall. Not suspicious exactly   curious. The curiosity of a professor who's just watched a student perform beyond their established ceiling.
+
+<div class="dialogue">"That lazy-propagation approach. I published a paper in 2022 using a similar technique for AVL trees. Have you read it?"</div>
+
+Your heart pounds. "No sir." True   you haven't read //that// one. You've read the BST optimisation paper, which is how you know his work, but Arjun wouldn't reference it.
+
+<div class="dialogue">"The insight is the same. Either it's a coincidence, or you've been underperforming in my class for two and a half years. Either way   submit to the department's research symposium. Deadline's in three weeks."</div>
+
+A professor is asking //Arjun// to submit academic research. It's intoxicating. It's also a problem   if this becomes a commitment, Arjun has to deliver work at your level in future swaps.
+
+"I'll think about it, sir."
+
+<div class="dialogue">"Think fast. And Arjun   whatever happened between yesterday and today, keep it happening."</div>
+
+<<run setup.flag("research_symposium_invited")>>
+<<run setup.stat("rel_krishnan", 5, "kavya")>>
+<<run setup.stat("krishnan_suspicion", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: nikhil_icpc_d3
+"Bhai. ICPC practice. Saturday. Graph algos, DP, string processing. Last year's prelim had an MST problem that killed sixty percent of teams."
+
+"Kruskal's or Prim's?"
+
+"Kruskal's with union-find. But the trick   the graph had negative weights. Most teams used Kruskal and got wrong answers. Correct approach: Bellman-Ford first, then MST on the residual."
+
+You've solved this exact problem on Codeforces. Two-phase, elegant, missed by most competitive programmers who commit to one approach too early.
+
+"I had a similar one on   " you stop. You were about to say Codeforces. Arjun isn't on Codeforces. KV_Codes is. "   a practice set online."
+
+Twenty minutes of strategy. His knowledge is solid, methodical, textbook. Yours   Kavya's   is intuitive, pattern-based, born from three years of unsupervised self-study under constraint.
+
+By the end Nikhil is looking at you with an expression you've never received from a peer: technical respect. //You know things I don't.//
+
+"Bhai, seriously. Kaunsa YouTube channel?"
+
+"I'll send you the link."
+
+There is no link. There's a girl in a medical hostel who solved these at 2 AM on a ₹3,000 phone. That story isn't available today.
+
+<<run setup.flag("nikhil_icpc_done_d3")>>
+<<run setup.flag("icpc_partner_agreed")>>
+<<run setup.stat("k_coding", 5, "kavya")>>
+<<run setup.stat("rel_nikhil", 5, "kavya")>>
+<<hubreturn>>
+
+
+:: anna_order_d3
+Anna, the South Indian uncle behind the dosa griddle: "Arjun! Aaj kya?"
+
+A test you didn't study for. Masala dosa? Plain? Idli? You saw his usual in the notes   masala dosa. But //always//?
+
+"Masala dosa, Anna."
+
+"Usual." Batter on the griddle. The sizzle is correct. "Tera dost ka bhi banaun? Rohit? Woh teen khaata hai."
+
+"Haan, usne bola hai." You're guessing.
+
+Anna starts a second batch. The guess was right, or unremarkable. But the dosa itself   in Arjun's body the flavour is flatter, lower-resolution; the cumin is just cumin. And one dosa is an appetiser. You order a second. Anna raises an approving eyebrow. "Aaj bhookh lagi hai. Acchi baat hai."
+
+<<run setup.flag("anna_order_done_d3")>>
+<<run setup.discover("a male metabolism, and a lower-res palate", "kavya")>>
+<<run setup.stat("energy", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: rohit_canteen_d3
+<div class="intimate"><span class="tag">The extended test</span>
+<<img "kavya_rohit_canteen.png" "the canteen">>
+Rohit slaps a plate of dosa in front of you   his greeting ritual, affection in carbohydrates.
+
+"Bhai, KAUNSA YouTube channel?"
+
+The Krishnan incident has percolated for two hours, and Rohit's brain, agitated, produces confrontations with the inevitability of monsoon.
+
+"Random one. Algorithm analysis."
+
+He tears his dosa. Chews. His eyes don't leave your face. "Arjun, tujhe Red-Black trees ka Sedgewick optimization kab se aata hai? Tera DBMS assignment mein tu basic joins nahi kar pa raha tha."
+
+Dangerous. Rohit is the person most calibrated to detect the delta between Arjun-two-days-ago and "Arjun"-today.
+
+You deploy the one weapon you have: emotional deflection.
+
+"Rohit." You lower your voice. Set down the dosa. Make eye contact   Arjun's eyes carry a particular earnest sincerity. "Meera ke baare mein jo call aaya tha? It motivated me. Six months pining, doing nothing. The call was a wake-up."
+
+The truth, wrapped in a lie, in his best friend's voice. The manipulation makes you uncomfortable   Rohit is genuine and you're exploiting his trust. But the alternative is exposure, and exposure kills the swap.
+
+Rohit studies you. Jaw working through dosa and suspicion at once. "Agar Meera ki wajah se tu finally padhai kar raha hai   I support it. Par itna sudden change... log notice karenge."
+
+"Main dhyan rakhunga."
+
+"Rakh. Krishnan ne tujhe aise dekha jaise tu alien hai. Which, honestly, you might be." He grins. The tension breaks.
+
+<<run setup.flag("rohit_canteen_done_d3")>>
+<<run setup.stat("rohit_suspicion", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: meera_folder_d3
+On Arjun's laptop, a folder on the desktop: <b>Important Documents</b>. Thumbprint-locked   but the machine's already unlocked and the folder opens.
+
+Sixteen items. All Meera. Marine Drive, green dupatta. Backstage at the cultural fest, green silk. A Bharatanatyam video, 206 views. Screenshots of a WhatsApp thread that ended six months ago, saved so the words couldn't be deleted out from under him.
+
+<div class="thought kavya">You knew he loved her. You didn't know the shape of it   this careful, this archival, a man building a museum so a person couldn't be erased.</div>
+
+<<run setup.flag("meera_folder_seen_d3")>>
+<<run setup.flag("kavya_curious_d3")>>
+<<run setup.stat("rel_arjun", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: arjun_poetry_d3
+A bookmarked local text file: <code>for_m.txt</code>. Love poems. Undated, dozens of them, revised   you can see the crossed-out lines where a weaker word was replaced.
+
+They're not sentimental. They're //precise//   a coder's poems, each one a small system where every element load-bears. One is just eleven lines about the specific sound of her ghungroos during a turn.
+
+You close the file. You feel like you've read someone's source code without permission.
+
+<div class="thought kavya">He's going to spend today in your body, in your hostel, learning what you carry. It seems only fair he doesn't get to know you did this first. You'll tell him. Eventually. Maybe.</div>
+
+<<run setup.flag("poetry_read_d3")>>
+<<run setup.stat("rel_arjun", 3, "kavya")>>
+<<hubreturn>>

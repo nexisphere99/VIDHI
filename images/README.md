@@ -206,3 +206,19 @@ temple_priest.png            IMG-120    joshi_rounds_tense.png       IMG-121
 arjun_bed_selfplay_d2.png    IMG-122    kavya_bed_selfplay_d2.png    IMG-123   (last-night self-play, art pending)
 arjun_porn_d2.png            IMG-124    kavya_porn_d2.png            IMG-125   (last-night porn, art pending)
 ```
+
+---
+
+## Day 3   "Pehla Badlav"  (prompts: story_files/day_3/day3_image_prompts.md)
+
+Day 3 scene illustrations -> `scenes/day3/`  (all art pending):
+```
+pataleshwar_dawn.png         IMG-200    arjun_first_kavya_body.png   IMG-201
+kavya_first_arjun_body.png   IMG-202    kavya_pulsar_ride.png        IMG-203
+meera_reunion.png            IMG-204    arjun_anatomy_horror.png     IMG-205
+kavya_cs_lecture.png         IMG-206    kavya_coding_joy.png         IMG-207
+kavya_rohit_canteen.png      IMG-208    room_304_arjun_pov.png       IMG-210
+pg_room_kavya_pov.png        IMG-211
+```
+Note: the swap and all body-discovery scenes are text-only. The images capture
+the emotional moments (reunion, coding joy, the ride), not the physical.

@@ -344,6 +344,150 @@ use("k2_body_catalogue");                        // kavya_day2_complete
 ["k2_obj_plan","k2_obj_rules","k2_obj_college","k2_obj_call","k2_obj_body"].forEach(assertObj);
 console.log("  k_coding", S.stats.k_coding, "k_med", S.stats.k_med, "rel_arjun", S.stats.rel_kavya_arjun);
 
+/* ================= DAY 3   THE FIRST SWAP ================= */
+console.log("\n=== DAY 3   beginDay(3) ===");
+setup.beginDay(3);
+console.log("  day", S.day, "pov", S.pov, "arjun@", S.loc.arjun, setup.clockStr("arjun"),
+  "| kavya@", S.loc.kavya, setup.fmtHM(S.time.kavya), "| bodies", JSON.stringify(S.body));
+if (S.loc.arjun !== "pataleshwar_temple_d3" || S.loc.kavya !== "pataleshwar_temple_d3")
+  fail("Day 3 should start both at the temple");
+
+const D3 = {
+  day3_swap: () => {
+    setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
+    setup.flag("swap_complete"); S.swapActive = true; setup.doSwap();
+    setup.removeItem("bike_keys", "arjun"); setup.addItem("bike_keys", "kavya");
+    setup.removeItem("redmi_phone", "kavya"); setup.addItem("redmi_phone", "arjun");
+    S.time.arjun = 310; S.time.kavya = 310;
+    S.loc.arjun = "hostel_walk_d3"; S.loc.kavya = "pulsar_ride_d3";
+  },
+  day3_swapback: () => {
+    setup.setBody("arjun", "arjun"); setup.setBody("kavya", "kavya");
+    setup.flag("swap_back_complete");
+    setup.removeItem("bike_keys", "kavya"); setup.addItem("bike_keys", "arjun");
+    setup.removeItem("redmi_phone", "arjun"); setup.addItem("redmi_phone", "kavya");
+    setup.flag(S.pov === "arjun" ? "arjun_day3_complete" : "kavya_day3_complete");
+  },
+  arjun_first_kavya_body: () => setup.flag("arjun_first_kavya_body"),
+  chowkidar_d3: () => setup.flag("chowkidar_passed"),
+  signin_d3: () => setup.flag("entered_hostel_d3"),
+  meera_reunion_d3: () => setup.flag("meera_reunion_d3"),
+  arjun_first_pee_female: () => setup.flag("arjun_first_pee_female"),
+  mess_eating_d3: () => setup.flag("mess_ate_d3"),
+  anatomy_horror_d3: () => { setup.flag("in_dissection_d3"); setup.flag("anatomy_done_d3"); },
+  specimen_jar_d3: () => setup.flag("specimen_helped_d3"),
+  manuscript_organize_d3: () => setup.flag("manuscript_organized_d3"),
+  meera_terrace_d3: () => setup.flag("meera_terrace_done_d3"),
+  meera_terrace_hold_d3: () => setup.flag("meera_terrace_done_d3"),
+  arjun_shower_female_d3: () => setup.flag("arjun_showered_d3"),
+  arjun_cupboard_d3: () => setup.flag("arjun_cupboard_seen_d3"),
+  kavya_first_arjun_body: () => setup.flag("kavya_first_arjun_body"),
+  kavya_clutch_d3: () => setup.flag("ride_complete_d3"),
+  kavya_pulsar_ride_d3: () => setup.flag("ride_complete_d3"),
+  rohit_morning_d3: () => setup.flag("rohit_pg_passed"),
+  patil_d3: () => setup.flag("entered_vit_d3"),
+  ds_lecture_d3: () => { setup.flag("in_lecture_d3"); setup.flag("cs_lecture_attended_d3"); },
+  kavya_brilliant_answer_d3: () => { setup.flag("krishnan_answered_d3"); setup.flag("research_symposium_invited"); },
+  krishnan_corridor_d3: () => setup.flag("research_symposium_invited"),
+  nikhil_icpc_d3: () => { setup.flag("nikhil_icpc_done_d3"); setup.flag("icpc_partner_agreed"); },
+  rohit_canteen_d3: () => setup.flag("rohit_canteen_done_d3"),
+  kavya_coding_ecstasy_d3: () => setup.flag("real_coding_done"),
+  kavya_evening_coding_d3: () => setup.flag("real_coding_done"),
+  kavya_first_pee_male: () => setup.flag("kavya_peed_male_d3"),
+  kavya_shower_male_d3: () => setup.flag("kavya_showered_male_d3"),
+  kavya_shaving_d3: () => setup.flag("kavya_shaved_d3"),
+  kavya_laptop_first_touch_d3: () => setup.flag("kavya_curious_d3"),
+  meera_folder_d3: () => { setup.flag("meera_folder_seen_d3"); setup.flag("kavya_curious_d3"); },
+  arjun_poetry_d3: () => setup.flag("poetry_read_d3"),
+  kavya_explore_body_d3: () => setup.flag("kavya_explored_body_d3"),
+  pg_chai_circle_d3: () => setup.flag("pg_chai_done_d3"),
+  amit_laptop_d3: () => setup.flag("amit_laptop_fixed_d3"),
+  signout_d3: () => setup.flag("signed_out_d3"),
+};
+Object.assign(EFFECTS, D3);
+
+// --- Arjun in Kavya's body ---
+console.log("\n--- Arjun (in Kavya's body) ---");
+pov("arjun");
+use("swap_circle");                              // -> day3_swap
+assertObj("a3_obj_swap");
+use("walk_body_check");                          // arjun_first_kavya_body
+go("hostel_entrance_d3"); use("chowkidar_pass"); use("signin_d3");
+assertObj("a3_obj_hostel");
+go("hostel_stairs_d3"); go("hostel_corridor_d3"); go("hostel_room_304_d3");
+use("meera_reunion");
+assertObj("a3_obj_meera");
+use("room304_cupboard_d3");                      // a3_sq_cupboard
+go("hostel_corridor_d3"); go("hostel_bathroom_d3"); use("toilet_d3");
+use("shower_d3_a");                              // a3_sq_shower_f
+go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_mess_d3");
+wait(12 * 60 + 30); use("mess_food_d3");
+go("hostel_stairs_d3"); go("hostel_entrance_d3");
+use("signout_d3");                               // signed_out_d3
+go("bj_campus_path_d3"); go("bj_anatomy_hall_d3");
+S.time.arjun = 9 * 60 + 30;                      // reach the dissection window
+use("anatomy_table_d3");                         // in_dissection_d3, anatomy_done_d3
+use("anatomy_specimen_d3");                      // a3_sq_specimen
+if (!S.flags.arjun_day_survived_d3) fail("arjun_day_survived_d3 not derived");
+assertObj("a3_obj_survive");
+// afternoon with Meera, then swap-back
+go("bj_campus_path_d3"); go("hostel_entrance_d3");
+S.time.arjun = 14 * 60 + 5; drainEvents();       // priya_out event
+go("hostel_stairs_d3"); go("hostel_corridor_d3"); go("hostel_room_304_d3");
+use("room304_manuscript_d3");                    // a3_sq_manuscript
+go("hostel_corridor_d3"); go("hostel_terrace_d3"); use("terrace_meera_d3"); // a3_sq_terrace
+S.time.arjun = 19 * 60 + 35;
+go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
+go("pataleshwar_temple_d3");
+use("swap_back_circle");                         // day3_swapback
+["a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
+console.log("  arjun body now:", S.body.arjun, "| fem_comfort", S.stats.a_femComfort, "| discoveries", (S.discoveries.arjun || []).length);
+
+// --- Kavya in Arjun's body ---
+// (sim walks threads sequentially; re-arm the swap for Kavya's thread)
+console.log("\n--- Kavya (in Arjun's body) ---");
+pov("kavya");
+setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
+setup.addItem("bike_keys", "kavya"); setup.removeItem("bike_keys", "arjun");
+S.swapActive = true; S.flags.swap_back_complete = false;
+S.loc.kavya = "pulsar_ride_d3"; S.time.kavya = 310;
+use("ride_body_check");                          // kavya_first_arjun_body
+use("ride_clutch");                              // ride_complete_d3
+assertObj("k3_obj_ride");
+go("katraj_pg_room_d3");
+S.time.kavya = 6 * 60 + 30;
+use("pg_rohit_d3");                              // rohit_pg_passed
+assertObj("k3_obj_pg");
+use("pg_laptop_d3"); use("pg_meera_folder_d3"); use("pg_poetry_d3"); // side quests
+go("pg_bathroom_d3"); use("urinal_d3"); use("pg_shave_d3");
+go("katraj_pg_room_d3"); go("pg_stairs_d3");
+use("pg_chai_d3"); use("pg_amit_d3");            // k3_sq_amit
+go("katraj_street_d3");
+S.time.kavya = 9 * 60 + 30;
+go("vit_gate_d3"); use("vit_id_d3");             // entered_vit_d3
+S.time.kavya = 9 * 60 + 45;
+go("vit_cblock_d3");
+use("cblock_lecture_d3");                        // cs_lecture_attended_d3
+assertObj("k3_obj_cs");
+use("cblock_answer_d3");                         // k3_sq_answer
+use("cblock_krishnan_d3"); use("cblock_nikhil_d3");
+go("vit_canteen_d3"); use("canteen_rohit_d3");   // k3_sq_rohit
+go("vit_cblock_d3");
+S.time.kavya = 14 * 60 + 5;
+go("vit_cs_lab_d3");
+use("lab_code_d3");                              // real_coding_done
+assertObj("k3_obj_code");
+go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3"); go("pg_stairs_d3"); go("katraj_pg_room_d3");
+S.time.kavya = 17 * 60 + 30;
+use("pg_explore_body_d3");                       // k3_sq_explore_m
+S.time.kavya = 19 * 60 + 35;
+go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3");
+go("pataleshwar_temple_d3");
+use("swap_back_circle");                         // day3_swapback
+["k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);
+console.log("  kavya body now:", S.body.kavya, "| masc_comfort", S.stats.k_mascComfort,
+  "| k_coding", S.stats.k_coding, "| symposium", !!S.flags.research_symposium_invited);
+
 function sideReport(who) {
   const side = setup.objectives[who].side.filter((o) => o.day === S.day);
   const done = side.filter((o) => S.objectives[o.id] === "complete").map((o) => o.id);

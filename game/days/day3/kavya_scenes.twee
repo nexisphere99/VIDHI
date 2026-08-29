@@ -1,0 +1,178 @@
+:: kavya_first_arjun_body
+<div class="intimate"><span class="tag">Intimate · body discovery</span>
+<<img "kavya_first_arjun_body.png" "admin access, at last">>
+<b>Height.</b> The world rearranges. Temple walls that loomed are at eye level. The Nandi statue you looked up at thirty seconds ago looks at you straight on. Everything above your former eye-line has dropped six inches, and the effect is like stepping onto a stage.
+
+You look at your hands. Arjun's hands. You spread the fingers wide and the reach is obscene   thumb to pinkie, easily nine inches. Where your hands stretched and repositioned on every keyboard, these would //rest// on a full-size QWERTY. A callus on the right index from mouse-clicking. These hands have written code. They know.
+
+You make fists. Substantial. Dense. When you curl these fingers the force feels concentrated   the difference between a slap and a punch built into the architecture.
+
+Voice. You clear your throat: a drum struck in a larger chamber. "Testing." A full octave below your usual register, the vibration starting in the //chest//, radiating through a wider ribcage. You feel your own voice in your collarbones for the first time in your life.
+
+Flat chest. The absence of breast weight is   you lack the adjective. Like removing a backpack you wore so long you forgot it was there. You roll your shoulders and nothing moves except muscle and bone.
+
+And between your legs: weight. Mass. Presence. Warm, soft, constant. Your female anatomy is internal, folded, hidden. This is external, hanging, negotiating with fabric and gravity in a running dialogue you can feel with every micro-adjustment. You shift your weight and the testicles shift too, rolling slightly, and you catalogue it with fascinated horror.
+
+<div class="dialogue">"How does it feel?"</div>
+
+"Like having admin access. After three years of read-only."
+
+<div class="thought kavya">Twelve hours. Do not waste a minute of them.</div>
+</div>
+
+<<run setup.flag("kavya_first_arjun_body")>>
+<<run setup.discover("flat chest", "kavya")>>
+<<run setup.discover("penis and testicles", "kavya")>>
+<<run setup.discover("height", "kavya")>>
+<<run setup.discover("a voice in the collarbones", "kavya")>>
+<<run setup.discover("hand span", "kavya")>>
+<<run setup.stat("masc_comfort", 4, "kavya")>>
+<<run setup.stat("sex_m", 3, "kavya")>>
+<<hubreturn "Get on the bike">>
+
+
+:: kavya_clutch_d3
+First attempt: you release the clutch too fast. The bike lurches, front wheel lifting an inch   a micro-wheelie. Arjun's flat stomach launches into your throat. The adrenaline spike is different in this body: sharper, centred in the chest not the gut. The testicles attempt to migrate upward, a reflexive retraction you feel distinctly and file under //male biology, subcategory: surprising//.
+
+Second attempt: easier. The clutch point is higher than a scooty's   more resistance, more power, and Arjun's wrist is stronger, the forearm managing the throttle with torque your wrists never had. You roll it gently. The bike moves.
+
+<<run setup.flag("ride_complete_d3")>>
+<<run setup.discover("the clutch, and the retraction reflex", "kavya")>>
+<<run setup.stat("masc_comfort", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_pulsar_ride_d3
+<div class="intimate"><span class="tag">Intimate</span>
+<<img "kavya_pulsar_ride.png" "Pune, 5:25 AM">>
+Pune at 5:25   near-empty, streetlights on damp asphalt. You lean into it. The wind hits Arjun's face and there's no dupatta to manage, no hair whipping into your mouth. His hair is short enough that the air passes //through// it. The air moves over you instead of around you. Narrower wind profile.
+
+You open the throttle. The Pulsar responds and for one exhilarating moment   engine screaming in second, speedo past forty, dawn painting the sky Pune-orange   you feel what this body was built for. Motion. Velocity. A body that takes up space and moves through it with a confidence that has nothing to do with the mind driving it.
+
+Freedom tastes like morning air and engine exhaust and a face nobody is watching.
+</div>
+<<run setup.flag("ride_complete_d3")>>
+<<run setup.discover("a body built for machines", "kavya")>>
+<<run setup.stat("masc_comfort", 4, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_sees_arjun_face
+<<img "pg_room_kavya_pov.png" "the scratched mirror">>
+Wheat skin. Two days of stubble you'll have to deal with. Dark circles   his, from six months of pining, not yours. Long lashes Rohit apparently mocks him for.
+
+You try Arjun's relaxed half-smile and your face does it wrong   too controlled, too precise. A dancer's posture in a swimmer's body. You'll have to loosen everything. Slouch. Take up space like you own it.
+
+The eyes, though. Meera would say the eyes are still you. You lean in and look. Maybe. Sharp where his are soft.
+
+<<run setup.discover("your own borrowed face", "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_laptop_first_touch_d3
+<<img "pg_room_kavya_pov.png" "the keyboard, finally">>
+The screen wakes. VS Code, still open from last night, a half-finished DBMS query on line 47. A full-size mechanical keyboard on USB, not the laptop's built-in. Dual monitors.
+
+Your fingers   Arjun's fingers   settle on the home row. F and J, the dimples under your index fingers. Every key exactly where it's always been on every keyboard, but //this// one has switches that respond with a click you feel in your fingertips and in your heart.
+
+You don't code yet. You just rest your hands there for a minute, on a real machine, in a body that fits it, and let one tear escape   Arjun's single, reluctant, bureaucratically-processed tear.
+
+Then you notice a folder on the desktop: <b>Important Documents</b>. And you notice you want to open it.
+
+<<run setup.flag("kavya_curious_d3")>>
+<<run setup.stat("k_coding", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_wardrobe_d3
+Jeans. Black t-shirts, four identical. One festival kurta. A hoodie. That's the entire decision tree   no dupatta to drape, no salwar to tie, no shape to minimise or reveal. You pick a t-shirt. It takes four seconds.
+
+<div class="thought kavya">A t-shirt and jeans on a male body invites exactly zero commentary. Nobody will check the tightness of this. Nobody will comment on how you sit. The absence of surveillance is the loudest thing in the room.</div>
+
+<<run setup.discover("getting dressed in four seconds", "kavya")>>
+<<run setup.stat("masc_comfort", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_vit_wonder_d3
+<<img "kavya_cs_lecture.png" "VIT, her campus now">>
+You walk in and it feels like walking into a cathedral where the religion is the one you actually believe in. The CS dept noticeboard. A hackathon poster. Students with laptops open on benches, arguing about time complexity.
+
+Three years you've watched this campus on a ₹3,000 phone. Now you're standing in it, and nobody here knows KV_Codes is the medical student who flinches at formalin. Today, for twelve hours, you just belong.
+
+<<run setup.stat("k_coding", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: ds_lecture_d3
+<div class="intimate"><span class="tag">The dream, made real</span>
+<<img "kavya_cs_lecture.png" "Room C-204">>
+Room C-204. Tiered seating. A wide clean whiteboard. The smell of dry-erase markers, which   unlike formalin   makes this borrowed heart sing.
+
+You sit in Arjun's seat, third row from the back, left, near the window. Rohit drops in beside you. "Bhai, tera face glow kar raha hai. Kya kha ke aaya?"
+
+"Chai." But the glow is real. Arjun's face is smiling and you can't stop it.
+
+Prof. Krishnan enters   mid-fifties, sharp eyes, the posture of a man who treats every lecture like a conversation with colleagues. He writes: <b>Red-Black Tree Balancing   Deletion Cases.</b>
+
+Your brain ignites. The neural pathways that have starved on phone screens and stolen library sessions light up like a grid after a blackout. The six deletion cases. Double-black resolution. Sibling analysis. Rotation sequences. You've solved these   on paper during pharmacology, on LeetCode at 2 AM, on the back of an anatomy worksheet during Dr. Sharma's spot quiz.
+
+You sit through the whole ninety minutes with your hand twitching in your lap, a mind that knows the answer and has spent three years forbidden from raising its hand.
+
+<<run setup.flag("in_lecture_d3")>>
+<<run setup.flag("cs_lecture_attended_d3")>>
+<<run setup.stat("k_coding", 5, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_evening_coding_d3
+<div class="intimate"><span class="tag">Intimate marker · first erection</span>
+<<img "kavya_coding_joy.png" "PG room, 5:35 PM">>
+Rohit's gone. Door locked. VS Code open. The flow state arrives in ninety seconds   a record. On the Redmi it takes ten minutes of buffering and frustration.
+
+You create the project: <code>ml-medical-imaging</code>. A CNN to classify chest X-rays. Data pipeline first. Then the model   ResNet backbone, custom head, dropout for regularisation. The code pours. Function after function. Arjun's fingers dance and the mechanical switches click and the sound is a percussion section playing to the rhythm of creation.
+
+And then, around 5:35, something else happens.
+
+You become aware of a sensation between your legs. A warmth. A thickening. The penis   soft, resting, unremarkable for twelve hours   is changing. Growing. Not suddenly; gradually, like a slow boot sequence, blood filling tissue in increments. You feel each one. It lifts from its resting position and presses, insistently, against the inside of the jeans.
+
+There's a bulge. An actual, visible, denim-straining bulge where thirty seconds ago there was none.
+
+This is not arousal. You're thinking about learning-rate schedulers. The erection is //random//   the male body's equivalent of a pop-up ad, an unsolicited notification from the genital subsystem, arriving without trigger or permission. You shift in the chair and the friction of denim against the sensitised head sends a bright jolt through your pelvis and you //gasp//   Arjun's voice, gasping, in an empty room.
+
+You sit very still. Think about Cockcroft-Gault equations. The Krebs cycle. Dr. Mhatre droning through pharmacokinetics. Aggressively boring things.
+
+Four minutes. The blood retreats, the tissue softens, the penis returns to rest against your thigh.
+
+//This happens to boys randomly? Regularly? Without warning? How do they attend lectures? How do they ride motorcycles?//
+
+You file it under //male biology, subcategory: design flaws// and keep coding. By 7:30 the project has a functional training pipeline, evaluation metrics, and documentation. More clean deployable code in one afternoon than three months on a phone. Your eyes sting. One tear   Arjun's single, bureaucratic tear   escapes.
+</div>
+
+<<run setup.flag("real_coding_done")>>
+<<run setup.flag("kavya_first_erection_d3")>>
+<<run setup.discover("a random erection", "kavya")>>
+<<run setup.discover("Arjun's bureaucratic tear ducts", "kavya")>>
+<<run setup.stat("k_coding", 10, "kavya")>>
+<<run setup.stat("sex_m", 4, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_coding_ecstasy_d3
+<div class="intimate"><span class="tag">The emotional payoff</span>
+<<img "kavya_coding_joy.png" "CS lab, real hardware">>
+Terminal 6, closest to the wall, screen angled away. A Dell that doesn't wheeze at JavaScript. Dual monitors. A mechanical keyboard whose switches you feel in your fingertips and in your heart.
+
+Your fingers   Arjun's fingers   settle on the home row. F and J. The dimples under your index fingers. Every key exactly where it's always been on every keyboard, but //this// one responds with a click.
+
+You build the medical-imaging classifier you've been carrying around in your head for a year. Two hours pass and you don't notice   nothing exists except syntax and logic and the euphoria of making something that WORKS. When you surface, the training pipeline runs. The metrics are clean.
+
+One tear escapes. You wipe it with the back of a hand that's bigger than your face used to be.
+
+<div class="thought kavya">You will lose this at 8 PM. You know that. You're doing it anyway, as hard and as fast as you can, because a thing you did once is a thing you did.</div>
+</div>
+
+<<run setup.flag("real_coding_done")>>
+<<run setup.discover("what your work feels like on real hardware", "kavya")>>
+<<run setup.stat("k_coding", 10, "kavya")>>
+<<hubreturn>>

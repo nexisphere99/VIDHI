@@ -34,7 +34,8 @@
 	rel_kavya_meera: 85, rel_kavya_arjun: 30, rel_kavya_priya: 5, rel_kavya_sneha: 3,
 	rel_kavya_divya: 0, rel_kavya_messdidi: 0,
 	trust_meera: 0, rel_triad: 0, karma: 0,
-	susp_priya: 0, susp_colonel: 0, susp_rohit: 0, susp_warden: 0
+	susp_priya: 0, susp_colonel: 0, susp_rohit: 0, susp_warden: 0,
+	susp_krishnan: 0, susp_sharma: 0, susp_pooja: 0, susp_aai: 0
 }>>
 <<set $mood to { arjun: "melancholy", kavya: "guarded" }>>
 <<set $body to { arjun: "arjun", kavya: "kavya" }>>
@@ -42,6 +43,7 @@
 <<set $arjunOutfit to "">>
 <<set $arjunToldRohit to "">>
 <<set $kavyaJournal to false>>
+<<set $discoveries to { arjun: [], kavya: [] }>>
 <<set $debug to true>>
 <<run setup.refreshObjectives()>>
 
@@ -216,6 +218,10 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<if $inventory[$pov].length gt 0>><<for _i range $inventory[$pov]>><span class="inv-chip"><<= setup.itemNames[_i] ? setup.itemNames[_i] : _i>></span><</for>><<else>><span class="obj-empty">Empty.</span><</if>>\
 <h3>Wallet</h3>\
 <span class="inv-chip">₹<<= setup.money()>></span>\
+<<if $swapActive and $discoveries[$pov].length gt 0>>\
+<h3>Body   what you've learned</h3>\
+<<for _d range $discoveries[$pov]>><span class="inv-chip">— <<= _d>></span><</for>>\
+<</if>>\
 <img class="mandala" src="images/mandala.svg" alt="">
 
 
@@ -246,7 +252,10 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <</if>>
 <div class="swap-box"><div class="n"><<= $swapCount>></div><div class="cl">Swaps · barrier <<= $barrierIntegrity>>%</div></div>
 <h3>Suspicion</h3>
-<<= setup.susRow("Priya", $stats.susp_priya)>><<= setup.susRow("Colonel", $stats.susp_colonel)>><<= setup.susRow("Rohit", $stats.susp_rohit)>><<= setup.susRow("Warden", $stats.susp_warden)>>
+<<= setup.susRow("Priya", $stats.susp_priya)>><<= setup.susRow("Colonel", $stats.susp_colonel)>><<= setup.susRow("Rohit", $stats.susp_rohit)>><<= setup.susRow("Warden", $stats.susp_warden)>>\
+<<if $day gte 3>>\
+<<= setup.susRow("Krishnan", $stats.susp_krishnan)>><<= setup.susRow("Dr. Sharma", $stats.susp_sharma)>><<= setup.susRow("Pooja", $stats.susp_pooja)>><<= setup.susRow("Aai", $stats.susp_aai)>>\
+<</if>>
 <h3>Game</h3>
 <div class="sys-btns">\
 <<link "💾 Save / Load">><<run UI.saves()>><</link>>\

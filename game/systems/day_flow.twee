@@ -1,0 +1,19 @@
+:: DayWrap [nobr]
+<<if setup.dayFullyDone() and setup.dayEnd[$day]>>\
+<<goto setup.dayEnd[$day].screen>>\
+<<elseif setup.dayFullyDone()>>\
+<<goto "Hub">>\
+<<else>>\
+<<set _me to $pov is "arjun" ? "Arjun" : "Kavya">>\
+<<set _them to $pov is "arjun" ? "Kavya" : "Arjun">>\
+<<set _theirId to $pov is "arjun" ? "kavya" : "arjun">>\
+<div class="title-screen">
+<div class="te">You lie down.</div>
+<p class="lede"><<= _me>> has done everything today   every objective on the board is checked off.</p>
+<p class="lede">But <<= _them>> still has this same day to get through, and the two of them sleep on the same clock. Switch with the toggle up top, live out <<= _them>>'s day, then come back here and sleep again.</p>
+<div class="start-btn">
+<<link `"Switch to " + _them + " now"`>><<run setup.pickPOV(_theirId)>><<goto "Hub">><</link>>
+<<link "Stay awake a while longer">><<goto "Hub">><</link>>
+</div>
+</div>
+<</if>>

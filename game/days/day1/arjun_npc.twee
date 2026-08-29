@@ -1,0 +1,219 @@
+:: rohit_morning_talk
+Rohit surfaces from sleep the way a submarine surfaces   slowly, with mechanical groaning. One eye opens.
+
+<div class="dialogue">"Bhai. Kitne baje hain?"<span class="gloss-en">Bro. What time is it?</span></div>
+
+"Six forty-five."
+
+<div class="dialogue">"Kyun? Krishnan ki class gyaarah baje hai."<span class="gloss-en">Why? Krishnan's class is at eleven.</span></div>
+
+"Lecture das baje hai, Rohit."<span class="gloss-en">The lecture is at ten, Rohit.</span>
+
+He stares at the ceiling. Processes. "Fuck." He sits up in three separate attempts, reaches for last night's protein shake, takes a swig, winces. "Khatta ho gaya."<span class="gloss-en">It's gone sour.</span> Takes another swig. "Protein protein hota hai, bhai. Fresh ya expired."<span class="gloss-en">Protein is protein, bro. Fresh or expired.</span>
+
+This is the man you share eighteen square metres with. God has a sense of humour and it's extremely specific.
+
+<<hubreturn>>
+
+
+:: landlord_interaction
+Sharma uncle opens the door in his undershirt, reading glasses on a nose that's seen sixty Pune monsoons.
+
+<div class="dialogue">"Paani ka bill badhega next month se. Swimming pool banaya hai kya bathroom mein? Aur woh tumhara dost   raat ko 2 baje gym ka bag phenk ke kya baja raha tha? Meri wife ko neend se uthaana   capital offense hai, Arjun."<span class="gloss-en">The water bill goes up next month. Have you built a swimming pool in the bathroom? And that friend of yours   throwing his gym bag around at 2 AM, what was that racket? Waking my wife from her sleep   that's a capital offense, Arjun.</span></div>
+
+"Sorry uncle. I'll tell him."
+
+<div class="dialogue">"Aur rent. Is hafte tak. Paisa ped pe nahi ugta."<span class="gloss-en">And the rent. By this week. Money doesn't grow on trees.</span></div>
+
+The door closes. From inside: //"Kaun tha?" "Woh Arjun. Accha ladka hai, par uska dost..."//<span class="gloss-en">"Who was it?" "That Arjun. Good boy, but his friend..."</span>
+
+<<hubreturn>>
+
+
+:: raju_phone_sidequest
+<<if setup.has("raju_phone_fixed")>>\
+Raju bhaiya waggles the phone at you   screen still cracked, because Anwar bhai's shop opens at eleven. "Baba, kal le jaana. Aur chai   tera toh free hai ab. Ek hafta."<span class="gloss-en">Take it tomorrow. And tea   yours is free now. For a week.</span> He's told three customers already.
+<<hubreturn>>
+<<else>>\
+The screen is a spiderweb radiating from the top-left corner   dropped on concrete at terminal velocity. A Redmi, two generations old. You turn it in your hands. The LCD isn't bleeding; the digitiser might still work behind the cracks.
+
+<div class="dialogue">"Screen replace karana padega, Raju bhaiya. Katraj mein Anwar bhai   ₹800 se ₹1000."<span class="gloss-en">The screen will need replacing, Raju bhaiya. Anwar bhai in Katraj   ₹800 to ₹1000.</span></div>
+
+<div class="dialogue">"Itna?" His mustache droops. For him that's two days of chai.<span class="gloss-en">That much?</span></div>
+
+"Wait. Main uska regular hoon   Rohit ka phone bhi wahan fix karwaya tha. Discount mil jaayega. Aur abhi backup le leta hoon   WhatsApp, contacts, sab safe."<span class="gloss-en">I'm a regular of his   I got Rohit's phone fixed there too. He'll give a discount. And I'll take a backup now   WhatsApp, contacts, all safe.</span>
+
+You pull the backup over an OTG cable to the spare drive in your laptop bag. His contact list is a time capsule: //Arun 2 cutting. Pramod special ginger. VIT boys table 3.//
+
+<div class="dialogue">"Tu kar sakta hai? Baba, tujhe free chai milegi zindagi bhar."<span class="gloss-en">You can do it? Son, you'll get free tea for life.</span></div>
+
+"Ek hafte ke liye chalega."<span class="gloss-en">A week will do.</span> You grin.
+
+<<run setup.flag("raju_phone_fixed")>>
+<<hubreturn>>
+<</if>>
+
+
+:: panwala_interaction
+Panwala Bhau runs a glass cabinet of tobacco, gutka and dreams. Gold chain, red tilak, an Amitabh Bachchan mustache.
+
+<div class="dialogue">"Arjun beta! Sun   kal raat police van aayi thi. Sinhagad Road pe. Bike racing, 200 pe. VIT ka ladka tha shayad. Apne doston ko bol   raat ko speed mat karo."<span class="gloss-en">Arjun, son! Listen   a police van came last night. On Sinhagad Road. Bike racing, at 200. Was a VIT boy, probably. Tell your friends   don't speed at night.</span></div>
+
+<<if setup.hasItem("panwala_packet") or setup.has("panwala_delivery_done")>>\
+<<hubreturn>>
+<<else>>\
+<div class="dialogue">"Ek kaam tha. VIT ke gate pe Patil guard   uska packet ready hai. Ek Classic Milds. Tu jaa raha hai toh de dega? Pachaas rupay."<span class="gloss-en">One favour. Guard Patil at the VIT gate   his packet is ready. One Classic Milds. If you're going, will you drop it? Fifty rupees.</span></div>
+
+<div class="choices">
+<<link "Take the packet   easy ₹50">>
+	<<run setup.flag("talked_to_panwala")>>
+	<<run setup.addItem("panwala_packet")>>
+	<<goto "Hub">>
+<</link>>
+<<link "Not today, Bhau">>
+	<<goto "Hub">>
+<</link>>
+</div>
+<</if>>
+
+
+:: panwala_delivery_scene
+You hand Guard Patil the Classic Milds packet through the booth window. He nods once, tucks it under the register, and   miracle   doesn't ask for your ID this time.
+
+<div class="dialogue">"Bhau ko bol   hisaab kal."<span class="gloss-en">Tell Bhau   we'll settle up tomorrow.</span></div>
+
+<<run setup.removeItem("panwala_packet")>>
+<<run setup.flag("panwala_delivery_done")>>
+<<run setup.addMoney(50, "arjun")>>
+<<hubreturn>>
+
+
+:: fruit_vendor_npc
+Tai runs the cart where Katraj Road meets the PG lane   pomegranates, guavas, a pyramid of sitaphal. Nine-yard saree, several gold teeth.
+
+<div class="dialogue">"Arjun! Kela le ja."<span class="gloss-en">Arjun! Take a banana.</span></div>
+
+"Tai, mera pet bhi khali hai aur wallet bhi."<span class="gloss-en">Tai, my stomach's empty and so is my wallet.</span>
+
+She tsks   the Maharashtrian tsk that carries volumes. Thrusts two bananas at you. "Free. Amma ko bolna   unka ladka kha nahi raha."<span class="gloss-en">Free. Tell your mother   her boy isn't eating.</span> Then, because your emotional state is visible from space: "Ladki theek hai teri? Hum sab jaante hain, beta. Katraj mein kuch chhupta nahi."<span class="gloss-en">Is your girl okay? We all know, son. Nothing stays hidden in Katraj.</span>
+
+<<run setup.stat("energy", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: stray_dog_scene
+<<if not setup.hasItem("biscuit")>>\
+The brown dog checks your hands, finds them empty, and gives you a look of profound disappointment. You'd need biscuits   the tapri sells Parle-G.
+<<hubreturn>>
+<<elseif setup.has("dog_fed")>>\
+The dog trots over, leans its bony flank against your knee for a while, and accepts another biscuit as its due.
+<<hubreturn>>
+<<else>>\
+You crouch and break the Parle-G into pieces. He approaches low to the ground   food first, human second   and takes each piece gently, like a surgeon removing a suture. Then he sits beside you, leaning his weight into your leg. For about thirty seconds you have something that loves you without conditions or surveillance.
+
+"Tujhe bhi koi mil jaaye, bhai,"<span class="gloss-en">May you find someone too, brother,</span> you tell him. He wags.
+
+<<run setup.flag("dog_fed")>>
+<<hubreturn>>
+<</if>>
+
+
+:: ananya_library_scene
+<<if setup.has("ananya_conversation_done")>>\
+Ananya lifts her earphone. "Still can't believe I stared at that bug for two days." She goes back to her pathfinding visualiser, nodes blooming across the screen.
+<<hubreturn>>
+<<else>>\
+Two desks over   Ananya, 2nd-year CSE, ponytail, VS Code open, typing like she's debugging production at 3 AM. She glances at you. Away. Back.
+
+<div class="dialogue">"Arjun, right? You wrote that sorting visualiser Krishnan showed in class. The recursive partitioning animation was elegant."</div>
+
+She turns her laptop toward you   a pathfinding visualiser, an A-star bug she can't find. It takes you forty-five seconds. "Line 87. Your heuristic is Manhattan distance but your grid allows diagonal movement. You need Chebyshev, or it over-explores."
+
+She fixes it, runs it, grins the grin of a coder whose code just worked. Then, carefully: "Random question. You know B.J. Medical, Sassoon Road? My cousin's third-year MBBS there. Sneha Patil. Room 302. She says the library has a rare Sanskrit section   I'm into computational linguistics, thought I could get some corpora."
+
+The world contracts. Room 302. The room next to Room 304. The room next to Meera.
+
+"I might be able to help," you say carefully. "Let me check with some people."
+
+<<run setup.flag("ananya_conversation_done")>>
+<<run setup.flag("ananya_has_bj_connection")>>
+<<hubreturn>>
+<</if>>
+
+
+:: sinhagad_dhaba_scene
+The dhaba is halfway up the approach road   tin roof, four plastic tables, a kerosene stove, and all of Pune laid out below. The owner is seventy, white stubble, a cloth wrapped round his head.
+
+<div class="dialogue">"Chai?" One word. He makes it on the kerosene flame, unhurried. "Pehle dost ke saath aata tha. Aur ek ladki bhi thi   lambe baal, sundar. Ab akela hai."<span class="gloss-en">You used to come with a friend. And there was a girl too   long hair, pretty. Now you're alone.</span></div>
+
+He remembers. This man, this dhaba, this mountain   they remember Meera and you.
+
+"Woh nahi aa sakti abhi."<span class="gloss-en">She can't come right now.</span>
+
+He nods. Doesn't ask why. "Chai pi. Sab theek hoga."<span class="gloss-en">Drink your tea. Everything will be alright.</span> Turns back to his stove. That's the whole philosophy.
+
+<<if not setup.hasItem("night_ride_invitation")>>\
+On your way out, three Royal Enfield boys rumble up. "Night ride kal   Sinhagad Fort, midnight, fifteen bikes. Girls bhi aa rahi hain. Soch le."<span class="gloss-en">Night ride tomorrow   Sinhagad Fort, midnight, fifteen bikes. Girls are coming too. Think about it.</span> One scrawls a number on a Classic Milds wrapper and drops it on the table.
+<<run setup.addItem("night_ride_invitation")>>
+<</if>>
+
+<<run setup.stat("energy", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: ice_cream_vendor_npc
+The ice cream wala's cart plays a tinny loop of a film song. You get an orange bar. It's mostly ice and a rumour of orange, and for a few minutes on the lakeside bench that is exactly enough.
+
+<<hubreturn>>
+
+
+:: sunita_interaction
+Aai is in the kitchen, which is where Aai is. "Beta, kha liya? Sirf dosa? Dosa mein kya hota hai   maida aur aloo."<span class="gloss-en">Son, have you eaten? Just a dosa? What's in a dosa   refined flour and potato.</span> She's already ladling something onto a plate you didn't ask for. "Sunday aa. Pooja ko maths samjha. Main mutton le lungi."<span class="gloss-en">Come Sunday. Teach Pooja maths. I'll get mutton.</span>
+
+The invitation is a command wrapped in love wrapped in calories. You say //dekhta hoon//.<span class="gloss-en">I'll see.</span> She hears //yes//.
+
+<<run setup.stat("energy", 4, "arjun")>>
+<<hubreturn>>
+
+
+:: suresh_interaction
+Papa lowers the newspaper. "Placement season aa raha hai. Resume ready hai? LIC mein bhi opening hai, back-office   permanent, pension."<span class="gloss-en">Placement season is coming. Is your resume ready? There's an opening at LIC too, back-office   permanent, pension.</span> He means well. He measures a life in permanence and pension and cannot understand why that isn't comforting.
+
+"Dekhta hoon, Papa."<span class="gloss-en">I'll see, Papa.</span>
+
+<<hubreturn>>
+
+
+:: pooja_interaction
+Pooja is on the sofa, textbooks unopened, phone very open. "Bhaiya WiFi password   SunitaAai2024, capital S, I know, it's cringe, Papa set it."<span class="gloss-en">Brother, WiFi password  </span> Then, without looking up: "Meera bhabhi ka update?<span class="gloss-en">Any update on Meera bhabhi (sister-in-law)?</span> ...Sorry. That was mean. Love you bhaiya. Come Sunday, Aai's making mutton."
+
+Seventeen years old and already more emotionally perceptive than most adults you know.
+
+<<hubreturn>>
+
+
+:: rohit_cad_scene
+<<if setup.has("rohit_cad_fixed")>>\
+Rohit's piston render sits on the screen, smooth and correct. He shows it to everyone who enters the room. "Mera project. Genius, na?"<span class="gloss-en">My project. Genius, right?</span>
+<<hubreturn>>
+<<else>>\
+Rohit's laptop shows SolidWorks and a 3D model that might be a piston or might be modern art. He hits render. The screen goes black, then white, then an error message in the specific red software uses when it's personally insulted.
+
+"Rohit, tera mesh density itni high hai ki render engine ko anxiety ho raha hai."<span class="gloss-en">Rohit, your mesh density is so high the render engine is having anxiety.</span>
+
+"Mesh density kya hota hai?"<span class="gloss-en">What's mesh density?</span>
+
+Twenty minutes later you've optimised the mesh, fixed two dimensions that would have made his piston the size of a building, and corrected a material assignment that gave steel the transparency of glass. The render completes   silver, gleaming.
+
+He's quiet a moment. Then: "Aaj canteen mein jo bola   usse related. Ek junior tha, Sameer, second year. Usne B.J. Medical ki library mein ek ladki dekhi. Lambe baal, fair, braid. Kisi ne bola woh Kulkarni hai. Colonel Kulkarni ki ladki. Parso. Sanskrit type ka kuch padh rahi thi."<span class="gloss-en">What I said in the canteen today   related to that. There was a junior, Sameer, second year. He saw a girl in the B.J. Medical library. Long hair, fair, in a braid. Someone said she's a Kulkarni. Colonel Kulkarni's daughter. Day before yesterday. Reading some Sanskrit-type thing.</span>
+
+Your hands stop on the keyboard. Meera. In the library. Reading Sanskrit. Two days ago. Alive. Functioning. In a place you can almost reach.
+
+"Rohit. Thanks."
+
+"Chal, biryani order kar. Tera Swiggy   mere pe coupon nahi hai."<span class="gloss-en">Come on, order biryani. On your Swiggy   I don't have a coupon.</span>
+
+<<run setup.flag("rohit_cad_fixed")>>
+<<run setup.flag("rohit_reveals_meera_sighting")>>
+<<hubreturn>>
+<</if>>

@@ -1,0 +1,117 @@
+:: EV_aai_phone_call
+<div class="alert-popup swap" style="position:static;max-width:none;margin-bottom:1rem;">📞 Incoming call   Aai ❤️</div>
+
+You pick up. "Haan Aai?"<span class="gloss-en">Yes, Ma?</span>
+
+<div class="dialogue">"Beta, kha liya? Sirf dosa? Protein kahan hai? Video call pe tera chehra dekha   haddi haddi ho gaya. Sunita mausi bhi bol rahi thi. Aur sun   weekend pe ghar aa. Pooja ka exam hai. Main sheera banaungi. Aur mutton. Sunday aaja."<span class="gloss-en">Son, have you eaten? Just a dosa? Where's the protein? I saw your face on the video call   you've gone to skin and bone. Aunt Sunita said so too. And listen   come home for the weekend. Pooja has an exam. I'll make sheera. And mutton. Come Sunday.</span></div>
+
+"Dekhta hoon, Aai."<span class="gloss-en">I'll see, Ma.</span>
+
+<div class="dialogue">"Dekhta hoon matlab aa raha hai. Bye, beta. Khaana kha."<span class="gloss-en">"I'll see" means you're coming. Bye, son. Eat something.</span></div>
+
+She hangs up. Your chest aches   the specific ache of being loved aggressively by a woman who expresses care in calories.
+
+<<goto "Hub">>
+
+
+:: EV_nikhil_whatsapp
+<div class="alert-popup objective" style="position:static;max-width:none;margin-bottom:1rem;">💬 Nikhil DBMS</div>
+
+<div class="chat-log">
+<div class="msg them">bhai assignment ka Q3   woh functional dependency wali table, uska candidate key kya hai<span class="gloss-en">bro, assignment Q3   the functional-dependency table, what's its candidate key</span></div>
+<div class="msg them">AB ya BC?<span class="gloss-en">AB or BC?</span></div>
+<div class="msg them">Krishnan ne class mein galat likha tha na<span class="gloss-en">Krishnan wrote it wrong in class, right</span></div>
+</div>
+
+You reply that it's {A, B} because C is functionally determined by A, and remind him the foreign key on table 3 is also wrong in the problem sheet. He sends back a single 🙏.
+
+<<goto "Hub">>
+
+
+:: EV_sunset_melancholy
+The light goes the colour of weak chai. 5 PM. Somewhere across the city a girl you have never met is washing formalin off her hands and not thinking about you at all.
+
+You don't know that yet. You just feel the day tilt toward evening and the familiar weight settle back onto your chest.
+
+<<goto "Hub">>
+
+
+:: EV_papa_missed_call
+<div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">📵 Missed video call   Papa</div>
+
+The Samsung buzzed against your hip through the whole of the brachial plexus dissection   five, six, seven times   while your hands were wrist-deep in a dead man's armpit. You couldn't answer.
+
+You'll have to call back during the break. He'll ask about Erb's point and the waiter's-tip deformity and whether you're eating, and he'll see through the answer to the last one, the way he always does   through the medical-student mask, through the dutiful daughter. What he has never once looked for is the code running underneath.
+
+<<goto "Hub">>
+
+
+:: EV_github_notification
+<div class="alert-popup objective" style="position:static;max-width:none;margin-bottom:1rem;">🔔 GitHub   2 notifications</div>
+
+On the Redmi, if you have it out: PR #247 to the NLP library   //merged//. Three approvals. And a comment from the maintainer: //"Elegant implementation. Who is KV_Codes? I want them on the core team."//
+
+<<if setup.hasItem("redmi_phone")>>You grin   toothpaste foam still at the corner of your mouth, standing in a hostel that has no idea.
+<<run setup.flag("github_checked")>>
+<<else>>The Samsung can't see any of this. You'll have to dig the Redmi out from under the mattress.<</if>>
+
+<<goto "Hub">>
+
+
+:: EV_meera_whisper
+Meera passes you in the corridor and doesn't slow down. Her voice arrives sideways, barely moving her lips:
+
+<div class="dialogue">"Aaj raat. Priya ke jog ke baad. Kahin aur mat rehna."<span class="gloss-en">Tonight. After Priya's jog. Don't be somewhere else.</span></div>
+
+Then she's gone, spine straight, every step measured.
+
+<<goto "Hub">>
+
+
+:: EV_priya_leaves_jog
+7:15. Priya laces up, jams in the earphones, and heads out for her thirty-minute loop of the campus perimeter   religious about it, Bollywood playlist audible from three feet away.
+
+The door closes. Her footsteps recede down the corridor.
+
+<div class="thought kavya">The window is open. Meera is in the room, and she has that look   the one that means the dam is about to come down.</div>
+
+<<run setup.flag("priya_out_jogging")>>
+<<goto "Hub">>
+
+
+:: KavyaDayEnd
+<<run setup.flag("test_swap_complete")>>
+<span class="scene-break"></span>
+
+**End of Day 1   Kavya.**
+<div class="thought kavya">Coding <<= $stats.k_coding>> · Medical <<= $stats.k_med>> · Rel Meera <<= $stats.rel_kavya_meera>> · Trust (swap) <<= $stats.trust_meera>> · ₹<<= setup.money("kavya")>> · Mood: <<= $mood.kavya>> · Swap experienced: yes</div>
+
+Tomorrow, everything changes. Or nothing does. With Meera it's always a coin flip   but tonight, for the first time in three years, the coin feels weighted in your favour.
+
+<div class="continue-nav">[[Sleep|DayWrap]]</div>
+
+<<if not setup.has("arjun_day1_complete")>>Arjun's Day 1 is still unfinished   his night ends with a phone screen and an empty folder. You can also keep wandering: <<link "back to the hostel">><<goto "Hub">><</link>>. The "Sleep   end the day" action stays in Room 304.<</if>>
+
+
+:: Day1Complete [nobr]
+<div class="title-screen">
+<div class="th">पहला दिन पूरा</div>
+<div class="te">End of Day 1</div>
+
+<p class="lede">Arjun sleeps in Katraj and dreams of green silk. Twenty minutes away, Kavya sleeps in Room 304 having been, for three minutes, someone else   and having discovered that a different cage is still a cage.</p>
+
+<p class="lede">Neither of them has met the other. Meera is the only thread between them, and she is holding a six-hundred-year-old plan in both hands.</p>
+
+<div class="thought arjun">ARJUN   Coding <<= $stats.a_coding>> · Rel Meera <<= $stats.rel_arjun_meera>> · Rel Rohit <<= $stats.rel_arjun_rohit>> · Karma <<= $stats.karma>> · ₹<<= setup.money("arjun")>></div>
+<div class="thought kavya">KAVYA   Coding <<= $stats.k_coding>> · Medical <<= $stats.k_med>> · Rel Meera <<= $stats.rel_kavya_meera>> · Trust (swap) <<= $stats.trust_meera>> · ₹<<= setup.money("kavya")>></div>
+
+<<set _sqDone to 0>><<for _o range setup.objectives.arjun.side.concat(setup.objectives.kavya.side)>><<if setup.objState(_o) is "complete">><<set _sqDone to _sqDone + 1>><</if>><</for>>\
+<p class="lede">Side quests: <<= _sqDone>> completed, <<= $sideDiscovered.length>> discovered. Swaps so far: <<= $swapCount>> · barrier at <<= $barrierIntegrity>>%.</p>
+
+<p class="lede">Day 2   "Saazish"   is the plan: the phone calls, the swap rules, and the night before the first cross-gender exchange.</p>
+
+<div class="start-btn">
+<<link "Keep exploring Day 1">><<goto "Hub">><</link>>
+<<link "Sleep   begin Day 2 (Day 1 can't be revisited)">><<run setup.beginDay(2)>><<goto "Day2Start">><</link>>
+</div>
+</div>

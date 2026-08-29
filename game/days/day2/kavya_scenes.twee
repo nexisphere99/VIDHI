@@ -1,0 +1,377 @@
+:: meera_full_plan_d2
+<<img "kavya_meera_planning.png" "Room 304, plan session">>
+Priya left at 6:50   Dr. Pathak's biochemistry, which she attends with religious devotion because he "has nice forearms when he rolls up his sleeves." The door closes. Footsteps recede.
+
+Meera locks it. Bolt. Chain. Then sits, spine straight   dancer's posture even in a cotton nightie at 7 AM planning a conspiracy that would give her father an aneurysm.
+
+<div class="dialogue">"Arjun swaps with you." No preamble. Meera doesn't do preambles. "He comes into the hostel in your body. I get to be with him   touch him, talk to him, be in the same room as my boyfriend for the first time in six months. You go out in his body. To VIT. To his classes."</div>
+
+Your brain is already running the algorithm. Input: two bodies, two minds. Operation: swap.
+
+"Mere body mein woh   a boy   will be walking around the hostel. Sleeping in MY bed. Using MY bathroom. Meera, tere saath   woh mere "<span class="gloss-en">A boy will be walking around the hostel in my body.</span>
+
+<div class="dialogue">"Focus, Kavya. You get to attend his CS classes. VIT. Full day. Real lectures. Real labs. A keyboard that isn't three inches wide."</div>
+
+The words land in your solar plexus. Not a punch   a key turning in a lock.
+
+CS classes. Not MIT OCW buffering at 240p. A real classroom, a real professor who published a real paper on optimal BST construction that you read during pharmacology and wept internally at.
+
+<div class="dialogue">"He'll have to PEE. In my body. He'll SEE everything. He'll have to   the BRA, Meera. Do you know what it takes to put on a bra from the inside?"</div>
+
+<div class="dialogue">"I'll teach him. I've been wearing bras since I was thirteen."</div>
+
+You walk to the window. VIT is out there, northwest, in Bibwewadi. C-Block lecture halls. A whole department dedicated to the thing you actually love.
+
+You turn back. "Rules. Non-negotiable."
+
+<<run setup.flag("meera_plan_heard")>>
+<<hubreturn>>
+
+
+:: swap_rules_d2
+You pull out the Redmi. Open Notes. Your thumbs move at the velocity of a woman drafting a legal contract while her best friend waits with the patience of someone who knows the contract is the price of admission.
+
+<div class="sensory">
+<b>SWAP RULES v1.0</b>
+1. NO sexual activity in Kavya's body without explicit written permission. Not even "accidental."
+2. Kavya gets FULL access to Arjun's CS schedule, materials, lab accounts, library card.
+3. Swap minimum 3 hours, maximum 12.
+4. Emergency swap-back via the brass bell   panic button, range ~2 km. No exceptions.
+5. If Priya gets suspicious   ABORT EVERYTHING.
+6. Nobody else knows. NOBODY. Not Rohit. Not parents. Not the chai wala.
+7. Full debrief after every swap. Complete account of both bodies. No omissions.
+8. Kavya retains VETO over any activity involving her body she hasn't pre-approved.
+9. If menstruation occurs during a swap   IMMEDIATE swap-back. No discussion.
+</div>
+
+Meera reads over your shoulder. She smells of Parachute coconut oil and last night's sandalwood. "Fair," she says.
+
+"One more thing." You lower your voice   for weight, not secrecy. "If he does anything to my body I haven't approved, the swaps stop permanently. And his Pulsar doesn't start for a month."
+
+<div class="dialogue">"Your promise isn't the one I need, Meera. His is."</div>
+
+<div class="dialogue">"You'll hear it from him. Tomorrow. Before the swap. Face to face."</div>
+
+You save the document. Lock the phone. Slide it under the pillow.
+
+<<run setup.flag("swap_rules_established")>>
+<<run setup.addItem("swap_rules_doc")>>
+<<hubreturn>>
+
+
+:: schedule_study_d2
+Meera pulls up VIT's public course portal on the Redmi. Hostel WiFi is a conceptual framework, not a utility, but eventually the page resolves. Third Year CSE, Section A, tomorrow:
+
+<div class="sensory">
+09:45   Data Structures &amp; Algorithms (Prof. R. Krishnan, C-204)
+11:00   Operating Systems (Prof. S. Desai, C-207)
+14:00   Algorithm Design Tutorial (optional, Lab 3)
+</div>
+
+"Prof. Krishnan published a paper on optimal BST construction last year," you hear yourself say, quiet   the frequency you use in temples and libraries. "He reduced the time complexity from O(n³) to O(n² log n) with a novel recurrence. I spent two days verifying it on paper during pharmacology."
+
+Meera watches you. She's seen you at your worst in anatomy lab, seen you lie to your father about loving medicine. But this naked wanting for a lecture hall and a whiteboard   this she's never seen, because you've never let it show.
+
+<div class="dialogue">"So you'll meet the man who wrote it. In person. As his student."</div>
+
+"Fine." Your eyes open. "Call him tonight."
+
+<<run setup.flag("schedule_memorized")>>
+<<hubreturn>>
+
+
+:: journal_d2
+<div class="choices">
+<div class="q">Keep a private record of what the swaps do to a body?</div>
+<<link "Yes. Start a hidden journal on the Redmi. For science. For yourself.">>
+	<<set $kavyaJournal to true>>
+	<<run setup.flag("journal_decision")>>
+	<<goto "journal_d2_yes">>
+<</link>>
+<<link "No. Some things shouldn't be documented, even by you.">>
+	<<set $kavyaJournal to false>>
+	<<run setup.flag("journal_decision")>>
+	<<goto "journal_d2_no">>
+<</link>>
+</div>
+
+
+:: journal_d2_yes
+You open a new note on the Redmi, buried in a folder called //pharmacokinetics//. First entry, timestamped:
+
+<div class="sensory">//Pre-swap baseline. Kavya Iyer. 34C. 8,000 nerve endings I'm about to leave behind. Recording everything.//</div>
+
+<<hubreturn>>
+
+
+:: journal_d2_no
+You close the Notes app. Whatever tomorrow does to you, it doesn't need to be a dataset.
+
+<<hubreturn>>
+
+
+:: chant_practice_d2
+Priya's out. Door locked. Meera sits in padmasana, the Bharatanatyam training making the hip rotation look effortless when you know from anatomy that it's borderline orthopedic.
+
+<div class="dialogue">"Sixteen syllables. //Om deha-vinimaya-siddhi-da namah Shivaya.//<span class="gloss-en">Om, to the accomplished power of body-exchange, salutations to Shiva.</span> Sanskrit is phonetic. Mispronunciation isn't wrong-sounding   it IS wrong. The vibration pattern changes."</div>
+
+"You've turned a fourteenth-century tantric ritual into an electrical-engineering metaphor."
+
+<div class="dialogue">"I've been rooming with you for three years. Some things rub off."</div>
+
+She chants. The syllables roll off her tongue, crisp and ancient. You follow. Your Sanskrit is functional   compulsory university paper, the linguistic equivalent of driving an automatic while she runs manual. Your //deha// is flat where hers curves.
+
+<div class="dialogue">"Softer on the 'sh'. Palatal, not alveolar. Tongue to the hard palate, not the tooth ridge."</div>
+
+"Meera, I'm a medical student. I know exactly what the hard palate is. I just can't make my tongue do the right thing with it."
+
+Twenty minutes. By repetition sixty, something happens   not the buzzing of the test swap, but a resonance. The syllables fitting. Like code compiling without errors.
+
+<<run setup.flag("chant_practiced")>>
+<<run setup.stat("trust_meera", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: pharmacology_lecture_d2
+<<img "kavya_pharmacology.png" "Pharmacology hall">>
+<<if setup.clock() lt 570>>\
+You're early. You sit outside on a bench while the hall fills, dupatta over your nose out of habit even though there's no formalin here   just the smell of chalk and forty MBBS students dreading the same hour. By 9:30 it starts.
+<<run setup.advanceTime(570 - setup.clock())>>
+<<beat>>
+<</if>>\
+Dr. Mhatre stands at the podium   thin, wire glasses, the energy of a man who has never once questioned whether memorising the mechanism of seventeen beta-blockers is a reasonable ask. His pointer sweeps a slide with no fewer than forty bullet points: //Pharmacokinetics   Absorption, Distribution, Metabolism, Excretion.//
+
+You know this the way you know every medical subject   thoroughly, accurately, with the emotional engagement of someone reading a software EULA.
+
+<div class="intimate"><span class="tag">Intimate · body awareness</span>
+The plastic chair digs into your thighs. The bra underwire presses differently at this angle   a point against your left ribcage you've been negotiating since you sat. You cross your legs. Uncross them. The salwar bunches between your thighs, cotton on cotton, friction you've worn every day for three years and suddenly can't stop feeling.
+
+Tomorrow: no bra. No dupatta pinned across your chest. No drawstring at your waist. Jeans and a t-shirt. From the //outside.//
+</div>
+
+<div class="dialogue">"Miss Iyer. The therapeutic window of digoxin   narrow or wide?"</div>
+
+"Narrow, sir. 0.5 to 2.0 nanograms per mL. Toxicity: nausea, yellow halos, cardiac arrhythmias."
+
+<div class="dialogue">"Correct."</div> The class exhales.
+
+You write in the margin, very small: //Tomorrow I learn if a body is a vehicle or a cage.//
+
+<<run setup.flag("in_pharma_lecture")>>
+<<run setup.flag("college_survived_d2")>>
+<<hubreturn>>
+
+
+:: mhatre_test_d2
+<<if setup.has("surprise_test_passed")>>\
+Your paper is already in the pile. Mhatre glances at you over his glasses on his way past. He doesn't say anything. He just makes a note.
+<<hubreturn>>
+<<else>>\
+Dr. Mhatre enters carrying the harbinger of suffering: a stack of papers, face-down, corners aligned.
+
+<div class="dialogue">"Close your notebooks. Phones away. This is an unannounced assessment."</div>
+
+Sixty MBBS students groan   the documented groan of the unprepared meeting the inevitable. But Sneha warned you yesterday, and you //built// the dosage calculator, which means the formulas are in your head, cross-referenced and debugged.
+
+Ten questions, thirty minutes. Clark's formula, Cockcroft–Gault, loading doses for aminoglycosides, renal-impairment adjustments. Math with medical labels. The CS brain activates   functions, variables, inputs, outputs.
+
+You finish in twelve minutes. Re-check in four. Sit the remaining fourteen watching classmates sweat, thinking about Prof. Krishnan's BST paper.
+
+<div class="dialogue">"Miss Iyer. You finished remarkably fast. Most students can't spell Cockcroft without checking."</div>
+
+"I had practice, sir."
+
+He makes a note. You don't care what it says. In eighteen hours you won't be in this chair.
+
+<<run setup.flag("surprise_test_passed")>>
+<<run setup.stat("med_knowledge", 3, "kavya")>>
+<<hubreturn>>
+<</if>>
+
+
+:: margin_coding_d2
+Mhatre's voice drones about hepatic first-pass metabolism. Under the desk, in the margin of your notebook, you sketch the control flow for the Sanskrit-loanword tokenizer   the sandhi-splitting logic, the dhatu recognition. Nobody looks. Nobody ever looks. You've been hiding code in medical notebooks for three years.
+
+<<run setup.stat("coding_skill", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: sneha_pharma_d2
+<<if setup.has("study_group_joined")>>\
+Sneha gives you a thumbs up across the hall. "Wednesday. Library. 6 PM. Don't forget."
+<<hubreturn>>
+<<else>>\
+Sneha drops into the seat beside you, still glowing from the surprise test.
+
+<div class="dialogue">"Kavya! The dosage app saved my LIFE. 8 out of 10. I've never scored 8 on anything except Instagram followers per week."</div>
+
+"Glad it helped."
+
+<div class="dialogue">"Listen   I'm starting a pharmacology study group. Me, Reshma, Aarti. Wednesday evenings, library. You should come."</div>
+
+A study group for a subject you'll be studying for approximately zero future hours if Meera's plan works. But the optics are perfect   Kavya Iyer joins a study group. Normal behaviour. Priya-approved behaviour. Camouflage.
+
+"I'm in."
+
+<div class="dialogue">"Wednesday. Library. 6 PM. Bring your brain."</div>
+
+Your brain will be in a different body by Wednesday. But sure.
+
+<<run setup.flag("study_group_joined")>>
+<<run setup.stat("rel_sneha", 3, "kavya")>>
+<<run setup.stat("priya_suspicion", -2, "kavya")>>
+<<hubreturn>>
+<</if>>
+
+
+:: last_coding_d2
+<<img "kavya_last_coding.png" "Library, Terminal 6">>
+<<if setup.has("last_kavya_coding")>>\
+Terminal 6. You add a few more test cases, save to the USB, clear the history. The Dell doesn't care that this was supposed to be goodbye.
+<<hubreturn>>
+<<else>>\
+The library computer section. Terminal 6. Your terminal. The membrane keyboard you've memorised down to the specific mushiness of each key, the delay on the spacebar, the Enter key that needs a full press.
+
+The GitHub issue assigned to KV_Codes this morning: Sanskrit loanword tokenization. Hindi absorbs Sanskrit words but modifies their declension. The tokenizer needs to recognise the root   the //dhatu//   and split compounds at sandhi junctions.
+
+Your fingers begin. The code flows. The monitor glows with the warm syntax highlighting of code that works. You're not Kavya Iyer, MBBS student. You're KV_Codes. The person three professional developers called elegant.
+
+Forty minutes. The tokenizer handles the loanwords correctly   splitting compounds at sandhi junctions, tagging roots. You test it on a paragraph of the Bhagavad Gita and it performs beautifully.
+
+This is the last time you code as Kavya. Tomorrow you code as Arjun. Same brain, different hands.
+
+You save. USB drive. Clear history. Stand up. In the black monitor: maroon kameez, wavy hair, dark circles, beauty mark.
+
+"Goodbye," you tell Terminal 6. "I'll be back. But I'll be different."
+
+<<run setup.flag("last_kavya_coding")>>
+<<run setup.stat("coding_skill", 3, "kavya")>>
+<<hubreturn>>
+<</if>>
+
+
+:: priya_gossip_d2
+Priya bursts in sweating and chattering   her twin natural states. She dumps her towel, grabs her water bottle, and launches in without preamble.
+
+<div class="dialogue">"Kavya, Room 308 ki Anjali? Her boyfriend   Siddharth, the Fergusson guy with the man-bun   he SNUCK INTO THE HOSTEL. Last week."</div>
+
+Your ears recalibrate. Intel incoming.
+
+<div class="dialogue">"Kitchen window! The one at the back into the alley behind the mess. The kitchen chowkidar   Ramesh ka assistant, the young one, Ganesh   takes a chai break EVERY EVENING. 7:30 to 8:00. Without fail. Thirty minutes of zero surveillance on the back entrance."</div>
+
+You file it the way you file a buffer-overflow exploit. 7:30 to 8:00 PM. Kitchen window. Broken latch. Unmonitored.
+
+<div class="dialogue">"Nobody reported it. There's an unwritten code   we don't snitch on each other for boyfriend stuff."</div>
+
+The word //code// hangs there. Priya means slang. You hear protocol. The hostel has formal rules enforced by Mrs. Joshi and informal ones enforced by solidarity   and the informal ones protect exactly the kind of thing you're about to do at a scale Anjali never imagined.
+
+<<run setup.flag("priya_gossip_heard")>>
+<<run setup.flag("hostel_security_intel")>>
+<<run setup.flag("kitchen_gap_known")>>
+<<run setup.stat("rel_priya", 2, "kavya")>>
+<<run setup.stat("priya_suspicion", -2, "kavya")>>
+<<hubreturn>>
+
+
+:: anjali_d2
+<<img "room_308.png" "Room 308">>
+You knock on 308. Anjali opens   compact, dark ponytail, the alert baseline of someone who's been on the edge of expulsion for two weeks.
+
+<div class="dialogue">"Priya told me about last week."</div>
+
+Her face cycles: alarm, resignation, calculation. "She needs to learn to shut up."
+
+"I'm not telling anyone. I need the layout. The kitchen back area. The window."
+
+Her eyes narrow, then widen. <div class="dialogue">"Tu bhi?"<span class="gloss-en">You too?</span></div>
+
+"Not a boyfriend. Something else. I can't explain."
+
+Five seconds of study. Then she steps aside. "Come in."
+
+She draws a quick map on the back of a pharmacology worksheet. <div class="dialogue">"Mess side door near the water cooler. Left, past the storage room, through the kitchen. Window at the back wall above the sink, opens outward, latch broken   just push. Alley two metres wide, then a chest-height compound wall. One camera, above the main entrance. Kitchen area   none. Budget."</div>
+
+<div class="dialogue">"Ganesh's chai break: 7:30, front gate, two cups, phone, back at 8:00 sharp. Seven days I've timed it. More reliable than Indian Railways."</div>
+
+You fold the map into your kameez pocket beside the tissue packet.
+
+<div class="dialogue">"Whatever you're doing   be careful. Mrs. Joshi isn't stupid. And if Colonel Kulkarni's people are involved..."</div>
+
+"They're the reason. Not the audience."
+
+She nods. Doesn't ask more. The hostel code.
+
+<<run setup.flag("anjali_visited")>>
+<<run setup.flag("kitchen_route_detailed")>>
+<<run setup.addItem("kitchen_route_map")>>
+<<run setup.stat("rel_anjali", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_calls_arjun_d2
+<<img "kavya_calling_arjun.png" "Room 304, the call">>
+Priya leaves at 8:15   //Sasural Simar Ka// rerun, the common room, the siren call of a show so melodramatic it makes real life feel understated. Meera moves to the door. Listening position. The sentinel.
+
+You pull out the Redmi. Arjun's number is saved as "VIT Library Reference Desk" because even your contact list has a cover story.
+
+He picks up before the first ring completes. His hand was on the phone. The desperation in that instant is very human   and you're about to ask this very human boy to trust you with something that isn't human at all.
+
+<div class="dialogue">"I'm going to explain something and you're going to think I'm pagal. Don't interrupt."</div>
+
+You tell him. Methodically. The manuscript   age, origin, Nath Sampradaya. The ritual   kumkum circle, kalava thread, sixteen-syllable mantra, 108 repetitions. The test swap with Meera   ninety seconds in another body, the wrench, the blackout, waking up looking at your own face across the bed.
+
+Clinical delivery. Facts first. The magic can take care of itself.
+
+<div class="dialogue">"Tum pagal ho."<span class="gloss-en">You're crazy.</span></div>
+
+"Probably. But it works. You swap with me. You come into the hostel in my body. Meera gets her boyfriend. I go out in your body   to VIT."
+
+The room, on his end, goes quiet. Then: "Kab?"<span class="gloss-en">When?</span>
+
+"Tomorrow. 5 AM. Pataleshwar Temple. Bring your bike   I'll need it to get to VIT."
+
+<div class="dialogue">"You'll be in my body. Riding my Pulsar. It has a manual clutch. Release it too fast in first gear and it'll buck and throw you."</div>
+
+"Then teach me before the swap."
+
+<div class="dialogue">"Deal."</div>
+
+The word comes fast. His body decided before his brain.
+
+"Arjun." You soften   one degree. "We have rules. Your girlfriend helped write them. You will respect my body."
+
+<div class="dialogue">"I will. I swear."</div>
+
+"And I'll respect yours. 5 AM. Pataleshwar. Don't be late   I'm not a morning person and I'm doing this against every rational principle I hold."
+
+You hang up. Your hands are trembling. Meera takes one and squeezes.
+
+<div class="dialogue">"Thank you," she whispers. There's an ocean in those two words.</div>
+
+"Don't thank me yet. Thank me when your boyfriend navigates a bra hook without dislocating his shoulder."
+
+She laughs   rare and beautiful, unguarded.
+
+<<run setup.flag("kavya_called_arjun")>>
+<<run setup.flag("full_briefing_done")>>
+<<run setup.stat("rel_arjun", 8, "kavya")>>
+<<run setup.stat("rel_meera", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_shower_d2
+<div class="intimate"><span class="tag">Intimate · body awareness</span>
+
+Same stall. Same curtain that doesn't reach the floor. Same showerhead that spits like an old man. But today you //notice.//
+
+The water on your skin, felt differently because you know it's one of your last showers in this body for a while. The weight of your breasts under the stream when you don't hold them. The curve where waist meets hip. The dark hair between your thighs.
+
+You're not aroused. You're archiving. Memorising the coordinates of your body like backing up a hard drive before a migration.
+
+Four minutes. The towel, once green, now the colour of doubt. The Clovia underwire   three hooks, second row, seven years of muscular scripture. The maroon salwar kameez. The dupatta pinned to minimise what Amma tactfully calls "shape."
+
+<div class="thought kavya">Tomorrow, none of this. No hooks. No underwire. No drawstring. A flat chest, muscled maybe, and something between your legs you've only held in latex gloves over a cadaver.</div>
+</div>
+
+<<run setup.stat("energy", 3, "kavya")>>
+<<hubreturn>>

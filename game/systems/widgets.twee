@@ -1,0 +1,45 @@
+:: Widgets [widget nobr]
+
+<<widget "hubreturn">>
+	<<set _lbl to $args[0] ? $args[0] : "Continue exploring">>
+	<div class="continue-nav"><<link _lbl>><<goto "Hub">><</link>></div>
+<</widget>>
+
+<<widget "goloc">>
+	<<run V().loc[V().pov] = $args[0]>>
+	<<run setup.refreshWorld()>>
+<</widget>>
+
+<<widget "th">>
+	<div class="thought <<= State.variables.pov>>"><<= $args[0]>></div>
+<</widget>>
+
+<<widget "beat">>
+	<div class="scene-break"></div>
+<</widget>>
+
+<<widget "img">>
+	<<= setup.img($args[0], $args[1])>>
+<</widget>>
+
+<<widget "adv">>
+	<<run setup.advanceTime($args[0])>>
+<</widget>>
+
+<<widget "flag">>
+	<<run setup.flag($args[0])>>
+<</widget>>
+
+<<widget "rel">>
+	<<run setup.stat($args[0], $args[1])>>
+<</widget>>
+
+<<widget "sus">>
+	<<run setup.stat($args[0] + "_suspicion", $args[1])>>
+<</widget>>
+
+/* inline Hindi/Hinglish phrase with a muted English gloss */
+<<widget "t">>$args[0]<span class="gloss-en">$args[1]</span><</widget>>
+
+/* a glossed dialogue line: <<dl "Hindi line." "English translation.">> */
+<<widget "dl">><div class="dialogue">$args[0]<span class="gloss-en">$args[1]</span></div><</widget>>

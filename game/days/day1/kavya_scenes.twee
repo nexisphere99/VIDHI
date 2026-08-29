@@ -1,0 +1,395 @@
+:: kavya_mirror_scene
+<<img "kavya_wakeup.png" "Room 304, pre-dawn">>
+The mirror on the cupboard door, clouded and rust-spotted, gives you back in fragments. Dusky skin. Dark circles from a night spent debugging a tokenizer module until 2 AM. The beauty mark below your left eye. Wavy black hair that fights every comb.
+
+<<th "Kavya Iyer. Twenty-one. MBBS third year. Daughter of Dr. Venkatesh Iyer, orthopaedic surgeon. Future doctor. Present prisoner.">>
+
+<<hubreturn>>
+
+
+:: meera_observation
+Meera is on the middle bed, spine against the wall, knees pulled up, reading in the dim light. Not a textbook   you know every textbook in this room by cover and thickness. This is something old. Palm leaves threaded together, brittle, the colour of old tea. Her lips move silently. Sanskrit   you recognise the mouth shapes.
+
+"Kya padh rahi hai subah subah?"<span class="gloss-en">What are you reading so early in the morning?</span>
+
+She startles. Presses it to her chest with both hands. "Kuch nahi. Library se mili. Sanskrit text."<span class="gloss-en">Nothing. Got it from the library. A Sanskrit text.</span> That smile   the one that means she's holding an ocean behind the dam of her lips. "Theek hoon."<span class="gloss-en">I'm fine.</span>
+
+She's not theek. She hasn't been theek in six months. But Meera reveals on her own schedule, like a slow-release medication.
+
+<<run setup.flag("noticed_manuscript")>>
+<<hubreturn>>
+
+
+:: priya_status_check
+<<if setup.has("priya_asks") or setup.clock() gte 780>>\
+Priya drops onto her bed, opens Instagram   the recovery protocol   and pitches her voice half an octave higher. The favour-asking tone.
+
+<div class="dialogue">"Kavya. Mujhe 'candid' photos chahiye. Campus mein. Like I'm walking and not looking at the camera and the light is catching my hair."<span class="gloss-en">Kavya. I need 'candid' photos. On campus.</span></div>
+
+"You want me to photograph you pretending you don't know photos are being taken."
+
+<div class="dialogue">"Exactly! You understand!"</div>
+
+<<run setup.flag("priya_asks")>>
+<<th "There's a real girl under the Instagram filter   lonely, wanting to feel pretty. You can't hate her for that. Only for the circumstances that put her between you and the people you're protecting.">>
+<<hubreturn>>
+<<else>>\
+Priya's alarm   a Jawan song at construction-site volume   has been going for a minute forty. She rolls over, slaps the screen, opens one eye behind the glasses she slept in again.
+
+<div class="dialogue">"Kavyaaa. Aaj ka day kya hai?"<span class="gloss-en">Kavyaaa. What day is it today?</span></div>
+
+"Thursday. Pharmacology."
+
+<div class="dialogue">"Ugh." Blanket over head. Blanket off. Blanket back. Then, narrowing her eyes at Meera's made bed: "She's been waking up super early lately. Kya padh rahi hai woh subah subah?"<span class="gloss-en">What is she reading so early in the morning?</span></div>
+
+"Exams, probably."
+
+<div class="dialogue">"Exams in September? Kaun karta hai?"<span class="gloss-en">Who does that?</span> She shrugs and shuffles out, slippers slapping stone.</div>
+
+<<hubreturn>>
+<</if>>
+
+
+:: kavya_cupboard
+Salwar kameez, ironed, Papa-approved: maroon, navy, one sober green. A stack of medical PDFs printed at the Sassoon Road shop. A pad stash in the back corner behind the Robbins. The Samsung's charger. Nothing here is a surprise, which is the point of it.
+
+<<hubreturn>>
+
+
+:: secret_clothes_stash
+Behind the false back of the bottom shelf: a pair of jeans, two crop tops, a denim jacket. Clothes you have worn exactly outside   never on campus, never near home. Kavya Iyer, the one you'd be if anyone had asked you.
+
+<<hubreturn>>
+
+
+:: kavya_study_options
+<div class="choices">
+<div class="q">At the desk</div>
+<<link "Open Robbins Pathology (the prop)">>
+	<<run setup.stat("med_knowledge", 1, "kavya")>>
+	<<goto "Hub">>
+<</link>>
+<<link "Watch an MIT OCW lecture, one earphone in">>
+	<<run setup.stat("coding_skill", 1, "kavya")>>
+	<<run setup.stat("satisfaction", 3, "kavya")>>
+	<<goto "Hub">>
+<</link>>
+</div>
+
+
+:: hostel_window_view
+The window of Room 304, third floor, second from the left. Below: the neem trees, the chowkidar's chair, the sign-out register on its chain. Beyond the wall, the road, the city, and   twenty minutes away   a PG in Katraj you have never heard of and a boy you have never met, who at this exact moment is staring at a ceiling fan.
+
+<<hubreturn>>
+
+
+:: manuscript_observation
+<<img "swap_ritual.png" "The palm-leaf text">>
+Up close: the leaves are threaded on a cord through two holes. The ink has gone brown but the characters are exact   the hand of someone dead six hundred years. Meera has pencilled a transliteration in the margin of her own notebook beside it. //Deha-vinimaya.//<span class="gloss-en">Body exchange (Sanskrit).</span> A tantric siddhi, the text says. Achievable.
+
+Your whole training rejects it. And yet you were inside her body for three minutes tonight, so.
+
+<<hubreturn>>
+
+
+:: kavya_bathroom_mirror
+A small square of mirror at chest height, clouded, rust-spotted. You get a shoulder, a collarbone gone prominent from mess food, the top curve of a breast. Enough to confirm you still exist. You don't linger. There's a queue.
+
+<<hubreturn>>
+
+
+:: morning_wash
+Cold tap, the bar of soap wedged on the counter bearing the compressed fingerprints of fifty girls. Face, teeth, the Oral-B with its splayed bristles. The soap dispenser has been empty since July.
+
+<<hubreturn>>
+
+
+:: handwash_scene
+You wring a salwar and two dupattas out under the tap and hang them on the line strung across the washing area. Everything in this building is slightly damp. You have stopped thinking about it.
+
+<<hubreturn>>
+
+
+:: hostel_notices
+**HOSTEL NOTICE BOARD**   Mess audit Friday. Water 5:30–7:00 & 6:00–8:00 PM. Sign-out register to be filled IN INK. "Girls are reminded that guardians may visit unannounced." Someone has underlined //unannounced// three times.
+
+<<hubreturn>>
+
+
+:: corridor_water
+The corridor cooler produces a thin, warm, rust-flecked stream. Sneha is ahead of you complaining about the pressure to nobody in particular. "Ek boond aayi. Ek. Main kya karun ek boond se?"<span class="gloss-en">One drop came out. One. What am I supposed to do with one drop?</span>
+
+<<hubreturn>>
+
+
+:: hostel_sign_out
+<<if setup.has("signed_out_hostel")>>\
+Your name is already in the register for today   //Kavya Iyer · college · 07:__ ·  //. The chowkidar waves you through.
+<<hubreturn>>
+<<else>>\
+The register hangs on its chain. Mrs. Joshi is somewhere behind you; you can feel it. You have to write a reason, and the reason has to survive a phone call to Koregaon Park if it comes to that.
+
+<div class="choices">
+<div class="q">Reason for sign-out</div>
+<<link "\"College   anatomy practical\" (true, boring, unimpeachable)">>
+	<<run setup.flag("signed_out_hostel")>>
+	<<goto "Hub">>
+<</link>>
+<<link "\"Library   reference work\" (leaves the afternoon open)">>
+	<<run setup.flag("signed_out_hostel")>>
+	<<run setup.flag("has_excuse")>>
+	<<goto "Hub">>
+<</link>>
+</div>
+<</if>>
+
+
+:: chowkidar_interaction
+Ramesh has guarded this gate longer than you've been alive. He knows every girl by gait.
+
+<div class="dialogue">"304 se ho na? Aapki roommate   woh braid waali   subah jaldi jaati hai library. Kal bhi, parso bhi. Achhi ladki hai. Padhaai mein lagi rehti hai."<span class="gloss-en">You're from 304, right? Your roommate   the one with the braid   goes to the library early every morning. Yesterday too, the day before too. Good girl. Always at her studies.</span></div>
+
+He reports to Mrs. Joshi, who reports to the Colonel. Everything Ramesh notices, someone else eventually hears. You smile and say Meera studies hard, yes, and file the exchange away.
+
+<<run setup.flag("chowkidar_noted_meera")>>
+<<hubreturn>>
+
+
+:: warden_interaction
+Mrs. Joshi's office smells of files and Nycil. She looks up over her glasses.
+
+<div class="dialogue">"Kavya. Attendance theek hai tumhara. Meera ke saath jyaada time mat bitao   dono ka result girega. Aur terrace pe raat ko koi nahi jaata. Samjhe?"<span class="gloss-en">Kavya. Your attendance is fine. Don't spend too much time with Meera   both your results will drop. And nobody goes to the terrace at night. Understood?</span></div>
+
+"Ji, ma'am."<span class="gloss-en">Yes, ma'am.</span>
+
+She has a soft spot she will never show you. She also sends a weekly report to a retired Colonel. Both things are true.
+
+<<hubreturn>>
+
+
+:: mess_corner_scene
+You take the corner seat. From here you can see the whole hall   who eats with whom, who eats nothing. Priya three tables away, thumbing Instagram, her peripheral vision a weapon.
+
+<<hubreturn>>
+
+
+:: mess_meera_conversation
+<<if setup.clock() lt 600>>\
+Meera slides in beside you, elbows touching. She eats slowly, deliberately, as if under surveillance   because she is.
+
+<div class="dialogue">"Tonight," she murmurs, lips barely moving. "After Priya sleeps. Are you scared?"</div>
+
+"I'm a third-year medical student who hates medicine, with a secret phone and a GitHub under a fake name. Fear is my default state."
+
+The corner of her mouth lifts. "Tonight, Kavya."
+
+<<run setup.stat("rel_meera", 2, "kavya")>>
+<<hubreturn>>
+<<else>>\
+Meera's already eaten and gone   back to the library, spine straight, every step a controlled performance. The Colonel wanted a daughter who looked perfect. He got one. He didn't realise the perfection was a disguise.
+<<hubreturn>>
+<</if>>
+
+
+:: campus_bench_rest
+<<img "bj_campus.png" "B.J. campus path">>
+Neem trees, dappled shade, students in white coats, the old colonial building going gold in the afternoon. A resident doctor walks past looking like she hasn't slept since her third year. You sit for a while and let the formalin work its way out of your kameez.
+
+<<hubreturn>>
+
+
+:: bookstore_scene
+The medical bookstore smells of new paper and debt. Cunningham's, Harrison's, Gray's   doorstops that function as furniture and punishment. You buy nothing. You already own the versions that matter, as PDFs, on a phone that isn't the Samsung.
+
+<<hubreturn>>
+
+
+:: anatomy_dissection_scene
+<<img "anatomy_hall.png" "Dissection hall">>
+<<if setup.clock() lt 540>>\
+You're early. You sit on the cold stone bench outside the hall while the attendant unlocks the cabinets, and don't think about what's behind the doors. By the time class assembles it's nine.
+<<run setup.advanceTime(540 - setup.clock())>>
+<<beat>>
+<</if>>\
+The smell first   formalin, sharp and invasive, coating your throat. Three years and your body still rejects it. You press the dupatta over your nose, an inadequate barrier.
+
+Dr. Sharma enters   mid-fifties, kind eyes behind thick glasses, a man who has never once had his calling questioned. "Today   brachial plexus. Roots, trunks, divisions, cords, branches. Clean dissection, people."
+
+You pick up the scalpel. Your hand is steady. It's always steady   the cruellest joke your body plays: a natural talent for the precise application of a blade to dead tissue. Like being born with a beautiful voice and hating music.
+
+C5, C6   upper trunk. C7   middle. C8, T1   lower. The names come automatically, filed in the same brain that stores Python syntax and the dream of never doing this again.
+
+Meera at the next table has her fingers deep in the cadaver, murmuring anatomical names like mantras   steady, sure, //loving//. She touches the dead with reverence. You touch them with resignation.
+
+She glances at your face, reads whatever it's doing, and slides a folded note under your dissection tray. The paper is damp. Everything here is damp.
+
+<<run setup.flag("in_dissection")>>
+<<run setup.flag("anatomy_lab_done")>>
+<<beat>>
+Dr. Sharma is circulating. Meera's note is under your tray. Both can wait a beat, or not.
+
+<<hubreturn>>
+
+
+:: note_passing_anatomy
+<<if setup.has("meera_note_read")>>\
+You've read it. //I found something. Tonight. Important. Don't make plans.// You slide it back under the tray. Your pen, still faintly greasy with cadaver fat, has written underneath: //My only plan was hating pharmacology. That can wait.//
+<<hubreturn>>
+<<else>>\
+Under the table you unfold it. Meera's handwriting, small and exact:
+
+<div class="dialogue">"I found something. Tonight. Important. Don't make plans."</div>
+
+Your pen   still faintly greasy with cadaver fat   writes back: //My only plan was hating pharmacology. That can wait.//
+
+<<run setup.flag("meera_note_read")>>
+<<hubreturn>>
+<</if>>
+
+
+:: dr_sharma_quiz_scene
+<<if setup.has("spot_quiz_aced")>>\
+Dr. Sharma has moved on to the next table. You catch the tail of his voice: //"...both are valuable, but one of them suggests a calling."//
+<<hubreturn>>
+<<else>>\
+Dr. Sharma pauses at your table, hands clasped behind his back.
+
+<div class="dialogue">"Miss Iyer. Your dissection is technically excellent. Let's test the knowledge behind the hands. The five terminal branches of the brachial plexus. In order."</div>
+
+Your brain switches to retrieval mode. "Musculocutaneous. Median. Ulnar. Radial. Axillary."
+
+<div class="dialogue">"Roots of the musculocutaneous?"</div>
+
+"C5, C6, C7. Lateral cord. Innervates biceps brachii, brachialis, coracobrachialis. Sensory   lateral cutaneous nerve of the forearm."
+
+He nods, warm behind the glasses. "Impeccable. I only wish I saw the same //fire// in your eyes that I see in Miss Kulkarni's. She touches the cadaver with reverence. You touch it with expertise. One of them suggests a calling."
+
+The fire he wants is burning. Just not in this building.
+
+<<run setup.flag("spot_quiz_aced")>>
+<<hubreturn>>
+<</if>>
+
+
+:: anatomy_wash
+You scrub to the elbow with the gritty pink soap. The formalin stays in the creases of your knuckles regardless. It always does. You'll smell it on yourself at dinner.
+
+<<hubreturn>>
+
+
+:: library_study
+A table in the reading room, high ceilings, a fan turning slowly. You get through a chapter of pathology you'll need for the terminal exam. Mrs. Kulkarni glances up every time you turn a page too loudly.
+
+<<run setup.stat("med_knowledge", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: rare_books_section
+The basement. Climate-controlled, technically   one wheezing AC unit and a dehumidifier. Rows of Sanskrit and Marathi texts nobody has requested in decades. One drawer is very slightly open. You know, without being told, that this is where Meera found it.
+
+<<run setup.flag("saw_rare_books")>>
+<<hubreturn>>
+
+
+:: librarian_npc
+<div class="dialogue">"Kavya Iyer. Third year. Seat 47." She doesn't look up from her register. "Cunningham's volume 2   wapas karna hai, due date kal thi. Kal. Not parso."<span class="gloss-en">Cunningham's volume 2   it has to come back, the due date was yesterday. Tomorrow. Not the day after.</span></div>
+
+Then, sharper: "And tell that friend of yours   Meera Kulkarni   the Sanskrit texts in the basement are for reference only. She was down there three times last week. Fourteenth-century palm leaf. It can't survive hostel humidity."
+
+She knows Meera's been visiting. She does not know what Meera found, or what it does.
+
+<<run setup.flag("librarian_aware_of_meera")>>
+<<hubreturn>>
+
+
+:: canteen_phone_coding
+Corner table, back to the wall, Redmi angled away from the room. You get twenty minutes on a LeetCode hard before a batch of first-years takes the next table and you switch tabs to a PubMed search for //brachial plexus surgical anatomy//.
+
+<<if setup.hasItem("redmi_phone")>><<run setup.stat("coding_skill", 1, "kavya")>><</if>>
+<<hubreturn>>
+
+
+:: library_computer_coding
+<<if setup.has("library_coding_done")>>\
+Terminal 6 is free again. You add a few more test cases to the tokenizer, save to the USB, clear the recent-files history, and leave. Forty-five minutes of being KV_Codes instead of Kavya Iyer.
+<<hubreturn>>
+<<else>>\
+Terminal 6   closest to the wall, screen angled away from the reading room. An ancient Dell running Windows 7. A membrane keyboard that feels like pressing into damp clay. But it is a full-size QWERTY, every key in the right place, not a touchscreen.
+
+Notepad++ is installed   some IT admin with standards, years ago. You start typing. Python. A tokenizer for Hindi text   Devanagari Unicode, sandhi-splitting. Your fingers find the keyboard's rhythm in thirty seconds. The satisfying clack of characters on a monitor wider than your palm.
+
+The librarian's footsteps in the corridor   you alt-tab to PubMed, she passes, you alt-tab back. There's an off-by-one in the Unicode range. You fix it. Tests pass. Clean Hindi text, properly segmented.
+
+For forty-five minutes you are not in B.J. Medical College. You are KV_Codes, the person three professional developers called //elegant//. You are home.
+
+<<run setup.flag("library_coding_done")>>
+<<hubreturn>>
+<</if>>
+
+
+:: manuscript_reveal_scene
+<<img "swap_ritual.png" "Room 304, evening">>
+Priya's footsteps recede down the corridor   the 7:15 jog, religious, thirty minutes of Bollywood playlist and brisk walking. Meera locks the door. Bolt. Chain. She drops to her knees, reaches deep under the mattress, and pulls out the manuscript. Holds it like a newborn, thumb and forefinger on the edges only.
+
+<div class="dialogue">"Yeh body swap ki vidhi hai."<span class="gloss-en">This is the method for body-swapping.</span></div>
+
+No preamble. Just   that.
+
+"Body swap."
+
+<div class="dialogue">"Deha-vinimaya. Chitragupta Tantra, fourteenth century, Nath Sampradaya. I've been translating it for two weeks."<span class="gloss-en">Deha-vinimaya   body exchange.</span></div>
+
+You run diagnostics. Cross-references. "Meera. We mapped the neural correlates of consciousness last semester. Thalamus, prefrontal cortex, reticular activation. You're telling me a six-hundred-year-old recipe overrides all of that?"
+
+<div class="dialogue">"And we couldn't explain consciousness, could we? I found this in a drawer nobody's opened in forty years."</div>
+
+She sits close, knees against yours, her cold fingers around your hand. The plan unfolds. Arjun. She needs to see him, touch him, be with him   and the Colonel has closed every conventional route. But if someone could enter the hostel in Kavya's body while Kavya went out in someone else's 
+
+"You want me to swap bodies with Arjun." Your CS brain finishes the algorithm before she finishes the sentence. "He comes in as me. I go out as him."
+
+<div class="dialogue">"You'd get to attend his CS classes. VIT. Full access."</div>
+
+The silence that follows could support a bridge. Real professors. Real terminals. A monitor wider than your palm. Code that compiles on hardware that wasn't designed for WhatsApp and prayer. The bait is exactly calibrated to the frequency of your desperation.
+
+"Let me try the swap with you first," you hear yourself say. "If this is real. Which it isn't. But if it is."
+
+<<run setup.flag("manuscript_revealed")>>
+<<run setup.flag("meera_shows_manuscript")>>
+<<run setup.stat("rel_meera", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: priya_sleep_scene
+Priya comes back sweaty at 7:50, showers, and is horizontal by ten with the earphones already in   ASMR rain, the volume set to drown the world. You lie in the dark and wait, watching the numbers on the Samsung.
+
+Mrs. Joshi's rounds at 9:45   three raps, a torch beam across the room, Robbins open on your desk as the prop. //Sab theek hai?//<span class="gloss-en">Everything alright?</span> //Yes, ma'am.// Three ticks on the clipboard. The chappals recede.
+
+By eleven Priya's breathing has gone deep and even. The white noise is your shield.
+
+<<run setup.advanceTime(1380 - setup.clock())>>
+<<run setup.flag("priya_asleep")>>
+<<hubreturn "Meera is awake and waiting">>
+
+
+:: test_swap_scene
+<<img "swap_ritual.png" "The ritual">>
+You and Meera sit cross-legged on her bed, knees almost touching. Between you, drawn in kumkum on the white sheet, a circle. A red kalava thread ties your right wrists together, pulled taut like the world's most impractical phone line. A sandalwood agarbatti glows on the windowsill, smoke curling up in lazy spirals.
+
+<div class="dialogue">"This is ridiculous," you whisper.</div>
+
+<div class="dialogue">"Just chant with me. Sixteen syllables, 108 times. If nothing happens, I'll buy you gulab jamun from the mess."</div>
+
+She begins. //Om deha-vinimaya-siddhi-da...//<span class="gloss-en">Om, grantor of the power of body-exchange... (Sanskrit invocation)</span> The Sanskrit rolls off her tongue with the curve and breath of something lived. Yours is textbook   flat, mechanical, but present.
+
+<div class="swap-fx"><span class="t">॥ देह-विनिमय ॥</span></div>
+
+Count 30. Nothing. Count 70. Nothing   Meera owes you gulab jamun. Count 97. Your mouth is dry, this is  
+
+A buzzing. In your sternum. Deep inside, rattling against the inside of your breastbone. Count 100   it intensifies, your fingers tingle where the thread touches your wrist. Count 104  
+
+A WRENCH. Something grabs the substrate of you, the thing that says //I am Kavya//, and yanks. Like being pulled backwards through a drain. Your vision shatters into prismatic shards. A roaring   every wave that ever was crammed into two seconds.
+
+Black.
+
+<<run setup.doSwap()>>
+<div class="continue-nav">[[Open your eyes|kavya_swap_body_discovery]]</div>

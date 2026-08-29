@@ -1,0 +1,411 @@
+:: arjun_mirror_scene
+<<img "arjun_wakeup.png" "Arjun   phone glow">>
+Six-thirty-two. Seventy-three percent battery. Seventeen notifications you don't care about.
+
+The mirror on the wardrobe door shows you a version of yourself that's been through a few bad parallel dimensions. Wheat complexion, a shade darker from evenings on the Pulsar. Two days of stubble. Dark circles like someone thumbed bruises under your eyes. Hair curling behind your ears   Meera liked it long. //Tere baal aise hi rakhna. You look like a poet.//<span class="gloss-en">Keep your hair like this.</span> You keep it long.
+
+<<th "One hundred and eighty-three days since Colonel Kulkarni landed at that hostel and ran a reconnaissance mission on his own daughter's life.">>
+
+<<hubreturn>>
+
+
+:: clothing_choice
+Jeans. Black t-shirt. The everyday armour. There's exactly one kurta in the wardrobe and it's for festivals.
+
+You pull the t-shirt over your head and for one second you catch your own eye in the mirror. This body. These shoulders. This face Meera used to cup between her palms like it was worth holding.
+
+<<if setup.has("morning_routine_complete")>>\
+Dressed and re-dressed. Stalling.
+<<elseif setup.has("phone_checked")>>\
+<<run setup.flag("morning_routine_complete")>>\
+You're dressed. Phone checked, day faced. That's "ready"   the objective's done. Grab the Pulsar keys off the desk if you haven't; you can't ride to VIT without them.
+<<else>>\
+You're dressed   but you haven't so much as looked at your phone yet. //Check it first.// (The 📱 button top-right, or "Check your phone" here in the room.)
+<</if>>
+
+<<if not setup.hasItem("bike_keys")>><<th "The Pulsar keys are on the desk. You'll need them to get anywhere.">><</if>>
+
+<<hubreturn>>
+
+
+:: dbms_status
+VS Code, still open from last night. Line 47 of a SQL query. A three-table join with a subquery   should be simple. It isn't, because your brain keeps inserting Meera into the logic.
+
+`SELECT * FROM my_life WHERE happiness IS NOT NULL;`
+//0 rows returned.//
+
+Due tomorrow. Krishnan wants it printed, not emailed, because he's living in 2003.
+
+<<hubreturn>>
+
+
+:: katraj_morning_view
+Grey light over Katraj. A tempo unloading milk crates. The landlord's dog barking at a scooter. Somewhere below, Raju bhaiya's stove is already roaring   you can smell the first chai from here.
+
+<<hubreturn>>
+
+
+:: laptop_interaction
+You alt-tab between a half-written query and Instagram. Nikhil at a trek you weren't invited to. Rohit's gym selfie. VIT people at pubs you've never been to. Everyone is living. You're watching.
+
+You type `ping meera` into the terminal. `ping: meera: Name or service not known.` Fine. That's fine.
+
+<<hubreturn>>
+
+
+:: pg_notices
+**PG NOTICE BOARD**
+  Water supply 6–8 AM & 7–9 PM only. Do not "adjust."
+  Rent dues to be cleared by the 5th. //Paisa ped pe nahi ugta.//<span class="gloss-en">Money doesn't grow on trees.</span>   Sharma
+  Lost: one blue bucket. If found, it's Vinod's, room 4.
+
+<<hubreturn>>
+
+
+:: arjun_bathroom_mirror
+The mirror is so scratched it shows three of you, all disappointed. You lean in and actually look, for once. Jaw that needs shaving. Purple-brown under the eyes. You look like a man running on Maggi and melancholy, because you are.
+
+<<hubreturn>>
+
+
+:: morning_routine
+Colgate, the red one   Aai sends it in bulk because she doesn't trust you to buy your own toothpaste. The foam tastes like mint and morning breath and the accumulated sadness of being twenty-one.
+
+<<hubreturn>>
+
+
+:: shaving_scene
+Two days of stubble off in slow strokes, the razor tugging where the beard's thickest along the jaw. A nick under the ear. You press tissue to it until it stops.
+
+Cleaner. Marginally more like someone who has his life together.
+
+<<hubreturn>>
+
+
+:: chai_scene
+<<img "tapri_chai.png" "Raju Bhaiya's tapri">>
+The cutting chai slides across the steel counter before you've asked. Two years of the same order, transcribed into Raju bhaiya's muscle memory.
+
+<div class="dialogue">"Arjun baba, aaj bhi udaas? Ladki ka chakkar hai na?"<span class="gloss-en">Sad again today, Arjun? It's girl trouble, isn't it?</span></div>
+
+You wrap your fingers around the glass   nuclear for the first thirty seconds. <div class="dialogue">"Chai mein zyada cheeni daal, Raju bhaiya."<span class="gloss-en">Put extra sugar in the tea, Raju bhaiya.</span></div>
+
+<div class="dialogue">"Cheeni se dil nahi bharta, beta. Uske liye ladki chahiye."<span class="gloss-en">Sugar doesn't fill the heart, son. For that you need a girl.</span></div>
+
+The chai is perfect. It always is   part cardamom, part dust, part the existential seasoning of a hundred morning conversations. The first chai of the day is the only sacred thing left.
+
+<<run setup.flag("talked_to_raju")>>
+<<th "He's turning his phone over in his hands. The screen is a spiderweb   cracked corner to corner. Worth a proper look.">>
+
+<<hubreturn>>
+
+
+:: news_of_day
+The paper is yesterday's, technically. Municipal water dispute. A film star's wedding. Page 4: a college student picked up on Sinhagad Road for racing at 200 kmph. //Pagal hai yeh bacche,//<span class="gloss-en">These kids are crazy,</span> says the man next to you, turning to the cricket scores.
+
+<<hubreturn>>
+
+
+:: vit_entry
+<<img "vit_gate.png" "VIT Main Gate">>
+Guard Patil in the booth like a king on a plastic throne. You flash your student card. He squints at it, squints at you, squints at it again. You've done this dance six hundred times.
+
+<div class="dialogue">"Arjun Deshmukh. CSE. Third year." Pause. "Late aata hai aajkal."<span class="gloss-en">You've been coming in late these days.</span></div>
+
+"Aaj time pe hoon, Patil sir."<span class="gloss-en">I'm on time today, Patil sir.</span>
+
+<div class="dialogue">"Hmm." He stamps something invisible on the air. "Ja."<span class="gloss-en">Go.</span></div>
+
+<<run setup.flag("entered_vit")>>
+You wedge the Pulsar between Rohit's Enfield and the immortal Splendor. The campus opens up ahead   C-Block, canteen, library, ground.
+
+<<hubreturn "Onto campus">>
+
+
+:: vit_notices
+**VIT NOTICE WALL**   Placement drive (TCS, Persistent) next month. Cultural fest committee auditions Friday. "DBMS extra class   Krishnan   Friday 4 PM   confirm on group." Someone has drawn a sad face next to it.
+
+<<hubreturn>>
+
+
+:: dbms_lecture_scene
+<<img "vit_lecture_hall.png" "C-204   DBMS">>
+Third row from back, left, near the window. Rohit drops in beside you radiating the energy of a man who showered with cold water and has opinions about it. Two rows ahead, Nikhil is already scribbling.
+
+Krishnan begins. Third normal form. Boyce-Codd. The chalk clicks. Your pen touches the page and doesn't move.
+
+<<th "Meera used to text you during boring lectures. Little doodles   professors as animals. Krishnan as a fox: sharp, knowing, slightly predatory. You'd muffle laughter into your fist.">>
+
+Rohit flicks your ear. "Bhai, Krishnan tujhe dekh raha hai."<span class="gloss-en">Bro, Krishnan's looking at you.</span>
+
+<div class="dialogue">"Arjun. What anomalies does 2NF resolve?"</div>
+
+You stand. Twenty-seven pairs of eyes rotate to you like CCTV. "Partial dependency anomalies, sir."
+
+It comes out flat, automatic. DBMS lives in a part of your brain that runs independently of your emotional state   the same part that could write a SELECT query while crying.
+
+<div class="dialogue">"At least your body is in class today, even if your mind isn't."</div>
+
+You sit. Write: //2NF eliminates partial dependencies.// Below it, smaller, in the margin: //183 days.//
+
+<<run setup.flag("dbms_lecture_done")>>
+<<beat>>
+Class ends at eleven. Rohit's already texting you from two seats away: //canteen. now. serious baat.//<span class="gloss-en">canteen. now. serious talk.</span>
+
+<<hubreturn>>
+
+
+:: nikhil_notes_scene
+Nikhil catches you in the corridor, the legendary colour-coded notebook in hand. "Tera notebook..."<span class="gloss-en">Your notebook...</span> You flip yours open. Two lines and a doodle of a ceiling fan. The number 183 in the margin. "...ek crime scene hai."<span class="gloss-en">...is a crime scene.</span>
+
+He winces with the sympathy of a man who's never understood how you attend a lecture without transcribing it. "Chal, photos le le. Page 47 se 53. BCNF edge cases   exam mein zaroor aayenge. Aur assignment mein table 3 ka foreign key constraint galat diya hai unhone. Cross-check kar apna."<span class="gloss-en">Come on, take photos. Pages 47 to 53. BCNF edge cases   they'll definitely be in the exam. And in the assignment they gave the wrong foreign key constraint on table 3. Cross-check yours.</span>
+
+You photograph seven pages. His handwriting doesn't need zoom.
+
+<<run setup.flag("nikhil_notes_obtained")>>
+<<hubreturn>>
+
+
+:: water_cooler_encounter
+The cooler dribbles rust-flecked water. A first-year fills a bottle beside you and says, unprompted, "Bhaiya, third year mein bhi itni tension hoti hai?"<span class="gloss-en">Brother, is there this much stress in third year too?</span> You tell him yes. He looks devastated. Good. Better he knows now.
+
+<<hubreturn>>
+
+
+:: cs_notices
+CS department board: internship postings, a hackathon in Bangalore, a handwritten card   //Peer tutoring: DS & Algo, contact Nikhil//. Of course.
+
+<<hubreturn>>
+
+
+:: corridor_rest
+You sit on the bench. The corridor smells of chalk and Dettol. Students stream past in both directions, all of them apparently certain where they're going.
+
+<<hubreturn>>
+
+
+:: rohit_canteen_confrontation
+<<img "arjun_rohit_canteen.png" "The canteen">>
+Rohit slaps a plate of dosa in front of you and drops into the plastic chair. It protests. He cracks his knuckles   one hand, then the other. His prelude to a Serious Talk.
+
+<div class="dialogue">"Bhai. Bahut ho gaya."<span class="gloss-en">Bro. That's enough.</span></div>
+
+The sambar is lukewarm. The chutney looks like it has feelings about being alive.
+
+<div class="dialogue">"Six months, Arjun. Tu nahi kha raha, nahi padh raha. Meera gai toh gai   life toh chal rahi hai na?"<span class="gloss-en">You're not eating, not studying. Meera's gone, so she's gone   life goes on, doesn't it?</span></div>
+
+"Tu nahi samjhega."<span class="gloss-en">You wouldn't understand.</span>
+
+<div class="dialogue">"Kya nahi samjhunga? Ki tera girlfriend ka baap psycho hai? Woh toh puri duniya ko pata hai. But tu kya karega   saari zindagi aise baithega? Purane photos ko shrine banaayega?"<span class="gloss-en">What wouldn't I understand? That your girlfriend's father is a psycho? The whole world knows that. But what are you going to do   sit like this your whole life? Make a shrine out of old photos?</span></div>
+
+Every word lands, because every word is true, and truth from someone who loves you hits different.
+
+He pushes his own plate across the table. "Chal, mera bhi kha le. Tujhe zaroorat hai."<span class="gloss-en">Come on, eat mine too. You need it.</span> Two cutting chais appear, courtesy of Canteen Anna. Rohit slides one over. The chai armistice.
+
+<div class="dialogue">"Sorry yaar. Tu mera best friend hai. It's hard watching you become a ghost."<span class="gloss-en">Sorry, man. You're my best friend.</span></div>
+
+"I know. I'm sorry too."
+
+<div class="dialogue">"Don't be sorry. Be better. Also   mera CAD project ka rendering kaam nahi kar raha. Fix it tonight? I'll get biryani."<span class="gloss-en">Also   my CAD project's rendering isn't working.</span></div>
+
+You almost laugh. Almost. "Bribe accepted."
+
+<<run setup.flag("rohit_confrontation_done")>>
+<<hubreturn>>
+
+
+:: arjun_alone_canteen
+You take the corner table. Canteen Anna   sixties, Kannada-accented Hindi that turns every sentence into a melody   brings a masala dosa without being asked. "Beta, kha raha hai toh theek hai. Jab khaana band karta hai, tab tension hota hai mujhe."<span class="gloss-en">Son, as long as you're eating, it's fine. It's when you stop eating that I worry.</span>
+
+You eat. It tastes like nothing. Everything tastes like nothing lately.
+
+<<hubreturn>>
+
+
+:: canteen_tv
+The TV plays last night's cricket highlights to an audience of nobody. A boundary. A wicket. A replay of the boundary. The universe, indifferent and looping.
+
+<<hubreturn>>
+
+
+:: lab_coding_session
+<<if not setup.has("dbms_assignment_submitted")>>\
+You sit at a terminal. Real keyboard, real screen. The three-table join resolves itself in about forty minutes   subquery, aggregate, the foreign-key fix Nikhil flagged. It runs. It returns the correct output.
+<<run setup.flag("dbms_assignment_submitted")>>
+You feel nothing. But it's done.
+<<else>>\
+You mess around with a side project for a while. The lab assistant watches you like you might steal a mouse.
+<</if>>
+
+<<hubreturn>>
+
+
+:: print_dbms
+The lab printer wheezes out six pages of SQL. You staple them. Krishnan will be pleased that you've respected the year 2003.
+
+<<hubreturn>>
+
+
+:: library_cs_browse
+Cool air   actual working AC, a campus miracle. You pull a database systems text off the shelf, read a paragraph on query optimisation, and put it back. You already know this. Knowing things has stopped feeling like enough.
+
+<<hubreturn>>
+
+
+:: library_study_session
+Thirty minutes at a desk with the notebook open. You get through half the BCNF material before your mind wanders back to a third-floor window across the city.
+
+<<hubreturn>>
+
+
+:: phone_charging
+You plug the phone into the wall point behind the CS section. While it charges you scroll to Meera's chat and read the last message again. //Don't forget me.// As if that were the risk.
+
+<<hubreturn>>
+
+
+:: basketball_scene
+You shoot a few hoops with the ground boys. Your jump shot is rusty. One of them says "Bhai pehle toh acche khelte the"<span class="gloss-en">Bro, you used to play well before</span> and you don't have an answer for that either.
+
+<<hubreturn>>
+
+
+:: arjun_ground_reflection
+You sit on the bench at the edge of the ground. A couple two benches over is pretending to study. The light's gone gold and long. Seventeen months ago Meera watched you play an inter-department match from these exact stands and told you afterward that you ran like you were apologising to the ball.
+
+<<hubreturn>>
+
+
+:: smoking_spot_encounter
+Behind the stands, the usual crowd, the usual haze. Someone offers you a cigarette. You shake your head. "Tu kabhi nahi leta,"<span class="gloss-en">You never take one,</span> he says, not unkindly. "Health-conscious." If only he knew it was just that Meera hated the smell.
+
+<<hubreturn>>
+
+
+:: sinhagad_reflection_scene
+<<img "sinhagad_viewpoint.png" "Sinhagad Road   dusk">>
+You park at the viewpoint. Pune spreads out below like a circuit board powering on, light by light. Wind coming up the valley, cool for the first time all day.
+
+You came here twice with Meera. Once on the Pulsar, once in a friend's car. Both times laughing. Both times convinced the world was a place where things worked out.
+
+<<th "The city is right there. She is somewhere in it. And you cannot reach her by any means known to engineering, computer science, or the desperate ingenuity of a boy in love.">>
+
+<<hubreturn>>
+
+
+:: meera_call_attempt_sinhagad
+Full signal up here. You scroll to her number   the one that goes nowhere now   and let your thumb hover over the green button.
+
+You don't press it. There's no phone on the other end; the Colonel has it in a drawer in Kothrud. But you sit with the possibility for a minute, engine ticking as it cools, before you put the phone away.
+
+<<run setup.flag("meera_contact_attempted")>>
+<<hubreturn>>
+
+
+:: lake_reflection
+The lake holds a flat grey sky. Joggers loop the track. A heron stands in the shallows doing a better job of stillness than you've managed in six months.
+
+<<hubreturn>>
+
+
+:: katraj_walk
+You walk the jogging track once, slowly, hands in pockets. College girls doing laps overtake you twice. By the second loop your head is a fraction quieter.
+
+<<hubreturn>>
+
+
+:: home_meal_scene
+<<img "kothrud_home.png" "Deshmukh home, Kothrud">>
+Aai puts a plate in front of you that could feed the PG. Varan-bhaat, tup, a mound of it. "Kha. Poora."<span class="gloss-en">Eat. All of it.</span> Pooja steals a papad off the edge and Papa asks, from behind the newspaper, whether you've thought about the campus placements.
+
+For an hour you are somebody's son in somebody's home, and the ache eases about ten percent.
+
+<<hubreturn>>
+
+
+:: arjun_childhood_room
+Your old room is Pooja's study now, but your cricket trophies are still on the shelf and there's a faded Sachin poster you never took down. On the desk, a school photo   you at sixteen, before swimming got cut for coaching fees, before any of it.
+
+<<hubreturn>>
+
+
+:: arjun_watches_hostel
+<<img "bj_campus.png" "Outside B.J. Medical">>
+You can see the hostel from the chai stall across the road. Third floor, second window from the left   Room 304. She told you which one on the last real phone call you had, whispering because the warden does rounds at ten.
+
+There's a light on in it. Someone moves across the curtain. Could be Meera. Could be Priya. Could be anyone.
+
+<<th "The chowkidar reports to the warden. The warden reports to the Colonel. If you knock on that gate, the information travels in under a day   and Meera pays for it, not you.">>
+
+You get back on the Pulsar.
+
+<<run setup.flag("meera_contact_attempted")>>
+<<hubreturn>>
+
+
+:: hostel_landline_call
+You dial the number from memory. 020-2612-XXXX. Seven rings   each one a separate negotiation with hope.
+
+<div class="dialogue">"B.J. Medical Girls Hostel." Mrs. Joshi. Clipped. The vocal equivalent of a padlock.</div>
+
+"Ma'am, Meera Kulkarni se baat karni thi "<span class="gloss-en">I wanted to speak to Meera Kulkarni </span>
+
+<div class="dialogue">"Visitors' hours khatam. Chhe baje tak phone allowed hai. Kal aana."<span class="gloss-en">Visiting hours are over. Phone calls are allowed until six. Come tomorrow.</span></div>
+
+Click. You hold the phone to your ear for ten seconds after the dial tone starts. As if it might resume. As if the universe might bend its rules.
+
+<<run setup.flag("meera_contact_attempted")>>
+<<hubreturn>>
+
+
+:: pco_call_attempt
+The PCO stall has a landline that isn't in the hostel's caller-ID memory. You try a different tack   ask for the warden's office, say you're calling from the medical college registrar about attendance records for Kulkarni, M.
+
+<div class="dialogue">"Registrar office toh din mein call karta hai. Aap kaun bol rahe ho?"<span class="gloss-en">The registrar's office calls during the day. Who is this speaking?</span></div>
+
+You hang up. Worth a try. Everything is worth a try, and nothing works.
+
+<<run setup.flag("meera_contact_attempted")>>
+<<hubreturn>>
+
+
+:: laptop_night_dbms
+<<img "arjun_night_room.png" "PG room, night">>
+The tube light makes everything look clinical and vaguely sad. You sit at the desk and actually finish it   the three-table join, the subquery, the aggregate function, Nikhil's foreign-key correction. It runs. It returns the correct output. Nine-thirty by the time it's done.
+
+<<run setup.flag("dbms_assignment_submitted")>>
+<<if not setup.has("dbms_lecture_done")>>You still haven't been to the lecture, which is its own kind of problem.<</if>>
+
+<<hubreturn>>
+
+
+:: arjun_night_end
+Rohit is asleep   face-down, one arm off the cot, the chainsaw snore cycling through its gears. The tube light's off. You lie on your back in cotton shorts and stare at the fan wobbling through its eternal orbit.
+
+The DBMS assignment is done. Tomorrow's problems are tomorrow's. Right now there's just the dark, the fan, and the phone warm in your hand.
+
+<div class="choices">
+<div class="q">The last hour of the day</div>
+<<link "Open the locked folder. Her video.">>
+	<<goto "arjun_masturbation_day1">>
+<</link>>
+<<link "Put the phone face-down. Just try to sleep.">>
+	<<run setup.flag("arjun_day1_complete")>>
+	<<goto "ArjunDayEnd">>
+<</link>>
+</div>
+
+
+:: ArjunDayEnd
+<<run setup.flag("arjun_day1_complete")>>
+<<img "arjun_night_room.png" "">>
+Sleep doesn't come for another hour. When it does, you dream of green silk and ghungroos and the taste of Thums Up on someone else's lips.
+
+<span class="scene-break"></span>
+
+**End of Day 1   Arjun.**
+<div class="thought arjun">Coding <<= $stats.a_coding>> · Rel Meera <<= $stats.rel_arjun_meera>> · Rel Rohit <<= $stats.rel_arjun_rohit>> · ₹<<= setup.money("arjun")>> · Mood: <<= $mood.arjun>></div>
+
+<div class="continue-nav">[[Sleep|DayWrap]]</div>
+
+<<if not setup.has("test_swap_complete")>>Kavya's Day 1 is still unfinished   her night is the one that changes everything. You can also keep wandering: <<link "back to Katraj">><<goto "Hub">><</link>>. The "Sleep   end the day" action stays in your room.<</if>>

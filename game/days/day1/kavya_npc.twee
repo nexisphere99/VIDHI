@@ -1,0 +1,207 @@
+:: sneha_room_visit
+<<if setup.has("sneha_helped")>>\
+Sneha opens 302 with her Redmi already showing your dosage app. "Yeh app ko patent kara le. Seriously."<span class="gloss-en">Get this app patented. Seriously.</span>
+<<hubreturn>>
+<<else>>\
+Sneha falls into step, damp from her shower, dupatta half on. "Kavya, tera pharmacology notes mil sakta hai? Notebook ghar bhool gayi. Dr. Mhatre next class mein surprise test dega   Reshma ne bataya. Drug dosage   body weight, creatinine clearance, paediatric adjustments. Formulas yaad nahi."<span class="gloss-en">Kavya, can I get your pharmacology notes? Left my notebook at home. Dr. Mhatre's giving a surprise test next class   Reshma told me. Drug dosage   body weight, creatinine clearance, paediatric adjustments. I can't remember the formulas.</span>
+
+Dosage calculations. Math. The one part of pharmacology your CS brain doesn't reject.
+
+"Chal, break mein baithte hain. I'll explain the formulas."<span class="gloss-en">Come on, let's sit during the break.</span>
+
+You walk her through Clark's formula for paediatric dosing, the Cockcroft–Gault equation, loading doses. Her eyes glaze at the math   she's a visual learner, needs colour and flowcharts. Medical education hasn't figured out that not everyone absorbs walls of text.
+
+An idea detonates. //Give me an hour.//
+
+<<run setup.flag("talked_to_sneha")>>
+<<run setup.flag("sneha_helped")>>
+<<run setup.flag("surprise_test_info")>>
+<<hubreturn>>
+<</if>>
+
+
+:: dosage_build_scene
+<<if setup.has("dosage_app_built")>>\
+The app is live on a Netlify subdomain. Sneha has already sent it to half of Section B. Nobody has asked how a medical student built it.
+<<hubreturn>>
+<<else>>\
+You pull out the Redmi and open Termux   the terminal emulator that turns a ₹3,000 phone into the world's most underpowered dev environment. Not Python this time   a simple HTML/JavaScript page. Inputs: weight, age, drug. Outputs: correct dosage, adjusted for renal function, paediatric or adult. Colour-coded   green safe, yellow borderline, red recheck. The formulas are the kind of math that makes doctors sweat and programmers yawn.
+
+Forty-five minutes. It works. You host it on a free subdomain and send Sneha the link.
+
+Her reply, verbatim: //KAVYA TU GENIUS HAI. MUJHE PEHLE BATANA THA KI TU YE SAB KAR SAKTI HAI.//<span class="gloss-en">KAVYA YOU'RE A GENIUS. YOU SHOULD HAVE TOLD ME EARLIER THAT YOU COULD DO ALL THIS.</span>
+
+You slide the Redmi back under the mattress.
+
+<<run setup.flag("dosage_app_built")>>
+<<hubreturn>>
+<</if>>
+
+
+:: priya_instagram_scene
+<<if setup.has("priya_photos_taken")>>\
+Priya is still editing. "Kavya, thoda aur warm tone?<span class="gloss-en">Kavya, a bit more warm tone?</span> ...actually theek hai.<span class="gloss-en">...actually it's fine.</span> Thanks, you're the BEST." She means it, in the way she means everything, for about a minute.
+<<hubreturn>>
+<<else>>\
+The campus path with the neem trees   the light between 3 and 4 hits the leaves and creates what Priya calls "organic glow" and you call partially obstructed sunlight.
+
+You hold her phone. She walks. Turns. Flips her hair. Looks at a tree as if it's told her a charming secret. Laughs at nothing. Forty-seven photos. She selects three, edits for twenty minutes, posts one captioned //autumn vibes 🍂✨//   it is September, the trees are green and dripping.
+
+<div class="dialogue">"Thanks, Kavya! You're the BEST." She squeezes your arm.</div>
+
+For a moment, behind the filter and the Colonel's assignment, there's a real girl who's lonely and wants to feel pretty. You can't hate her for that.
+
+<<run setup.flag("priya_photos_taken")>>
+<<run setup.stat("rel_priya", 3, "kavya")>>
+<<run setup.stat("priya_suspicion", -2, "kavya")>>
+<<hubreturn>>
+<</if>>
+
+
+:: mess_didi_scene
+<<if setup.has("mess_stock_helped")>>\
+Mess Didi slides two more gulab jamun onto your plate without a word. The audit is tomorrow. She is calm about it in the way of a woman who has counted rice for two hundred girls for twenty years.
+<<hubreturn>>
+<<else>>\
+<div class="dialogue">"Kavya! Idhar aa."<span class="gloss-en">Kavya! Come here.</span> Savita   "didi" (elder sister) to three generations of B.J. Medical girls, forearms like a wrestler, a heart hidden behind a permanent scowl. "Kal audit hai. Stock count karna hai   rice bags, dal packets, oil tins. Help karegi toh extra gulab jamun. Fresh batch bana rahi hoon."<span class="gloss-en">There's an audit tomorrow. I have to count stock   rice bags, dal packets, oil tins. If you help, extra gulab jamun. I'm making a fresh batch.</span></div>
+
+"How many?"
+
+<div class="dialogue">"Do."   "Char."   "Teen. Final offer."<span class="gloss-en">"Two."   "Four."   "Three. Final offer."</span></div>
+
+"Done."
+
+Twenty minutes in the storage room: fourteen bags of rice, twenty-two packets of toor dal, seven tins of oil, nine sacks of atta. "Tera hisaab accha hai,"<span class="gloss-en">Your accounting is good,</span> she says. "Doctor nahi, banker banna chahiye tha tujhe."<span class="gloss-en">You should have been a banker, not a doctor.</span> Closer than you think, didi.
+
+Three gulab jamun arrive, warm, swimming in syrup. You eat one and wrap two in tissue   one for Meera.
+
+<<run setup.flag("mess_stock_helped")>>
+<<run setup.addItem("gulab_jamun")>>
+<<hubreturn>>
+<</if>>
+
+
+:: senior_divya_scene
+<<if setup.has("divya_conversation_done")>>\
+Divya raises her chai cup in salute from the good sofa. "Room 408. Chai, biscuits, zero judgment. Standing offer."
+<<hubreturn>>
+<<else>>\
+The common room after 6 belongs to the seniors. Divya Subramaniam   fourth year, Tamil like you, Coimbatore accent when tired, the unofficial didi of the hostel. She shifts to make space; the broken middle cushion tips you toward her.
+
+"Divya didi   honest question. Fourth year better hota hai?"<span class="gloss-en">Divya didi   honest question. Is fourth year better?</span>
+
+<div class="dialogue">"Define better. The lectures are more clinical   actual patients. The hours are worse. But you start to see the point. When a patient looks at you and their eyes say //please help me//   that changes something."</div>
+
+"What if you're still kicking and screaming in fourth year?"
+
+Her eyes search yours. Dangerously perceptive   a hundred girls talked through a hundred crises in these corridors. "Kavya. Mujhe pata hai. Ki tujhe medicine se koi lena-dena nahi hai. It's on your face every time you walk into the anatomy hall. Main judge nahi kar rahi. Half the girls here are their parents' decision, not their own. But you're clearly brilliant at something else."<span class="gloss-en">Kavya. I know. That you want nothing to do with medicine. I'm not judging.</span>
+
+"What if the something else isn't medicine?"
+
+<div class="dialogue">"Then you survive medical school, get the degree, and build the something else on your own terms. The MBBS is a key, Kavya. Not a lock. Also   for Sharma sir's viva, focus on practicals. His questions repeat every three years."</div>
+
+<<run setup.flag("divya_conversation_done")>>
+<<run setup.flag("exam_strategy_tips")>>
+<<hubreturn>>
+<</if>>
+
+
+:: samosa_vendor_npc
+<<img "bj_campus_samosa.png" "The samosa stall">>
+The stall sits at the exact midpoint of a medical student's daily commute between death and knowledge. The vendor has forearms from years of deep-frying and knows every MBBS student by order.
+
+<div class="dialogue">"Kavya madam! Do samosa ek chutney? Aur ek Meera ke liye   usse mirchi se darr lagta hai, sirf imli."<span class="gloss-en">Kavya madam! Two samosas, one chutney? And one for Meera   she's scared of chilli, only tamarind.</span></div>
+
+Three samosas wrapped in the classified section   your food seasoned with used-car listings and matrimonial ads. The first bite shatters, hot potato spilling, green chutney burning your lip. For thirty seconds nothing else matters.
+
+<div class="dialogue">"Ek baat bolun? Meri biwi ka knee ka operation chahiye. Ruby Hall mein quotation liya   das lakh. Aap log padho acche se. Jab doctor ban jaao   discount. Main samosa free dunga. Lifetime."<span class="gloss-en">Can I say something? My wife needs a knee operation. Got a quote at Ruby Hall   ten lakh. You lot study hard. When you become a doctor   a discount. I'll give samosas free. For life.</span></div>
+
+"Done."
+
+<<if not setup.hasItem("meera_samosa")>><<run setup.addItem("meera_samosa")>><</if>>
+<<run setup.flag("samosa_bought")>>
+<<run setup.stat("rel_meera", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: juice_vendor_npc
+Fresh sugarcane through the crusher, ginger and lime and a pinch of black salt. "Garmi bahut hai, madam. Aur suna   anatomy department mein naya professor aa raha hai next month. Sharma sir retire kar rahe hain shayad."<span class="gloss-en">It's very hot, madam. And I heard   a new professor is coming to the anatomy department next month. Sharma sir might be retiring.</span> Campus gossip, delivered with the juice.
+
+<<run setup.stat("energy", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: phone_shop_scene
+The shop sells cheap phones and repairs screens   the same shop, probably, where Raju bhaiya's Redmi will end up. The owner doesn't ask for ID. "Second-hand phone chahiye toh bolna, madam. Cash. No questions."<span class="gloss-en">If you want a second-hand phone, just say, madam. Cash. No questions.</span> You file that away. A person in your situation keeps a mental list of people who ask no questions.
+
+<<run setup.flag("knows_phone_shop")>>
+<<hubreturn>>
+
+
+:: hostel_landline
+The entrance landline, in full view of the chowkidar and the sign-out register. You could call home. You could call Sneha. You cannot call anyone who matters without an audience. You don't pick it up.
+
+<<hubreturn>>
+
+
+:: common_room_tv
+A Marathi serial   joint family, scheming mother-in-law, the entire budget visible in the gold jewellery. Someone changes it to a cricket match. Someone changes it back. The remote is a contested territory.
+
+<<hubreturn>>
+
+
+:: common_room_corner
+You take the quiet corner sofa, the one with springs that still work, and get twenty minutes of a CS229 lecture on one earphone while the room argues about the serial.
+
+<<run setup.stat("coding_skill", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: wifi_check
+The router lives here, which is why the room is always full. Two bars in the corner. Enough for WhatsApp. Not enough for a git push   that's a terrace job, or a library-computer job.
+
+<<hubreturn>>
+
+
+:: magazine_browse
+A stack of six-month-old //Femina// and //Reader's Digest// and one //Competition Success Review// nobody has ever opened. You read a horoscope. It says a period of transformation is beginning. For once the horoscope is not wrong.
+
+<<hubreturn>>
+
+
+:: terrace_reflection
+<<img "hostel_terrace.png" "The terrace, night">>
+City lights below in a warm grid. The only truly private space in the building   no NPCs, that's the point. You lean on the railing and breathe air that hasn't passed through the corridor first.
+
+<<hubreturn>>
+
+
+:: hidden_terrace_spot
+Behind the water tank there's a gap wide enough to sit in, invisible from the stairwell door. Meera showed it to you in first year. It's where you've had every real conversation since.
+
+<<hubreturn>>
+
+
+:: terrace_phone_use
+Four bars up here. <<if setup.hasItem("redmi_phone")>>You pull out the Redmi, push two commits, reply to a Telegram thread, and refresh GitHub. Ten minutes of being fully yourself, on a rooftop, in the dark.
+<<run setup.stat("coding_skill", 1, "kavya")>><<else>>The Samsung loads Amma's WhatsApp forwards at full speed for once. Small mercies.<</if>>
+
+<<hubreturn>>
+
+
+:: iyer_home_scene
+The Koregaon Park flat: marble, a Ganesha in silver, Amma's Carnatic students' shoes lined up by the door. Here you are a different person   quieter, softer, agreeing with things. Papa asks for your pharmacology marks before he asks how you are.
+
+<<hubreturn>>
+
+
+:: cafe_scene
+A cafe where a cold coffee costs what the mess charges for a day. You sit with a book you're not reading and watch people your age who seem to have decided things about their lives. In jeans, outside the hostel's sightlines, you feel briefly like the version of yourself in the hidden compartment of your cupboard.
+
+<<hubreturn>>
+
+
+:: koregaon_shopping
+Street stalls: fairy lights, cushion covers, bootleg band t-shirts. You buy nothing. Everything you'd actually want to own would raise a question at the next inspection.
+
+<<hubreturn>>

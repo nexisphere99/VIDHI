@@ -1,0 +1,156 @@
+:: PH_rohit_chat
+<div class="chat-log">
+<div class="msg them">bhai lab ka assignment bhej<span class="gloss-en">bro, send the lab assignment</span><div class="meta">last night</div></div>
+<div class="msg them">bhai</div>
+<div class="msg them">canteen aaja lunch pe. serious baat hai<span class="gloss-en">come to the canteen at lunch. it's serious</span></div>
+</div>
+<div class="choices">
+<div class="q">Reply</div>
+<<link "\"bhej raha hoon. canteen mein milte hain.\" — sending it, see you at the canteen">><<goto "Hub">><</link>>
+<<link "\"kya baat hai\" — what's it about">><<goto "PH_rohit_chat_more">><</link>>
+</div>
+
+
+:: PH_rohit_chat_more
+<div class="chat-log">
+<div class="msg me">kya baat hai</div>
+<div class="msg them">face to face. text pe nahi.<span class="gloss-en">face to face. not over text.</span></div>
+</div>
+<<hubreturn>>
+
+
+:: PH_nikhil_chat
+<div class="chat-log">
+<div class="msg them">notes chahiye toh bol. today BCNF edge cases the<span class="gloss-en">say the word if you need notes. today was BCNF edge cases</span></div>
+<div class="msg me">haan bhej. corridor mein milte hain?<span class="gloss-en">yeah send them. meet in the corridor?</span></div>
+<div class="msg them">👍 page 47-53</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_aai_chat
+<div class="chat-log">
+<div class="msg them">beta kha liya kya 🙏<span class="gloss-en">son, have you eaten</span></div>
+<div class="msg them">doodh piya?<span class="gloss-en">did you drink milk?</span></div>
+<div class="msg them">sunday aa raha hai na. mutton le rahi hoon.<span class="gloss-en">you're coming Sunday, right. I'm getting mutton.</span></div>
+<div class="msg me">haan Aai. dekhta hoon.<span class="gloss-en">yes Ma. I'll see.</span></div>
+<div class="msg them">dekhta hoon matlab aa raha hai ✅<span class="gloss-en">"I'll see" means you're coming</span></div>
+</div>
+<<hubreturn>>
+
+
+:: PH_pooja_chat
+<div class="chat-log">
+<div class="msg them">Bhaiya WiFi ka password kya tha<span class="gloss-en">Brother, what was the WiFi password</span></div>
+<div class="msg them">Hello?? Dead body?? Zombie??</div>
+<div class="msg me">SunitaAai2024. Capital S.</div>
+<div class="msg them">omg finally the dead speaks</div>
+<div class="msg them">why is the password Aai's name thats so cringe</div>
+<div class="msg them">bhaiya Meera bhabhi ka koi update 👀<span class="gloss-en">brother, any update on Meera bhabhi (sister-in-law)</span></div>
+<div class="msg them">sorry that was mean. love you bhaiya ❤️<span class="gloss-en">...love you brother</span></div>
+<div class="msg them">come home sunday Aai is making mutton</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_arjun_gallery
+The locked folder. Thumbprint. Sixteen items, all Meera.
+
+Marine Drive   wind catching her green dupatta, the silver thumb ring, laughing at something you said about the sunset looking like God's desktop wallpaper.
+
+Backstage at the cultural fest   green silk saree, gold border, kajal slightly smudged from happy tears. Looking at you like you were geography, not weather.
+
+The Bharatanatyam video. 206 views. You don't press play right now. Not here, not at this hour of the day.
+
+<<run setup.flag("phone_checked")>>
+<<hubreturn>>
+
+
+:: PH_papa_chat
+<div class="chat-log">
+<div class="msg them">Result kab aayega<span class="gloss-en">When will the result come</span></div>
+<div class="msg them">Pharmacology internal marks bhej<span class="gloss-en">Send the pharmacology internal marks</span></div>
+<div class="msg me">Next week Papa. Sab theek hai.<span class="gloss-en">...Everything's fine.</span></div>
+<div class="msg them">Sunday lunch. Vaishali. Marks laana.<span class="gloss-en">Sunday lunch. Vaishali. Bring the marks.</span></div>
+</div>
+<<hubreturn>>
+
+
+:: PH_amma_chat
+<div class="chat-log">
+<div class="msg them">Kanna, had your breakfast? 🍳<span class="gloss-en">Kanna (dear / little one, Tamil), had your breakfast?</span></div>
+<div class="msg them">Made murukku. Will send with Papa.</div>
+<div class="msg them">Mridangam Uncle asked about you. His son doing MBA at Symbiosis. "Very decent boy" he says 😊</div>
+<div class="msg me">Amma please no.</div>
+<div class="msg them">I'm just telling you what he said! He IS quite fair and tall</div>
+<div class="msg them">🎵 [audio 0:47   Amma humming Kalyani ragam, pots clanging]</div>
+</div>
+
+You play the audio on one earphone. Coconut oil and steel utensils and the specific frequency of a Tamil Brahmin kitchen at noon. Your eyes sting. You lock the phone and press it to your chest.
+
+<<hubreturn>>
+
+
+:: PH_meera_chat
+<div class="chat-log">
+<div class="msg them">Anatomy notes dena<span class="gloss-en">Give me the anatomy notes</span><div class="meta">via Kavya's phone   the only channel left</div></div>
+<div class="msg me">Room mein baat karte hain.<span class="gloss-en">Let's talk in the room.</span></div>
+</div>
+
+Even this chat is a performance. Meera types from your Samsung when Priya's in the bathroom, deletes the thread after, and you both pretend the conversation happens somewhere it can't be traced.
+
+<<hubreturn>>
+
+
+:: PH_priya_chat
+<div class="chat-log">
+<div class="msg them">Kavya ASMR playlist link bhej<span class="gloss-en">Kavya, send the ASMR playlist link</span></div>
+<div class="msg them">the soap cutting one</div>
+<div class="msg them">also did you see Reshma's engagement photos 😭</div>
+<div class="msg me">sending</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_sneha_chat
+<div class="chat-log">
+<div class="msg them">Pharma notes plzzzz 🙏🙏</div>
+<<if setup.has("dosage_app_built")>>\
+<div class="msg them">KAVYA TU GENIUS HAI. YEH APP 🔥🔥<span class="gloss-en">KAVYA YOU'RE A GENIUS. THIS APP</span></div>
+<div class="msg them">poori section B ko bhej diya<span class="gloss-en">sent it to the whole of Section B</span></div>
+<<elseif setup.has("sneha_helped")>>\
+<div class="msg them">thanks for explaining the formulas!! break mein samajh aaya<span class="gloss-en">...it clicked during the break</span></div>
+<<else>>\
+<div class="msg me">notebook mera bhi crime scene hai but haan, break mein<span class="gloss-en">my notebook's a crime scene too but yeah, during the break</span></div>
+<</if>>
+</div>
+<<hubreturn>>
+
+
+:: PH_github
+<div class="chat-log">
+<div class="msg them"><b>nlp-toolkit</b> · PR #247 <b>merged</b>   3 approvals</div>
+<div class="msg them"><b>@maintainer</b>: "Elegant implementation. Who is KV_Codes? I want them on the core team."</div>
+<div class="msg them"><b>issue #251</b> assigned to you: tokenizer edge case   Devanagari conjuncts</div>
+</div>
+
+Three professional developers just approved code you wrote at 2 AM on a phone you bought in cash. Nobody in your building knows KV_Codes is the girl who flinches at formalin.
+
+<<run setup.flag("github_checked")>>
+<<hubreturn>>
+
+
+:: PH_rahul_chat
+<div class="chat-log">
+<div class="msg them">KV! Your PR got merged! 🎉🎉🎉</div>
+<div class="msg them">3 approvals first review   that never happens</div>
+<div class="msg them">maintainer literally asked who you are. CORE TEAM KV</div>
+<div class="msg me">Thanks Rahul. Can't commit to regular hours rn. Life stuff.</div>
+<div class="msg them">no worries, invite stays open</div>
+<div class="msg them">you should apply to GSoC next cycle. IIT Bombay students get in all the time</div>
+</div>
+
+Rahul thinks you're a CS undergrad at IIT Bombay. He thinks your "lab" is a CS lab. It's a room full of bodies preserved in formaldehyde.
+
+<<run setup.flag("GSoC_awareness")>>
+<<hubreturn>>

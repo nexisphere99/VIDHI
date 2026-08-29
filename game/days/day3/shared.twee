@@ -44,6 +44,18 @@ You sit on the cold steps and watch the sky do the thing skies do just before da
 <div class="dialogue">"It bucks in first if you drop the clutch. Key's in the jacket   which is about to be your jacket."</div>
 <</if>>
 
+<<if $pov is "arjun">>You look at the circle   red powder, a length of string, a printed sheet of Sanskrit   and it looks exactly like what it looks like: two people about to do a craft project and call it a miracle.
+
+"You've actually done this. It actually happened."
+
+<div class="dialogue">"Ninety seconds. Meera and me, night before last, right on this stone. I woke up looking at my own face from the wrong side and I was sick in the bushes. It's real, Arjun. It's real //and// it's insane   both are true, and we don't have time for you to make peace with that."</div>
+<<else>>Arjun keeps looking at the circle like it's a card trick he's being slow to catch.
+
+<div class="dialogue">"You've actually done this. It actually happened?"</div>
+
+"Ninety seconds. Meera and me, night before last, right on this stone." You don't dress it up. "I woke up looking at my own face from the wrong side and I was sick in the bushes. It's real. It's also insane. Both, at once. Sit."
+<</if>>
+
 You sit cross-legged, knees almost touching, inside a circle of red kumkum drawn on the stone. <<if $pov is "arjun">>Kavya loops the kalava thread around both your right wrists and pulls it taut.<<else>>You loop the kalava thread around both your right wrists   yours and Arjun's   and pull it taut.<</if>>
 
 <<if $pov is "arjun">><div class="dialogue">"Last chance to back out."</div>
@@ -87,28 +99,59 @@ Black.
 :: day3_briefing
 <div class="intimate"><span class="tag">The handover</span>
 <<img "day3_briefing.png" "two strangers wearing familiar faces">>
-The wrench recedes. You're both sitting in the kumkum circle, breathing hard, staring at your own face on someone else's neck. The priest has withdrawn to the inner shrine. There is maybe fifteen minutes before either of you has to move.
+The wrench recedes. Colour bleeds back into the world. You're sitting in the kumkum circle, breathing like you sprinted a mile, and three feet away your own face is looking back at you wearing an expression you have never once seen from the inside.
 
-Kavya   in Arjun's body, voice pitched low and strange   goes first, because of course she does. She has a list.
+<<if $pov is "arjun">>"It worked." Your voice   Kavya's voice, higher, the Tamil under it   comes out in pieces. "It //worked//. That's my face. On you. You're //in// there." You raise a hand and it's small and dusky and ringed and it obeys you. "I said yes but I didn't //believe// it   I thought we'd sit here and nothing would happen and I'd still get to hear about Meera. And instead I'm   am I actually //you// right now? Is this real? This is real?"
 
-<div class="dialogue">"Hostel. Ramesh calls you 'didi,' don't flinch. Sign the register slow   my hand is round, yours is block capitals, split the difference. Priya is the danger: she's a planted observer and she reads posture. Sit like you're annoyed. Kavya is annoyed by default."</div>
+<div class="dialogue">"It's real. Now stop hyperventilating   those are my lungs and they're smaller than you're used to."</div>
+<<else>>Arjun is coming apart in the best possible way, in your body: hands out in front of him, turning them over, pressing them to his own (your own) face, hair, throat.
 
-<div class="dialogue">"Bathroom is not optional, and it's the squat kind   brace a foot on the door. Wipe front to back, I mean it, a UTI in my body is a war crime. Sneha will quiz you on pathology in the corridor; apoptosis shrinks, necrosis swells, that's all you need. And the dupatta lives on the left shoulder. It will not stay there. Accept this."</div>
+<div class="dialogue">"It worked. It //worked//. That's my face on you. Say something, I need to hear my voice from outside   //oh my god//. I said yes but I never believed it. I'm actually   am I actually you? Is this really happening?"</div>
 
-You nod, filing it. Then it's your turn, and your voice comes out of your own throat aimed back at you.
+"It's real." Your own voice, an octave lower, steady because one of you has to be   though inside you're screaming too: you have //this// as a body, flat-chested, centre of gravity six inches too high, hands like shovels. "It's real, and you have about fifteen minutes of being useless before we both have to walk out of here. So land the plane."
+<</if>>
 
-<div class="dialogue">"Rohit. He's the sensor   two years of living with me, he'll clock any behavioural delta. Keep answers short, shrug a lot, blame lack of sleep. Do <i>not</i> be brilliant in Krishnan's class. One clever line is a YouTube tutorial; a full optimisation is a knowledge bomb you can't walk back."</div>
+The priest withdraws to the inner shrine. Fifteen minutes. Then the day.
 
-<div class="dialogue">"Pooja texts fast and reads everything   reply in three words or not at all. Aai will hear something under the voice; keep the call short. The Pulsar's clutch bites high and bucks once on the first release. Wallet's in the left pocket, ID in the wallet, and the free chai at Raju's is real, take it."</div>
+Kavya   in Arjun's body   goes first, because of course she does. She has an actual list: a folded sheet of ruled paper from the kameez pocket, her half of the day written out in the round hand you're about to have to forge. She presses it into your palm and talks you through it, line by line.
 
-<<if $pov is "arjun">>Kavya stands   your legs, unfolding to a height she keeps misjudging. "Twelve hours. Temple, here, 7:30. Don't lose my body and I won't lose yours."
-<<else>>You stand   Arjun's legs, and the ground arrives later than you expect. "Twelve hours," you tell him. "Back here, 7:30. Try not to cry with my tear ducts. They file paperwork."<</if>>
+<div class="dialogue">"Ramesh calls you 'didi,' don't flinch. Sign the register slow   my hand is round, yours is block capitals, split the difference. Priya is the danger: planted observer, reads posture. Sit like you're annoyed. Kavya is annoyed by default."</div>
+
+<div class="dialogue">"Bathroom is not optional and it's the squat kind   brace a foot on the door. Wipe front to back, I mean it, a UTI in my body is a war crime. Sneha will quiz you on pathology in the corridor; apoptosis shrinks, necrosis swells, that's all you need. Dupatta lives on the left shoulder. It will not stay. Accept it."</div>
+
+You fold her page into your pocket. Then it's your turn   you've done the same thing, a page torn from a lab notebook, your block capitals, everything she'll need   and you hand it over and hear your own voice aimed back at you.
+
+<div class="dialogue">"Rohit's the sensor   two years living with me, he'll catch any behavioural change. Short answers, shrug, blame no sleep. Do <i>not</i> be brilliant in Krishnan's class. One clever line is a YouTube tutorial; a full optimisation is a knowledge bomb you can't walk back."</div>
+
+<div class="dialogue">"Pooja texts fast and reads everything   three words or nothing. Aai will hear something under the voice, keep the call short. Clutch bites high, bucks once on the first release. Wallet left pocket, ID in the wallet, and the free chai at Raju's is real   take it."</div>
+
+<<if $pov is "arjun">>Then she takes your wrist   her own wrist, small, the silver ring   and holds it until you're looking at your own face gone dead serious.
+
+<div class="dialogue">"One rule above every other one. You do not touch my body. Not curiosity, not 'just to see,' not one second longer in the shower than washing takes. You wash it, you feed it, you put it to bed. That is the entire list of what your hands are allowed to do in there."</div>
+
+<div class="dialogue">"If I come back into it and I //know// you crossed that line   the swaps stop, permanently. Meera loses this. And I will make the rest of your year genuinely unpleasant, and she will hold your Pulsar keys while I do it. Say it back to me."</div>
+
+"I understand. I gave my word to Meera and I'm giving it to you   nothing your body doesn't need. I swear it."
+
+<div class="dialogue">"Good. Same terms the other way; yours is safe with me. Now get up."</div>
+
+Kavya stands   your legs, unfolding to a height she keeps misjudging. "Twelve hours. Here, 7:30. Don't lose my body and I won't lose yours."
+<<else>>Then you take his wrist   your own wrist now, thick and strange   and hold it until he's looking at his own face gone hard.
+
+"One rule above every other one. You do not touch my body. Not curiosity, not 'just to see,' not one second longer in the shower than washing takes. Wash it, feed it, put it to bed. That is the entire list of what your hands may do in there."
+
+"If I come back into it and I //know// you crossed that line   the swaps stop, permanently. Meera loses this. And I will make the rest of your year genuinely unpleasant, and Meera will hold your Pulsar keys while I do it. Say it back."
+
+<div class="dialogue">"I understand. I gave my word to Meera, I'm giving it to you   nothing your body doesn't need. I swear it."</div>
+
+"Good. Your body's safe with me   same terms." You stand   Arjun's legs, and the ground arrives later than you expect. "Twelve hours. Here, 7:30. Try not to cry with my tear ducts, they file paperwork."
+<</if>>
 
 You touch your own borrowed face once, to confirm it's really there, and walk out of the temple in opposite directions.
 </div>
 \
 <<run setup.flag("day3_briefed")>>\
-<<run setup.discover("a fifteen-minute crash course in a life", $pov)>>\
+<<run setup.discover("a fifteen-minute crash course in a life", $pov)>>
 <div class="continue-nav"><<link "Open your eyes on the day">><<goto "Hub">><</link>></div>
 
 

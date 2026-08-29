@@ -1636,7 +1636,7 @@ setup.actionTime = function (trigger) {
     arjun_first_kavya_body: 10, arjun_hair_d3: 3, arjun_dupatta_d3: 3, arjun_walk_d3: 5, arjun_stairs_d3: 3,
     chowkidar_d3: 5, signin_d3: 3, signout_d3: 3, arjun_corridor_d3: 5, sneha_d3: 15,
     meera_reunion_d3: 25, arjun_sees_kavya_face: 5, arjun_cupboard_d3: 10,
-    meera_close_d3: 75, arjun_arousal_meera_d3: 25,
+    meera_coaches_d3: 25, meera_close_d3: 75, arjun_arousal_meera_d3: 25,
     kavya_cs_lab_first_d3: 8, kavya_library_d3: 20, kavya_library_read_d3: 45,
     kavya_popup_arousal_d3: 20, EV_a3_papa_call: 10,
     manuscript_organize_d3: 90, meera_afternoon_d3: 40, priya_room_d3: 15,
@@ -2699,6 +2699,7 @@ setup.phoneTab = function (which, tab) {
       description: "The room you've only ever heard described. Three cots. And on the middle one, in a white kurta with her braid undone: Meera. Real. Breathing. Six months end in this room.",
       objects: [
         { id: "meera_reunion", action: "Look at Meera", triggers: "meera_reunion_d3", quest: "main", unlockCondition: "not meera_reunion_d3" },
+        { id: "room304_meera_coach", action: "Let Meera teach you the body (Priya's still asleep)", triggers: "meera_coaches_d3", quest: "side", intimate: true, timeWindow: "05:00-09:30", unlockCondition: "meera_reunion_d3 AND not meera_coached_d3" },
         { id: "room304_mirror_d3", action: "Look in the mirror   see Kavya's face", triggers: "arjun_sees_kavya_face", unlockCondition: "meera_reunion_d3" },
         { id: "room304_cupboard_d3", action: "Open Kavya's cupboard", triggers: "arjun_cupboard_d3", quest: "side", unlockCondition: "meera_reunion_d3" },
         { id: "room304_meera_close", action: "Bolt the door. Be with Meera   properly, no clock.", triggers: "meera_close_d3", quest: "main", intimate: true, unlockCondition: "meera_reunion_d3 AND priya_out_d3 AND not meera_close_d3" },
@@ -3029,6 +3030,11 @@ setup.phoneTab = function (which, tab) {
       hint: { where: "Leave for Pataleshwar from the hostel gate or the campus path.", when: "From 5 PM   the circle reverses at 5:30, a clean twelve hours.", who: "Kavya, patting herself down.", how: "Sit in the circle. Reverse the chant." } }
   );
   A.side.push(
+    { id: "a3_sq_meera_coach", title: "Meera's crash course", pov: "arjun", day: 3,
+      description: "Before the day starts and Priya wakes: twenty minutes of Meera teaching you how to wear a body you've only ever seen from the outside.",
+      unlockCondition: "meera_reunion_d3", completionTrigger: "meera_coached_d3",
+      reward: { fem_comfort: 6, rel_meera: 4 },
+      hint: { where: "Room 304, right after the reunion.", when: "Early   before Priya's alarm and your first bathroom trip (05:00-09:30).", who: "Meera, with zero embarrassment   she's undressed in front of Kavya a hundred times, it's just a body.", how: "Peeing, the bra (she demonstrates with her own), clothes and underwear, sitting, talking, hair. Watch, then try it." } },
     { id: "a3_sq_meera_arousal", title: "What this body does near her", pov: "arjun", day: 3,
       description: "Six months of wanting Meera, and now you're close to her in a body that answers the call a completely different way.",
       unlockCondition: "meera_close_d3", completionTrigger: "arjun_wet_d3",

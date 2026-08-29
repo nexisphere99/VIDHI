@@ -321,6 +321,51 @@ You sit like that until you have to leave for the temple. Her head on your shoul
 <<hubreturn>>
 
 
+:: meera_coaches_d3
+<div class="intimate"><span class="tag">Intimate · body coaching</span>
+Priya is a mound under her blanket, breathing the slow flat rhythm of someone who won't move for another hour. Meera checks   really checks, leans over and listens   then turns back to you and stops being your girlfriend and becomes an instructor.
+
+<div class="dialogue">"Twenty minutes. You have to walk into that bathroom knowing things, or you'll do something a three-year med student would never do and someone will clock it. Sit. Listen."</div>
+
+<b>Peeing.</b> She can't demonstrate this one, thank god. She talks it through fast: <div class="dialogue">"Stall three, the bolt sticks   push up and left. Squat, don't hover, brace a foot on the door, that's Kavya's habit and people have seen it. Wipe front to back, always, no exceptions   the openings are close together and a UTI in someone else's body is unforgivable. And it just... comes out, there's nothing to aim, don't overthink it."</div>
+
+<b>The bra.</b> She pulls her kurta over her head without a flicker of hesitation   down to a plain grey bra, and when you look away on reflex she snorts. <div class="dialogue">"Arjun. I have changed in front of Kavya every day for three years. She's held my hair back while I threw up. This is the least strange thing that's happening today. //Watch the hooks.//"</div>
+
+She reaches back, unclasps it, holds it up like a diagram. <div class="dialogue">"Three hooks. You will never do this behind your back on the first try   nobody does. Hook it in front, at your sternum, loosest setting."</div> She does it, slow, narrating. <div class="dialogue">"Then spin it round   band first, cups at the back   then arms through the straps, then rotate the cups to the front. Band sits //level//, front and back same height. Two fingers under the band, not four, not zero. Straps take the weight off but they're not supposed to dig."</div>
+
+She hands you Kavya's spare off the chair. You fumble it. She fixes the twist in the strap without comment, the way you'd hand someone a dropped pen.
+
+And somewhere in the middle of watching her   the ordinary competence of her half-dressed in the grey morning light, a body you have wanted for fourteen months right there and completely off the table   Kavya's body does the thing it did on the terrace, quieter this time: a low warmth, a pulse, the beginning of wetness you weren't asking for. You could reach out. She's right there and she wouldn't stop you. You don't. It isn't the moment and it isn't your body to spend and there's a sleeping observer six feet away.
+
+You look down at Kavya's chest instead, then at Meera's, doing the involuntary comparison, and the surprise of it derails the arousal cleanly: //Kavya's are bigger.// A cup size, maybe more. You'd always pictured it the other way around, without ever examining why, and now the picture rearranges and you feel obscurely like you've learned something you weren't supposed to.
+
+<div class="dialogue">"You're comparing us," Meera says, not looking up from the strap. "Everyone does it once. Get it out of your system now, not in the mess."</div>
+
+<b>Clothes.</b> The maroon salwar kameez   the boring one, Papa-approved, invisible. <div class="dialogue">"Drawstring, not elastic; bow it, don't knot it, you'll need it fast later. Dupatta pins at the left shoulder and it will //not stay//, you just re-pin it forty times a day like everyone does. Kavya's underwear will fit you   they're hers, it's fine, stop making that face. Fold everything back the way it was; she squares her corners, it drives Priya insane, keep doing it."</div>
+
+<b>Sitting.</b> <div class="dialogue">"Knees together or crossed, never open. Dupatta falls over your lap when you sit   let it. On a bench, ankles crossed, take up one seat's width. In the mess you make yourself small. Not scared-small. Bored-small."</div>
+
+<b>Talking.</b> <div class="dialogue">"Kavya's voice is lower than you think and flatter than you think. Tamil under the Hindi   //ki// not //kih//, hard //t//. Short answers. Don't explain. Don't volunteer. Her resting state is 'mildly irritated genius,' so if you don't know what face to make, make that one."</div>
+
+<b>Hair.</b> She gathers Kavya's and does something quick and deft. <div class="dialogue">"You won't manage a braid, don't try. Low ponytail, hair tie on your wrist always. When it's in your face you don't blow at it like a boy   one finger, tuck behind the ear."</div> She demonstrates on you. Your scalp lights up under her hands in a way that is its own separate education.
+
+She pulls the kurta back on. <div class="dialogue">"Target isn't 'pass as Kavya.' Target is 'pass as Kavya having a strange, quiet day.' That's achievable. Go pee before she wakes up."</div>
+
+Priya shifts. You both go still. She doesn't wake.
+
+<div class="thought arjun">Twenty minutes and you've learned more about living in this body than a day of doing it alone would have taught you. And she taught it like it was nothing, because to her it //is// nothing   it's just Tuesday, in a female body, with a friend.</div>
+</div>\
+<<run setup.flag("meera_coached_d3")>>\
+<<run setup.discover("the bra, demonstrated", "arjun")>>\
+<<run setup.discover("Kavya's are bigger than Meera's", "arjun")>>\
+<<run setup.discover("bored-small, not scared-small", "arjun")>>\
+<<run setup.discover("one finger, tuck behind the ear", "arjun")>>\
+<<run setup.stat("fem_comfort", 6, "arjun")>>\
+<<run setup.stat("sex_f", 2, "arjun")>>\
+<<run setup.stat("rel_arjun_meera", 4, "arjun")>>
+<<hubreturn>>
+
+
 :: meera_close_d3
 <div class="intimate"><span class="tag">The reason for all of it</span>
 <<img "meera_close.png" "Room 304, the door bolted, the afternoon">>

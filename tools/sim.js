@@ -379,6 +379,7 @@ const D3 = {
   anatomy_horror_d3: () => { setup.flag("in_dissection_d3"); setup.flag("anatomy_done_d3"); },
   specimen_jar_d3: () => setup.flag("specimen_helped_d3"),
   manuscript_organize_d3: () => setup.flag("manuscript_organized_d3"),
+  meera_coaches_d3: () => setup.flag("meera_coached_d3"),
   meera_close_d3: () => setup.flag("meera_close_d3"),
   arjun_arousal_meera_d3: () => setup.flag("arjun_wet_d3"),
   meera_terrace_d3: () => setup.flag("meera_terrace_done_d3"),
@@ -434,6 +435,7 @@ assertObj("a3_obj_hostel");
 go("hostel_stairs_d3"); go("hostel_corridor_d3"); go("hostel_room_304_d3");
 use("meera_reunion");
 assertObj("a3_obj_meera");
+use("room304_meera_coach");                      // a3_sq_meera_coach (Priya asleep, morning)
 use("room304_cupboard_d3");                      // a3_sq_cupboard
 go("hostel_corridor_d3"); go("hostel_bathroom_d3"); use("toilet_d3");
 use("shower_d3_a");                              // a3_sq_shower_f

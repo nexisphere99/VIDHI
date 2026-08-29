@@ -155,6 +155,15 @@ An elderly Indian temple priest (70s, white dhoti, rudraksha bead necklace, thre
 A stern middle-aged Indian woman (Mrs. Joshi   55, widow, Maharashtrian, cotton saree, reading glasses on a chain) standing in the doorway of a hostel room, clipboard in hand, looking inside with sharp evaluating eyes. The corridor behind her is lit by fluorescent tubes. Her expression is controlled authority   not cruel, but missing nothing. From inside the room, we see three beds with three young women in varying states of studied innocence. The tension between the watcher and the watched. Semi-realistic digital illustration, harsh corridor lighting contrasting with dim room interior, surveillance atmosphere.
 ```
 
+### IMG-122 to IMG-125: Last-night intimacy (repeatable side scenes, art pending)
+The night before the swap. WARM CLOSE tones   amber, moonlight. Portraiture,
+not voyeurism. No explicit nudity   suggestion, shadow, cropping.
+
+- **IMG-122** `arjun_bed_selfplay_d2.png` (`arjun_bed_selfplay_d2`): a young man on his back on a PG-room cot in near-dark, one arm under a thin sheet, a 4 AM alarm labelled "TEMPLE" glowing on the desk beside him, roommate a blurred shape on the far cot. The mood is a goodbye, not a thrill.
+- **IMG-123** `kavya_bed_selfplay_d2.png` (`kavya_bed_selfplay_d2`): a young woman on her side under a blanket in a three-bed hostel room, moonlight across her face, one hand hidden, two sleeping shapes nearby, a rolled palm-leaf manuscript just visible under the middle bed's pillow. Tender, valedictory.
+- **IMG-124** `arjun_porn_d2.png` (`arjun_porn_d2`): close on a phone held low against a bare chest in the dark, brightness near zero, abstract blur on the screen, the "TEMPLE" alarm glowing out of focus behind. Furtive, studious, frightened.
+- **IMG-125** `kavya_porn_d2.png` (`kavya_porn_d2`): the small secret Redmi phone turned to the wall in a dark hostel bed, blanket tented over the glow, both earphones in, the official Samsung sitting dark and ignored on the shelf. Abstract blur on screen.
+
 ---
 
 ## NEW CHARACTER PORTRAITS
@@ -311,13 +320,14 @@ Stylized illustrated map of the B.J. Medical Girls Hostel building, now with MOR
 ```
 New Location Backgrounds:         6  (IMG-100 to IMG-105)
 Scene Illustrations:             12  (IMG-110 to IMG-121)
+Last-night intimacy scenes:      4  (IMG-122 to IMG-125, art pending)
 New Character Portraits:          7  (IMG-130 to IMG-136)
 Expression Variants:              7  (IMG-140 to IMG-146)
 UI Elements:                      4  (IMG-150 to IMG-153)
 ─────────────────────────────────────
-DAY 2 NEW IMAGES:                36
+DAY 2 NEW IMAGES:                40
 
-CUMULATIVE (Day 1 + Day 2):     85 images
+CUMULATIVE (Day 1 + Day 2):     89 images
 
 PRIORITY ORDER FOR DAY 2 PRODUCTION:
 1. Scene illustrations (key story moments   call, planning, gym, night)

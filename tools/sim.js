@@ -368,22 +368,28 @@ sideReport("arjun"); sideReport("kavya");
 
 /* ---- bedroom self-play + porn: every-day room actions, time-gated ---- */
 (() => {
-  const check = (pov, locId, id, t, cond) => {
-    S.pov = pov; S.loc[pov] = locId; S.time[pov] = t;
+  const check = (day, pov, locId, id, t, cond) => {
+    S.day = day; S.pov = pov; S.loc[pov] = locId; S.time[pov] = t;
     const o = findObj(pov, locId, id);
     if (!o) return fail("intimacy object missing: " + id);
     const vis = setup.objVisible(o) && setup.objInWindow(o);
-    if (vis !== cond) fail(id + " visibility=" + vis + " expected " + cond + " at " + setup.clockStr(pov));
+    if (vis !== cond) fail("D" + day + " " + id + " visibility=" + vis + " expected " + cond + " at " + setup.clockStr(pov));
   };
-  // Arjun: night after 23:00, morning before 07:00, hidden midday
-  check("arjun", "katraj_pg_room", "a_bed_night", 23 * 60 + 20, true);
-  check("arjun", "katraj_pg_room", "a_bed_night", 15 * 60, false);
-  check("arjun", "katraj_pg_room", "a_bed_morning", 6 * 60 + 45, true);
-  check("arjun", "katraj_pg_room", "a_porn_night", 23 * 60 + 20, true);
-  // Kavya: same windows (06:00 morning cutoff) + needs the Redmi for porn
-  check("kavya", "hostel_room_304", "k_bed_night", 23 * 60 + 10, true);
-  check("kavya", "hostel_room_304", "k_bed_morning", 5 * 60 + 30, true);
-  check("kavya", "hostel_room_304", "k_porn_morning", 5 * 60 + 30, true); // redmi in bag from playthrough
+  // Day 1: night after 23:00, morning before cutoff, hidden midday
+  check(1, "arjun", "katraj_pg_room", "a_bed_night", 23 * 60 + 20, true);
+  check(1, "arjun", "katraj_pg_room", "a_bed_night", 15 * 60, false);
+  check(1, "arjun", "katraj_pg_room", "a_bed_morning", 6 * 60 + 45, true);
+  check(1, "arjun", "katraj_pg_room", "a_porn_night", 23 * 60 + 20, true);
+  check(1, "kavya", "hostel_room_304", "k_bed_night", 23 * 60 + 10, true);
+  check(1, "kavya", "hostel_room_304", "k_bed_morning", 5 * 60 + 30, true);
+  check(1, "kavya", "hostel_room_304", "k_porn_morning", 5 * 60 + 30, true);
+  // Day 1 objects gone on Day 2; Day 2 twins present in the evening window
+  check(2, "arjun", "katraj_pg_room", "a_bed_night", 23 * 60, false);
+  check(2, "arjun", "katraj_pg_room", "a_bed_night_d2", 22 * 60, true);
+  check(2, "arjun", "katraj_pg_room", "a_porn_night_d2", 22 * 60, true);
+  check(2, "kavya", "hostel_room_304", "k_bed_night_d2", 22 * 60, true);
+  check(2, "kavya", "hostel_room_304", "k_porn_night_d2", 22 * 60, true);
+  S.day = 2;
 
   // helpers resolve without throwing
   if (typeof setup.habit("arjun").self !== "number") fail("setup.habit() malformed");

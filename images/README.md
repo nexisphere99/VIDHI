@@ -203,4 +203,6 @@ kavya_pharmacology.png       IMG-114    kavya_calling_arjun.png      IMG-115
 arjun_gym_punching.png       IMG-116    arjun_anticipation_night.png IMG-117
 kavya_body_catalogue.png     IMG-118    kavya_last_coding.png        IMG-119
 temple_priest.png            IMG-120    joshi_rounds_tense.png       IMG-121
+arjun_bed_selfplay_d2.png    IMG-122    kavya_bed_selfplay_d2.png    IMG-123   (last-night self-play, art pending)
+arjun_porn_d2.png            IMG-124    kavya_porn_d2.png            IMG-125   (last-night porn, art pending)
 ```

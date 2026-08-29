@@ -1,0 +1,116 @@
+:: arjun_bed_selfplay_d2
+<div class="intimate"><span class="tag">Intimate · explicit · self</span>
+
+<<img "arjun_bed_selfplay_d2.png" "the last night this body is yours">>
+Rohit's breathing has gone deep and even across the room. The 4 AM alarm sits on the desk, labelled //TEMPLE//, a small plastic countdown to the impossible. You lie on your back and, for once, there is nowhere the day still needs you to be.
+
+You reach under the waistband less out of wanting than out of a need to //record//. In a few hours this body isn't yours. You want a reference copy of what this was.
+
+So you go slow. You feel the actual weight of yourself in your palm, the familiar circuit closing, and you pay attention to every part of it the way you'd photograph a house before you move out. The grip you've used since you were fourteen. The exact spot under the head where the nerves cluster. The way your breath drags. The heat gathering hard and low behind your pubic bone, a build that runs one specific male route you have never had to think about because it was the only route there was.
+
+Under the grief there's a thing you're ashamed of: curiosity. //What will her body's version of this be.// Different geometry, different wiring, pleasure spread wide instead of concentrated to a point. You shove the thought away and it comes straight back and your hand doesn't stop.
+
+When it breaks it breaks the way it always has   spine snapping taut, your cock pulsing in your fist, the release striping warm over your knuckles, your jaw dropping open on a sound you bite down on out of seven months of shared-room habit. Three, four seconds where your head goes quiet.
+
+Then the fan, the snore, the label on the alarm. You clean up and lie still.
+
+<div class="thought arjun">That was the last time it'll ever be this simple. Tomorrow night you'll have a whole new manual to read, in a body that isn't yours, and you have no idea yet whether that terrifies you or not.</div>
+</div>
+
+<<run setup.habit("arjun").self++>>
+<<run setup.stat("sex_f", 2, "arjun")>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: kavya_bed_selfplay_d2
+<div class="intimate"><span class="tag">Intimate · explicit · self</span>
+
+<<img "kavya_bed_selfplay_d2.png" "the last night this body is only yours">>
+Priya's asleep with the rain turned up. Meera's a still shape on the middle bed, the manuscript rolled and tucked under her pillow like a knife. Tomorrow at 5 you hand this body to a boy you spoke to twice and take his.
+
+You already did the clinical version tonight   the catalogue, every measurement logged for migration. This isn't that. This is a goodbye, and you intend to do it properly.
+
+Slow. Both hands. You cup your breasts and feel their weight as //yours//, the ache along the underwire line you finally stopped resenting, thumbs crossing the nipples until the current runs down. Then one hand lower, under the nightie, past the elastic, to the clit you calibrated alone at sixteen and have known the exact settings of ever since. Slow circles, the hood sliding, the heat blooming outward through your pelvis and down both thighs.
+
+You don't go inside. Not the temple, not Amma's warnings   you keep that line tonight the way you always have, except tonight it lands different, because tomorrow it won't even be your call to make. So you keep it once more, deliberately, //because it's still yours to keep//, and that is the whole point of doing this now.
+
+The wave, when it comes, is deep and full and rolls down both legs and curls your toes against the sheet and clenches your stomach until it aches, and a sound leaves you through your teeth, //nnh//, more grief than pleasure, more pleasure than you expected.
+
+Then the river-delta crack. Sri Lanka on the wall. The specific frequency of Room 304 at night.
+
+<div class="thought kavya">When you come back to this body   //if// you come back   a boy will have been living in it. You wanted the last unshared night to be a good one. It was.</div>
+</div>
+
+<<run setup.habit("kavya").self++>>
+<<run setup.stat("sex_m", 2, "kavya")>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: arjun_porn_d2
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+<<img "arjun_porn_d2.png" "not browsing, tonight">>
+Tonight you don't scroll. Brightness at the floor, one earbud in, the other ear on Rohit, and your thumb goes straight to the category you spent a year pretending you opened by accident   //her side of it.// Shot from her, about her, the camera looking down her own body the way she'd see it.
+
+Because tonight it isn't pretence and it isn't even really about getting off. It's the last briefing. //This is the interface you're getting in six hours.// You watch it the way you'd study a schematic the night before you have to operate the machine: the perspective, the spread of it, the way the pleasure in her doesn't spike to one point but floods.
+
+You touch yourself in slow time with it and there's a new thing in the room   you're not watching from outside any more, at a safe distance. You're rehearsing being //inside// it. Turned on and frightened in a ratio you can't work out.
+
+<div class="choices">
+<div class="q">How does it end?</div>
+<<link "Finish, eyes on the screen, learning">><<goto "arjun_porn_d2_end">><</link>>
+<<link "Close it   this is too much tonight">><<run setup.stat("sex_f", 1, "arjun")>><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: arjun_porn_d2_end
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+You finish with your eyes still open, biting down, spilling into the waiting tissue, and the thought you'd never say aloud is fully formed now and you don't bother pretending it isn't: some part of you //wants// to know what tomorrow feels like from the inside.
+
+You lock the phone. The alarm glows //TEMPLE// on the desk.
+
+<div class="thought arjun">You stopped being able to call it curiosity a while ago. Tomorrow you find out what it actually was.</div>
+</div>
+
+<<run setup.habit("arjun").porn++>>
+<<run setup.stat("sex_f", 3, "arjun")>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: kavya_porn_d2
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+<<img "kavya_porn_d2.png" "the Redmi, one last exam">>
+No browsing tonight. Redmi turned to the wall, both earphones in, Priya's rain and Meera's breathing as cover. Your thumb goes straight past everything you usually watch to the one you used to hold at arm's length   //POV, shot down a man's body.// A hand doing what a hand does, from behind his eyes.
+
+Tomorrow that is your nervous system. So you watch it the way you'd review a past paper the night before the exam: the different geometry, the pleasure concentrated hard in one place instead of spread through you, the specific mechanics of a body you have twelve hours left before you're driving it.
+
+You touch yourself, slow, in a body that already feels provisional, and somewhere in the middle you notice the thing that would have embarrassed you a week ago and doesn't now: you're not studying it at a distance. You're leaning in.
+
+<div class="choices">
+<div class="q">How does it end?</div>
+<<link "Finish, taking notes with your whole body">><<goto "kavya_porn_d2_end">><</link>>
+<<link "Enough. Sleep. Big morning.">><<run setup.stat("sex_m", 1, "kavya")>><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: kavya_porn_d2_end
+<div class="intimate"><span class="tag">Intimate · explicit</span>
+
+You go over quietly, thighs closing around your hand, a long breath through your teeth, eyes still on the screen and a question sitting right there in the dark that you are finally not too much of a coward to look at.
+
+You lock the Redmi. Twelve hours.
+
+<div class="thought kavya">The scientist wanted the reference material. The scientist got it. The rest of you is very quiet about how much it's looking forward to the experiment.</div>
+</div>
+
+<<run setup.habit("kavya").porn++>>
+<<run setup.stat("sex_m", 3, "kavya")>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>

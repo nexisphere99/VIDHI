@@ -41,10 +41,12 @@ setup.locations = {
         { id: "night_call", action: "Try the hostel landline", triggers: "hostel_landline_call", unlockCondition: "rohit_confrontation_done AND time >= 18:00" },
         { id: "dbms_work", action: "Work on the DBMS assignment", triggers: "laptop_night_dbms", unlockCondition: "time >= 19:00" },
         { id: "end_day", action: "End the day   lie down on the cot", triggers: "arjun_night_end", unlockCondition: "meera_contact_attempted AND time >= 21:00 AND not arjun_day1_complete" },
-        { id: "a_bed_night", action: "Lie back in the dark. Hand under the waistband.", triggers: "arjun_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59" },
-        { id: "a_bed_morning", action: "Awake before the alarm, the room still dark.", triggers: "arjun_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-07:00" },
-        { id: "a_porn_night", action: "Earphones in. Open the private tab.", triggers: "arjun_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59" },
-        { id: "a_porn_morning", action: "Something to watch before the day starts.", triggers: "arjun_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-07:00" }
+        { id: "a_bed_night", action: "Lie back in the dark. Hand under the waistband.", triggers: "arjun_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59", dayOnly: 1 },
+        { id: "a_bed_morning", action: "Awake before the alarm, the room still dark.", triggers: "arjun_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-07:00", dayOnly: 1 },
+        { id: "a_porn_night", action: "Earphones in. Open the private tab.", triggers: "arjun_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59", dayOnly: 1 },
+        { id: "a_porn_morning", action: "Something to watch before the day starts.", triggers: "arjun_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-07:00", dayOnly: 1 },
+        { id: "a_bed_night_d2", action: "Lie back. The last night this body is yours.", triggers: "arjun_bed_selfplay_d2", intimate: true, quest: "side", repeatable: true, timeWindow: "21:00-23:59", dayOnly: 2 },
+        { id: "a_porn_night_d2", action: "Earphones in. Watch the one you keep circling.", triggers: "arjun_porn_d2", intimate: true, quest: "side", repeatable: true, timeWindow: "21:00-23:59", dayOnly: 2 }
       ],
       npcs: ["rohit"],
       exits: [
@@ -302,7 +304,7 @@ setup.locations = {
     "hostel_room_304": {
       name: "Room 304   B.J. Medical Girls Hostel",
       available: "00:00-23:59",
-      description: "Three beds, twenty square metres, three lives colliding. The ceiling crack that looks like a river delta. The water stain shaped like Sri Lanka.",
+      description: "Three steel cots, three almirahs, one fan that ticks on every rotation. Kavya's corner is ruthlessly ordered; Priya's is a landslide of dupattas and charging cables; Meera's is nearly monastic. The one window faces the compound wall. Twenty square metres of a life none of them chose.",
       objects: [
         { id: "phone_samsung", action: "Check the Samsung (official phone)", triggers: "samsung_phone_menu" },
         { id: "phone_redmi", action: "Check the Redmi (secret phone)", triggers: "redmi_phone_menu", unlockCondition: "has_redmi_phone" },
@@ -320,10 +322,12 @@ setup.locations = {
         { id: "wait_priya_sleep", action: "Wait for Priya to fall asleep", triggers: "priya_sleep_scene", unlockCondition: "manuscript_revealed AND time >= 22:30 AND not test_swap_complete" },
         { id: "test_swap_obj", action: "Try the ritual with Meera", triggers: "test_swap_scene", unlockCondition: "manuscript_revealed AND time >= 23:00 AND priya_asleep AND not test_swap_complete" },
         { id: "build_dosage", action: "Build Sneha's dosage calculator app", triggers: "dosage_build_scene", unlockCondition: "sneha_helped" },
-        { id: "k_bed_night", action: "Lie awake. Hand under the nightie.", triggers: "kavya_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59" },
-        { id: "k_bed_morning", action: "Awake before the others, the room still grey.", triggers: "kavya_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-06:00" },
-        { id: "k_porn_night", action: "Earphones in. The other browser, on the Redmi.", triggers: "kavya_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59", unlockCondition: "has_redmi_phone" },
-        { id: "k_porn_morning", action: "Something to watch before the alarm, on the Redmi.", triggers: "kavya_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-06:00", unlockCondition: "has_redmi_phone" }
+        { id: "k_bed_night", action: "Lie awake. Hand under the nightie.", triggers: "kavya_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59", dayOnly: 1 },
+        { id: "k_bed_morning", action: "Awake before the others, the room still grey.", triggers: "kavya_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-06:00", dayOnly: 1 },
+        { id: "k_porn_night", action: "Earphones in. The other browser, on the Redmi.", triggers: "kavya_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59", unlockCondition: "has_redmi_phone", dayOnly: 1 },
+        { id: "k_porn_morning", action: "Something to watch before the alarm, on the Redmi.", triggers: "kavya_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-06:00", unlockCondition: "has_redmi_phone", dayOnly: 1 },
+        { id: "k_bed_night_d2", action: "Lie back. The last night this body is only yours.", triggers: "kavya_bed_selfplay_d2", intimate: true, quest: "side", repeatable: true, timeWindow: "21:00-23:59", dayOnly: 2 },
+        { id: "k_porn_night_d2", action: "Redmi out. Watch the one you keep circling.", triggers: "kavya_porn_d2", intimate: true, quest: "side", repeatable: true, timeWindow: "21:00-23:59", unlockCondition: "has_redmi_phone", dayOnly: 2 }
       ],
       npcs: ["meera", "priya"],
       exits: [ { to: "hostel_corridor", label: "Go to the corridor" } ],
@@ -565,7 +569,10 @@ setup._questTag = {
     "deliver_packet", "ananya", "stray_dog",
     "under_mattress", "phone_redmi", "sneha_door", "build_dosage", "build_dosage_lib",
     "sharma_quiz", "priya_photo_req", "priya_bed", "mess_didi_favor", "divya_sofa",
-    "samosa_stall", "computer_section", "arjun_alone", "kavya_alone"
+    "samosa_stall", "computer_section", "arjun_alone", "kavya_alone",
+    "a_bed_night", "a_bed_morning", "a_porn_night", "a_porn_morning",
+    "k_bed_night", "k_bed_morning", "k_porn_night", "k_porn_morning",
+    "a_bed_night_d2", "a_porn_night_d2", "k_bed_night_d2", "k_porn_night_d2"
   ]
 };
 (function tagQuests() {
@@ -1298,7 +1305,7 @@ setup.debugGoDay = function (n) {
   if (n === V().day) { setup.restartDay(); }
   else {
     setup.beginDay(n);
-    setup.toast("swap", "DEBUG — jumped to Day " + n + ".");
+    setup.toast("swap", "DEBUG   jumped to Day " + n + ".");
   }
   return (setup.dayStart[n] && setup.dayStart[n].startPassage) || "Hub";
 };
@@ -1324,7 +1331,7 @@ setup.restartDay = function () {
   S.povUnlocked = ds.povUnlocked ? { arjun: !!ds.povUnlocked.arjun, kavya: !!ds.povUnlocked.kavya }
                                  : { arjun: true, kavya: true };
   setup.refreshObjectives();
-  setup.toast("swap", "DEBUG — Day " + d + " reset to its opening state.");
+  setup.toast("swap", "DEBUG   Day " + d + " reset to its opening state.");
   return "";
 };
 
@@ -1584,6 +1591,8 @@ setup.actionTime = function (trigger) {
     arjun_self_explore: 40, kavya_self_explore: 40,
     arjun_bed_selfplay: 15, kavya_bed_selfplay: 15,
     arjun_porn_menu: 25, kavya_porn_menu: 25,
+    arjun_bed_selfplay_d2: 20, kavya_bed_selfplay_d2: 20,
+    arjun_porn_d2: 25, kavya_porn_d2: 25,
     /* ---- Day 2 ---- */
     arjun_shower_d2: 15, arjun_stress_pee_d2: 3, kavya_shower_d2: 15, kavya_period_planning_d2: 3,
     os_lecture_d2: 60, pharmacology_lecture_d2: 60, mhatre_test_d2: 30, margin_coding_d2: 20,
@@ -1974,7 +1983,7 @@ setup.openLocationGuide = function () {
     });
     if (timed.length)
       h += "<div class='lg-row'><b>Timed action</b><span>" + timed.map(function (o) {
-        return "“" + o.action + "” — " + setup.fmtWindows(o.timeWindow);
+        return "“" + o.action + "”   " + setup.fmtWindows(o.timeWindow);
       }).join("<br>") + "</span></div>";
     h += "</div>";
   });
@@ -2458,6 +2467,8 @@ setup.phoneTab = function (which, tab) {
     "arjun_gym_punching.png": "scenes/day2", "arjun_anticipation_night.png": "scenes/day2",
     "kavya_body_catalogue.png": "scenes/day2", "kavya_last_coding.png": "scenes/day2",
     "temple_priest.png": "scenes/day2", "joshi_rounds_tense.png": "scenes/day2",
+    "arjun_bed_selfplay_d2.png": "scenes/day2", "kavya_bed_selfplay_d2.png": "scenes/day2",
+    "arjun_porn_d2.png": "scenes/day2", "kavya_porn_d2.png": "scenes/day2",
     "anjali_portrait.png": "characters", "mhatre_portrait.png": "characters",
     "vikram_portrait.png": "characters", "kulkarni_uncle_portrait.png": "characters",
     "temple_priest_portrait.png": "characters", "sanjay_portrait.png": "characters"

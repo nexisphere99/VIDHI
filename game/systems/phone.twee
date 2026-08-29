@@ -6,8 +6,8 @@
 </div>
 <div class="choices">
 <div class="q">Reply</div>
-<<link "\"bhej raha hoon. canteen mein milte hain.\" — sending it, see you at the canteen">><<goto "Hub">><</link>>
-<<link "\"kya baat hai\" — what's it about">><<goto "PH_rohit_chat_more">><</link>>
+<<link "\"bhej raha hoon. canteen mein milte hain.\"   sending it, see you at the canteen">><<goto "Hub">><</link>>
+<<link "\"kya baat hai\"   what's it about">><<goto "PH_rohit_chat_more">><</link>>
 </div>
 
 

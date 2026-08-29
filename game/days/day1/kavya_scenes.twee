@@ -90,7 +90,7 @@ The window of Room 304, third floor, second from the left. Below: the neem trees
 
 
 :: manuscript_observation
-<<img "kavya_manuscript_closeup.png" "the palm-leaf text — “deha-vinimaya”">>
+<<img "kavya_manuscript_closeup.png" "the palm-leaf text   “deha-vinimaya”">>
 Up close: the leaves are threaded on a cord through two holes. The ink has gone brown but the characters are exact   the hand of someone dead six hundred years. Meera has pencilled a transliteration in the margin of her own notebook beside it. //Deha-vinimaya.//<span class="gloss-en">Body exchange (Sanskrit).</span> A tantric siddhi, the text says. Achievable.
 
 Your whole training rejects it. And yet you were inside her body for three minutes tonight, so.
@@ -387,10 +387,10 @@ The silence that follows could support a bridge. Real professors. Real terminals
 :: priya_sleep_scene
 Priya comes back sweaty at 7:50, showers, and is horizontal by ten with the earphones already in   ASMR rain, the volume set to drown the world. You lie in the dark and wait, watching the numbers on the Samsung.
 
-<<img "kavya_joshi_rounds.png" "9:45 rounds — Robbins as camouflage">>
+<<img "kavya_joshi_rounds.png" "9:45 rounds   Robbins as camouflage">>
 Mrs. Joshi's rounds at 9:45   three raps, a torch beam across the room, Robbins open on your desk as the prop. //Sab theek hai?//<span class="gloss-en">Everything alright?</span> //Yes, ma'am.// Three ticks on the clipboard. The chappals recede.
 
-<<img "kavya_priya_asleep.png" "11 PM — white noise as their shield">>
+<<img "kavya_priya_asleep.png" "11 PM   white noise as their shield">>
 By eleven Priya's breathing has gone deep and even. The white noise is your shield.
 
 <<run setup.advanceTime(1380 - setup.clock())>>

@@ -51,16 +51,20 @@ images/
 │   └── kavya_map.png               IMG-044
 │
 └── scenes/
-    └── day1/                       ← Day 1 story-moment illustrations only
-        ├── arjun_wakeup.png        IMG-030
-        ├── kavya_wakeup.png        IMG-031
-        ├── arjun_rohit_canteen.png IMG-032
-        ├── kavya_anatomy.png       IMG-033   (not wired yet)
-        ├── swap_ritual.png         IMG-034
-        ├── arjun_night_room.png    IMG-035
-        ├── kavya_night_bed.png     IMG-036
-        ├── bj_campus_samosa.png    IMG-037
-        └── sinhagad_viewpoint.png  IMG-038
+    ├── day1/                       ← Day 1 story-moment illustrations only
+    │   ├── arjun_wakeup.png        IMG-030
+    │   ├── kavya_wakeup.png        IMG-031
+    │   ├── arjun_rohit_canteen.png IMG-032
+    │   ├── kavya_anatomy.png       IMG-033   (not wired yet)
+    │   ├── swap_ritual.png         IMG-034
+    │   ├── arjun_night_room.png    IMG-035
+    │   ├── kavya_night_bed.png     IMG-036
+    │   ├── bj_campus_samosa.png    IMG-037
+    │   └── sinhagad_viewpoint.png  IMG-038
+    └── common/                     ← not tied to one day (memories, flashbacks)
+        ├── Marine_Drive_Green_Dupatta.png                  IMG-050  (PH_arjun_gallery)
+        ├── Cultural_Fest_Backstage_Green_Silk_Saree.png    IMG-051  (PH_arjun_gallery)
+        └── Bharatanatyam_Video_Locked_Folder_Thumbnail.png IMG-052  (PH_arjun_gallery)
 ```
 
 ## Recommended specs

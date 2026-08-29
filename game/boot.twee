@@ -258,5 +258,10 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<link "🔧 Restart this day">><<run setup.restartDay()>><<goto "Hub">><</link>>\
 <<link "Debug off">><<set $debug to false>><<goto "Hub">><</link>>\
 </div>
-<p class="obj-empty">Day <<= $day>> · debug mode on</p>\
+<div class="sys-btns">\
+<<for _dn range setup.debugDays()>><<capture _dn>>\
+<<link `(_dn is $day ? "↻ " : "→ ") + setup.debugDayLabel(_dn)`>><<set _p to setup.debugGoDay(_dn)>><<goto _p>><</link>>\
+<</capture>><</for>>\
+</div>
+<p class="obj-empty">now on Day <<= $day>> · debug mode on · jumping wipes the day's tracker</p>\
 <</if>>

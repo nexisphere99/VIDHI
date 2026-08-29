@@ -438,6 +438,14 @@ library. Kavya consistent with IMG-002. Plus three location backgrounds:
 - **IMG-152** `kavya_teaching_sneha.png` (`dosage_build_scene`): a young woman sketching a formula / app UI on paper for a delighted classmate — the moment an idea (a dosage-calculator app) is born. Warm.
 - **IMG-153** `kavya_priya_instagram.png` (`priya_instagram_scene`): the glasses-wearing roommate posing for "candid" photos, phone in hand, but her eyes tracking everything in the room. Performative.
 - **IMG-154** `kavya_final_beat.png` (`KavyaDayEnd`): night, Room 304 — the braided young woman leaning close to Kavya, saying two words: "Tonight, Kavya." A charged, quiet ending frame. Dim, blue-lit.
+- **IMG-155** `kavya_manuscript_closeup.png` (`manuscript_observation`): a tight close-up of a brittle palm-leaf manuscript page, Devanagari/Grantha script incised into the leaf, one term legible: *deha-vinimaya* ("body exchange"). Lamp-light, dust motes.
+- **IMG-156** `kavya_joshi_rounds.png` (`priya_sleep_scene`): a torch beam sweeping a dark hostel room during the 9:45 PM warden round; a young woman sitting up in bed with a thick red pathology text (Robbins) open as a prop, feigning study.
+- **IMG-157** `kavya_priya_asleep.png` (`priya_sleep_scene`): 11 PM, Room 304 — the roommate deep asleep with earphones in (ASMR rain), while Kavya lies awake in the next bed watching the phone clock. White-noise as cover.
+- **IMG-158** `kavya_warden_office.png` (`warden_interaction`): a cramped hostel warden's office smelling of files and prickly-heat powder, a stern middle-aged woman looking over her glasses from behind a desk stacked with registers, warning implied.
+- **IMG-159** `kavya_terrace_watertank.png` (`hidden_terrace_spot`): a hidden gap behind a rooftop water tank, just wide enough to sit in, invisible from the stairwell door — the one private space, city lights beyond.
+- **IMG-160** `kavya_terrace_coding.png` (`terrace_phone_use`): a young woman crouched on a dark hostel rooftop, face lit by a second phone showing a code editor / GitHub, four signal bars — ten minutes of being fully herself.
+- **IMG-161** `kavya_phone_shop.png` (`phone_shop_scene`): a tiny roadside phone shop crammed with second-hand handsets and screen-repair tools, a bored owner who "doesn't ask for ID", a hand-lettered "CASH" sign.
+- **IMG-162** `kavya_juice_stall.png` (`juice_vendor_npc`): a sugarcane-juice cart with a hand-cranked crusher, ginger and lime and black salt, a glass being poured, campus gossip delivered along with it. Hot afternoon.
 
 ---
 
@@ -445,14 +453,14 @@ library. Kavya consistent with IMG-002. Plus three location backgrounds:
 
 ```
 Character Reference Sheets:     5  (IMG-001 to IMG-005)
-Location Backgrounds:           16  (IMG-010 to IMG-026)
+Location Backgrounds:           17  (IMG-010 to IMG-027)
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
 Ambient vignettes (Arjun):     38  (IMG-070 to IMG-107, scenes/common/)
-Ambient vignettes (Kavya):     35  (IMG-120 to IMG-154, scenes/common/)
+Ambient vignettes (Kavya):     43  (IMG-120 to IMG-162, scenes/common/)
 ─────────────────────────────────────
-TOTAL:                         128 images
+TOTAL:                         137 images   (Day 1 fully covered)
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

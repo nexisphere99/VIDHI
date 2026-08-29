@@ -128,6 +128,7 @@ Three samosas wrapped in the classified section   your food seasoned with used-c
 
 
 :: juice_vendor_npc
+<<img "kavya_juice_stall.png" "the sugarcane stall">>
 Fresh sugarcane through the crusher, ginger and lime and a pinch of black salt. "Garmi bahut hai, madam. Aur suna   anatomy department mein naya professor aa raha hai next month. Sharma sir retire kar rahe hain shayad."<span class="gloss-en">It's very hot, madam. And I heard   a new professor is coming to the anatomy department next month. Sharma sir might be retiring.</span> Campus gossip, delivered with the juice.
 
 <<run setup.stat("energy", 2, "kavya")>>
@@ -135,6 +136,7 @@ Fresh sugarcane through the crusher, ginger and lime and a pinch of black salt. 
 
 
 :: phone_shop_scene
+<<img "kavya_phone_shop.png" "cash, no questions">>
 The shop sells cheap phones and repairs screens   the same shop, probably, where Raju bhaiya's Redmi will end up. The owner doesn't ask for ID. "Second-hand phone chahiye toh bolna, madam. Cash. No questions."<span class="gloss-en">If you want a second-hand phone, just say, madam. Cash. No questions.</span> You file that away. A person in your situation keeps a mental list of people who ask no questions.
 
 <<run setup.flag("knows_phone_shop")>>
@@ -183,12 +185,14 @@ City lights below in a warm grid. The only truly private space in the building  
 
 
 :: hidden_terrace_spot
+<<img "kavya_terrace_watertank.png" "the gap behind the water tank">>
 Behind the water tank there's a gap wide enough to sit in, invisible from the stairwell door. Meera showed it to you in first year. It's where you've had every real conversation since.
 
 <<hubreturn>>
 
 
 :: terrace_phone_use
+<<img "kavya_terrace_coding.png" "ten minutes of being herself">>
 Four bars up here. <<if setup.hasItem("redmi_phone")>>You pull out the Redmi, push two commits, reply to a Telegram thread, and refresh GitHub. Ten minutes of being fully yourself, on a rooftop, in the dark.
 <<run setup.stat("coding_skill", 1, "kavya")>><<else>>The Samsung loads Amma's WhatsApp forwards at full speed for once. Small mercies.<</if>>
 

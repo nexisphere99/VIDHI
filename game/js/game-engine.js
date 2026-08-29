@@ -500,7 +500,8 @@ setup.locations = {
         { id: "corner_table_bj", action: "Sit alone with the phone", triggers: "canteen_phone_coding" }
       ],
       npcs: ["canteen_owner_bhau", "random_medical_students_canteen"],
-      exits: [ { to: "bj_campus_path", label: "Back to campus" } ]
+      exits: [ { to: "bj_campus_path", label: "Back to campus" } ],
+      image: "bj_canteen.png"
     },
 
     "sassoon_road": {
@@ -1556,7 +1557,7 @@ setup.imgDir = {
   "anatomy_hall.png": "locations",
   "katraj_snake_park.png": "locations", "sinhagad_road.png": "locations",
   "bj_library.png": "locations", "hostel_common_room.png": "locations",
-  "hostel_entrance.png": "locations",
+  "hostel_entrance.png": "locations", "bj_canteen.png": "locations",
   /* UI mockups                  -> images/ui/ */
   "arjun_phone_ui.png": "ui", "kavya_samsung_ui.png": "ui",
   "kavya_redmi_ui.png": "ui", "arjun_map.png": "ui", "kavya_map.png": "ui",
@@ -1608,7 +1609,11 @@ setup.imgDir = {
   "kavya_signout_register.png": "scenes/common", "kavya_sneha_visit.png": "scenes/common",
   "kavya_study_desk.png": "scenes/common", "kavya_teaching_sneha.png": "scenes/common",
   "kavya_toilet.png": "scenes/common", "kavya_tonight_breakfast.png": "scenes/common",
-  "kavya_window_view.png": "scenes/common"
+  "kavya_window_view.png": "scenes/common",
+  "kavya_priya_asleep.png": "scenes/common", "kavya_phone_shop.png": "scenes/common",
+  "kavya_terrace_watertank.png": "scenes/common", "kavya_terrace_coding.png": "scenes/common",
+  "kavya_joshi_rounds.png": "scenes/common", "kavya_warden_office.png": "scenes/common",
+  "kavya_manuscript_closeup.png": "scenes/common", "kavya_juice_stall.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

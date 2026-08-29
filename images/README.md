@@ -44,7 +44,8 @@ images/
 │   ├── sinhagad_road.png           IMG-023
 │   ├── bj_library.png              IMG-024
 │   ├── hostel_common_room.png      IMG-025
-│   └── hostel_entrance.png         IMG-026
+│   ├── hostel_entrance.png         IMG-026
+│   └── bj_canteen.png              IMG-027
 │
 ├── objects/                        ← interactive-object sprites (none wired yet)
 │
@@ -144,7 +145,15 @@ images/
         ├── kavya_canteen_corner.png      IMG-151  (canteen_phone_coding)
         ├── kavya_teaching_sneha.png      IMG-152  (dosage_build_scene)
         ├── kavya_priya_instagram.png     IMG-153  (priya_instagram_scene)
-        └── kavya_final_beat.png          IMG-154  (KavyaDayEnd)
+        ├── kavya_final_beat.png          IMG-154  (KavyaDayEnd)
+        ├── kavya_manuscript_closeup.png  IMG-155  (manuscript_observation)
+        ├── kavya_joshi_rounds.png        IMG-156  (priya_sleep_scene)
+        ├── kavya_priya_asleep.png        IMG-157  (priya_sleep_scene)
+        ├── kavya_warden_office.png       IMG-158  (warden_interaction)
+        ├── kavya_terrace_watertank.png   IMG-159  (hidden_terrace_spot)
+        ├── kavya_terrace_coding.png      IMG-160  (terrace_phone_use)
+        ├── kavya_phone_shop.png          IMG-161  (phone_shop_scene)
+        └── kavya_juice_stall.png         IMG-162  (juice_vendor_npc)
 ```
 
 ## Recommended specs

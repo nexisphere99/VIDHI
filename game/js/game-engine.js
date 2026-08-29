@@ -1309,7 +1309,8 @@ setup.dayStart = {
        "arjun_received_call", "arjun_briefed", "full_briefing_done",
        "arjun_at_temple_d3", "kavya_at_temple_d3", "arjun_dressed_predawn_d3",
        "kavya_dressed_predawn_d3", "kavya_signed_out_predawn_d3", "day3_briefed",
-       "swap_complete", "swap_back_complete"
+       "swap_complete", "swap_back_complete", "arjun_home_d3", "kavya_home_d3",
+       "arjun_slept_d3", "kavya_slept_d3", "day4_swap_planned"
       ].forEach(function (f) { delete S.flags[f]; });
       S.mood.arjun = "terrified, electric";
       S.mood.kavya = "clinical, alive";
@@ -1636,7 +1637,8 @@ setup.actionTime = function (trigger) {
     /* ---- Day 3 ---- */
     arjun_predawn_d3: 15, arjun_ride_temple_d3: 25, kavya_predawn_d3: 15,
     kavya_chowkidar_lie_d3: 8, kavya_walk_temple_d3: 30, day3_briefing: 20,
-    day3_swap: 15, day3_swapback: 25, day3_temple_wait: 20, day3_temple_wait_back: 20,
+    day3_swap: 15, day3_swapback: 25, day3_gohome: 35, day3_sleep: 0,
+    day3_temple_wait: 20, day3_temple_wait_back: 20,
     arjun_first_kavya_body: 10, arjun_hair_d3: 3, arjun_dupatta_d3: 3, arjun_walk_d3: 5, arjun_stairs_d3: 3,
     chowkidar_d3: 5, signin_d3: 3, signout_d3: 3, arjun_corridor_d3: 5, sneha_d3: 15,
     meera_reunion_d3: 25, arjun_sees_kavya_face: 5, arjun_cupboard_d3: 10,
@@ -3030,7 +3032,15 @@ setup.phoneTab = function (which, tab) {
       description: "5:30 PM. Pataleshwar. Twelve hours to the minute. The circle only reverses once //both// of your days are done.",
       unlockCondition: "day3_both_done AND time >= 17:00", completionTrigger: "swap_back_complete",
       lockNote: "Unlocks once BOTH of you have finished the day   you: survived + your time with Meera; Kavya: her real coding session. From 5 PM.",
-      hint: { where: "From 5 PM, the hostel gate and the campus path both get a 'Leave for Pataleshwar' option. Ride there and sit in the circle.", when: "Circle reverses at 5:30. If it's still locked at the temple, Kavya's day isn't finished   switch POV.", who: "Kavya, patting herself down.", how: "Sit in the circle. Reverse the chant." } }
+      hint: { where: "From 5 PM, the hostel gate and the campus path both get a 'Leave for Pataleshwar' option. Ride there and sit in the circle.", when: "Circle reverses at 5:30. If it's still locked at the temple, Kavya's day isn't finished   switch POV.", who: "Kavya, patting herself down.", how: "Sit in the circle. Reverse the chant." } },
+    { id: "a3_obj_home", title: "Ride home to Katraj", pov: "arjun", day: 3,
+      description: "Own body, own bike, own bed. Forty minutes of evening traffic and then the day is over.",
+      unlockCondition: "swap_back_complete", completionTrigger: "arjun_home_d3",
+      hint: { where: "Straight through from the swap-back   the Pulsar back to the PG.", when: "Right after the circle.", who: "Rohit's still out.", how: "Just follow it through." } },
+    { id: "a3_obj_sleep", title: "Sleep", pov: "arjun", day: 3,
+      description: "Lie down. Alarm at 4:15. Tomorrow you do it again.",
+      unlockCondition: "arjun_home_d3", completionTrigger: "arjun_slept_d3",
+      hint: { where: "The cot in the PG room.", when: "Now.", who: " .", how: "Close your eyes." } }
   );
   A.side.push(
     { id: "a3_sq_meera_coach", title: "Meera's crash course", pov: "arjun", day: 3,
@@ -3103,7 +3113,15 @@ setup.phoneTab = function (which, tab) {
       description: "5:30 PM. Pataleshwar. Twelve hours to the minute. The circle only reverses once //both// of your days are done.",
       unlockCondition: "day3_both_done AND time >= 17:00", completionTrigger: "swap_back_complete",
       lockNote: "Unlocks once BOTH threads are finished   Kavya: your real coding session; Arjun: survived + his time with Meera. From 5 PM.",
-      hint: { where: "From 5 PM, Katraj Main Road gets a 'Ride to Pataleshwar (swap-back)' option. Ride there and sit in the circle.", when: "Circle reverses at 5:30. If it's still locked at the temple, Arjun's day isn't finished   switch POV. Later than 6 and Kavya's late back to the hostel.", who: "Arjun.", how: "Sit in the circle. Reverse the chant." } }
+      hint: { where: "From 5 PM, Katraj Main Road gets a 'Ride to Pataleshwar (swap-back)' option. Ride there and sit in the circle.", when: "Circle reverses at 5:30. If it's still locked at the temple, Arjun's day isn't finished   switch POV. Later than 6 and Kavya's late back to the hostel.", who: "Arjun.", how: "Sit in the circle. Reverse the chant." } },
+    { id: "k3_obj_home", title: "Get back to Room 304", pov: "kavya", day: 3,
+      description: "Sign in at the hostel gate   in your own hand this time   and climb the stairs to your own bed.",
+      unlockCondition: "swap_back_complete", completionTrigger: "kavya_home_d3",
+      hint: { where: "Straight through from the swap-back.", when: "Right after the circle.", who: "Ramesh at the gate, Meera and Priya upstairs.", how: "Just follow it through." } },
+    { id: "k3_obj_sleep", title: "Sleep", pov: "kavya", day: 3,
+      description: "Lie down. Alarm at 4:15. Tomorrow you do it again.",
+      unlockCondition: "kavya_home_d3", completionTrigger: "kavya_slept_d3",
+      hint: { where: "Your cot in Room 304.", when: "Now.", who: " .", how: "Close your eyes." } }
   );
   K.side.push(
     { id: "k3_sq_library", title: "The CS section of the library", pov: "kavya", day: 3,

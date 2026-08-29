@@ -371,6 +371,8 @@ const D3 = {
     setup.flag("arjun_day3_complete"); setup.flag("kavya_day3_complete");
     S.time.arjun = 1085; S.time.kavya = 1085;
   },
+  day3_gohome: () => { setup.flag("arjun_home_d3"); setup.flag("kavya_home_d3"); },
+  day3_sleep: () => { setup.flag("arjun_slept_d3"); setup.flag("kavya_slept_d3"); },
   arjun_first_kavya_body: () => setup.flag("arjun_first_kavya_body"),
   chowkidar_d3: () => setup.flag("chowkidar_passed"),
   signin_d3: () => setup.flag("entered_hostel_d3"),
@@ -508,10 +510,12 @@ go("pg_stairs_d3"); go("katraj_street_d3");
 go("pataleshwar_temple_d3");                     // the "Ride to Pataleshwar (swap-back)" option
 const circK = findObj("kavya", "pataleshwar_temple_d3", "swap_back_circle");
 if (!circK || !setup.objVisible(circK)) fail("swap_back_circle should be visible once both days are done + 5:30");
-use("swap_back_circle");                         // day3_swapback   completes BOTH threads
-["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_meera_time","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
-["k3_obj_gethere","k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback"].forEach(assertObj);
-if (!setup.dayFullyDone()) fail("dayFullyDone() should be true after the shared swap-back");
+use("swap_back_circle");                         // day3_swapback   reverses BOTH bodies
+// scripted epilogue: ride home, then sleep (a passage chain, not objects)
+EFFECTS.day3_gohome(); EFFECTS.day3_sleep(); setup.refreshObjectives();
+["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_meera_time","a3_obj_survive","a3_obj_swapback","a3_obj_home","a3_obj_sleep"].forEach(assertObj);
+["k3_obj_gethere","k3_obj_swap","k3_obj_ride","k3_obj_pg","k3_obj_cs","k3_obj_code","k3_obj_swapback","k3_obj_home","k3_obj_sleep"].forEach(assertObj);
+if (!setup.dayFullyDone()) fail("dayFullyDone() should be true after the full Day 3 epilogue");
 console.log("  arjun body:", S.body.arjun, "| kavya body:", S.body.kavya, "| fem_comfort", S.stats.a_femComfort,
   "| k_coding", S.stats.k_coding, "| symposium", !!S.flags.research_symposium_invited);
 

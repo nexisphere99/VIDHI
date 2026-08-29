@@ -397,7 +397,44 @@ Tomorrow you do this again. The thought is terrifying and inevitable in equal me
 <<run $time.kavya = 1085>>\
 <<run setup.stat("rel_arjun_kavya", 5, "arjun")>>\
 <<run setup.stat("rel_kavya_arjun", 5, "kavya")>>
-<div class="continue-nav">[[Ride home. Sleep, if you can.|DayWrap]]</div>
+<div class="continue-nav"><<link "Get on the bike. Go home.">><<goto "day3_gohome">><</link>></div>
+
+
+:: day3_gohome
+<div class="intimate"><span class="tag">The ride home</span>
+<<if $pov is "arjun">>You wheel the Pulsar out of the temple lot   your Pulsar, your hands, your weight over the tank   and ride down into Pune's evening. Katraj is forty minutes of horns and diesel and a body doing exactly what you tell it. Rohit's still out. The PG room is dark and yours and smells of Axe and stale Maggi, and it has never once looked this good.
+
+Across the city, Kavya is signing back into the B.J. hostel in her own round hand   //K. Iyer, in, 18:40, temple//   nodding at Ramesh, climbing to 304, where Meera is holding a book she isn't reading and Priya actually is.
+<<else>>You sign back into the hostel yourself   //K. Iyer, in, 18:40, temple//, your own round hand, nothing to forge   nod at Ramesh, and climb to 304. Meera looks up from a book she isn't reading. Priya doesn't look up at all. You're home, in your own skin, in the room you've resented and needed for three years.
+
+Across the city, Arjun is riding the Pulsar back to Katraj through the evening traffic, in his own body, in a helmet that fits, toward a dark PG room that smells of Axe and stale Maggi.
+<</if>>
+
+You each carry the same thing home: a day that happened, that shouldn't have been possible, and a 4:15 alarm.
+</div>\
+<<run setup.flag("arjun_home_d3")>>\
+<<run setup.flag("kavya_home_d3")>>\
+<<run $time.arjun = 1120>>\
+<<run $time.kavya = 1120>>
+<div class="continue-nav"><<link "Lie down">><<goto "day3_sleep">><</link>></div>
+
+
+:: day3_sleep
+<div class="intimate"><span class="tag">The end of Day 3</span>
+<<if $pov is "arjun">>You lie down on the cot that's yours, in the body that's yours   twenty-one years of it, every inch familiar and not one of them the same tonight. You keep feeling the ghost of the dupatta on your left shoulder. You keep reaching to push back hair that isn't there.
+
+You think about Meera on a cot two hours long. You think about your father hearing nothing in forty seconds. You set the alarm for 4:15 and turn it face-down under the pillow so it won't reach Rohit.
+<<else>>You lie down in Room 304, in your own body, the underwire back where it lives, the pathology reading you're behind on glowing on Priya's side of the room. Meera's breathing has gone even. You can still feel where the Pulsar's tank sat between your knees.
+
+You think about ninety minutes of Krishnan and the whole hall turning around. You think about your father   forty seconds, nothing. You set the alarm for 4:15.
+<</if>>
+
+Tomorrow, before dawn, you do it again.
+</div>\
+<<run setup.flag("arjun_slept_d3")>>\
+<<run setup.flag("kavya_slept_d3")>>\
+<<run setup.flag("day4_swap_planned")>>
+<div class="continue-nav">[[Close your eyes|DayWrap]]</div>
 
 
 :: Day3Complete [nobr]
@@ -410,7 +447,7 @@ Tomorrow you do this again. The thought is terrifying and inevitable in equal me
 <p class="lede">The first cross-gender swap is complete. Nobody's cover held perfectly   Pooja clocked a texting anomaly, Aai heard something under the voice, Krishnan is asking about a research symposium, Dr. Sharma noticed "Kavya" being kind. But nobody knows. Not yet.</p>
 
 <div class="thought arjun">ARJUN   Coding <<= $stats.a_coding>> · Fem-comfort <<= $stats.a_femComfort>> · Rel Meera <<= $stats.rel_arjun_meera>> · Rel Kavya <<= $stats.rel_arjun_kavya>> · Drawn to female frame <<= $stats.a_sexF>></div>
-<div class="thought kavya">KAVYA   Coding <<= $stats.k_coding>> · Masc-comfort <<= $stats.k_mascComfort>> · Rel Arjun <<= $stats.rel_kavya_arjun>> · Drawn to male frame <<= $stats.k_sexM>> · Krishnan symposium: <<= setup.has("research_symposium_invited") ? "invited" : "no"></div>
+<div class="thought kavya">KAVYA   Coding <<= $stats.k_coding>> · Masc-comfort <<= $stats.k_mascComfort>> · Rel Arjun <<= $stats.rel_kavya_arjun>> · Drawn to male frame <<= $stats.k_sexM>> · Krishnan symposium: <<if setup.has("research_symposium_invited")>>invited<<else>>no<</if>></div>
 
 <p class="lede">Swaps: <<= $swapCount>> · barrier <<= $barrierIntegrity>>%. Discoveries logged: <<= ($discoveries.arjun.length + $discoveries.kavya.length)>>. The Colonel still visits Sunday.</p>
 

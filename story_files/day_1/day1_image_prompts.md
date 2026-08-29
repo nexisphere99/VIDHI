@@ -396,19 +396,63 @@ Also two location backgrounds: `katraj_snake_park.png` (IMG-022) and
 - **IMG-106** `kothrud_family_meal.png` (`home_meal_scene`): a family of four (or three plus an empty-ish place) at a small dining table with steel thalis, an extra serving already on the guest's plate, warm light. The ache of being fed too much love.
 - **IMG-107** `kothrud_old_bedroom.png` (`arjun_childhood_room`): a small bedroom half-converted to a study — cricket trophies still on a shelf, a faded Sachin Tendulkar poster, a framed school photo of a boy at sixteen on the desk. Nostalgic afternoon light. No people.
 
+### IMG-120 to IMG-154: Kavya's path vignettes (already wired)
+B.J. Medical girls' hostel and campus. Cool blue-grey institutional
+mornings; formalin light in anatomy; warm lamp-light in the colonial
+library. Kavya consistent with IMG-002. Plus three location backgrounds:
+`bj_library.png` (IMG-024), `hostel_common_room.png` (IMG-025),
+`hostel_entrance.png` (IMG-026).
+
+- **IMG-120** `kavya_room_mirror.png` (`kavya_mirror_scene`): a clouded, rust-spotted mirror on a steel cupboard door giving back a fragmented reflection of a dusky young woman with dark circles and a beauty mark below one eye, wavy hair. Pre-dawn hostel room, two other beds.
+- **IMG-121** `kavya_bathroom_mirror.png` (`kavya_bathroom_mirror`): a small square of clouded mirror at chest height in a shared hostel bathroom, showing only a shoulder and collarbone, a queue implied behind. Utilitarian, damp.
+- **IMG-122** `kavya_window_view.png` (`hostel_window_view`): view from a third-floor hostel window over neem trees, a chowkidar's empty chair, a chained sign-out register, the compound wall and the city beyond. Grey morning.
+- **IMG-123** `kavya_cupboard.png` (`kavya_cupboard`): an open steel almirah — three ironed salwar kameez (maroon, navy, sober green), a stack of printed medical PDFs, a discreet pad stash tucked behind a thick textbook. Ordered, careful.
+- **IMG-124** `kavya_hidden_compartment.png` (`secret_clothes_stash`): the false back of a bottom cupboard shelf pulled aside to reveal folded jeans, two crop tops and a denim jacket — the other self, hidden.
+- **IMG-125** `kavya_study_desk.png` (`kavya_study_options`): a tidy hostel study desk, anatomy atlas open, a lamp, a second phone face-down, sticky notes in two scripts. Night.
+- **IMG-126** `kavya_meera_observation.png` (`meera_observation`): a fair young woman with a braid sitting cross-legged on a middle bed in dim light, reading a brittle palm-leaf manuscript the colour of old tea, lips moving. Observed from across a hostel room.
+- **IMG-127** `kavya_priya_wakeup.png` (`priya_status_check`): a round-faced young woman in glasses jolting awake to a blaring alarm clock, reaching for her phone, mouth already forming a question. Cluttered bunk.
+- **IMG-128** `kavya_after_shower.png` (`morning_wash`): a young woman at a row of cold taps in a hostel washroom, towel-damp hair, brushing teeth, a shared soap bar worn concave. Fluorescent light.
+- **IMG-129** `kavya_toilet.png` (`kavya_pee_day1`): a hostel toilet stall from a discreet distance — a bolt that barely reaches the latch, one foot braced against the door, fully clothed, deliberately mundane. No nudity.
+- **IMG-130** `kavya_period_check.png` (`kavya_period_check_day1`): a small wall calendar with a few dates quietly marked, and a hand reaching a pad from a stash tucked behind a thick red textbook. Matter-of-fact.
+- **IMG-131** `kavya_handwash.png` (`handwash_scene`): a young woman wringing out a salwar under a communal tap and pegging dupattas to a line strung across a damp hostel washing area. Overcast.
+- **IMG-132** `kavya_hostel_notices.png` (`hostel_notices`): a hostel notice board — mess-audit notice, water timings, "fill the register IN INK", and "guardians may visit unannounced" with *unannounced* underlined three times. No people.
+- **IMG-133** `kavya_corridor_water.png` (`corridor_water`): a wall water cooler in a hostel corridor dribbling a thin rusty stream, a girl ahead complaining, bottles queued on the floor. Green walls, tube light.
+- **IMG-134** `kavya_sneha_visit.png` (`sneha_room_visit`): a friendly, slightly frantic classmate at a hostel room door holding a pharmacology notebook, asking for help; Kavya half-turned from her desk.
+- **IMG-135** `kavya_tonight_breakfast.png` (`mess_corner_scene`): a corner seat in a hostel mess hall with a full view of the room, steel plates, girls at long tables, one girl three tables away on Instagram. Early, grey.
+- **IMG-136** `kavya_meera_mess_seat.png` (`mess_meera_conversation`): the braided young woman sliding onto the bench beside Kavya at a mess table, leaning in to murmur something, both facing forward. Quiet conspiracy.
+- **IMG-137** `hostel_wifi.png` (`wifi_check`): a wall-mounted Wi-Fi router in a crowded common room, a phone held up showing two signal bars, girls clustered on broken sofas around it.
+- **IMG-138** `kavya_horoscope.png` (`magazine_browse`): hands holding an old dog-eared women's magazine open to the horoscope page in a hostel common room; the line "a period of transformation is beginning" legible-ish.
+- **IMG-139** `hostel_landline.png` (`hostel_landline`): a wall landline phone at a hostel entrance, directly in view of a chowkidar's desk and the sign-out register on its chain. No privacy.
+- **IMG-140** `kavya_signout_register.png` (`hostel_sign_out`): a worn hardbound sign-out register on a chain at a hostel gate desk, a pen tied on, columns for time out / reason / expected return. A warden's presence implied.
+- **IMG-141** `kavya_chowkidar.png` (`chowkidar_interaction`): an elderly hostel gatekeeper in a worn uniform sweater on a plastic chair by the gate, knowing every girl by her walk. Morning light, neem shade.
+- **IMG-142** `kavya_campus_bench.png` (`campus_bench_rest`): a young woman in a white coat sitting on a bench on a neem-lined medical-college path, eyes shut, a brief break from formalin. Dappled September sun.
+- **IMG-143** `bj_bookstore.png` (`bookstore_scene`): a cramped medical-college bookshop wall of doorstop textbooks (Gray's, Harrison's, Cunningham's), price stickers, a student browsing but buying nothing.
+- **IMG-144** `kavya_anatomy_wash.png` (`anatomy_wash`): hands scrubbing to the elbow with gritty pink soap at a row of steel basins in a dissection hall, formalin haze, damp-cloth-covered tables behind. The smell won't wash out.
+- **IMG-145** `kavya_meera_note.png` (`note_passing_anatomy`): a folded scrap of paper being passed low, below the level of a draped dissection table, between two gloved hands. Fluorescent buzz.
+- **IMG-146** `kavya_sharma_quiz.png` (`dr_sharma_quiz_scene`): a stern professor in a white coat quizzing a female student across a dissection table, pointing at a structure, other students watching. Tense.
+- **IMG-147** `kavya_expertise.png` (`library_study`): a young woman at a long table in a high-ceilinged colonial reading room, a slow fan overhead, a pathology text open, a fierce focus that doesn't match the dutiful-daughter uniform.
+- **IMG-148** `bj_library_basement.png` (`rare_books_section`): a dim climate-controlled library basement, shelves of untouched Sanskrit and Marathi texts, one drawer slightly open, a single wheezing AC unit. Nobody there.
+- **IMG-149** `kavya_kulkarni_library.png` (`librarian_npc`): a severe middle-aged librarian at a wooden issue desk not looking up from her register, a young woman standing before her holding an overdue volume.
+- **IMG-150** `kavya_cs229_lecture.png` (`library_computer_coding`): a young woman at a library desktop in a corner, an ML lecture paused on screen, a second phone beside the keyboard, back to the room. Absorbed in the wrong subject.
+- **IMG-151** `kavya_canteen_corner.png` (`canteen_phone_coding`): a corner canteen table, back to the wall, a phone angled away from the room showing a code editor, a half-eaten plate. Watchful.
+- **IMG-152** `kavya_teaching_sneha.png` (`dosage_build_scene`): a young woman sketching a formula / app UI on paper for a delighted classmate — the moment an idea (a dosage-calculator app) is born. Warm.
+- **IMG-153** `kavya_priya_instagram.png` (`priya_instagram_scene`): the glasses-wearing roommate posing for "candid" photos, phone in hand, but her eyes tracking everything in the room. Performative.
+- **IMG-154** `kavya_final_beat.png` (`KavyaDayEnd`): night, Room 304 — the braided young woman leaning close to Kavya, saying two words: "Tonight, Kavya." A charged, quiet ending frame. Dim, blue-lit.
+
 ---
 
 ## TOTAL IMAGE COUNT   DAY 1
 
 ```
 Character Reference Sheets:     5  (IMG-001 to IMG-005)
-Location Backgrounds:           13  (IMG-010 to IMG-023)
+Location Backgrounds:           16  (IMG-010 to IMG-026)
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
-Ambient room-action vignettes: 38  (IMG-070 to IMG-107, scenes/common/)
+Ambient vignettes (Arjun):     38  (IMG-070 to IMG-107, scenes/common/)
+Ambient vignettes (Kavya):     35  (IMG-120 to IMG-154, scenes/common/)
 ─────────────────────────────────────
-TOTAL:                          90 images
+TOTAL:                         128 images
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

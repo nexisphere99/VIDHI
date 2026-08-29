@@ -399,7 +399,8 @@ setup.locations = {
         { id: "divya_sofa", action: "Talk to Divya Didi (4th year)", triggers: "senior_divya_scene", unlockCondition: "time >= 18:00" }
       ],
       npcs: ["random_hostel_girls_tv", "senior_student_divya"],
-      exits: [ { to: "hostel_stairs", label: "Back to the stairs" } ]
+      exits: [ { to: "hostel_stairs", label: "Back to the stairs" } ],
+      image: "hostel_common_room.png"
     },
 
     "hostel_entrance": {
@@ -415,7 +416,8 @@ setup.locations = {
       exits: [
         { to: "hostel_stairs", label: "Back inside" },
         { to: "bj_campus_path", label: "Exit to campus", unlockCondition: "signed_out_hostel" }
-      ]
+      ],
+      image: "hostel_entrance.png"
     },
 
     "hostel_terrace": {
@@ -483,7 +485,8 @@ setup.locations = {
         { id: "build_dosage_lib", action: "Build Sneha's dosage calculator app", triggers: "dosage_build_scene", unlockCondition: "sneha_helped" }
       ],
       npcs: ["librarian_kulkarni", "studious_seniors"],
-      exits: [ { to: "bj_campus_path", label: "Back to campus" } ]
+      exits: [ { to: "bj_campus_path", label: "Back to campus" } ],
+      image: "bj_library.png"
     },
 
     "bj_canteen": {
@@ -1552,6 +1555,8 @@ setup.imgDir = {
   "hostel_terrace.png": "locations", "bj_campus.png": "locations",
   "anatomy_hall.png": "locations",
   "katraj_snake_park.png": "locations", "sinhagad_road.png": "locations",
+  "bj_library.png": "locations", "hostel_common_room.png": "locations",
+  "hostel_entrance.png": "locations",
   /* UI mockups                  -> images/ui/ */
   "arjun_phone_ui.png": "ui", "kavya_samsung_ui.png": "ui",
   "kavya_redmi_ui.png": "ui", "arjun_map.png": "ui", "kavya_map.png": "ui",
@@ -1584,7 +1589,26 @@ setup.imgDir = {
   "katraj_jogging_track.png": "scenes/common", "katraj_ice_bar.png": "scenes/common",
   "katraj_fruit_cart.png": "scenes/common", "kothrud_aai_kitchen.png": "scenes/common",
   "kothrud_papa_livingroom.png": "scenes/common", "kothrud_pooja_sofa.png": "scenes/common",
-  "kothrud_family_meal.png": "scenes/common", "kothrud_old_bedroom.png": "scenes/common"
+  "kothrud_family_meal.png": "scenes/common", "kothrud_old_bedroom.png": "scenes/common",
+  /* Kavya's path */
+  "bj_bookstore.png": "scenes/common", "bj_library_basement.png": "scenes/common",
+  "hostel_wifi.png": "scenes/common", "hostel_landline.png": "scenes/common",
+  "kavya_after_shower.png": "scenes/common", "kavya_anatomy_wash.png": "scenes/common",
+  "kavya_bathroom_mirror.png": "scenes/common", "kavya_campus_bench.png": "scenes/common",
+  "kavya_canteen_corner.png": "scenes/common", "kavya_chowkidar.png": "scenes/common",
+  "kavya_corridor_water.png": "scenes/common", "kavya_cs229_lecture.png": "scenes/common",
+  "kavya_cupboard.png": "scenes/common", "kavya_expertise.png": "scenes/common",
+  "kavya_final_beat.png": "scenes/common", "kavya_handwash.png": "scenes/common",
+  "kavya_hidden_compartment.png": "scenes/common", "kavya_horoscope.png": "scenes/common",
+  "kavya_hostel_notices.png": "scenes/common", "kavya_kulkarni_library.png": "scenes/common",
+  "kavya_meera_mess_seat.png": "scenes/common", "kavya_meera_note.png": "scenes/common",
+  "kavya_meera_observation.png": "scenes/common", "kavya_period_check.png": "scenes/common",
+  "kavya_priya_instagram.png": "scenes/common", "kavya_priya_wakeup.png": "scenes/common",
+  "kavya_room_mirror.png": "scenes/common", "kavya_sharma_quiz.png": "scenes/common",
+  "kavya_signout_register.png": "scenes/common", "kavya_sneha_visit.png": "scenes/common",
+  "kavya_study_desk.png": "scenes/common", "kavya_teaching_sneha.png": "scenes/common",
+  "kavya_toilet.png": "scenes/common", "kavya_tonight_breakfast.png": "scenes/common",
+  "kavya_window_view.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

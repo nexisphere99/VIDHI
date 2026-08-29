@@ -2583,13 +2583,13 @@ setup.phoneTab = function (which, tab) {
   var temple = {
     name: "Pataleshwar Cave Temple   Pre-dawn",
     available: "04:00-06:00,19:00-22:00",
-    description: "1,500-year-old basalt, carved gods peering from the rock. Pune's light pollution bleeds a sick orange into a sky that never goes fully black. The universe is about to invert.",
+    description: "1,500-year-old basalt, carved gods peering from the rock. Kavya scouted the quiet hours for a reason   pre-dawn and late evening the courtyard empties out, no priest, no devotees, just one perpetual lamp and a sky Pune's light pollution never lets go fully black. The universe is about to invert.",
     objects: [
       { id: "swap_circle", action: "Sit in the kumkum circle. Begin.", triggers: "day3_swap", quest: "main", unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3 AND not swap_complete" },
       { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND time >= 19:30 AND not swap_back_complete" },
       { id: "temple_wait", action: "Wait. Watch the sky. Don't think.", triggers: "day3_temple_wait", unlockCondition: "not swap_complete" }
     ],
-    npcs: ["temple_priest"],
+    npcs: [],
     exits: [],
     image: "pataleshwar_dawn.png"
   };
@@ -2922,7 +2922,7 @@ setup.phoneTab = function (which, tab) {
   L.kavya.hostel_predawn_d3 = {
     name: "Room 304   3:55 AM",
     available: "00:00-06:30",
-    description: "Priya and Anjali breathe in the dark. Meera's bed is already empty, the sheet pulled straight   she left twenty minutes ago to unlatch the temple's side gate. Your salwar is folded on the chair, the dupatta on top. In an hour you won't be the one wearing them.",
+    description: "Priya and Anjali breathe in the dark. Meera's awake, sitting up against the wall   she can't come, she hasn't been off this campus without a parent in eleven months, so she waits here for her boyfriend to walk in wearing your face. Your salwar is folded on the chair, the dupatta on top. In an hour you won't be the one wearing them.",
     objects: [
       { id: "predawn_go_k", action: "Dress. Go down. Get past the chowkidar.", triggers: "kavya_predawn_d3", quest: "main", unlockCondition: "not kavya_at_temple_d3" }
     ],
@@ -3003,7 +3003,7 @@ setup.phoneTab = function (which, tab) {
     { id: "k3_obj_gethere", title: "Slip out to Pataleshwar", pov: "kavya", day: 3, status: "active",
       description: "Before 4. Dress, wind the dupatta, get past Ramesh with a lie about early puja, and walk to the cave temple.",
       completionTrigger: "kavya_at_temple_d3",
-      hint: { where: "Down the stairs, past the chowkidar's booth, out the gate and along the dark road.", when: "Now   3:55 AM.", who: "Chowkidar Ramesh. Tell him early-morning puja. Meera's already gone ahead.", how: "Sign the register, say it plain, don't hurry. Then walk." } },
+      hint: { where: "Down the stairs, past the chowkidar's booth, out the gate and along the dark road.", when: "Now   3:55 AM.", who: "Chowkidar Ramesh. Tell him early-morning puja and that family's meeting you there   Meera can't leave, so you go alone.", how: "Sign the register, say it plain, don't hurry. Then walk (the auto won't show)." } },
     { id: "k3_obj_swap", title: "Complete the swap", pov: "kavya", day: 3,
       description: "Become Arjun. Take his keys, his bike, his life for twelve hours.",
       unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3", completionTrigger: "swap_complete",

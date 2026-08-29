@@ -176,9 +176,13 @@ One tear escapes. You wipe it with the back of a hand that's bigger than your fa
 <<img "hostel_304_night.png" "Room 304, 3:55 AM">>
 Your phone vibrates once under the pillow. You're already awake   you've been awake since three, watching the ceiling crack that looks like a river delta.
 
-Priya sleeps flat on her back, mouth open, pathology notes still on her chest. Anjali is a comma under two blankets. Meera's bed is empty and pulled straight; she left at 3:30 to walk down and get the temple's side gate unlatched, the way you planned it on paper four times.
+Priya sleeps flat on her back, mouth open, pathology notes still on her chest. Anjali is a comma under two blankets. Meera is the only other one awake   sitting up against the wall, knees to her chest, watching you get ready. She can't come. She hasn't left this campus without her father or her mother in eleven months; a girl in her position walking out of the gate before dawn is exactly the sort of thing that gets phoned in. She has to stay here and wait for her boyfriend to walk //in//, wearing your face.
 
 You dress in the dark you know by heart. The maroon salwar kameez   Papa-approved, unremarkable, the one nobody looks at twice. You wind the dupatta across your chest and pin it at the left shoulder, tight, armour. Redmi in one hand. The folded transliteration of the mantra in the kameez pocket, soft at the creases now from handling.
+
+<div class="dialogue">"Get him here safe," Meera whispers. "And Kavya   thank you. There's no version of this I could ever pay back."</div>
+
+"Then don't try. Just be here at six, in your own bed, pretending to wake up." You squeeze her foot through the blanket.
 
 <div class="thought kavya">Twelve hours from now a boy will be standing in this room wearing this body, and Priya will be watching him. Leave the room the way Kavya leaves it. Straight back. Annoyed face. Go.</div>
 
@@ -194,9 +198,9 @@ Chowkidar Ramesh is awake   he's always awake, that's the job   transistor radio
 
 You keep your voice flat, a little bored, the register of someone doing a chore.
 
-<div class="dialogue">"Pataleshwar. Aaj Monday hai   Mahadev ki puja. Meera didi pehle nikal gayi, main late ho gayi."<span class="gloss-en">Pataleshwar. It's Monday   prayers for Shiva. Meera left ahead, I'm running late.</span></div>
+<div class="dialogue">"Pataleshwar. Aaj Somvar hai   Mahadev ki puja. Meri mausi aur cousins Kothrud se aa rahe hain, wahin milenge. Auto bola hua hai."<span class="gloss-en">Pataleshwar. It's Monday   prayers for Shiva. My aunt and cousins are coming from Kothrud, I'll meet them there. I've booked an auto.</span></div>
 
-He nods like this is the most ordinary sentence in the world, because for a medical hostel full of homesick girls, it is. He turns the register toward you.
+He nods like this is the most ordinary sentence in the world, because for a medical hostel full of homesick girls with families across the city, it is. He turns the register toward you.
 
 <div class="dialogue">"Naam, time, jagah. Aur savdhaan jaana, andhera hai."<span class="gloss-en">Name, time, place. And go carefully, it's dark.</span></div>
 
@@ -211,13 +215,13 @@ You write it in your own round hand   //K. Iyer · 3:58 · Pataleshwar temple// 
 :: kavya_walk_temple_d3
 <div class="intimate"><span class="tag">Pre-dawn · the walk</span>
 <<img "pataleshwar_approach.png" "the road up to the caves, before dawn">>
-The road is yours alone. A pack of street dogs lifts their heads at you from a shuttered shopfront and decides you're not worth it. One milk van, headlights swinging. A single share-auto idles at the corner, but the driver shakes his head   <<t "itni door nahi jaa raha, madam" "not going that far">>   so you walk, dupatta pulled up over your head against the cold, chappals slapping a rhythm on empty tarmac.
+The auto you booked never comes   4 AM in Pune is a promise, not a service. You wait ten minutes at the corner, then give up and walk. A pack of street dogs lifts their heads at you from a shuttered shopfront and decides you're not worth it. One milk van, headlights swinging. Otherwise the road is yours alone, dupatta pulled up over your head against the cold, chappals slapping a rhythm on empty tarmac.
 
-Twenty-five minutes uphill. Your calves burn. Your body   the small efficient one you've spent twenty-one years in, that flinches at formalin and cries at poha   carries you up the ghat past the last streetlight and into the trees, and you think, with a strange grief you weren't expecting: //this is one of the last hours I'll spend being exactly this.//
+Twenty-five minutes, the last stretch uphill. Your calves burn. Your body   the small efficient one you've spent twenty-one years in, that flinches at formalin and cries at poha   carries you up the ghat past the last streetlight and into the trees, and you think, with a strange grief you weren't expecting: //this is one of the last hours I'll spend being exactly this.//
 
-The temple steps. Meera is a shape by the unlatched side gate, lifting a hand. The courtyard is old dark and one oil lamp. You sit on the cold stone to wait   and a few minutes later a headlight comes sawing up the ghat road too fast, and you know without looking that it's Arjun on the Pulsar, taking the bends the way he always does.
+The temple steps. No priest, no devotees   at this hour Pataleshwar is just old stone and one perpetual oil lamp guttering at the cave mouth, exactly the emptiness you scouted it for. You crouch and start drawing the kumkum circle from memory, the way Meera walked you through it. A few minutes later a headlight comes sawing up the ghat road too fast, and you know without looking that it's Arjun on the Pulsar, taking the bends the way he always does.
 
-<div class="thought kavya">He's here. Meera's here. The circle's drawn. There is exactly one way this morning goes now.</div>
+<div class="thought kavya">He's here. The circle's drawn. There is exactly one way this morning goes now.</div>
 </div>\
 <<run $loc.kavya to "pataleshwar_temple_d3">>\
 <<run $time.kavya to 290>>\

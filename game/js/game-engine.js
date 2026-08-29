@@ -2620,7 +2620,8 @@ setup.phoneTab = function (which, tab) {
       { id: "swap_circle", action: "Sit in the kumkum circle. Begin.", triggers: "day3_swap", quest: "main", unlockCondition: "arjun_at_temple_d3 AND kavya_at_temple_d3 AND not swap_complete" },
       { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day3_swapback", quest: "main", unlockCondition: "swap_complete AND not swap_back_complete AND time >= 17:30 AND day3_both_done" },
       { id: "temple_wait", action: "Wait. Watch the sky. Don't think.", triggers: "day3_temple_wait", unlockCondition: "not swap_complete" },
-      { id: "temple_wait_back", action: "Sit on the steps and wait for the other one", triggers: "day3_temple_wait_back", unlockCondition: "swap_complete AND not swap_back_complete AND not day3_both_done" }
+      { id: "temple_wait_back", action: "Sit on the steps and wait for the other one", triggers: "day3_temple_wait_back", unlockCondition: "swap_complete AND not swap_back_complete AND not day3_both_done" },
+      { id: "temple_leave_done", action: "It's done. Head home.", triggers: "day3_gohome", quest: "main", unlockCondition: "swap_back_complete" }
     ],
     npcs: [],
     exits: [],

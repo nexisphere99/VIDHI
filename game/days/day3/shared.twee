@@ -433,7 +433,9 @@ Tomorrow, before dawn, you do it again.
 </div>\
 <<run setup.flag("arjun_slept_d3")>>\
 <<run setup.flag("kavya_slept_d3")>>\
-<<run setup.flag("day4_swap_planned")>>
+<<run setup.flag("day4_swap_planned")>>\
+<<run $loc.arjun = "hostel_room_304_d3">>\
+<<run $loc.kavya = "katraj_pg_room_d3">>
 <div class="continue-nav">[[Close your eyes|DayWrap]]</div>
 
 

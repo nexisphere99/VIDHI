@@ -1309,7 +1309,6 @@ setup.debugFromHash = function () {
   try { return String(window.location.hash || "").toLowerCase().indexOf("debug") !== -1; }
   catch (e) { return false; }
 };
->>>>>>> 1513f50 (Add $debug flag + "Restart this day" debug button)
 
 setup.beginDay = function (n) {
   var S = V();

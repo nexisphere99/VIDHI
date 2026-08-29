@@ -1975,7 +1975,25 @@ setup.humanCond = function (expr) {
     sneha_helped: "after you've helped Sneha",
     visited_common_room: "after you've been to the common room",
     visited_vit_library: "after you've been to the library",
-    mains_done: "once the day's main objectives are done"
+    mains_done: "once the day's main objectives are done",
+    /* Day 3 */
+    swap_complete: "after the swap at Pataleshwar",
+    swap_back_complete: "after the swap-back",
+    arjun_at_temple_d3: "once you've reached the temple",
+    kavya_at_temple_d3: "once Kavya has reached the temple",
+    arjun_first_kavya_body: "after you've taken stock of the body",
+    entered_hostel_d3: "after signing into the hostel as Kavya",
+    signed_out_d3: "after signing out of the hostel for college",
+    meera_reunion_d3: "after finding Meera in Room 304",
+    meera_close_d3: "after your time alone with Meera",
+    priya_out_d3: "once Priya has left for the library",
+    entered_vit_d3: "after showing Arjun's ID at the VIT gate",
+    cs_lecture_attended_d3: "after the Data Structures lecture",
+    rohit_pg_passed: "after getting past Rohit at the PG",
+    ride_complete_d3: "after the Pulsar ride",
+    real_coding_done: "after your real coding session",
+    arjun_had_meera_time: "after your time alone with Meera",
+    arjun_day_survived_d3: "once you've got through the day as Kavya"
   };
   var SKIP_NOT = /^(has_bike_keys|has_redmi_phone|.*_complete)$/;
   var out = [];
@@ -2012,11 +2030,16 @@ setup.openLocationGuide = function () {
     });
   });
   var name = pov === "arjun" ? "Arjun" : "Kavya";
-  var h = "<div class='loc-guide'><p class='lg-intro'>Everywhere " + name +
-    " can go, with opening hours and what unlocks each place. The clock only moves when you act, so use <b>Wait</b> / <b>Rest</b> in any room to pass a time gate.</p>";
+  var lead = V().day === 3
+    ? "Where you can go today, in " + (pov === "arjun" ? "Kavya's body around the B.J. Medical hostel" : "Arjun's body around VIT and Katraj") + ". "
+    : "Everywhere " + name + " can go, ";
+  var h = "<div class='loc-guide'><p class='lg-intro'>" + lead +
+    "with opening hours and what unlocks each place. The clock only moves when you act, so use <b>Wait</b> / <b>Rest</b> in any room to pass a time gate.</p>";
   Object.keys(locs).forEach(function (id) {
     var L = locs[id];
     if (L.dayOnly && L.dayOnly !== V().day) return;
+    /* Day 3: you're living the other person's day   only their world is real */
+    if (V().day === 3 && L.dayOnly !== 3) return;
     var unlocked = !L.unlockCondition || setup.cond(L.unlockCondition, pov);
     var openNow = setup.locAvailable(L, pov);
     var badge = id === here ? "<span class='lg-badge here'>you are here</span>"
@@ -3210,6 +3233,9 @@ setup.phoneTab = function (which, tab) {
   /* ---- re-run taggers ---- */
   ["arjun", "kavya"].forEach(function (pov) {
     Object.keys(L[pov]).forEach(function (lid) {
+      /* Day 3 swaps each player into the OTHER world   tag every *_d3 place so
+         the Places guide (and anything else day-scoped) hides the day-1/2 map */
+      if (/_d3$/.test(lid)) L[pov][lid].dayOnly = 3;
       (L[pov][lid].objects || []).forEach(function (o) {
         if (setup._questTag.main.indexOf(o.id) !== -1) o.quest = "main";
         else if (setup._questTag.side.indexOf(o.id) !== -1) o.quest = "side";

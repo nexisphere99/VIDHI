@@ -179,10 +179,16 @@ needs **both** flags, so the player has to run both threads to the temple. `day3
 flips `$body` via `setup.setBody()`, swaps the Pulsar keys / Redmi between the two
 inventories, then routes through `day3_briefing` (the two of them coaching each
 other on the day ahead); `day3_swapback` reverses it. `$swapActive` gates the
-sidebar body-discovery log and the extra Day-3 suspicion rows.
+sidebar body-discovery log and the extra Day-3 suspicion rows. Every `*_d3`
+location is auto-tagged `dayOnly: 3`, and both the **📱 phone** buttons and the
+**🗺 Places** guide are day-3-aware: on Day 3 the header shows *the other
+person's* phone(s) (Arjun carries Kavya's Samsung + Redmi; Kavya carries Arjun's
+phone), and the Places guide lists only the `*_d3` world, not the character's
+own day-1/2 map.
 
 Mechanics that make it work:
-- **`o.dayOnly`** on a location object → `setup.objVisible` hides it on other days.
+- **`o.dayOnly`** on a location object → `setup.objVisible` hides it on other days
+  (and the Places guide; on Day 3 the guide shows only `dayOnly: 3` places).
 - **`o.day`** on an objective (default 1) → `refreshObjectives` skips other days;
   the sidebar shows only the current day's.
 - **`ev.day`** on a timed event; **`ev.setFlag`** to set a flag when it fires.

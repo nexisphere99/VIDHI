@@ -1698,12 +1698,117 @@ setup.openHelp = function () {
     "<div class='help-body'>" +
     "<p><b>This is an open world, not a chapter book.</b> You're always standing in a place. Under <i>Look around · do</i> are the things you can interact with here; under <i>Go</i> are the ways out. Nothing advances on its own.</p>" +
     "<p><b>Time.</b> The clock (top bar) only moves when you <i>do</i> something: a conversation, a scene, a trip. Many things are gated to a time or a place. If an objective is only waiting on the clock, use <b>Wait here</b> or <b>Rest / nap</b> under the actions in any location to skip 30 or 60 minutes (a nap also restores a little energy).</p>" +
+    "<p><b>Getting around.</b> The <b>🗺 Places</b> button (top bar) lists every location you can reach, its opening hours, and what unlocks it. An exit that's only shut for the hour shows greyed-out with the reason; one that needs a story beat first stays hidden until then.</p>" +
     "<p><b>Objectives.</b> Left panel. Main objectives are the spine of the day; each has an <b>i</b> button with exactly where to go, when it's open, and who's involved. <b>Side quests</b> only appear once you've stumbled on them (talked to the right person, entered the right room).</p>" +
     "<p><b>Two lives.</b> Once Kavya unlocks, the <i>Arjun / Kavya</i> toggle (top bar) switches whose day you're playing. They run in parallel and never meet   yet. Each keeps its own clock, location and progress.</p>" +
     "<p><b>Phone.</b> Top bar. WhatsApp threads, calls, and   for Kavya   a hidden second phone. Some side quests only surface through a message.</p>" +
     day +
     "</div>"
   );
+  Dialog.open();
+};
+
+/* ---- human-readable unlock conditions (for the location guide) ---- */
+setup.humanCond = function (expr) {
+  if (!expr) return "";
+  var DICT = {
+    phone_checked: "after you've looked at your phone",
+    morning_routine_complete: "after your morning routine",
+    has_bike_keys: "with the Pulsar keys on you",
+    entered_vit: "after showing your ID at the VIT gate",
+    dbms_lecture_done: "after the DBMS lecture",
+    nikhil_notes_obtained: "after getting Nikhil's notes",
+    rohit_confrontation_done: "after the canteen talk with Rohit",
+    rohit_reveals_meera_sighting: "after Rohit says where he saw Meera",
+    meera_contact_attempted: "after you've tried to reach Meera tonight",
+    dbms_assignment_submitted: "after you've finished the DBMS assignment",
+    talked_to_raju: "after talking to Raju at the tapri",
+    signed_out_hostel: "after signing out at the hostel gate",
+    has_excuse: "with an approved reason to be off campus",
+    has_redmi_phone: "once you have the hidden Redmi phone",
+    kavya_morning_done: "after your morning routine",
+    anatomy_lab_done: "after the dissection session",
+    in_dissection: "during the dissection session",
+    meera_note_read: "after reading Meera's note",
+    meera_shows_manuscript: "after Meera shows you the manuscript",
+    manuscript_revealed: "after Meera tells you what she found",
+    priya_out_jogging: "while Priya is out on her jog",
+    priya_asleep: "once Priya has fallen asleep",
+    priya_asks: "after Priya asks you for the photos",
+    sneha_helped: "after you've helped Sneha",
+    visited_common_room: "after you've been to the common room",
+    visited_vit_library: "after you've been to the library",
+    mains_done: "once the day's main objectives are done"
+  };
+  var SKIP_NOT = /^(has_bike_keys|has_redmi_phone|.*_complete)$/;
+  var out = [];
+  String(expr).split(/\s+AND\s+/).forEach(function (raw) {
+    var a = raw.trim(), m;
+    if (a.indexOf("not ") === 0) {
+      var inner = a.slice(4).trim();
+      if (!SKIP_NOT.test(inner)) out.push("unless " + (DICT[inner] || inner.replace(/_/g, " ")));
+      return;
+    }
+    if ((m = a.match(/^time\s*>=?\s*(\d{1,2}):(\d{2})$/))) return out.push("after " + setup.fmtHM(+m[1] * 60 + +m[2]));
+    if ((m = a.match(/^time\s*<=?\s*(\d{1,2}):(\d{2})$/))) return out.push("before " + setup.fmtHM(+m[1] * 60 + +m[2]));
+    if ((m = a.match(/^day\s*>=\s*(\d+)$/))) return out.push("Day " + m[1] + " onward");
+    if ((m = a.match(/^has_money\s*>=\s*(\d+)$/))) return out.push("₹" + m[1] + " in your wallet");
+    out.push(DICT[a] || ("after " + a.replace(/_/g, " ")));
+  });
+  return out.join(" · ");
+};
+
+setup.fmtWindows = function (s) {
+  return String(s).split(",").map(function (w) {
+    var m = w.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/);
+    return m ? setup.fmtHM(setup.parseHM(m[1])) + "–" + setup.fmtHM(setup.parseHM(m[2])) : w.trim();
+  }).join(", ");
+};
+
+setup.openLocationGuide = function () {
+  var pov = V().pov, here = V().loc[pov], locs = setup.locations[pov];
+  var routes = {};
+  Object.keys(locs).forEach(function (fromId) {
+    var L = locs[fromId];
+    (L.exits || []).concat(L.travelDestinations || []).forEach(function (x) {
+      (routes[x.to] = routes[x.to] || []).push({ name: L.name, note: x.unlockCondition });
+    });
+  });
+  var name = pov === "arjun" ? "Arjun" : "Kavya";
+  var h = "<div class='loc-guide'><p class='lg-intro'>Everywhere " + name +
+    " can go, with opening hours and what unlocks each place. The clock only moves when you act, so use <b>Wait</b> / <b>Rest</b> in any room to pass a time gate.</p>";
+  Object.keys(locs).forEach(function (id) {
+    var L = locs[id];
+    if (L.dayOnly && L.dayOnly !== V().day) return;
+    var unlocked = !L.unlockCondition || setup.cond(L.unlockCondition, pov);
+    var openNow = setup.locAvailable(L, pov);
+    var badge = id === here ? "<span class='lg-badge here'>you are here</span>"
+      : !unlocked ? "<span class='lg-badge locked'>locked</span>"
+      : !openNow ? "<span class='lg-badge shut'>shut now</span>"
+      : "<span class='lg-badge open'>open now</span>";
+    h += "<div class='lg-loc'><div class='lg-head'><span class='lg-name'>" + L.name + "</span>" + badge + "</div>";
+    h += "<div class='lg-row'><b>Hours</b><span>" +
+      (L.available && L.available !== "00:00-23:59" ? setup.fmtWindows(L.available) : "any time") + "</span></div>";
+    if (L.unlockCondition)
+      h += "<div class='lg-row'><b>Unlocks</b><span>" + setup.humanCond(L.unlockCondition) + "</span></div>";
+    var froms = (routes[id] || []).map(function (r) {
+      var extra = r.note && r.note !== L.unlockCondition ? " (" + setup.humanCond(r.note) + ")" : "";
+      return r.name + extra;
+    }).filter(function (v, i, a) { return a.indexOf(v) === i; });
+    if (froms.length)
+      h += "<div class='lg-row'><b>Reach from</b><span>" + froms.join("; ") + "</span></div>";
+    var timed = (L.objects || []).filter(function (o) {
+      return o.timeWindow && !(o.dayOnly && o.dayOnly !== V().day);
+    });
+    if (timed.length)
+      h += "<div class='lg-row'><b>Timed action</b><span>" + timed.map(function (o) {
+        return "“" + o.action + "” — " + setup.fmtWindows(o.timeWindow);
+      }).join("<br>") + "</span></div>";
+    h += "</div>";
+  });
+  h += "</div>";
+  Dialog.setup("Places · " + name, "vidhi-guide");
+  Dialog.wiki(h);
   Dialog.open();
 };
 

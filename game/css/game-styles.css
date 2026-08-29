@@ -193,6 +193,23 @@ body.pov-kavya .pov-face-wrap { border-bottom-color:var(--kavya-purple); }
 #ui-dialog-body.vidhi-help { max-width:520px; }
 .help-body p { margin:0 0 .9rem; font-size:.92rem; line-height:1.6; }
 .help-body b { color:var(--maroon); }
+
+/* location guide dialog */
+#ui-dialog-body.vidhi-guide { max-width:560px; }
+.loc-guide .lg-intro { margin:0 0 1rem; font-size:.86rem; line-height:1.55; color:var(--smoke); }
+.loc-guide .lg-intro b { color:var(--maroon); }
+.lg-loc { padding:10px 0; border-top:1px solid rgba(201,168,76,.22); }
+.lg-loc:first-of-type { border-top:0; }
+.lg-head { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:4px; }
+.lg-name { font-family:var(--font-display); font-weight:600; color:var(--ink); font-size:.98rem; }
+.lg-badge { font-size:.64rem; text-transform:uppercase; letter-spacing:.05em; padding:2px 7px; border-radius:var(--radius-full); white-space:nowrap; }
+.lg-badge.here   { background:var(--maroon); color:#fff; }
+.lg-badge.open   { background:rgba(46,139,135,.18); color:var(--q-side); }
+.lg-badge.shut   { background:rgba(107,107,120,.15); color:var(--smoke); }
+.lg-badge.locked { background:rgba(232,121,43,.16); color:var(--q-main); }
+.lg-row { display:flex; gap:8px; font-size:.82rem; line-height:1.5; margin:2px 0; }
+.lg-row b { flex:0 0 84px; color:var(--smoke); font-weight:600; font-size:.72rem; text-transform:uppercase; letter-spacing:.03em; padding-top:1px; }
+.lg-row span { flex:1; color:var(--ink); }
 .inv-chip {
   display:inline-block; font-size:.72rem; background:rgba(201,168,76,.15);
   border:1px solid rgba(201,168,76,.3); border-radius:var(--radius-full);

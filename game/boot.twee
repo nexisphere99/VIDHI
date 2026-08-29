@@ -172,10 +172,10 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<else>><span class="pov-lock">Kavya</span><</if>>\
 </div>\
 <span class="hdr-phones">\
-<<if $day gte 3 and $pov is "arjun">>\
+<<if $swapActive and $pov is "arjun">>\
 <<link "📱 Kavya's phone">><<run setup.openPhone("arjun")>><</link>>\
 <<if setup.hasItem("redmi_phone")>><<link "🔒 Redmi">><<run setup.openPhone("redmi")>><</link>><</if>>\
-<<elseif $day gte 3>>\
+<<elseif $swapActive>>\
 <<link "📱 Arjun's phone">><<run setup.openPhone("samsung")>><</link>>\
 <<if setup.hasItem("redmi_phone")>><<link "🔒 Redmi">><<run setup.openPhone("redmi")>><</link>><</if>>\
 <<elseif $pov is "arjun">><<link "📱 Phone">><<run setup.openPhone("arjun")>><</link>>\

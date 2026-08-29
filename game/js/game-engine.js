@@ -1188,23 +1188,27 @@ setup.objState = function (o) {
 setup.refreshObjectives = function () {
   var S = V();
   ["arjun", "kavya"].forEach(function (who) {
+    var isCurrent = who === S.pov;
     var sideIds = setup.objectives[who].side.map(function (s) { return s.id; });
     setup.allObjectives(who).forEach(function (o) {
       if (o.day && o.day !== S.day) return;   /* only the current day's objectives */
       var cur = setup.objState(o);
       var isSide = sideIds.indexOf(o.id) !== -1;
       if (cur === "locked") {
+        /* side quests only surface for the character you're actually playing   no
+           toasts / tracker entries for the other thread's discoveries */
+        if (isSide && !isCurrent) return;
         var ready = o.unlockCondition ? setup.cond(o.unlockCondition, who) : (o.status === "active");
         if (ready) {
           S.objectives[o.id] = "active";
           if (isSide && S.sideDiscovered.indexOf(o.id) === -1) S.sideDiscovered.push(o.id);
-          setup.toast("objective", (isSide ? "Side quest   " : "Objective   ") + o.title);
+          if (isCurrent) setup.toast("objective", (isSide ? "Side quest   " : "Objective   ") + o.title);
           cur = "active";
         }
       }
       if (cur === "active" && o.completionTrigger && S.flags[o.completionTrigger]) {
         S.objectives[o.id] = "complete";
-        setup.toast("objective", "✓ " + o.title);
+        if (isCurrent) setup.toast("objective", "✓ " + o.title);
         if (o.reward) setup.applyReward(o.reward, who);
       }
     });
@@ -2034,8 +2038,14 @@ setup.openLocationGuide = function () {
     });
   });
   var name = pov === "arjun" ? "Arjun" : "Kavya";
-  var lead = V().day === 3
+  var d3swapped = V().day === 3 && V().swapActive;
+  var d3done = V().day === 3 && V().flags.swap_back_complete;
+  var lead = d3done
+    ? "Back in your own body   Day 3 is winding down. All that's left is to sleep. "
+    : d3swapped
     ? "Where you can go today, in " + (pov === "arjun" ? "Kavya's body around the B.J. Medical hostel" : "Arjun's body around VIT and Katraj") + ". "
+    : V().day === 3
+    ? "Before the swap   you're heading for Pataleshwar at dawn. "
     : "Everywhere " + name + " can go, ";
   var h = "<div class='loc-guide'><p class='lg-intro'>" + lead +
     "with opening hours and what unlocks each place. The clock only moves when you act, so use <b>Wait</b> / <b>Rest</b> in any room to pass a time gate.</p>";
@@ -2044,6 +2054,8 @@ setup.openLocationGuide = function () {
     if (L.dayOnly && L.dayOnly !== V().day) return;
     /* Day 3: you're living the other person's day   only their world is real */
     if (V().day === 3 && L.dayOnly !== 3) return;
+    /* after the swap-back the day's over   only your own room is left */
+    if (d3done && !/night_d3$/.test(id)) return;
     var unlocked = !L.unlockCondition || setup.cond(L.unlockCondition, pov);
     var openNow = setup.locAvailable(L, pov);
     var badge = id === here ? "<span class='lg-badge here'>you are here</span>"
@@ -2988,6 +3000,30 @@ setup.phoneTab = function (which, tab) {
     image: "hostel_304_night.png"
   };
 
+  /* ---- POST-SWAP-BACK: each mind home in its own body, the day winding down ---- */
+  L.arjun.katraj_pg_room_night_d3 = {
+    name: "PG Room 12   Home Again",
+    available: "00:00-23:59",
+    unlockCondition: "swap_back_complete",
+    description: "Your own room, your own body, your own bed. Rohit's still out. You keep feeling the ghost of a dupatta on your left shoulder and reaching for hair that isn't there. Twelve hours in someone else's skin and now the quiet is enormous.",
+    objects: [
+      { id: "d3_arjun_sleep", action: "Lie down. Set the alarm for 4:15. End Day 3.", triggers: "day3_sleep", quest: "main" }
+    ],
+    npcs: [],
+    exits: []
+  };
+  L.kavya.hostel_room_304_night_d3 = {
+    name: "Room 304   Home Again",
+    available: "00:00-23:59",
+    unlockCondition: "swap_back_complete",
+    description: "Your own body, the underwire back where it lives, the pathology reading you're behind on glowing on Priya's side of the room. Meera's breathing has gone even. You can still feel where the Pulsar's tank sat between your knees.",
+    objects: [
+      { id: "d3_kavya_sleep", action: "Lie down. Set the alarm for 4:15. End Day 3.", triggers: "day3_sleep", quest: "main" }
+    ],
+    npcs: [],
+    exits: []
+  };
+
   /* ---- helpers (same as day2) ---- */
   function add(pov, loc, arr) { var o = L[pov][loc].objects || (L[pov][loc].objects = []); arr.forEach(function (x) { o.push(x); }); }
 
@@ -3218,11 +3254,11 @@ setup.phoneTab = function (which, tab) {
   setup._restLocs.kavya.push("katraj_pg_room_d3", "tapri_chai_d3", "vit_canteen_d3", "vit_library_d3", "pataleshwar_temple_d3");
 
 
-  /* ---- PHONE (day 3: swapped devices) ---- */
+  /* ---- PHONE (day 3: swapped devices, but ONLY while the swap is active) ---- */
   var _pd3 = setup.phoneData;
   setup.phoneData = function () {
     var d = _pd3();
-    if (V().day >= 3) {
+    if (V().day >= 3 && V().swapActive) {
       /* the arjun-pov player is carrying Kavya's phones */
       d.arjun = {
         title: "Kavya's Samsung", tabs: ["WhatsApp", "Calls"],

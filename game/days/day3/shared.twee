@@ -415,8 +415,10 @@ You each carry the same thing home: a day that happened, that shouldn't have bee
 <<run setup.flag("arjun_home_d3")>>\
 <<run setup.flag("kavya_home_d3")>>\
 <<run $time.arjun = 1120>>\
-<<run $time.kavya = 1120>>
-<div class="continue-nav"><<link "Lie down">><<goto "day3_sleep">><</link>></div>
+<<run $time.kavya = 1120>>\
+<<run $loc.arjun = "katraj_pg_room_night_d3">>\
+<<run $loc.kavya = "hostel_room_304_night_d3">>
+<div class="continue-nav"><<link "You're home. Get inside.">><<goto "Hub">><</link>></div>
 
 
 :: day3_sleep
@@ -433,9 +435,7 @@ Tomorrow, before dawn, you do it again.
 </div>\
 <<run setup.flag("arjun_slept_d3")>>\
 <<run setup.flag("kavya_slept_d3")>>\
-<<run setup.flag("day4_swap_planned")>>\
-<<run $loc.arjun = "hostel_room_304_d3">>\
-<<run $loc.kavya = "katraj_pg_room_d3">>
+<<run setup.flag("day4_swap_planned")>>
 <div class="continue-nav">[[Close your eyes|DayWrap]]</div>
 
 

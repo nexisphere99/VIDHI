@@ -1263,12 +1263,31 @@ setup.profileImgSrc = function (who) {
 /* advance to a new day and wipe the previous day's tracker (no going back) */
 setup.dayStart = {
   1: {
-    pov: "arjun",
+    pov: "arjun", title: "Qaid", startPassage: "Hub",
     loc: { arjun: "katraj_pg_room", kavya: "hostel_room_304" },
     time: { arjun: 392, kavya: 330 },   /* 06:32 / 05:30 */
     mood: { arjun: "melancholy", kavya: "guarded" },
     povUnlocked: { arjun: true, kavya: false }
   }
+};
+
+/* DEBUG: days you can jump to (every day with a start block), and the
+   passage to land on. Jumping to the current day = restartDay. */
+setup.debugDays = function () {
+  return Object.keys(setup.dayStart).map(Number).sort(function (a, b) { return a - b; });
+};
+setup.debugDayLabel = function (n) {
+  var d = setup.dayStart[n];
+  return "Day " + n + (d && d.title ? " · " + d.title : "");
+};
+setup.debugGoDay = function (n) {
+  n = Number(n);
+  if (n === V().day) { setup.restartDay(); }
+  else {
+    setup.beginDay(n);
+    setup.toast("swap", "DEBUG — jumped to Day " + n + ".");
+  }
+  return (setup.dayStart[n] && setup.dayStart[n].startPassage) || "Hub";
 };
 
 /* DEBUG: hard-reset the current day (flags, objectives, tracker, clocks,
@@ -1322,6 +1341,7 @@ setup.beginDay = function (n) {
     if (ds.loc) S.loc = { arjun: ds.loc.arjun, kavya: ds.loc.kavya };
     if (ds.time) S.time = { arjun: ds.time.arjun, kavya: ds.time.kavya };
     if (ds.mood) S.mood = { arjun: ds.mood.arjun, kavya: ds.mood.kavya };
+    if (ds.povUnlocked) S.povUnlocked = { arjun: !!ds.povUnlocked.arjun, kavya: !!ds.povUnlocked.kavya };
   }
   setup.refreshObjectives();
   return "";

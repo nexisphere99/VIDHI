@@ -399,6 +399,10 @@ Also two location backgrounds: `katraj_snake_park.png` (IMG-022) and
 - **IMG-109** `scenic_route_meera_call_try.png` (`meera_call_attempt_sinhagad`): a young man on a dark mountain-road viewpoint, a black Pulsar parked at the railing, phone lit in his hand with a call screen open and his thumb hovering over the green button, city lights far below. He won't press it.
 - **IMG-110** `arjun_self_explore.png` (`arjun_self_explore` — side quest, **art pending**): a young man sitting alone on an upturned bucket in a small locked bathroom, shower running for the sound of it, steam softening the frame, head tipped back, one hand at rest on his thigh. Private, unhurried, tender rather than charged. No explicit nudity — suggestion, steam, framing.
 - **IMG-111** `kavya_self_explore.png` (`kavya_self_explore` — side quest, **art pending**): a young woman alone in a bolted hostel shower stall, low water running, one arm across her chest, eyes closed, shoulder and collarbone lit, the rest lost to steam and shadow. Quiet ownership, not performance. No explicit nudity — steam, cropping, shadow.
+- **IMG-112** `arjun_bed_selfplay.png` (`arjun_bed_selfplay` — nightly/early-morning, **art pending**): a dark PG room, a young man on his back under a thin sheet lit only by grey pre-dawn or the ghost of a phone, one arm disappearing under the blanket, head tipped back, roommate a blurred mound on the far cot. Private, ordinary, unglamorous. Suggestion only — no explicit nudity.
+- **IMG-113** `kavya_bed_selfplay.png` (`kavya_bed_selfplay` — nightly/early-morning, **art pending**): a dark three-bed hostel room, a young woman on her side/back under a blanket, face lit by moonlight, one hand hidden, two other sleeping shapes in the room, earphone cord trailing from one. Quiet, careful, covered. Suggestion only.
+- **IMG-114** `arjun_porn_menu.png` (`arjun_porn_menu` — nightly, **art pending**): close on a phone held low against a bare chest in the dark, screen brightness near zero, a blurred grid of video thumbnails, one earbud in, the other ear cocked toward an off-frame sleeping roommate. Furtive. No explicit imagery on the visible screen — abstract blur.
+- **IMG-115** `kavya_porn_menu.png` (`kavya_porn_menu` — nightly, **art pending**): a small cheap phone (the secret Redmi) turned face-to-the-wall in a dark hostel bed, both earphones in, a hand shielding the glow, a blanket tented over it. The Samsung sits dark and ignored on the shelf. Abstract blur on the screen.
 
 ### IMG-120 to IMG-154: Kavya's path vignettes (already wired)
 B.J. Medical girls' hostel and campus. Cool blue-grey institutional
@@ -461,10 +465,10 @@ Location Backgrounds:           17  (IMG-010 to IMG-027)
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
-Ambient vignettes (Arjun):     41  (IMG-070 to IMG-110, scenes/common/)
-Ambient vignettes (Kavya):     44  (IMG-120 to IMG-162 + IMG-111, scenes/common/)
+Ambient vignettes (Arjun):     43  (IMG-070 to IMG-110, IMG-112, IMG-114)
+Ambient vignettes (Kavya):     46  (IMG-120 to IMG-162, IMG-111, IMG-113, IMG-115)
 ─────────────────────────────────────
-TOTAL:                         141 images   (139 delivered; IMG-110/111 pending)
+TOTAL:                         145 images   (139 delivered; IMG-110..115 pending — bathroom + nightly self-play / porn scenes)
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

@@ -157,7 +157,11 @@ images/
         ├── night_sleep_arjun_rohit.png   IMG-108  (arjun_night_end)
         ├── scenic_route_meera_call_try.png IMG-109  (meera_call_attempt_sinhagad)
         ├── arjun_self_explore.png        IMG-110  (arjun_self_explore · side quest, art pending)
-        └── kavya_self_explore.png        IMG-111  (kavya_self_explore · side quest, art pending)
+        ├── kavya_self_explore.png        IMG-111  (kavya_self_explore · side quest, art pending)
+        ├── arjun_bed_selfplay.png        IMG-112  (arjun_bed_selfplay · nightly, art pending)
+        ├── kavya_bed_selfplay.png        IMG-113  (kavya_bed_selfplay · nightly, art pending)
+        ├── arjun_porn_menu.png           IMG-114  (arjun_porn_menu · nightly, art pending)
+        └── kavya_porn_menu.png           IMG-115  (kavya_porn_menu · nightly, art pending)
 ```
 
 ## Recommended specs

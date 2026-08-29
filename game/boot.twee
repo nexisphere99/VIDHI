@@ -21,6 +21,7 @@
 <<set $doneActions to {}>>
 <<set $inventory to { arjun: [], kavya: [] }>>
 <<set $intimateSeen to []>>
+<<set $habit to { arjun: { self: 0, porn: 0 }, kavya: { self: 0, porn: 0 } }>>
 <<set $swapCount to 0>>
 <<set $swapActive to false>>
 <<set $barrierIntegrity to 100>>
@@ -123,7 +124,7 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <div class="action-list">\
 <<for _o range _L.objects>><<capture _o>>\
 <<if setup.objVisible(_o) && setup.objInWindow(_o)>>\
-<span @class="(_o.quest ? ('act act-' + _o.quest) : 'act') + (setup.actionDone(_o) ? ' done' : '')"><<link `_o.action`>><<if setup.useObject(_o) neq "block">><<goto setup.objTarget(_o)>><</if>><</link>></span>\
+<span @class="(_o.quest ? ('act act-' + _o.quest) : 'act') + ((setup.actionDone(_o) and not _o.repeatable) ? ' done' : '')"><<link `_o.action`>><<if setup.useObject(_o) neq "block">><<goto setup.objTarget(_o)>><</if>><</link>></span>\
 <</if>>\
 <</capture>><</for>>\
 </div>
@@ -227,6 +228,14 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<= setup.statBar("Coding", $stats.a_coding, "green")>><<= setup.statBar("Medical", $stats.a_med, "saffron")>><<= setup.statBar("Feminine comfort", $stats.a_femComfort, "purple")>><<= setup.statBar("Energy", $stats.a_energy, "blue")>>\
 <<else>>\
 <<= setup.statBar("Coding", $stats.k_coding, "green")>><<= setup.statBar("Medical", $stats.k_med, "saffron")>><<= setup.statBar("Masculine comfort", $stats.k_mascComfort, "blue")>><<= setup.statBar("Energy", $stats.k_energy, "purple")>>\
+<</if>>
+<<if ($pov is "arjun" and ($stats.a_sexF gt 0 or $stats.a_sexM gt 20)) or ($pov is "kavya" and ($stats.k_sexM gt 0 or $stats.k_sexF gt 15))>>\
+<h3>Desire</h3>
+<<if $pov is "arjun">>\
+<<= setup.statBar("Drawn to the male frame", $stats.a_sexM, "blue")>><<= setup.statBar("Drawn to the female frame", $stats.a_sexF, "pink")>>\
+<<else>>\
+<<= setup.statBar("Drawn to the female frame", $stats.k_sexF, "pink")>><<= setup.statBar("Drawn to the male frame", $stats.k_sexM, "blue")>>\
+<</if>>
 <</if>>
 <h3>Relationships</h3>
 <<if $pov is "arjun">>\

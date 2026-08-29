@@ -40,7 +40,11 @@ setup.locations = {
         { id: "rohit_cad", action: "Debug Rohit's CAD project", triggers: "rohit_cad_scene", unlockCondition: "rohit_confrontation_done" },
         { id: "night_call", action: "Try the hostel landline", triggers: "hostel_landline_call", unlockCondition: "rohit_confrontation_done AND time >= 18:00" },
         { id: "dbms_work", action: "Work on the DBMS assignment", triggers: "laptop_night_dbms", unlockCondition: "time >= 19:00" },
-        { id: "end_day", action: "End the day   lie down on the cot", triggers: "arjun_night_end", unlockCondition: "meera_contact_attempted AND time >= 21:00 AND not arjun_day1_complete" }
+        { id: "end_day", action: "End the day   lie down on the cot", triggers: "arjun_night_end", unlockCondition: "meera_contact_attempted AND time >= 21:00 AND not arjun_day1_complete" },
+        { id: "a_bed_night", action: "Lie back in the dark. Hand under the waistband.", triggers: "arjun_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59" },
+        { id: "a_bed_morning", action: "Awake before the alarm, the room still dark.", triggers: "arjun_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-07:00" },
+        { id: "a_porn_night", action: "Earphones in. Open the private tab.", triggers: "arjun_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59" },
+        { id: "a_porn_morning", action: "Something to watch before the day starts.", triggers: "arjun_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-07:00" }
       ],
       npcs: ["rohit"],
       exits: [
@@ -315,7 +319,11 @@ setup.locations = {
         { id: "manuscript_reveal_obj", action: "Ask Meera what she found", triggers: "manuscript_reveal_scene", unlockCondition: "meera_note_read AND time >= 19:15 AND priya_out_jogging" },
         { id: "wait_priya_sleep", action: "Wait for Priya to fall asleep", triggers: "priya_sleep_scene", unlockCondition: "manuscript_revealed AND time >= 22:30 AND not test_swap_complete" },
         { id: "test_swap_obj", action: "Try the ritual with Meera", triggers: "test_swap_scene", unlockCondition: "manuscript_revealed AND time >= 23:00 AND priya_asleep AND not test_swap_complete" },
-        { id: "build_dosage", action: "Build Sneha's dosage calculator app", triggers: "dosage_build_scene", unlockCondition: "sneha_helped" }
+        { id: "build_dosage", action: "Build Sneha's dosage calculator app", triggers: "dosage_build_scene", unlockCondition: "sneha_helped" },
+        { id: "k_bed_night", action: "Lie awake. Hand under the nightie.", triggers: "kavya_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59" },
+        { id: "k_bed_morning", action: "Awake before the others, the room still grey.", triggers: "kavya_bed_selfplay", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-06:00" },
+        { id: "k_porn_night", action: "Earphones in. The other browser, on the Redmi.", triggers: "kavya_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "23:00-23:59", unlockCondition: "has_redmi_phone" },
+        { id: "k_porn_morning", action: "Something to watch before the alarm, on the Redmi.", triggers: "kavya_porn_menu", intimate: true, quest: "side", repeatable: true, timeWindow: "00:00-06:00", unlockCondition: "has_redmi_phone" }
       ],
       npcs: ["meera", "priya"],
       exits: [ { to: "hostel_corridor", label: "Go to the corridor" } ],
@@ -1305,7 +1313,8 @@ setup.resolveStat = function (key, who) {
     priya_suspicion: "susp_priya", colonel_suspicion: "susp_colonel",
     rohit_suspicion: "susp_rohit", warden_suspicion: "susp_warden",
     academic_standing: "misc_academic", confidence: "misc_confidence",
-    satisfaction: "misc_satisfaction", hunger: "misc_hunger"
+    satisfaction: "misc_satisfaction", hunger: "misc_hunger",
+    sex_m: p + "sexM", sex_f: p + "sexF"
   };
   return map[key] || ("misc_" + key);
 };
@@ -1341,6 +1350,25 @@ setup.stat = function (key, delta, who) {
   S.stats[sk] = Math.clamp(S.stats[sk] + delta, 0, 100);
   setup.toast("stat", setup.prettyStat(key) + " " + (delta > 0 ? "+" : "") + delta);
   return "";
+};
+
+/* ---- private-routine tracking (bedroom self-play + porn, every day) ---- */
+setup.habit = function (who) {
+  var S = V();
+  who = who || S.pov;
+  if (!S.habit) S.habit = { arjun: { self: 0, porn: 0 }, kavya: { self: 0, porn: 0 } };
+  if (!S.habit[who]) S.habit[who] = { self: 0, porn: 0 };
+  return S.habit[who];
+};
+/* how far the swap has reshaped what turns them on:
+   0 = baseline, 1 = the swap is real and looming, 2 = they've been in the other body */
+setup.intimPhase = function (who) {
+  var S = V();
+  who = who || S.pov;
+  if (S.body && S.body[who] && S.body[who] !== who) return 2;
+  if (S.swapCount >= 2) return 2;
+  if (S.day >= 2 || S.flags.full_briefing_done || S.flags.meera_plan_heard || S.flags.test_swap_complete) return 1;
+  return 0;
 };
 
 /* ------------------------------------------------------------
@@ -1490,6 +1518,9 @@ setup.actionTime = function (trigger) {
     panwala_delivery_scene: 5, sneha_room_visit: 15,
     arjun_night_end: 0, priya_sleep_scene: 0, test_swap_scene: 0, DayWrap: 0,
     manuscript_reveal_scene: 25, dr_sharma_quiz_scene: 10, note_passing_anatomy: 5,
+    arjun_self_explore: 40, kavya_self_explore: 40,
+    arjun_bed_selfplay: 15, kavya_bed_selfplay: 15,
+    arjun_porn_menu: 25, kavya_porn_menu: 25,
     /* ---- Day 2 ---- */
     arjun_shower_d2: 15, arjun_stress_pee_d2: 3, kavya_shower_d2: 15, kavya_period_planning_d2: 3,
     os_lecture_d2: 60, pharmacology_lecture_d2: 60, mhatre_test_d2: 30, margin_coding_d2: 20,
@@ -1650,7 +1681,9 @@ setup.imgDir = {
   "kavya_joshi_rounds.png": "scenes/common", "kavya_warden_office.png": "scenes/common",
   "kavya_manuscript_closeup.png": "scenes/common", "kavya_juice_stall.png": "scenes/common",
   "night_sleep_arjun_rohit.png": "scenes/common", "scenic_route_meera_call_try.png": "scenes/common",
-  "arjun_self_explore.png": "scenes/common", "kavya_self_explore.png": "scenes/common"
+  "arjun_self_explore.png": "scenes/common", "kavya_self_explore.png": "scenes/common",
+  "arjun_bed_selfplay.png": "scenes/common", "kavya_bed_selfplay.png": "scenes/common",
+  "arjun_porn_menu.png": "scenes/common", "kavya_porn_menu.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

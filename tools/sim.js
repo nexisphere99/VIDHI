@@ -366,5 +366,34 @@ sideReport("arjun"); sideReport("kavya");
   if (k.includes("bike_keys")) fail("Kavya should NOT have Arjun's bike_keys");
 })();
 
+/* ---- bedroom self-play + porn: every-day room actions, time-gated ---- */
+(() => {
+  const check = (pov, locId, id, t, cond) => {
+    S.pov = pov; S.loc[pov] = locId; S.time[pov] = t;
+    const o = findObj(pov, locId, id);
+    if (!o) return fail("intimacy object missing: " + id);
+    const vis = setup.objVisible(o) && setup.objInWindow(o);
+    if (vis !== cond) fail(id + " visibility=" + vis + " expected " + cond + " at " + setup.clockStr(pov));
+  };
+  // Arjun: night after 23:00, morning before 07:00, hidden midday
+  check("arjun", "katraj_pg_room", "a_bed_night", 23 * 60 + 20, true);
+  check("arjun", "katraj_pg_room", "a_bed_night", 15 * 60, false);
+  check("arjun", "katraj_pg_room", "a_bed_morning", 6 * 60 + 45, true);
+  check("arjun", "katraj_pg_room", "a_porn_night", 23 * 60 + 20, true);
+  // Kavya: same windows (06:00 morning cutoff) + needs the Redmi for porn
+  check("kavya", "hostel_room_304", "k_bed_night", 23 * 60 + 10, true);
+  check("kavya", "hostel_room_304", "k_bed_morning", 5 * 60 + 30, true);
+  check("kavya", "hostel_room_304", "k_porn_morning", 5 * 60 + 30, true); // redmi in bag from playthrough
+
+  // helpers resolve without throwing
+  if (typeof setup.habit("arjun").self !== "number") fail("setup.habit() malformed");
+  setup.stat("sex_f", 1, "arjun"); setup.stat("sex_m", 1, "kavya");
+  if ((S.stats.a_sexF || 0) < 1) fail("sex_f stat did not resolve to a_sexF");
+  if ((S.stats.k_sexM || 0) < 1) fail("sex_m stat did not resolve to k_sexM");
+  console.log("  arjun intimPhase=" + setup.intimPhase("arjun") +
+              " · kavya intimPhase=" + setup.intimPhase("kavya") +
+              " · a_sexF=" + S.stats.a_sexF + " k_sexM=" + S.stats.k_sexM);
+})();
+
 console.log("\n" + (failures ? "✗ " + failures + " FAILURE(S)" : "✓ full critical path completes for both characters"));
 process.exit(failures ? 1 : 0);

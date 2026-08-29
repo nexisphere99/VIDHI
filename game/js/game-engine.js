@@ -1636,7 +1636,7 @@ setup.actionTime = function (trigger) {
     /* ---- Day 3 ---- */
     arjun_predawn_d3: 15, arjun_ride_temple_d3: 25, kavya_predawn_d3: 15,
     kavya_chowkidar_lie_d3: 8, kavya_walk_temple_d3: 30, day3_briefing: 20,
-    day3_swap: 15, day3_swapback: 15, day3_temple_wait: 20, day3_temple_wait_back: 20,
+    day3_swap: 15, day3_swapback: 25, day3_temple_wait: 20, day3_temple_wait_back: 20,
     arjun_first_kavya_body: 10, arjun_hair_d3: 3, arjun_dupatta_d3: 3, arjun_walk_d3: 5, arjun_stairs_d3: 3,
     chowkidar_d3: 5, signin_d3: 3, signout_d3: 3, arjun_corridor_d3: 5, sneha_d3: 15,
     meera_reunion_d3: 25, arjun_sees_kavya_face: 5, arjun_cupboard_d3: 10,

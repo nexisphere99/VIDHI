@@ -323,17 +323,64 @@ And, strangely, a flicker of loss. Kavya's body was terrifying and alien and als
 
 "Tera dissection class bhayanak hai,"<span class="gloss-en">Your dissection class is horrifying.</span> you tell Kavya, who's patting herself down   face, chest, hips, the body-audit of a woman reclaiming her property.
 
-<div class="dialogue">"Tere Rohit ko control karo. Also your bike's in VIT lot B, keys in your jacket. I didn't scratch it."<span class="gloss-en">Get your Rohit under control.</span></div>
+<div class="dialogue">"Tere Rohit ko control karo. Your bike's in VIT lot B, keys in your jacket. I didn't scratch it. Now sit   rule seven, full debrief, both bodies, no omissions."<span class="gloss-en">Get your Rohit under control.</span></div>
 <<else>>You open your eyes and your breasts are BACK   two familiar masses dropping into position, the Clovia underwire clamping down. Twelve hours flat-chested and free, and now the whole production returns.
 
 The world rises. You're looking up at the Nandi statue again. Small again. And between your legs: the absence where a warm, present, slightly ridiculous weight used to be. Not wrong. Familiar. But the familiarity has a new texture now.
 
-"Your laptop is beautiful," you tell Arjun, and the tears come, fast, Kavya's zero-latency system firing. "I wrote two thousand lines of production code. I //coded//, Arjun. On a real keyboard."
+"Your laptop is beautiful," you tell Arjun, and the tears come, fast, Kavya's zero-latency system firing. "I wrote two thousand lines of production code. I //coded//, Arjun." You wipe your face with a hand that's yours again. "Sit down. Rule seven. Full debrief before either of us moves."
 
 <div class="dialogue">"Also your Pulsar is a death machine and I love it."</div>
 <</if>>
 
-You both laugh. Real laughter, in your own voices, bouncing off 1,500-year-old stone. Tomorrow you do this again. The thought is terrifying and inevitable in equal measure.
+You sit on the cooling stone together and do the thing the rules demand.
+
+<<if $pov is "kavya">>You go first, because your list is mostly wins.<<else>>Kavya goes first. Her list is mostly wins.<</if>>
+
+<div class="dialogue">"CS lecture: I attended, I understood every word, and then Krishnan asked for approaches to red-black deletion and my hand was up before my brain approved it. I gave him a Sedgewick optimisation. The whole room turned around. He wants //you// to submit to the department research symposium   deadline three weeks."</div>
+
+<<if $pov is "arjun">>"That's a problem."<<else>>"That's a problem," Arjun says.<</if>>
+
+<div class="dialogue">"I know. Rohit's on the 'since when do you know this' setting   I told him the call about Meera was a wake-up and he half-bought it. Nikhil put your name down for ICPC practice Saturday; I said yes, sorry. And I coded for two hours on real hardware and it was the closest thing to prayer I have."</div>
+
+Then the part she says flatter, because it's the part that can sink them.
+
+<div class="dialogue">"Your family called. Aai first   routine on paper, mutton for Sunday, eat your eggs   but she heard something. //'Tera voice thoda alag lag raha hai.'// I told her I hadn't slept. She let it go and she //logged// it. Mothers log everything."</div>
+
+"And Papa?"
+
+<div class="dialogue">"Papa called about internal assessment marks, attendance, and Sunday lunch at Vaishali   printout, not a screenshot. Forty seconds. He heard nothing, because hearing something would mean he'd looked at you at least once this year, and he hasn't. That was the worst moment of my whole day, Arjun, and I spent it in someone else's skin."</div>
+
+<div class="dialogue">"Also Pooja texted three times, clocked that 'you' were replying too fast and with the wrong phrasing, and told me she's watching. A seventeen-year-old nearly had it. Reply to her in three words or not at all."</div>
+
+Then it's <<if $pov is "arjun">>your<<else>>Arjun's<</if>> turn.
+
+<<if $pov is "arjun">>You give her the shape of Meera   six months of her father's silence folded into two hours on a narrow cot, the manuscript reorganised, the terrace, what Kavya's body does near Meera that yours doesn't, which you kept your hands off. She nods once, approving, and doesn't ask for the rest.
+
+Then the survival log: the anatomy hall and the formalin that made you gag and cry at the same time; Sneha's pathology quiz passed on etymology alone; Priya calling you 'relaxed' twice, which is not Kavya's default and which you'll pay for; Dr. Sharma noticing 'Kavya' was kind to a crying first-year; the bra, twelve minutes; crying roughly six times, most of it unauthorised.
+
+<div class="dialogue">"You cried //six// times. In my body. In one day."</div>
+
+"Your tear ducts have no latency. It's a design choice I disagree with."
+<<else>>Arjun gives you the shape of Meera   six months of her father's silence folded into two hours on your cot, the manuscript, the terrace, what your body apparently does near Meera that his doesn't, which he kept his hands off. You nod once. You don't need the rest.
+
+Then his survival log: the anatomy hall, the formalin, gagging and crying at once; Sneha's quiz bluffed on etymology; Priya calling him 'relaxed' twice   "which is not your resting face, you're going to pay for that"; Dr. Sharma clocking that 'Kavya' was kind; the bra, twelve minutes; crying about six times, mostly without deciding to.
+
+<div class="dialogue">"Six times? In one day?"</div>
+
+"Your tear ducts have no latency. I stand by my complaint."<</if>>
+
+You both laugh   real laughter, in your own voices, bouncing off 1,500-year-old stone.
+
+Then Kavya gets practical, because that's her at rest.
+
+<div class="dialogue">"Same again tomorrow. 5 AM, this circle. We can't stop now   Krishnan's symposium, ICPC Saturday, Meera expecting you, and your father wants those marks //tonight//, which means I have to be you sending them. It only works if we keep the pattern: swap at dawn, back here by half five, every day we can hold it together."</div>
+
+<<if $pov is "arjun">>"Every day," you agree, before you've finished the arithmetic on what that will cost.<<else>>"Every day," Arjun says, too fast   the way he says yes to anything with Meera in it.<</if>>
+
+<div class="dialogue">"Alarm at 4:15. Don't sleep well. Nothing about tomorrow will feel the way tired feels tonight."</div>
+
+Tomorrow you do this again. The thought is terrifying and inevitable in equal measure.
 </div>\
 <<run setup.setBody("arjun", "arjun")>>\
 <<run setup.setBody("kavya", "kavya")>>\

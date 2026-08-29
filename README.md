@@ -10,6 +10,10 @@ run parallel threads on the same day. Kavya's perspective unlocks after Arjun's
 morning routine; from then on the header toggle switches between them freely.
 Day 1 ends with Kavya's body-swap ritual   the hinge the rest of the story turns on.
 
+> **Version 0.1** covers **Day 1 ("Qaid")** in full   both characters, every
+> objective and side quest. Day 1 closes on the v0.1 end screen. More days are
+> planned; support the work at <https://www.patreon.com/c/vidhidevs>.
+
 > **Adult content (18+).** Explicit sexual content, nudity and body description are
 > part of the narrative and appear in context as you explore. A content warning
 > gates the start of the game; there is no per-scene toggle.
@@ -54,20 +58,18 @@ game/
   js/game-engine.js        the open-world engine   see below
   systems/
     widgets.twee           <<hubreturn>> <<th>> <<img>> <<flag>> <<adv>> ...
-    phone.twee             PH_* chat passages (Day 1)
-    phone_d2.twee          PH_*_d2 chat passages (Day 2)
+    phone.twee             PH_* chat passages
+    day_flow.twee          DayWrap (end-of-day routing)
   days/day1/               "Qaid"   the manuscript, the test swap
     arjun_scenes.twee  arjun_npc.twee  kavya_scenes.twee  kavya_npc.twee
-    intimate.twee  shared.twee   (EV_* events, Day1Complete, Day2Start launcher)
-  days/day2/               "Saazish"   the plan, the phone calls, the night before
-    arjun_scenes.twee  arjun_npc.twee  kavya_scenes.twee
-    intimate.twee  shared.twee   (EV_a2_* events, Day2Complete, Day3Start stub)
+    intimate.twee  shared.twee   (EV_* events, Day1Complete)
 
 images/                    OUTSIDE game/ so tweego never bundles it; build.sh
     mandala.svg            copies the tree to dist/images/
     README.md               which image file goes in which folder (full manifest)
     characters/ locations/ objects/ ui/    shared across every day
     scenes/day1/            day-specific story illustrations
+    scenes/                 (scenes/day2, scenes/day3 … added per day)
                             `setup.imgDir` maps each filename → folder; a missing
                             file renders as a captioned placeholder frame
 
@@ -110,18 +112,18 @@ tracker**. Objectives are stamped `day: N`; the sidebar only shows the current d
 **Ending a day:** once a character's *main* objectives for the day are all
 complete (`mains_done` cond atom → `setup.dayMainsDone`), a **"Sleep   end the
 day"** action appears in their room (`sleep_next_day` object → the `DayWrap`
-passage). If *both* characters are done → the DayN-complete screen (which has the
-"begin Day N+1" button). If only this one is done → a note to switch POV and
-finish the other; the Sleep action stays put so you can come back any time. The
-day-finale objects (`end_day`, `test_swap_obj`, `a2_night`…) hide once done
-(`… AND not <char>_dayN_complete`), so the room never shows two "sleep" actions.
+passage). If *both* characters are done → the day-complete screen. If only this
+one is done → a note to switch POV and finish the other; the Sleep action stays
+put so you can come back any time. The day-finale objects (`end_day`,
+`test_swap_obj`…) hide once done (`… AND not <char>_dayN_complete`), so the room
+never shows two "sleep" actions.
 
 **Player guidance:**
 - Every objective carries a `hint` (where / when / who / how) behind the sidebar's **i** toggle, plus a `lockNote` shown while it's still locked. All **main** objectives are always visible (locked ones dimmed with 🔒); side quests appear only once discovered.
 - Room actions are colour-coded: **saffron** = advances the main story, **peacock** = a side quest (`setup._questTag` lists which object ids get which). The objective list uses the same two colours.
 - Header **? Help** dialog explains the loop / clock / POV switching / a "typical day".
 - Restful locations (room, home, canteen, library, terrace, benches   `setup._restLocs`, before 23:00) offer **Wait here   30 min** / **Rest · nap   1 hour** (`setup.passTime()`) so a player waiting on a time gate can skip ahead; the nap also restores a little energy.
-- Header `‹ ›` = undo / redo a turn. Stats panel **Game** section = Save/Load (`UI.saves()`), Undo/Redo (`Engine.backward/forward()`), Restart (`UI.restart()`).
+- Header `‹ ›` = step back / forward through visited passages (`Engine.backward/forward()`). Stats panel **Game** section = Save/Load (`UI.saves()`) and Restart (`UI.restart()`).
 - Money changes toast as **"Earned +₹n"** (green) / **"Spent −₹n"** (amber).
 
 ### Hindi / Hinglish translations
@@ -142,12 +144,12 @@ block, which also handles lines that contain quote characters.
 
 ---
 
-## Day-scoping (how Day 2 is bolted on)
+## Day-scoping (how later days bolt on)
 
-Day 2 is an **additive module** at the end of `game-engine.js` (`(function day2(){…})()`):
-it `Object.assign`s new locations, `.push()`es new objects/objectives/timed-events,
-tags the Day-1 finale objects with `dayOnly: 1`, and wraps `setup.phoneData` for
-Day-2 message lists. Day 1's data literals are untouched.
+The engine is already day-aware so future days can be added as **additive
+modules** without touching Day 1's data literals   `Object.assign` new locations,
+`.push()` new objects / objectives / timed-events, and wrap `setup.phoneData` for
+that day's message lists.
 
 Mechanics that make it work:
 - **`o.dayOnly`** on a location object → `setup.objVisible` hides it on other days.
@@ -157,13 +159,13 @@ Mechanics that make it work:
 - **`day >= N`** is a valid `unlockCondition` atom (see `setup.atom`).
 - **`setup.beginDay(n)`**   resets `$day`, wipes the objective tracker, clears
   daily-state flags (sign-out, VIT entry, Priya's whereabouts, morning-done…),
-  and applies `setup.dayStart[n]` (pov / loc / time / mood). Called from the
-  Day-1 and Day-2 end screens.
+  and applies `setup.dayStart[n]` (pov / loc / time / mood).
 
-## Adding Day 3+
+## Adding Day 2+
 
-1. New scene passages in `days/day3/`, named exactly by their `triggers` value.
-2. In the day2 module (or a new day3 module) add locations / objects (`dayOnly: 3`)
-   / objectives (`day: 3`) / timed events (`day: 3`), and a `setup.dayStart[3]`.
+1. New scene passages in `days/day2/`, named exactly by their `triggers` value.
+2. Add a day module to `game-engine.js`: locations / objects (`dayOnly: 2`) /
+   objectives (`day: 2`) / timed events (`day: 2`), a `setup.dayStart[2]`, a
+   `setup.dayEnd[2]` screen, and tag the Day-1 finale objects `dayOnly: 1`.
 3. `node tools/linkcheck.js game`, then `node tools/sim.js` (extend its `EFFECTS`
-   map + walkthrough   it already covers Days 1–2).
+   map + walkthrough).

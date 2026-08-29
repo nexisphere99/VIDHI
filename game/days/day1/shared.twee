@@ -108,10 +108,13 @@ Tomorrow, everything changes. Or nothing does. With Meera it's always a coin fli
 <<set _sqDone to 0>><<for _o range setup.objectives.arjun.side.concat(setup.objectives.kavya.side)>><<if setup.objState(_o) is "complete">><<set _sqDone to _sqDone + 1>><</if>><</for>>\
 <p class="lede">Side quests: <<= _sqDone>> completed, <<= $sideDiscovered.length>> discovered. Swaps so far: <<= $swapCount>> · barrier at <<= $barrierIntegrity>>%.</p>
 
-<p class="lede">Day 2   "Saazish"   is the plan: the phone calls, the swap rules, and the night before the first cross-gender exchange.</p>
+<div class="version-note">
+<p class="lede"><b>This is the end of the version 0.1 content.</b></p>
+<p class="lede">Thank you for playing VIDHI. If you'd like to see more of this story   or just support the work   you can back the project on Patreon:</p>
+<p class="lede"><a href="https://www.patreon.com/c/vidhidevs" target="_blank" rel="noopener">patreon.com/c/vidhidevs</a></p>
+</div>
 
 <div class="start-btn">
 <<link "Keep exploring Day 1">><<goto "Hub">><</link>>
-<<link "Sleep   begin Day 2 (Day 1 can't be revisited)">><<run setup.beginDay(2)>><<goto "Day2Start">><</link>>
 </div>
 </div>

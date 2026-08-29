@@ -19,7 +19,7 @@
 <<set $firedEvents to []>>
 <<set $eventQueue to []>>
 <<set $doneActions to {}>>
-<<set $inventory to []>>
+<<set $inventory to { arjun: [], kavya: [] }>>
 <<set $intimateSeen to []>>
 <<set $swapCount to 0>>
 <<set $swapActive to false>>
@@ -211,7 +211,7 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <<if _sideDone gt 0>><p class="side-done">✓ <<= _sideDone>> side quest<<if _sideDone gt 1>>s<</if>> done</p>\
 <</if>>\
 <h3>Inventory</h3>\
-<<if $inventory.length gt 0>><<for _i range $inventory>><span class="inv-chip"><<= setup.itemNames[_i] ? setup.itemNames[_i] : _i>></span><</for>><<else>><span class="obj-empty">Empty.</span><</if>>\
+<<if $inventory[$pov].length gt 0>><<for _i range $inventory[$pov]>><span class="inv-chip"><<= setup.itemNames[_i] ? setup.itemNames[_i] : _i>></span><</for>><<else>><span class="obj-empty">Empty.</span><</if>>\
 <h3>Wallet</h3>\
 <span class="inv-chip">₹<<= setup.money()>></span>\
 <img class="mandala" src="images/mandala.svg" alt="">

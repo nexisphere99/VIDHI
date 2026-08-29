@@ -1335,17 +1335,30 @@ setup.addMoney = function (n, who) {
 };
 setup.canAfford = function (n, who) { return setup.money(who) >= n; };
 
-setup.hasItem = function (id) { return V().inventory.indexOf(id) !== -1; };
-setup.addItem = function (id) {
-  if (!setup.hasItem(id)) {
-    V().inventory.push(id);
+/* inventory is per-character: $inventory = { arjun: [...], kavya: [...] } */
+setup.inv = function (who) {
+  var S = V();
+  who = who || S.pov;
+  if (!S.inventory || Array.isArray(S.inventory)) {
+    /* migrate an old flat-array save into the current character's bag */
+    var old = Array.isArray(S.inventory) ? S.inventory : [];
+    S.inventory = { arjun: [], kavya: [] };
+    S.inventory[S.pov] = old;
+  }
+  if (!S.inventory[who]) S.inventory[who] = [];
+  return S.inventory[who];
+};
+setup.hasItem = function (id, who) { return setup.inv(who).indexOf(id) !== -1; };
+setup.addItem = function (id, who) {
+  if (!setup.hasItem(id, who)) {
+    setup.inv(who).push(id);
     setup.toast("objective", "Obtained: " + (setup.itemNames[id] || id));
   }
   return "";
 };
-setup.removeItem = function (id) {
-  var i = V().inventory.indexOf(id);
-  if (i !== -1) V().inventory.splice(i, 1);
+setup.removeItem = function (id, who) {
+  var arr = setup.inv(who), i = arr.indexOf(id);
+  if (i !== -1) arr.splice(i, 1);
   return "";
 };
 

@@ -21,6 +21,7 @@ The mirror on the wardrobe door shows you a version of yourself that's been thro
 
 
 :: clothing_choice
+<<run setup.flag("got_dressed")>>\
 <<img "arjun_get_dressed.png" "jeans, black t-shirt, the everyday armour">>
 Jeans. Black t-shirt. The everyday armour. There's exactly one kurta in the wardrobe and it's for festivals.
 

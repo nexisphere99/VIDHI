@@ -1200,6 +1200,11 @@ setup.refreshObjectives = function () {
 
 setup.refreshWorld = function () {
   var S = V();
+  /* derived: Arjun's morning is "done" once he's both dressed AND checked his
+     phone, in either order (the wardrobe scene no longer has to be the last click) */
+  if (S.flags.got_dressed && S.flags.phone_checked && !S.flags.morning_routine_complete) {
+    S.flags.morning_routine_complete = true;
+  }
   setup.refreshObjectives();
   /* POV switch point 1: after Arjun's morning routine, Kavya opens up */
   if (S.flags.morning_routine_complete && !S.povUnlocked.kavya) {
@@ -1322,7 +1327,7 @@ setup.beginDay = function (n) {
   /* clear "today only" state so each day starts fresh */
   ["signed_out_hostel", "has_excuse", "entered_vit", "priya_out_jogging", "priya_asleep",
    "in_dissection", "priya_left_for_class", "priya_in_common_room", "priya_asks",
-   "morning_routine_complete", "kavya_morning_done"
+   "morning_routine_complete", "kavya_morning_done", "got_dressed", "phone_checked"
   ].forEach(function (f) { delete S.flags[f]; });
   var ds = setup.dayStart[n];
   if (ds) {
@@ -1963,6 +1968,10 @@ setup.openPhone = function (which) {
   var data = setup.phoneData()[which];
   if (!data) return;
   V()._phoneWhich = which;
+  /* opening Arjun's phone (header button or gallery) counts as "checked your phone" */
+  if (which === "arjun" || which === "gallery") {
+    if (!V().flags.phone_checked) { setup.flag("phone_checked"); setup.refreshWorld(); }
+  }
   Dialog.setup(data.title, "vidhi-phone");
   Dialog.wiki(setup.renderPhone(which, data.tabs[0]));
   Dialog.open();

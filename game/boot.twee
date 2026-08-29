@@ -42,7 +42,7 @@
 <<set $arjunOutfit to "">>
 <<set $arjunToldRohit to "">>
 <<set $kavyaJournal to false>>
-<<set $debug to setup.debugFromHash()>>
+<<set $debug to true>>
 <<run setup.refreshObjectives()>>
 
 

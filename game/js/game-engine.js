@@ -59,7 +59,8 @@ setup.locations = {
         { id: "shower", action: "Take a shower", triggers: "arjun_shower_day1", intimate: true },
         { id: "toothbrush", action: "Brush your teeth", triggers: "morning_routine" },
         { id: "urinal", action: "Use the urinal", triggers: "arjun_pee_day1", intimate: true },
-        { id: "shaving_kit", action: "Shave", triggers: "shaving_scene" }
+        { id: "shaving_kit", action: "Shave", triggers: "shaving_scene" },
+        { id: "arjun_alone", action: "Bolt the door. Take the hour to yourself.", triggers: "arjun_self_explore", intimate: true, quest: "side", unlockCondition: "morning_routine_complete AND not arjun_day1_complete", dayOnly: 1 }
       ],
       npcs: ["random_pg_boy"],
       exits: [ { to: "katraj_pg_room", label: "Back to the room" } ],
@@ -331,7 +332,8 @@ setup.locations = {
         { id: "period_check", action: "Do the morning period check", triggers: "kavya_period_check_day1", intimate: true },
         { id: "mirror_bathroom", action: "Look in the mirror", triggers: "kavya_bathroom_mirror" },
         { id: "sink", action: "Wash your face / brush teeth", triggers: "morning_wash" },
-        { id: "washing_area", action: "Hand-wash clothes", triggers: "handwash_scene" }
+        { id: "washing_area", action: "Hand-wash clothes", triggers: "handwash_scene" },
+        { id: "kavya_alone", action: "Take the stall. Properly, this time.", triggers: "kavya_self_explore", intimate: true, quest: "side", unlockCondition: "kavya_morning_done AND not test_swap_complete", dayOnly: 1 }
       ],
       npcs: ["sneha_302", "random_hostel_girls"],
       exits: [ { to: "hostel_corridor", label: "Back to the corridor" } ],
@@ -555,7 +557,7 @@ setup._questTag = {
     "deliver_packet", "ananya", "stray_dog",
     "under_mattress", "phone_redmi", "sneha_door", "build_dosage", "build_dosage_lib",
     "sharma_quiz", "priya_photo_req", "priya_bed", "mess_didi_favor", "divya_sofa",
-    "samosa_stall", "computer_section"
+    "samosa_stall", "computer_section", "arjun_alone", "kavya_alone"
   ]
 };
 (function tagQuests() {
@@ -700,6 +702,16 @@ setup.objectives = {
           when: "The room option appears after 7 PM. The lab is open 9 AM–5 PM.",
           who: "Nobody   solo coding.",
           how: "Either sit at a lab terminal in the afternoon, or do it at night in the room. Doing it also satisfies part of “End the day”."
+        } },
+      { id: "a_sq_self", title: "A rare hour alone", pov: "arjun", day: 1,
+        description: "The PG bathroom has a latch that mostly holds, and for once nobody needs anything from you. Sit with your own body a while   it's the only one you've ever had.",
+        unlockCondition: "morning_routine_complete", completionTrigger: "arjun_self_explored",
+        reward: { karma: 1 },
+        hint: {
+          where: "PG bathroom → “Bolt the door. Take the hour to yourself.”",
+          when: "Any time you're back at the PG and Rohit isn't around   morning or evening.",
+          who: "Just you. No one else.",
+          how: "A slow, private scene about noticing this body before the day takes it back. It completes on its own."
         } }
     ]
   },
@@ -848,6 +860,16 @@ setup.objectives = {
           when: "After 6 PM   the common room belongs to the seniors then.",
           who: "Divya (4th-year, Tamil, the hostel's unofficial big sister).",
           how: "Visit the common room once to discover it, then after 6 PM the “Talk to Divya Didi” action appears. She gives real exam strategy."
+        } },
+      { id: "k_sq_self", title: "Ten minutes that are yours", pov: "kavya", day: 1,
+        description: "The shower stall has the only bolt in the building that holds, and you've never used it for more than four efficient minutes. This body was chosen for you   but what you do alone in a locked room is the last thing about it that isn't.",
+        unlockCondition: "kavya_morning_done", completionTrigger: "kavya_self_explored",
+        reward: { confidence: 2 },
+        hint: {
+          where: "Hostel bathroom → “Take the stall. Properly, this time.”",
+          when: "Morning before you sign out, or evening once you're back in the hostel.",
+          who: "Just you. No one else.",
+          how: "A slow, tender scene about claiming ownership of your own body   breast and clitoral touch only, a line you keep. It completes on its own."
         } }
     ]
   }
@@ -1627,7 +1649,8 @@ setup.imgDir = {
   "kavya_terrace_watertank.png": "scenes/common", "kavya_terrace_coding.png": "scenes/common",
   "kavya_joshi_rounds.png": "scenes/common", "kavya_warden_office.png": "scenes/common",
   "kavya_manuscript_closeup.png": "scenes/common", "kavya_juice_stall.png": "scenes/common",
-  "night_sleep_arjun_rohit.png": "scenes/common", "scenic_route_meera_call_try.png": "scenes/common"
+  "night_sleep_arjun_rohit.png": "scenes/common", "scenic_route_meera_call_try.png": "scenes/common",
+  "arjun_self_explore.png": "scenes/common", "kavya_self_explore.png": "scenes/common"
 };
 
 setup.imgSrc = function (file) {

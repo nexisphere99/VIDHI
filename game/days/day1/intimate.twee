@@ -195,3 +195,59 @@ Your eyes close. Sleep takes you in under a minute   the body's emergency shutdo
 </div>
 
 <div class="continue-nav">[[End of Day 1   Kavya|KavyaDayEnd]]</div>
+
+
+:: arjun_self_explore
+<div class="intimate"><span class="tag">Intimate · explicit · self</span>
+
+<<img "arjun_self_explore.png" "bolt across, water running">>
+The PG is empty in that particular afternoon way   Rohit still on campus, the landlord asleep, the water tank ticking as it fills. You slide the bolt. It sticks, then holds. For the length of a long shower, nobody in the world needs anything from you.
+
+You turn the water on for the sound of it and sit on the upturned bucket and, for once, do not hurry.
+
+Your hands go over yourself the way you'd check a bike you were about to sell   not looking for fault, just taking inventory. The flat plane of your chest, the sternum you can trace like a seam. The hair that's thickened across it in the last two years. Your stomach, softer than it was when you swam competitively, a little give at the sides now. The old scar on your shin from the Kothrud cricket ground. Forearms roped from the clutch and the throttle. This is the body Aai grew on dal and ghee and worry, the one Meera used to hold your face in. You have never once thanked it for anything.
+
+You're half-hard before you decide to be, the way it happens when your hand is unhurried and the door is locked and the day has stopped demanding things. You wrap your fingers around yourself   warm, familiar, the one reliable circuit   and it isn't about anyone. Not the folder, not the video, not the twenty-minutes-away window. Just the plain animal fact of being alive in a body on a Tuesday afternoon, and the small mercy that this at least still works.
+
+Slow. The foreskin sliding with the motion, a thumb across the head, the first slick drop spread down. Your breath goes long. Your shoulders come down off your ears for the first time all day. Somewhere under the loneliness there's a thing that feels almost like tenderness, and it's aimed, absurdly, at yourself   at this dumb loyal machine that keeps carrying you around a city that has taken everything else.
+
+The build is gentle and then it isn't. Your hips lift off the bucket. You brace a hand flat on the cold tiled wall. When it comes it comes clean   a bright unclenching that runs from the base of your spine out to your fingertips, your jaw dropping open on a sound you don't bother to swallow because there's no one to hear it. Three, four seconds where the noise in your head simply stops.
+
+Then the ordinary quiet. Water running. Steam on the mirror. You rinse your hand, sit a moment longer, breathing.
+
+<div class="thought arjun">It didn't leave you emptier this time. That's the strange part. Maybe because you weren't reaching for someone who isn't there   you were just, for ten minutes, here. In this body. Which is a thing you should probably do more often, in the small window you have left of having it.</div>
+</div>
+
+<<run setup.flag("arjun_self_explored")>>
+<<run setup.stat("energy", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: kavya_self_explore
+<div class="intimate"><span class="tag">Intimate · explicit · self</span>
+
+<<img "kavya_self_explore.png" "the third stall, bolt thrown">>
+You wait for the queue to thin   mid-morning, most girls in class   and take the third stall, the one bolt in this building that actually reaches its latch. Push, lift, slide. It holds.
+
+Four minutes is what you allow yourself, normally. Efficiency, not indulgence. Today you turn the water low so it just runs, and you stay.
+
+The nightie comes off slowly instead of in the usual yank. You look, which you also don't normally do. Dusky skin, the tan-line ghost of a salwar neckline. The waist Amma calls "your good feature" as if the rest needs managing. And the breasts you have spent seven years strapping down and dressing around and apologising for with a well-pinned dupatta   34C, warm, heavier than they look, a faint ache along the underwire line that's been there so long you'd forgotten it was a sensation and not just a fact.
+
+You cup them. Feel the actual weight of them in your palms, not as a logistics problem   as //yours//. Your thumbs move over the nipples and they draw tight and a small current runs down through your belly, sharper than you let yourself notice on a normal morning with a bus to catch. You circle them slowly, both hands, and let the warmth spread. It's been so long since you touched this body with anything other than soap and impatience.
+
+One hand stays. The other goes down over your stomach, past the plain elastic, and finds you already slick   the body quicker than the mind, as always. Your fingers settle on your clit, the pressure you calibrated at sixteen alone in a bathroom exactly like this one, the only private decision in a life scheduled by other people. Slow circles. The hood sliding with the motion. Heat blooming outward through your pelvis and down your inner thighs.
+
+You don't go inside. You never have. It isn't quite the temple and it isn't quite Amma's warnings folded into you before you were old enough to argue   it's simpler and more stubborn than either: in a body someone else enrolled in medicine, someone else dressed, someone else will marry off on a convenient Sunday, //this line is yours//. The one boundary nobody set for you. You keep it because keeping it is the point.
+
+So it's all outside, all the swollen electric surface of it, two fingers flat and the circles tightening, your other hand still working a nipple, your back against cold tile and your knees not quite steady. You bite down on nothing. Your breath goes ragged and quiet.
+
+When you come it isn't the desperate escape-hatch feeling of some nights   it's slower, fuller, a wave that starts deep in the core and rolls out through both thighs and curls your toes against the wet floor. Your stomach clenches. A sound leaves you through your teeth, low, //nnh//, more like relief than pleasure. For four or five seconds you are not a daughter or a student or a future Dr. Iyer. You are a woman alone in a locked room who owns exactly one thing completely, and is, right now, enjoying it.
+
+Then it eases. Water running. Your own breathing. The green towel gone the colour of doubt on its hook.
+
+<div class="thought kavya">Not rebellion, exactly. Maintenance of a different kind   the upkeep of the one part of this life that was never up for negotiation. You dry off, dress slowly, pin the dupatta the way Amma taught you, and walk out four minutes and eleven minutes later than you told yourself you would. Nobody notices. That's rather the point.</div>
+</div>
+
+<<run setup.flag("kavya_self_explored")>>
+<<run setup.stat("energy", 1, "kavya")>>
+<<hubreturn>>

@@ -397,6 +397,8 @@ Also two location backgrounds: `katraj_snake_park.png` (IMG-022) and
 - **IMG-107** `kothrud_old_bedroom.png` (`arjun_childhood_room`): a small bedroom half-converted to a study — cricket trophies still on a shelf, a faded Sachin Tendulkar poster, a framed school photo of a boy at sixteen on the desk. Nostalgic afternoon light. No people.
 - **IMG-108** `night_sleep_arjun_rohit.png` (`arjun_night_end`): a dark PG room past midnight — one young man asleep face-down on a cot with an arm hanging off, the other lying on his back in shorts staring up at a wobbling ceiling fan, tube light off, blue night through the window. Insomniac stillness.
 - **IMG-109** `scenic_route_meera_call_try.png` (`meera_call_attempt_sinhagad`): a young man on a dark mountain-road viewpoint, a black Pulsar parked at the railing, phone lit in his hand with a call screen open and his thumb hovering over the green button, city lights far below. He won't press it.
+- **IMG-110** `arjun_self_explore.png` (`arjun_self_explore` — side quest, **art pending**): a young man sitting alone on an upturned bucket in a small locked bathroom, shower running for the sound of it, steam softening the frame, head tipped back, one hand at rest on his thigh. Private, unhurried, tender rather than charged. No explicit nudity — suggestion, steam, framing.
+- **IMG-111** `kavya_self_explore.png` (`kavya_self_explore` — side quest, **art pending**): a young woman alone in a bolted hostel shower stall, low water running, one arm across her chest, eyes closed, shoulder and collarbone lit, the rest lost to steam and shadow. Quiet ownership, not performance. No explicit nudity — steam, cropping, shadow.
 
 ### IMG-120 to IMG-154: Kavya's path vignettes (already wired)
 B.J. Medical girls' hostel and campus. Cool blue-grey institutional
@@ -459,10 +461,10 @@ Location Backgrounds:           17  (IMG-010 to IMG-027)
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
-Ambient vignettes (Arjun):     40  (IMG-070 to IMG-109, scenes/common/)
-Ambient vignettes (Kavya):     43  (IMG-120 to IMG-162, scenes/common/)
+Ambient vignettes (Arjun):     41  (IMG-070 to IMG-110, scenes/common/)
+Ambient vignettes (Kavya):     44  (IMG-120 to IMG-162 + IMG-111, scenes/common/)
 ─────────────────────────────────────
-TOTAL:                         139 images   (Day 1 fully covered)
+TOTAL:                         141 images   (139 delivered; IMG-110/111 pending)
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

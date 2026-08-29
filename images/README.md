@@ -220,10 +220,22 @@ kavya_cs_lecture.png         IMG-206    kavya_coding_joy.png         IMG-207
 kavya_rohit_canteen.png      IMG-208    room_304_arjun_pov.png       IMG-210
 pg_room_kavya_pov.png        IMG-211    katraj_pg_night.png          IMG-212
 hostel_304_night.png         IMG-213    pataleshwar_approach.png     IMG-214
-day3_briefing.png            IMG-215
+day3_briefing.png            IMG-215    meera_close.png              IMG-216
+vit_library_cs.png           IMG-217    vit_cs_lab_doorway.png       IMG-218
 ```
 Note: the swap and all body-discovery scenes are text-only. The images capture
 the emotional moments (reunion, coding joy, the ride), not the physical.
+
+Meera / CS additions:
+- `meera_close.png`   Room 304, door bolted, afternoon light. Arjun-in-Kavya's
+  body curled against Meera on the narrow cot, geometry inverted (he's the small
+  one now). Tender, not sexual   the emotional core of the whole day.
+- `vit_library_cs.png`   the algorithms aisle of a university library, hardcover
+  CLRS / Sedgewick / the Dragon Book on the shelf, one figure holding a book,
+  cold fluorescent quiet.
+- `vit_cs_lab_doorway.png`   POV standing in the doorway of a proper CS lab:
+  rows of dual-monitor machines, mechanical keyboards, one AC unit, nobody
+  looking up.
 
 Pre-dawn / handover additions:
 - `katraj_pg_night.png`   Arjun's dark PG room at 4 AM, Rohit a mound under a

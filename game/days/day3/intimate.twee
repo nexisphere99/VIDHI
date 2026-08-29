@@ -160,3 +160,31 @@ You practise Arjun's grin until it stops looking like a grimace. Loosen the shou
 <div class="thought kavya">Twelve hours to learn a body it took him twenty-one years to stop noticing. You're a fast learner. You'll have to be.</div>
 <<run setup.discover("wearing his face", "kavya")>>
 <<hubreturn>>
+
+
+:: kavya_popup_arousal_d3
+<div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
+Rohit's out. You've got ten minutes before you should leave, so you open Chrome to check GitHub notifications on a real screen for once   and click a stale bookmark that 404s and redirects and //redirects//, and then the whole monitor is a pop-under: autoplaying video, no visible close button, a woman looking directly into the lens, sound coming out of Rohit's speakers before you can kill it.
+
+You lunge for the volume key, then the tab. Ctrl-W. Gone. Eight seconds, maybe.
+
+Not fast enough.
+
+Because in those eight seconds Arjun's body did something yours never has. Immediate. Visible. The blood went //there//, downward and forward, no gradual tide   a switch. The penis stiffening against the inside of the jeans in real time, lengthening, lifting, and a bulge you can see if you look down, which you do, appalled.
+
+And underneath the mortification: the //feeling//. This one has a trigger, so this time you get the other half of it   the pull. A low insistent wanting, concentrated and directional, pointing outward like everything about this body points outward. Your pulse in a place you've spent a day being startled by. It //wants//, uncomplicatedly, and it is extremely unsubtle about it.
+
+You sit back. Hands off the desk. You are a guest in this body and you have a rule and you are keeping it.
+
+But you catalogue it, because that's what you do. //Male arousal: external, obvious, fast, hard to hide, and it announces itself whether or not the mind agreed to the conversation. No wonder they build so much etiquette around not looking. No wonder Arjun sits with a laptop on his knees in the canteen.//
+
+Four minutes of thinking hard about the hepatic first-pass effect, and it subsides   sullenly, taking its time, the way the erection in the coding session did. You install an adblocker, out of spite, and close the laptop.
+
+<div class="thought kavya">You will give this body back tonight with a slightly better adblocker and a much better understanding of why he flinches at certain jokes. Fair trade.</div>
+</div>\
+<<run setup.flag("kavya_popup_d3")>>\
+<<run setup.discover("arousal with a trigger, and a direction", "kavya")>>\
+<<run setup.discover("why men sit the way they sit", "kavya")>>\
+<<run setup.stat("sex_m", 4, "kavya")>>\
+<<run setup.stat("masc_comfort", 3, "kavya")>>
+<<hubreturn>>

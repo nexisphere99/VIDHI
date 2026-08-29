@@ -242,6 +242,43 @@ Same vocal cords. Same pitch. But a mother is hearing something underneath   the
 <<hubreturn>>
 
 
+:: EV_a3_papa_call
+<div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">📞 Papa</div>
+
+Arjun always answers his father too   but for a completely different reason. You pick up on the first ring, the way you've watched him do it, spine straightening on reflex.
+
+No greeting. Papa doesn't greet.
+
+<div class="dialogue">"Internal assessment marks. Pharmacology, DBMS, OS. You were supposed to send them Sunday. Send them tonight."</div>
+
+"Haan, Papa. Aaj bhej dunga."<span class="gloss-en">Yes, Papa. I'll send them today.</span>
+
+<div class="dialogue">"Attendance?"</div>
+
+"Seventy-eight percent." You have no idea. It's a number that sounds survivable.
+
+<div class="dialogue">"Hmm. Krishnan's course is the one that matters. If you're serious about the campus placement, it's not the year to coast. Sunday, one o'clock, Vaishali. Bring a printout of the marks, not a screenshot."</div>
+
+"Theek hai, Papa."<span class="gloss-en">Alright, Papa.</span>
+
+Click. Forty seconds. He didn't ask how you are, didn't hear anything under the voice, didn't notice a single thing   because noticing would require having looked at his son even once in the last five years, and he hasn't.
+
+<div class="thought kavya">Aai clocked something in three sentences. This man wouldn't clock the swap if you told him. That's not a security feature. That's the saddest thing you've learned all day, and you've spent it in someone else's skin.</div>
+
+<<run setup.stat("rel_arjun", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: PH_a3_papa
+<div class="chat-log">
+<div class="msg them">Internal assessment marks. All subjects. Today.</div>
+<div class="msg them">Sunday 1 pm Vaishali. Printout, not screenshot.</div>
+<div class="msg me">Haan Papa<span class="gloss-en">Yes Papa</span></div>
+<div class="msg them">"Haan Papa" is not marks. Send the marks.</div>
+</div>
+<<hubreturn>>
+
+
 :: EV_a3_rohit_gym
 Rohit stands, cracks his back, announces "leg day extension" as if his quads filed a formal request, and leaves. The door closes. His footsteps recede down the stairs.
 

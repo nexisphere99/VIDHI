@@ -228,3 +228,51 @@ The temple steps. No priest, no devotees   at this hour Pataleshwar is just old 
 <<run setup.flag("kavya_at_temple_d3")>>\
 <<run setup.discover("grieving your own body a little, in advance", "kavya")>>
 <<hubreturn "Wait for him on the steps">>
+
+
+:: kavya_cs_lab_first_d3
+<<img "vit_cs_lab_doorway.png" "the CS lab doorway">>
+You stop in the doorway before you go in, because you want to remember doing it.
+
+Forty machines. Dual monitors on every one. Mechanical keyboards, the good kind, the kind that costs more than your monthly hostel mess bill. Three ceiling projectors. A whiteboard wall. A hum of fans and one air conditioner losing a slow war with a Pune afternoon.
+
+You have wanted to stand in a room exactly like this since you were fifteen and figured out, on a ₹3,000 phone in a girls' hostel, that you were better at this than the subject you're allowed to study. Every LeetCode streak, every 2 AM, every stolen library hour was aimed at a room you were never going to be allowed into.
+
+You're in it now. For three more hours. On a borrowed card, in a borrowed body, and it still counts.
+
+Suresh the lab assistant glances up, sees "Arjun," goes back to his phone. Nobody stops you. Nobody ever stops the boy.
+
+<<run setup.flag("lab_seen_d3")>>\
+<<run setup.discover("standing in the room you were aimed at", "kavya")>>\
+<<run setup.stat("k_coding", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_library_d3
+<<img "vit_library_cs.png" "the algorithms aisle">>
+The VIT library is cold and carpeted and silent in the way only a room built for concentration can be. You follow the Dewey numbers to 005, then along   operating systems, compilers, and then the aisle you came for.
+
+CLRS. The actual hardcover, spine uncracked on the library copy, the thing you have read as a lopsided photographed PDF where someone's thumb covers the bottom of every left-hand page. Sedgewick in two volumes. Skiena. The Dragon Book. A run of bound ACM proceedings going back to before you were born.
+
+You take //Introduction to Algorithms// down and just hold it. It's heavier than you expected. Someone has penciled //see p.412// in the margin of the red-black tree chapter, in handwriting that isn't yours, and you feel an absurd flare of kinship with them.
+
+<div class="thought kavya">Three years of treating this material like contraband. And it was just... sitting on a shelf, twenty minutes' ride from the PG, the whole time. Behind a gate that only checks whether you're a boy.</div>
+
+You photograph four pages you've always wanted clean copies of. Old habit. Then you put the book back exactly square, because someone raised you to.
+
+<<run setup.flag("kavya_library_seen_d3")>>\
+<<run setup.discover("the books, in hardcover, on a shelf you were kept off", "kavya")>>\
+<<run setup.stat("k_coding", 3, "kavya")>>\
+<<run setup.stat("energy", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_library_read_d3
+You take a carrel by the window with the Dragon Book and a notebook, and for forty-five minutes you do the thing you have never once been able to do: read a hard text, properly, in a quiet room, with no alarm, no viva to cram for, no dupatta to keep adjusting, nobody tracking how long you've been gone.
+
+You get through the lexical-analysis chapter and half of parsing. You take notes in Arjun's block capitals   which come easier now, six hours in. A CS student two carrels down is quietly losing a fight with a segfault; you almost lean over to help and stop yourself. Not today. Today you just get to be someone who reads here.
+
+<<run setup.flag("kavya_library_read_d3")>>\
+<<run setup.discover("reading properly, once, with nobody counting", "kavya")>>\
+<<run setup.stat("k_coding", 4, "kavya")>>
+<<hubreturn>>

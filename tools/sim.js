@@ -379,6 +379,8 @@ const D3 = {
   anatomy_horror_d3: () => { setup.flag("in_dissection_d3"); setup.flag("anatomy_done_d3"); },
   specimen_jar_d3: () => setup.flag("specimen_helped_d3"),
   manuscript_organize_d3: () => setup.flag("manuscript_organized_d3"),
+  meera_close_d3: () => setup.flag("meera_close_d3"),
+  arjun_arousal_meera_d3: () => setup.flag("arjun_wet_d3"),
   meera_terrace_d3: () => setup.flag("meera_terrace_done_d3"),
   meera_terrace_hold_d3: () => setup.flag("meera_terrace_done_d3"),
   arjun_shower_female_d3: () => setup.flag("arjun_showered_d3"),
@@ -395,6 +397,10 @@ const D3 = {
   rohit_canteen_d3: () => setup.flag("rohit_canteen_done_d3"),
   kavya_coding_ecstasy_d3: () => setup.flag("real_coding_done"),
   kavya_evening_coding_d3: () => setup.flag("real_coding_done"),
+  kavya_cs_lab_first_d3: () => setup.flag("lab_seen_d3"),
+  kavya_library_d3: () => setup.flag("kavya_library_seen_d3"),
+  kavya_library_read_d3: () => setup.flag("kavya_library_read_d3"),
+  kavya_popup_arousal_d3: () => setup.flag("kavya_popup_d3"),
   kavya_first_pee_male: () => setup.flag("kavya_peed_male_d3"),
   kavya_shower_male_d3: () => setup.flag("kavya_showered_male_d3"),
   kavya_shaving_d3: () => setup.flag("kavya_shaved_d3"),
@@ -445,6 +451,9 @@ assertObj("a3_obj_survive");
 go("bj_campus_path_d3"); go("hostel_entrance_d3");
 S.time.arjun = 14 * 60 + 5; drainEvents();       // priya_out event
 go("hostel_stairs_d3"); go("hostel_corridor_d3"); go("hostel_room_304_d3");
+use("room304_meera_close");                      // a3_obj_meera_time (the point of the day)
+assertObj("a3_obj_meera_time");
+use("room304_arjun_wet");                        // a3_sq_meera_arousal
 use("room304_manuscript_d3");                    // a3_sq_manuscript
 go("hostel_corridor_d3"); go("hostel_terrace_d3"); use("terrace_meera_d3"); // a3_sq_terrace
 S.time.arjun = 17 * 60 + 5;                      // leave for the temple ~5 PM
@@ -452,7 +461,7 @@ go("hostel_corridor_d3"); go("hostel_stairs_d3"); go("hostel_entrance_d3");
 go("pataleshwar_temple_d3");
 wait(17 * 60 + 30);                              // circle reverses at 5:30
 use("swap_back_circle");                         // day3_swapback
-["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
+["a3_obj_gethere","a3_obj_swap","a3_obj_hostel","a3_obj_meera","a3_obj_meera_time","a3_obj_survive","a3_obj_swapback"].forEach(assertObj);
 console.log("  arjun body now:", S.body.arjun, "| fem_comfort", S.stats.a_femComfort, "| discoveries", (S.discoveries.arjun || []).length);
 
 // --- Kavya in Arjun's body ---
@@ -483,14 +492,18 @@ use("cblock_lecture_d3");                        // cs_lecture_attended_d3
 assertObj("k3_obj_cs");
 use("cblock_answer_d3");                         // k3_sq_answer
 use("cblock_krishnan_d3"); use("cblock_nikhil_d3");
+go("vit_library_d3"); use("lib_cs_shelf_d3"); use("lib_read_d3"); // k3_sq_library
+go("vit_cblock_d3");
 go("vit_canteen_d3"); use("canteen_rohit_d3");   // k3_sq_rohit
 go("vit_cblock_d3");
 S.time.kavya = 14 * 60 + 5;
 go("vit_cs_lab_d3");
+use("lab_first_d3");                             // k3_sq_lab_first
 use("lab_code_d3");                              // real_coding_done
 assertObj("k3_obj_code");
 go("vit_cblock_d3"); go("vit_gate_d3"); go("katraj_street_d3"); go("pg_stairs_d3"); go("katraj_pg_room_d3");
 S.time.kavya = 15 * 60;
+use("pg_browse_d3");                             // k3_sq_popup
 use("pg_explore_body_d3");                       // k3_sq_explore_m
 S.time.kavya = 17 * 60 + 5;                      // leave for the temple ~5 PM
 go("pg_stairs_d3"); go("katraj_street_d3");

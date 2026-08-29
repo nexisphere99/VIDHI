@@ -319,3 +319,69 @@ You sit like that until you have to leave for the temple. Her head on your shoul
 <<run setup.flag("meera_terrace_done_d3")>>\
 <<run setup.stat("rel_arjun_meera", 5, "arjun")>>
 <<hubreturn>>
+
+
+:: meera_close_d3
+<div class="intimate"><span class="tag">The reason for all of it</span>
+<<img "meera_close.png" "Room 304, the door bolted, the afternoon">>
+Priya's gone until at least five   pathology group, then the library, complaining the whole way out. You bolt the door. Chain. And then you stop performing, for the first time since 5 AM: no Kavya-posture, no irritated face, no cover. Just you, in the wrong body, in a locked room with Meera.
+
+She pulls you down onto her cot. You go. The mattress is thin and smells of her   Parachute oil, the sandalwood soap, sleep. She arranges you: your head on her shoulder, her arm around your back, and the geometry is upside-down from every version of this you've held in your head. You used to be the one she tucked under. Now you're small enough to tuck.
+
+<div class="dialogue">"Six months," she says, into Kavya's hair. "Do you know what today is costing three people so you and I can lie here for two hours?"</div>
+
+"I know exactly what it's costing. I'd pay it again tomorrow. I am, actually, paying it again tomorrow."
+
+You talk. Properly, the way you can't on a monitored phone. She tells you the real version of the last six months   not the brave WhatsApp version. Her father cancelled her Bharatanatyam arangetram two weeks before the date, in front of the guru. He reads her call logs on the family plan. She's been dancing alone in the bathroom with the tap running so the sound covers the ghungroos.
+
+You tell her yours. The Redmi under the mattress. The nights coding until the grief blurred. The poem folder you'll deny exists.
+
+<div class="dialogue">"I know about the folder. Kavya told me. Sixteen photos and a text file called //for_m//."</div>
+
+"I'm going to kill her. In her own body. Efficient."
+
+She laughs   the real one, unguarded, that photos never caught   and turns so you're facing each other on the narrow cot, noses almost touching. Her thumb finds the beauty mark under Kavya's eye, traces up to the corner, stops.
+
+<div class="dialogue">"The eyes really are still you. It's the strangest thing. I'm looking at my best friend's face and missing you, and you're //right here//."</div>
+
+"I'm right here. For two more hours I'm right here."
+
+Neither of you says the thing about how a borrowed afternoon is still the most of each other you've had since a backstage corridor fourteen months ago. You just hold it, and let the clock be the enemy for a while instead of her father.
+
+<div class="thought arjun">This. Not the anatomy hall, not surviving Priya, not the CS classes Kavya's stealing across town. //This// is what the ritual is for. Everything else is the price.</div>
+</div>\
+<<run setup.flag("meera_close_d3")>>\
+<<run setup.discover("being the one who gets tucked in", "arjun")>>\
+<<run setup.discover("the real six months, not the WhatsApp version", "arjun")>>\
+<<run setup.stat("rel_arjun_meera", 8, "arjun")>>\
+<<run setup.stat("trust_meera", 3, "arjun")>>\
+<<run setup.stat("fem_comfort", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_arousal_meera_d3
+<div class="intimate"><span class="tag">Intimate · explicit · body discovery</span>
+Meera's still asleep against you   twenty minutes of it, her breath slow on your neck, one leg hooked over yours. You've been lying very still, and somewhere in that stillness your body started answering a question nobody asked out loud.
+
+It's the smell of her, mostly. Fourteen months of memory and six of want, and a nervous system that's spent every one of those days routing that want to one specific place. So it routes there now. Reflex. Twenty-one years of wiring firing on schedule.
+
+And there's nothing there to receive it.
+
+You feel the exact moment the signal arrives and finds the equipment missing   a phantom reach, like flexing a hand that's been amputated. //I should be hard right now.// The thought is so automatic it's almost funny. There is no //hard// available. The blood that would have gone one way has to go somewhere.
+
+It goes inward. Downward. Heat blooming deep in the pelvis, low and spreading, nothing like the sharp forward urgency you know. A pulse starts   the clitoris, that small hooded knot of nerves you catalogued clinically in a bathroom stall this morning, now very much not clinical, throbbing in time with your heartbeat. And then the wetness: slow, unmistakable, the body's //yes// written in a language you have never once spoken, soaking into fabric that isn't yours.
+
+Your face goes hot. This is Kavya's body. Rule One. You are not going to move a single muscle toward anything.
+
+But you lie there and you //feel// it   arousal with no spike, no crest you can chase, just a rising warm tide with no obvious shore   and some engineer part of you is taking notes even now. //Different architecture. Same output. The body wants her either way. It just doesn't ask permission through the front door anymore.//
+
+You breathe. Think about the anatomy hall. The formalin. Dr. Sharma's glasses. The tide goes out, slowly, on its own schedule, the way nothing in your old body ever did.
+
+Meera stirs, doesn't wake. You don't tell her. Some data you keep.
+</div>\
+<<run setup.flag("arjun_wet_d3")>>\
+<<run setup.discover("your body's yes, in a language you don't speak", "arjun")>>\
+<<run setup.discover("arousal with no crest to chase", "arjun")>>\
+<<run setup.stat("sex_f", 4, "arjun")>>\
+<<run setup.stat("fem_comfort", 3, "arjun")>>
+<<hubreturn>>

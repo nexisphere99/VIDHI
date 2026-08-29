@@ -60,7 +60,7 @@ setup.locations = {
         { id: "toothbrush", action: "Brush your teeth", triggers: "morning_routine" },
         { id: "urinal", action: "Use the urinal", triggers: "arjun_pee_day1", intimate: true },
         { id: "shaving_kit", action: "Shave", triggers: "shaving_scene" },
-        { id: "arjun_alone", action: "Bolt the door. Take the hour to yourself.", triggers: "arjun_self_explore", intimate: true, quest: "side", unlockCondition: "morning_routine_complete AND not arjun_day1_complete", dayOnly: 1 }
+        { id: "arjun_alone", action: "Bolt the door. Take the hour to yourself.", triggers: "arjun_self_explore", intimate: true, quest: "side", unlockCondition: "morning_routine_complete", dayOnly: 1 }
       ],
       npcs: ["random_pg_boy"],
       exits: [ { to: "katraj_pg_room", label: "Back to the room" } ],
@@ -333,7 +333,7 @@ setup.locations = {
         { id: "mirror_bathroom", action: "Look in the mirror", triggers: "kavya_bathroom_mirror" },
         { id: "sink", action: "Wash your face / brush teeth", triggers: "morning_wash" },
         { id: "washing_area", action: "Hand-wash clothes", triggers: "handwash_scene" },
-        { id: "kavya_alone", action: "Take the stall. Properly, this time.", triggers: "kavya_self_explore", intimate: true, quest: "side", unlockCondition: "kavya_morning_done AND not test_swap_complete", dayOnly: 1 }
+        { id: "kavya_alone", action: "Take the stall. Properly, this time.", triggers: "kavya_self_explore", intimate: true, quest: "side", unlockCondition: "kavya_morning_done", dayOnly: 1 }
       ],
       npcs: ["sneha_302", "random_hostel_girls"],
       exits: [ { to: "hostel_corridor", label: "Back to the corridor" } ],

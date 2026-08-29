@@ -39,7 +39,9 @@ images/
 │   ├── hostel_terrace.png          IMG-018
 │   ├── bj_campus.png               IMG-019
 │   ├── hostel_mess.png             IMG-020
-│   └── kothrud_home.png            IMG-039
+│   ├── kothrud_home.png            IMG-039
+│   ├── katraj_snake_park.png       IMG-022
+│   └── sinhagad_road.png           IMG-023
 │
 ├── objects/                        ← interactive-object sprites (none wired yet)
 │
@@ -88,7 +90,21 @@ images/
         ├── arjun_phone_charging.png      IMG-090  (phone_charging)
         ├── vit_ground_hoops.png          IMG-091  (basketball_scene)
         ├── arjun_ground_bench.png        IMG-092  (arjun_ground_reflection)
-        └── vit_ground_stands.png         IMG-093  (smoking_spot_encounter)
+        ├── vit_ground_stands.png         IMG-093  (smoking_spot_encounter)
+        ├── arjun_stray_dog.png           IMG-094  (stray_dog_scene)
+        ├── arjun_newspaper.png           IMG-095  (news_of_day)
+        ├── pg_notice_board.png           IMG-096  (pg_notices)
+        ├── pg_landlord_sharma.png        IMG-097  (landlord_interaction)
+        ├── panwala_bhau.png              IMG-098  (panwala_interaction)
+        ├── katraj_fruit_cart.png         IMG-099  (fruit_vendor_npc)
+        ├── katraj_jogging_track.png      IMG-100  (katraj_walk)
+        ├── katraj_ice_bar.png            IMG-101  (ice_cream_vendor_npc)
+        ├── sinhagad_dhaba.png            IMG-102  (sinhagad_dhaba_scene)
+        ├── kothrud_aai_kitchen.png       IMG-103  (sunita_interaction)
+        ├── kothrud_papa_livingroom.png   IMG-104  (suresh_interaction)
+        ├── kothrud_pooja_sofa.png        IMG-105  (pooja_interaction)
+        ├── kothrud_family_meal.png       IMG-106  (home_meal_scene)
+        └── kothrud_old_bedroom.png       IMG-107  (arjun_childhood_room)
 ```
 
 ## Recommended specs

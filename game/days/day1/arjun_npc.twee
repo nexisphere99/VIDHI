@@ -17,6 +17,7 @@ This is the man you share eighteen square metres with. God has a sense of humour
 
 
 :: landlord_interaction
+<<img "pg_landlord_sharma.png" "Sharma uncle at the door">>
 Sharma uncle opens the door in his undershirt, reading glasses on a nose that's seen sixty Pune monsoons.
 
 <div class="dialogue">"Paani ka bill badhega next month se. Swimming pool banaya hai kya bathroom mein? Aur woh tumhara dost   raat ko 2 baje gym ka bag phenk ke kya baja raha tha? Meri wife ko neend se uthaana   capital offense hai, Arjun."<span class="gloss-en">The water bill goes up next month. Have you built a swimming pool in the bathroom? And that friend of yours   throwing his gym bag around at 2 AM, what was that racket? Waking my wife from her sleep   that's a capital offense, Arjun.</span></div>
@@ -55,6 +56,7 @@ You pull the backup over an OTG cable to the spare drive in your laptop bag. His
 
 
 :: panwala_interaction
+<<img "panwala_bhau.png" "Panwala Bhau's cabinet">>
 Panwala Bhau runs a glass cabinet of tobacco, gutka and dreams. Gold chain, red tilak, an Amitabh Bachchan mustache.
 
 <div class="dialogue">"Arjun beta! Sun   kal raat police van aayi thi. Sinhagad Road pe. Bike racing, 200 pe. VIT ka ladka tha shayad. Apne doston ko bol   raat ko speed mat karo."<span class="gloss-en">Arjun, son! Listen   a police van came last night. On Sinhagad Road. Bike racing, at 200. Was a VIT boy, probably. Tell your friends   don't speed at night.</span></div>
@@ -89,6 +91,7 @@ You hand Guard Patil the Classic Milds packet through the booth window. He nods 
 
 
 :: fruit_vendor_npc
+<<img "katraj_fruit_cart.png" "Tai's fruit cart">>
 Tai runs the cart where Katraj Road meets the PG lane   pomegranates, guavas, a pyramid of sitaphal. Nine-yard saree, several gold teeth.
 
 <div class="dialogue">"Arjun! Kela le ja."<span class="gloss-en">Arjun! Take a banana.</span></div>
@@ -102,6 +105,7 @@ She tsks   the Maharashtrian tsk that carries volumes. Thrusts two bananas at yo
 
 
 :: stray_dog_scene
+<<img "arjun_stray_dog.png" "the brown stray at the tapri">>
 <<if not setup.hasItem("biscuit")>>\
 The brown dog checks your hands, finds them empty, and gives you a look of profound disappointment. You'd need biscuits   the tapri sells Parle-G.
 <<hubreturn>>
@@ -143,6 +147,7 @@ The world contracts. Room 302. The room next to Room 304. The room next to Meera
 
 
 :: sinhagad_dhaba_scene
+<<img "sinhagad_dhaba.png" "the dhaba on the approach road">>
 The dhaba is halfway up the approach road   tin roof, four plastic tables, a kerosene stove, and all of Pune laid out below. The owner is seventy, white stubble, a cloth wrapped round his head.
 
 <div class="dialogue">"Chai?" One word. He makes it on the kerosene flame, unhurried. "Pehle dost ke saath aata tha. Aur ek ladki bhi thi   lambe baal, sundar. Ab akela hai."<span class="gloss-en">You used to come with a friend. And there was a girl too   long hair, pretty. Now you're alone.</span></div>
@@ -163,12 +168,14 @@ On your way out, three Royal Enfield boys rumble up. "Night ride kal   Sinhagad 
 
 
 :: ice_cream_vendor_npc
+<<img "katraj_ice_bar.png" "orange bar by the lake">>
 The ice cream wala's cart plays a tinny loop of a film song. You get an orange bar. It's mostly ice and a rumour of orange, and for a few minutes on the lakeside bench that is exactly enough.
 
 <<hubreturn>>
 
 
 :: sunita_interaction
+<<img "kothrud_aai_kitchen.png" "Aai in the kitchen">>
 Aai is in the kitchen, which is where Aai is. "Beta, kha liya? Sirf dosa? Dosa mein kya hota hai   maida aur aloo."<span class="gloss-en">Son, have you eaten? Just a dosa? What's in a dosa   refined flour and potato.</span> She's already ladling something onto a plate you didn't ask for. "Sunday aa. Pooja ko maths samjha. Main mutton le lungi."<span class="gloss-en">Come Sunday. Teach Pooja maths. I'll get mutton.</span>
 
 The invitation is a command wrapped in love wrapped in calories. You say //dekhta hoon//.<span class="gloss-en">I'll see.</span> She hears //yes//.
@@ -178,6 +185,7 @@ The invitation is a command wrapped in love wrapped in calories. You say //dekht
 
 
 :: suresh_interaction
+<<img "kothrud_papa_livingroom.png" "Papa in the living room">>
 Papa lowers the newspaper. "Placement season aa raha hai. Resume ready hai? LIC mein bhi opening hai, back-office   permanent, pension."<span class="gloss-en">Placement season is coming. Is your resume ready? There's an opening at LIC too, back-office   permanent, pension.</span> He means well. He measures a life in permanence and pension and cannot understand why that isn't comforting.
 
 "Dekhta hoon, Papa."<span class="gloss-en">I'll see, Papa.</span>
@@ -186,6 +194,7 @@ Papa lowers the newspaper. "Placement season aa raha hai. Resume ready hai? LIC 
 
 
 :: pooja_interaction
+<<img "kothrud_pooja_sofa.png" "Pooja on the sofa">>
 Pooja is on the sofa, textbooks unopened, phone very open. "Bhaiya WiFi password   SunitaAai2024, capital S, I know, it's cringe, Papa set it."<span class="gloss-en">Brother, WiFi password  </span> Then, without looking up: "Meera bhabhi ka update?<span class="gloss-en">Any update on Meera bhabhi (sister-in-law)?</span> ...Sorry. That was mean. Love you bhaiya. Come Sunday, Aai's making mutton."
 
 Seventeen years old and already more emotionally perceptive than most adults you know.

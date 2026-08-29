@@ -375,19 +375,40 @@ institutional textures. Arjun consistent with IMG-001.
 - **IMG-092** `arjun_ground_bench.png` (`arjun_ground_reflection`): the young man sitting alone on a bench at the edge of a sports ground / old spectator stands, gold hour light, a couple pretending to study two benches away. Nostalgic, still.
 - **IMG-093** `vit_ground_stands.png` (`smoking_spot_encounter`): the shaded underside / back of concrete spectator stands, a small group of students in a cigarette haze, one offering a cigarette to the protagonist who is refusing with a head-shake. Backlit, dusty light shafts.
 
+### IMG-094 to IMG-107: Katraj / Sinhagad / Kothrud vignettes (already wired)
+Arjun's own neighbourhood, the evening ride, and the family home. Grey-blue
+Katraj mornings; gold-hour mountain road; warm cluttered middle-class flat.
+Also two location backgrounds: `katraj_snake_park.png` (IMG-022) and
+`sinhagad_road.png` (IMG-023).
+
+- **IMG-094** `arjun_stray_dog.png` (`stray_dog_scene`): a bony brown street dog at the chai tapri looking up hopefully at a young man, Parle-G biscuit packet in frame. Morning, tin roof, kettle steam.
+- **IMG-095** `arjun_newspaper.png` (`news_of_day`): hands holding a creased Marathi/English newspaper at a tapri bench, a cutting chai glass on the ledge, an older man reading beside him. Ordinary morning.
+- **IMG-096** `pg_notice_board.png` (`pg_notices`): a grubby whiteboard/paper notice board in a PG stairwell — water-timing notice, rent-due note with a hand-drawn line, a lost-key notice. Peeling paint, a slipper on the stair. No people.
+- **IMG-097** `pg_landlord_sharma.png` (`landlord_interaction`): a sixty-something Maharashtrian man in a white undershirt and reading glasses opening a flat door a crack, unimpressed. Dim landing light.
+- **IMG-098** `panwala_bhau.png` (`panwala_interaction`): a paan/cigarette stall with a glass cabinet of gutka and toffees, run by a moustached man with a gold chain and red tilak, hand resting on the counter. Street-corner light, hanging foil strips.
+- **IMG-099** `katraj_fruit_cart.png` (`fruit_vendor_npc`): a wooden handcart piled with pomegranates, guavas and a pyramid of sitaphal (custard apple), an older woman in a nine-yard saree weighing fruit on a hand balance. Roadside, dappled light.
+- **IMG-100** `katraj_jogging_track.png` (`katraj_walk`): a paved lakeside jogging track at Katraj, a lone young man walking hands-in-pockets while fitter people overtake, grey morning water and reeds to one side.
+- **IMG-101** `katraj_ice_bar.png` (`ice_cream_vendor_npc`): a hand holding a half-melted orange ice bar on a stick, a small brightly-stickered ice-cream cart blurred behind, a lake bench. Overcast light, small pleasure.
+- **IMG-102** `sinhagad_dhaba.png` (`sinhagad_dhaba_scene`): a tin-roofed roadside dhaba halfway up the Sinhagad approach road — four plastic tables, a kerosene stove, an old man with a cloth-wrapped head, all of Pune's lights spread out below at dusk.
+- **IMG-103** `kothrud_aai_kitchen.png` (`sunita_interaction`): a middle-aged Maharashtrian woman in a saree in a small home kitchen, already ladling food onto a steel plate, steam rising, pressure cooker on the flame. Warm tube-light yellow.
+- **IMG-104** `kothrud_papa_livingroom.png` (`suresh_interaction`): a middle-aged man lowering a newspaper in an armchair in a modest 2BHK living room, LIC calendar on the wall behind, TV murmuring. He looks like he's about to give practical advice.
+- **IMG-105** `kothrud_pooja_sofa.png` (`pooja_interaction`): a teenage girl sprawled on a sofa, school textbooks shut beside her, phone held up, mid-eye-roll but affectionate. Cluttered homey living room.
+- **IMG-106** `kothrud_family_meal.png` (`home_meal_scene`): a family of four (or three plus an empty-ish place) at a small dining table with steel thalis, an extra serving already on the guest's plate, warm light. The ache of being fed too much love.
+- **IMG-107** `kothrud_old_bedroom.png` (`arjun_childhood_room`): a small bedroom half-converted to a study — cricket trophies still on a shelf, a faded Sachin Tendulkar poster, a framed school photo of a boy at sixteen on the desk. Nostalgic afternoon light. No people.
+
 ---
 
 ## TOTAL IMAGE COUNT   DAY 1
 
 ```
 Character Reference Sheets:     5  (IMG-001 to IMG-005)
-Location Backgrounds:           10  (IMG-010 to IMG-020) + pg_bathroom IMG-021
+Location Backgrounds:           13  (IMG-010 to IMG-023)
 Scene Illustrations:            10  (IMG-030 to IMG-039)
 UI Elements:                     5  (IMG-040 to IMG-044)
 Expression Variants:            19  (IMG-050 to IMG-068)
-Ambient room-action vignettes: 24  (IMG-070 to IMG-093, scenes/common/)
+Ambient room-action vignettes: 38  (IMG-070 to IMG-107, scenes/common/)
 ─────────────────────────────────────
-TOTAL:                          74 images
+TOTAL:                          90 images
 
 PRIORITY ORDER FOR PRODUCTION:
 1. Character references (needed for all scenes)

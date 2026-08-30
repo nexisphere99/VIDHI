@@ -15,7 +15,9 @@
     "dist": "electron-builder",
     "dist:mac": "electron-builder --mac",
     "dist:win": "electron-builder --win",
-    "dist:linux": "electron-builder --linux"
+    "dist:linux": "electron-builder --linux",
+    "dist:all": "electron-builder --mac --linux --win",
+    "release": "(cd .. && ./build.sh) && npm run dist:all"
   },
   "devDependencies": {
     "electron": "^33.0.0",
@@ -26,7 +28,7 @@
     "productName": "VIDHI",
     "copyright": "© vidhidevs",
     "directories": {
-      "output": "release",
+      "output": "release/${version}",
       "buildResources": "build"
     },
     "files": [

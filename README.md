@@ -53,10 +53,12 @@ module and is the reliable regression test for the progression logic.
 ./build.sh                 # produce dist/ first (it's what the app ships)
 cd desktop && npm install
 npm start                  # run the desktop app
-npm run dist               # build installers -> desktop/release/
+npm run dist:all           # mac + linux + windows installers -> desktop/release/<version>/
 ```
 
-See [`desktop/README.md`](desktop/README.md) for targets, icons and notes.
+`npm run release` re-runs `build.sh` first, then `dist:all`. See
+[`desktop/README.md`](desktop/README.md) for single-platform targets, icons
+and cross-building notes (Windows needs Wine on a Mac host).
 
 ---
 

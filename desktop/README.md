@@ -53,12 +53,24 @@ cd desktop
 npm run release       # runs ../build.sh, then dist:all
 ```
 
-Everything lands in **`desktop/release/<version>/`** (e.g. `release/0.3.0/`),
-one folder per `version` in `package.json`.
+### Version = the git branch you're on
+
+`dist*` builds go through `scripts/dist.js`, which sets the version from the
+**current git branch**, not from `package.json`:
+
+| branch | version | output folder |
+|--------|---------|---------------|
+| `0.1`  | `0.1.0` | `release/0.1.0/` |
+| `0.2`  | `0.2.0` | `release/0.2.0/` |
+| `0.3`  | `0.3.0` | `release/0.3.0/` |
+
+So `git checkout 0.1 && npm run dist:all` builds `0.1.0`   you never have to
+remember to bump `package.json`. (`npm run version` prints what it resolved;
+on a non-`x.y` branch it falls back to the `package.json` number.)
 
 ### The files you actually ship
 
-Every `dist*` script runs `scripts/prune-release.js` at the end, which deletes
+`scripts/dist.js` also runs `prune-release.js` at the end, which deletes
 everything from `release/<version>/` that isn't a shippable installer   the
 `*.blockmap` auto-update deltas, the `latest*.yml` update manifests, the
 `builder-*.y*ml` build logs, and the `*-unpacked/` / `mac*/` intermediate app
@@ -98,10 +110,17 @@ brew install --cask wine-stable
 ```
 
 Without it, the Windows step half-runs and leaves a stray `*.nsis.7z` (not a
-usable installer)   `dist:all` won't error, you just get no `.exe`. Build
-the Windows target on Windows, or run `dist:all` inside the
-`electronuserland/builder` Docker image / a GitHub Actions OS matrix for a
-zero-setup all-platform build.
+usable installer)   `dist:all` won't error, you just get no `.exe` (prune
+clears the `.nsis.7z` too). Build the Windows target on Windows, or run
+`dist:all` inside the `electronuserland/builder` Docker image / a GitHub
+Actions OS matrix for a zero-setup all-platform build.
+
+**`unable to execute hdiutil ... detach ... Resource busy`:** a DMG volume
+from a previous build is still mounted. `scripts/dist.js` force-detaches any
+`/Volumes/VIDHI *` before building, and the two `.dmg`s now get per-arch
+volume titles so arm64 and x64 can't collide. If it still happens, run
+`hdiutil detach -force "/Volumes/VIDHI 0.1.0 arm64"` (or whatever `mount`
+shows) and rebuild.
 
 ### Code signing
 
@@ -145,6 +164,7 @@ Without them the default Electron icon is used.
 
 ## Version
 
-Bump `version` in `desktop/package.json` to match the release
-(`0.1` / `0.2` / `0.3` branch). It drives the installer filenames and the
-in-app "About" version.
+`dist*` derive the version from the git branch (see above)   nothing to bump.
+The `version` in `desktop/package.json` is only a fallback for builds off a
+branch that isn't named `x.y` / `x.y.z`; keep it roughly in sync with the
+branch anyway so `npm start` / the in-app "About" show a sane number.

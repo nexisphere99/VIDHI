@@ -224,7 +224,7 @@ jm_road, pharmacology_hall, room_308   all wired.
 
 ## Day 3   "Pehla Badlav"  (prompts: story_files/day_3/day3_image_prompts.md)
 
-Day 3 scene illustrations -> `scenes/day3/`  (all art pending):
+Day 3 scene illustrations -> `scenes/day3/`  (all wired):
 ```
 pataleshwar_dawn.png         IMG-200    arjun_first_kavya_body.png   IMG-201
 kavya_first_arjun_body.png   IMG-202    kavya_pulsar_ride.png        IMG-203

@@ -139,11 +139,10 @@ Portrait bust of Arjun's face with an expression of startled alarm — eyes wide
 
 ---
 
-## ADDED IN IMPLEMENTATION — extra Day 3 scenes (art pending)
+## ADDED IN IMPLEMENTATION — extra Day 3 scenes
 
 These passages were written after this prompt doc and the game already
-references the images below. Until the art exists they render as captioned
-placeholder frames.
+references the images below. Art added and wired.
 
 ### IMG-212: Arjun's PG Room — Pre-Dawn
 **File:** `katraj_pg_night.png`

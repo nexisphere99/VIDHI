@@ -3016,7 +3016,8 @@ setup.phoneTab = function (which, tab) {
       { id: "d3_arjun_sleep", action: "Lie down. Set the alarm for 4:15. End Day 3.", triggers: "day3_sleep", quest: "main" }
     ],
     npcs: [],
-    exits: []
+    exits: [],
+    image: "pg_room_kavya_pov.png"
   };
   L.kavya.hostel_room_304_night_d3 = {
     name: "Room 304   Home Again",
@@ -3027,7 +3028,8 @@ setup.phoneTab = function (which, tab) {
       { id: "d3_kavya_sleep", action: "Lie down. Set the alarm for 4:15. End Day 3.", triggers: "day3_sleep", quest: "main" }
     ],
     npcs: [],
-    exits: []
+    exits: [],
+    image: "room_304_arjun_pov.png"
   };
 
   /* ---- helpers (same as day2) ---- */
@@ -3254,7 +3256,11 @@ setup.phoneTab = function (which, tab) {
     "pg_room_kavya_pov.png": "scenes/day3", "katraj_pg_night.png": "scenes/day3",
     "hostel_304_night.png": "scenes/day3", "pataleshwar_approach.png": "scenes/day3",
     "day3_briefing.png": "scenes/day3", "meera_close.png": "scenes/day3",
-    "vit_library_cs.png": "scenes/day3", "vit_cs_lab_doorway.png": "scenes/day3"
+    "vit_library_cs.png": "scenes/day3", "vit_cs_lab_doorway.png": "scenes/day3",
+    /* Day 3 expression busts   not shown in-scene yet, kept for a future gallery */
+    "arjun_kavya_panic.png": "characters", "arjun_kavya_tender.png": "characters",
+    "kavya_arjun_wonder.png": "characters", "kavya_arjun_coding_joy.png": "characters",
+    "kavya_arjun_erection_panic.png": "characters"
   });
   setup._restLocs.arjun.push("hostel_room_304_d3", "hostel_terrace_d3", "bj_campus_path_d3", "pataleshwar_temple_d3");
   setup._restLocs.kavya.push("katraj_pg_room_d3", "tapri_chai_d3", "vit_canteen_d3", "vit_library_d3", "pataleshwar_temple_d3");

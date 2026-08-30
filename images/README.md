@@ -199,6 +199,9 @@ characters/  (portraits + expression variants   catalogued, NOT shown in any
     arjun_shock_hope.png / arjun_restrained.png / kavya_contract.png
     kavya_vulnerable_night.png / meera_commander.png
     priya_suspicious_d2.png / rohit_concerned_d2.png                   (IMG-140–146)
+    arjun_kavya_panic.png / arjun_kavya_tender.png
+    kavya_arjun_wonder.png / kavya_arjun_coding_joy.png
+    kavya_arjun_erection_panic.png                                     (IMG-220–224)
 ```
 
 Day 2 scene illustrations -> `scenes/day2/`  (all wired):
@@ -250,8 +253,9 @@ Meera / CS additions:
 Pre-dawn / handover additions:
 - `katraj_pg_night.png`   Arjun's dark PG room at 4 AM, Rohit a mound under a
   blanket, riding jacket on the chair, keys in hand. Cold blue night light.
-- `hostel_304_night.png`   Room 304 at 3:55 AM, two roommates asleep, Meera's
-  bed empty and made, a folded salwar on the chair. Same cold palette.
+- `hostel_304_night.png`   Room 304 at 3:55 AM, two roommates asleep, Meera
+  sitting up awake against the wall (she can't leave campus, she stays behind),
+  a folded salwar on the chair. Same cold palette.
 - `pataleshwar_approach.png`   the empty ghat road up to the cave temple before
   dawn, a single headlight / a lone walking figure, sodium streetlights, sky
   just starting to thin. Used for both the ride and the walk.

@@ -7,7 +7,7 @@
 ## SCENE ILLUSTRATIONS
 
 ### IMG-200: Pataleshwar Temple — Pre-Dawn Swap
-**File:** `pataleshwar_dawn.jpg`
+**File:** `pataleshwar_dawn.png`
 **Insertion:** Day 3 opening, both characters
 **Prompt:**
 ```
@@ -15,7 +15,7 @@ Ancient rock-cut cave temple courtyard at pre-dawn (5 AM), two young people sitt
 ```
 
 ### IMG-201: Arjun's First Moment in Kavya's Body
-**File:** `arjun_first_kavya_body.jpg`
+**File:** `arjun_first_kavya_body.png`
 **Insertion:** `day3_arjun_main_scenes.md Scene 2`
 **Prompt:**
 ```
@@ -23,7 +23,7 @@ A young Indian woman's body (Kavya — dusky skin, wavy hair, beauty mark) in th
 ```
 
 ### IMG-202: Kavya's First Moment in Arjun's Body
-**File:** `kavya_first_arjun_body.jpg`
+**File:** `kavya_first_arjun_body.png`
 **Insertion:** `day3_kavya_main_scenes.md Scene 1`
 **Prompt:**
 ```
@@ -31,7 +31,7 @@ A young Indian man's body (Arjun — wheat skin, stubble, lean build) in the tem
 ```
 
 ### IMG-203: Kavya Riding the Pulsar
-**File:** `kavya_pulsar_ride.jpg`
+**File:** `kavya_pulsar_ride.png`
 **Insertion:** `day3_kavya_main_scenes.md Scene 2`
 **Prompt:**
 ```
@@ -39,7 +39,7 @@ A young Indian man (Arjun's body) riding a black Bajaj Pulsar 150 through empty 
 ```
 
 ### IMG-204: Meera Reunion
-**File:** `meera_reunion.jpg`
+**File:** `meera_reunion.png`
 **Insertion:** `day3_arjun_main_scenes.md Scene 4`
 **Prompt:**
 ```
@@ -47,7 +47,7 @@ Two young Indian women embracing in a hostel room — one (Meera — fair, loose
 ```
 
 ### IMG-205: Arjun's Anatomy Horror
-**File:** `arjun_anatomy_horror.jpg`
+**File:** `arjun_anatomy_horror.png`
 **Insertion:** `day3_arjun_main_scenes.md Scene 6`
 **Prompt:**
 ```
@@ -55,7 +55,7 @@ A young Indian woman (Kavya's body) in a white coat at a dissection table, dupat
 ```
 
 ### IMG-206: Kavya in CS Lecture — The Brilliant Answer
-**File:** `kavya_cs_lecture.jpg`
+**File:** `kavya_cs_lecture.png`
 **Insertion:** `day3_kavya_main_scenes.md Scene 4`
 **Prompt:**
 ```
@@ -63,7 +63,7 @@ A young Indian man (Arjun's body) standing in a college lecture hall, one hand r
 ```
 
 ### IMG-207: Kavya Coding Ecstasy
-**File:** `kavya_coding_joy.jpg`
+**File:** `kavya_coding_joy.png`
 **Insertion:** `day3_kavya_main_scenes.md Scene 6`
 **Prompt:**
 ```
@@ -71,7 +71,7 @@ A young Indian man (Arjun's body) sitting at a desk with a laptop and external m
 ```
 
 ### IMG-208: Rohit Canteen Confrontation — Day 3
-**File:** `kavya_rohit_canteen.jpg`
+**File:** `kavya_rohit_canteen.png`
 **Insertion:** `day3_kavya_npc_sidequests.md → Rohit canteen scene`
 **Prompt:**
 ```
@@ -83,7 +83,7 @@ Two young Indian men at a college canteen table. One (Rohit — stocky, bearded)
 ## NEW LOCATION BACKGROUNDS
 
 ### IMG-210: Room 304 — Arjun's POV
-**File:** `room_304_arjun_pov.jpg`
+**File:** `room_304_arjun_pov.png`
 **Insertion:** `day3_arjun_hub.tw → hostel_room_304_d3`
 **Prompt:**
 ```
@@ -91,7 +91,7 @@ Interior of hostel Room 304 but viewed with FRESH EYES — the familiar room ren
 ```
 
 ### IMG-211: PG Room — Kavya's POV
-**File:** `pg_room_kavya_pov.jpg`
+**File:** `pg_room_kavya_pov.png`
 **Insertion:** `day3_kavya_hub.tw → katraj_pg_room_d3`
 **Prompt:**
 ```
@@ -103,38 +103,102 @@ Interior of the boys' PG room viewed with WONDER — the messy room (Maggi tower
 ## CHARACTER EXPRESSION VARIANTS — DAY 3
 
 ### IMG-220: Arjun-in-Kavya — Panic
-**File:** `arjun_kavya_panic.jpg`
+**File:** `arjun_kavya_panic.png`
 **Prompt:**
 ```
 Portrait bust of Kavya's face (dusky, beauty mark, wavy hair) but wearing ARJUN'S panic — wide eyes, slightly open mouth, the expression of a masculine mind confronting feminine physicality. Hair messy, falling in face. The beauty mark is prominent. Semi-realistic, consistent with Kavya reference but WRONG expression.
 ```
 
 ### IMG-221: Arjun-in-Kavya — Tender
-**File:** `arjun_kavya_tender.jpg`
+**File:** `arjun_kavya_tender.png`
 **Prompt:**
 ```
 Portrait bust of Kavya's face looking at someone (Meera) with Arjun's love — soft eyes, the specific tenderness of a man seeing the woman he loves after six months, but through another woman's features. Tears on cheeks. The dissonance of masculine devotion in feminine features. Semi-realistic, warm close-up tones.
 ```
 
 ### IMG-222: Kavya-in-Arjun — Wonder
-**File:** `kavya_arjun_wonder.jpg`
+**File:** `kavya_arjun_wonder.png`
 **Prompt:**
 ```
 Portrait bust of Arjun's face (wheat skin, stubble, long wavy hair) wearing Kavya's intellectual wonder — sharp focus, slight upward curve of lips, eyes bright with discovery. The expression is too controlled, too precise for Arjun's usually relaxed features. It's a woman's curiosity in a man's face. Semi-realistic.
 ```
 
 ### IMG-223: Kavya-in-Arjun — Coding Joy
-**File:** `kavya_arjun_coding_joy.jpg`
+**File:** `kavya_arjun_coding_joy.png`
 **Prompt:**
 ```
 Portrait bust of Arjun's face illuminated by monitor light, expression of pure unguarded joy — a rare single tear on stubbled cheek, eyes reflecting code on screen, the face of someone who has reached home after years of exile. Semi-realistic, blue-white screen glow on warm skin.
 ```
 
 ### IMG-224: Kavya-in-Arjun — Erection Panic
-**File:** `kavya_arjun_erection_panic.jpg`
+**File:** `kavya_arjun_erection_panic.png`
 **Prompt:**
 ```
 Portrait bust of Arjun's face with an expression of startled alarm — eyes widened, slight blush on wheat cheeks, the specific look of someone experiencing an unexpected physical event they can't control. The panic is distinctly feminine — more bewildered than embarrassed. Semi-realistic, warm room lighting. Tasteful — the expression tells the story.
+```
+
+---
+
+## ADDED IN IMPLEMENTATION — extra Day 3 scenes (art pending)
+
+These passages were written after this prompt doc and the game already
+references the images below. Until the art exists they render as captioned
+placeholder frames.
+
+### IMG-212: Arjun's PG Room — Pre-Dawn
+**File:** `katraj_pg_night.png`
+**Insertion:** `arjun_predawn_d3` (Day 3, ~4:00 AM, Arjun's own body)
+**Prompt:**
+```
+A cramped Indian PG room at 4 AM, near-total dark cut only by a phone screen and a sodium streetlight through a thin curtain. One cot holds a mound of blanket and a sleeping boy (Rohit); the other is empty, sheet thrown back. A riding jacket hangs on a plastic chair, a motorcycle key held in a hand at the edge of frame. Axe deodorant, stale Maggi cups, a gym bag. Cold blue-black palette, one warm phone-glow accent. Semi-realistic digital illustration, the stillness of a room someone is about to leave before dawn.
+```
+
+### IMG-213: Room 304 — Pre-Dawn, Meera Awake
+**File:** `hostel_304_night.png`
+**Insertion:** `kavya_predawn_d3` (Day 3, ~3:55 AM, Kavya's own body)
+**Prompt:**
+```
+A three-bed Indian girls' hostel room at 3:55 AM. Two roommates asleep (one flat on her back, notes on her chest; one a comma under blankets). On the third bed a young woman (Meera, white kurta) sits up against the wall, knees to her chest, awake, watching. A folded maroon salwar kameez and a dupatta are laid over a chair. Faint grey pre-dawn at the window, one small nightlight. Cold palette, quiet, the ache of someone who has to stay behind. Semi-realistic digital illustration.
+```
+
+### IMG-214: The Ghat Road to Pataleshwar — Pre-Dawn
+**File:** `pataleshwar_approach.png`
+**Insertion:** `arjun_ride_temple_d3` AND `kavya_walk_temple_d3`
+**Prompt:**
+```
+An empty two-lane ghat road winding uphill toward a dark cave-temple hill before dawn. Sodium streetlights, a single motorcycle headlight cutting the frame (or, alternate crop, a lone figure in a salwar walking with a dupatta pulled over the head). Shuttered shopfronts, a stray dog, one milk van. The sky is just beginning to thin at the horizon, deep indigo overhead. Semi-realistic digital illustration, cold pre-dawn palette with a warm headlight/streetlight accent, the loneliness of the hour before a city wakes.
+```
+
+### IMG-215: The Handover — Just After the Swap
+**File:** `day3_briefing.png`
+**Insertion:** `day3_briefing` (immediately after `day3_swap`)
+**Prompt:**
+```
+Two young people sitting knee to knee inside a circle of red kumkum on ancient temple stone, grey dawn coming up behind the caves. The visual trick: each wears the OTHER's face on the wrong body — the young man's body (Arjun's) with a woman's sharp composure and a folded sheet of ruled paper in hand; the young woman's body (Kavya's) with a man's stunned, coming-apart expression, one small ringed hand pressed to its own face. They are mid-conversation, one talking, one nodding. A single oil lamp. Semi-realistic digital illustration, pre-dawn blue with kumkum-red and lamp-gold, the fifteen-minute crash course.
+```
+
+### IMG-216: Time Alone with Meera
+**File:** `meera_close.png`
+**Insertion:** `meera_close_d3` (Day 3 afternoon, Room 304, Priya out)
+**Prompt:**
+```
+Room 304, door bolted, warm afternoon light. Two women on a narrow single cot — one (Meera, white kurta, undone braid) holding the other, who is curled small against her chest. The held one has Kavya's body and face but the posture and the eyes are a man's — the geometry inverted, he is the small one now. Tender, not sexual: a hand in hair, foreheads close, the exhaustion of six months apart finally set down. A folded palm-leaf manuscript on the desk. Semi-realistic digital illustration, warm amber afternoon tones, the emotional core of the whole day.
+```
+
+### IMG-217: VIT Library — The Algorithms Aisle
+**File:** `vit_library_cs.png`
+**Insertion:** `kavya_library_d3` (Day 3, Kavya in Arjun's body)
+**Prompt:**
+```
+The computer-science aisle of a university library — cool, carpeted, hushed. Floor-to-ceiling shelves of hardcover algorithms and systems texts (CLRS, Sedgewick, the Dragon Book, bound conference proceedings). A young man (Arjun's body) stands holding one heavy hardcover open, expression of quiet want fulfilled — a woman's reverence in a man's face. Fluorescent light, a window with late-morning sun at the aisle's end. Semi-realistic digital illustration, cool library palette with one warm window accent, the feeling of finally touching the real thing after years of bad PDFs.
+```
+
+### IMG-218: The CS Lab Doorway
+**File:** `vit_cs_lab_doorway.png`
+**Insertion:** `kavya_cs_lab_first_d3` (Day 3, Kavya in Arjun's body)
+**Prompt:**
+```
+POV / over-shoulder from the doorway of a proper university CS computer lab: rows of dual-monitor Dell machines, good mechanical keyboards, ceiling projectors, a whiteboard wall, one air-conditioner. A lab assistant at a desk not looking up. In the foreground edge, a young man (Arjun's body) pausing on the threshold — you read it in the shoulders — before stepping in. The room is ordinary; the moment is not. Semi-realistic digital illustration, cool even lab lighting, the hush before someone enters the room they were always aimed at.
 ```
 
 ---
@@ -144,11 +208,12 @@ Portrait bust of Arjun's face with an expression of startled alarm — eyes wide
 ```
 Scene Illustrations:              9  (IMG-200 to IMG-208)
 New Location Backgrounds:         2  (IMG-210 to IMG-211)
-Expression Variants:              5  (IMG-220 to IMG-224)
+Expression Variants:              5  (IMG-220 to IMG-224)   [not wired   future gallery]
+Implementation additions:        7  (IMG-212 to IMG-218)   [wired, art pending]
 ─────────────────────────────────────
-DAY 3 NEW IMAGES:                16
+DAY 3 NEW IMAGES:                23
 
-CUMULATIVE (Day 1 + 2 + 3):    101 images
+CUMULATIVE (Day 1 + 2 + 3):    108 images
 
 PRIORITY ORDER:
 1. Swap scene (IMG-200) — the defining moment

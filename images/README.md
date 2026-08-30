@@ -190,19 +190,29 @@ locations/
     jm_road.png                IMG-103
     pharmacology_hall.png      IMG-104
     room_308.png               IMG-105
-characters/
+characters/  (portraits + expression variants   catalogued, NOT shown in any
+             scene yet; reserved for a future NPC-gallery / portrait-bust feature,
+             same as the Day 1 *_reference.png set)
     anjali_portrait.png / mhatre_portrait.png / vikram_portrait.png
-    kulkarni_uncle_portrait.png / temple_priest_portrait.png / sanjay_portrait.png   (IMG-130–136, not wired yet)
+    kulkarni_uncle_portrait.png / temple_priest_portrait.png / sanjay_portrait.png
+    nikhil_expression_eager.png                                        (IMG-130–136)
+    arjun_shock_hope.png / arjun_restrained.png / kavya_contract.png
+    kavya_vulnerable_night.png / meera_commander.png
+    priya_suspicious_d2.png / rohit_concerned_d2.png                   (IMG-140–146)
 ```
 
-Day 2 scene illustrations -> `scenes/day2/`:
+Day 2 scene illustrations -> `scenes/day2/`  (all wired):
 ```
 arjun_call_bathroom.png      IMG-110    kavya_meera_planning.png     IMG-111
 arjun_distracted_lecture.png IMG-112    nikhil_canteen.png           IMG-113
 kavya_pharmacology.png       IMG-114    kavya_calling_arjun.png      IMG-115
 arjun_gym_punching.png       IMG-116    arjun_anticipation_night.png IMG-117
 kavya_body_catalogue.png     IMG-118    kavya_last_coding.png        IMG-119
-temple_priest.png            IMG-120    joshi_rounds_tense.png       IMG-121
-arjun_bed_selfplay_d2.png    IMG-122    kavya_bed_selfplay_d2.png    IMG-123   (last-night self-play, art pending)
-arjun_porn_d2.png            IMG-124    kavya_porn_d2.png            IMG-125   (last-night porn, art pending)
+temple_priest.png            IMG-120    joshi_rounds_tense.png       IMG-121  (EV_a2_joshi_rounds)
+arjun_bed_selfplay_d2.png    IMG-122    kavya_bed_selfplay_d2.png    IMG-123
+arjun_porn_d2.png            IMG-124    kavya_porn_d2.png            IMG-125
+swap_rules_ui.png            IMG-150    alarm_4am.png                IMG-151
 ```
+
+Location `image:` props: katraj_general_store, katraj_gym, pataleshwar_temple,
+jm_road, pharmacology_hall, room_308   all wired.

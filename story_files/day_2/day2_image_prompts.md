@@ -8,7 +8,7 @@
 ## NEW LOCATION BACKGROUNDS
 
 ### IMG-100: Katraj General Store
-**File:** `katraj_general_store.jpg`
+**File:** `katraj_general_store.png`
 **Insertion:** `day2_arjun_hub.tw → katraj_general_store` (new location)
 **Prompt:**
 ```
@@ -16,7 +16,7 @@ Small Indian neighborhood general store (kirana shop), narrow interior with floo
 ```
 
 ### IMG-101: Iron Temple Gym   Katraj
-**File:** `katraj_gym.jpg`
+**File:** `katraj_gym.png`
 **Insertion:** `day2_arjun_hub.tw → katraj_gym` (new location)
 **Prompt:**
 ```
@@ -24,7 +24,7 @@ Basement gym in an Indian neighborhood   low ceiling, concrete walls, fluorescen
 ```
 
 ### IMG-102: Pataleshwar Cave Temple
-**File:** `pataleshwar_temple.jpg`
+**File:** `pataleshwar_temple.png`
 **Insertion:** `day2_arjun_hub.tw → pataleshwar_temple` AND `day2_arjun_npc_sidequests.md Temple Priest scene`
 **Prompt:**
 ```
@@ -32,7 +32,7 @@ Ancient rock-cut cave temple in Pune India (Pataleshwar), carved from single bas
 ```
 
 ### IMG-103: JM Road   Jangli Maharaj Road
-**File:** `jm_road.jpg`
+**File:** `jm_road.png`
 **Insertion:** `day2_arjun_hub.tw → jm_road` (new location)
 **Prompt:**
 ```
@@ -40,7 +40,7 @@ Busy Pune city road (Jangli Maharaj Road) in the evening   tree-lined boulevard,
 ```
 
 ### IMG-104: Pharmacology Lecture Hall
-**File:** `pharmacology_hall.jpg`
+**File:** `pharmacology_hall.png`
 **Insertion:** `day2_kavya_hub.tw → bj_pharmacology_hall` (new location)
 **Prompt:**
 ```
@@ -48,7 +48,7 @@ Medical college lecture hall interior   tiered seating with wooden desks, a proj
 ```
 
 ### IMG-105: Room 308   Anjali's Room
-**File:** `room_308.jpg`
+**File:** `room_308.png`
 **Insertion:** `day2_kavya_npc_sidequests.md → Anjali scene`
 **Prompt:**
 ```
@@ -60,7 +60,7 @@ Indian girls' hostel room similar to Room 304 but messier   clothes draped over 
 ## SCENE-SPECIFIC ILLUSTRATIONS
 
 ### IMG-110: Arjun   The Bathroom Call
-**File:** `arjun_call_bathroom.jpg`
+**File:** `arjun_call_bathroom.png`
 **Insertion:** `day2_arjun_main_scenes.md Scene 1` (opening image)
 **Prompt:**
 ```
@@ -68,7 +68,7 @@ Young Indian man (Arjun   wheat skin, stubble, long wavy hair) sitting on a bath
 ```
 
 ### IMG-111: Kavya & Meera   The Planning Session
-**File:** `kavya_meera_planning.jpg`
+**File:** `kavya_meera_planning.png`
 **Insertion:** `day2_kavya_main_scenes.md Scene 1` (opening image)
 **Prompt:**
 ```
@@ -76,7 +76,7 @@ Two young Indian women in a hostel room, sitting cross-legged on adjacent beds f
 ```
 
 ### IMG-112: Arjun   Distracted in OS Lecture
-**File:** `arjun_distracted_lecture.jpg`
+**File:** `arjun_distracted_lecture.png`
 **Insertion:** `day2_arjun_main_scenes.md Scene 2`
 **Prompt:**
 ```
@@ -84,7 +84,7 @@ Young Indian man (Arjun) sitting in a lecture hall, notebook open but empty, pen
 ```
 
 ### IMG-113: Nikhil   Canteen ICPC Conversation
-**File:** `nikhil_canteen.jpg`
+**File:** `nikhil_canteen.png`
 **Insertion:** `day2_arjun_npc_sidequests.md → ICPC scene`
 **Prompt:**
 ```
@@ -92,7 +92,7 @@ Two young Indian men at a college canteen table. One (Nikhil   thin, round wire-
 ```
 
 ### IMG-114: Kavya   Pharmacology Surprise Test
-**File:** `kavya_pharmacology.jpg`
+**File:** `kavya_pharmacology.png`
 **Insertion:** `day2_kavya_main_scenes.md Scene 4`
 **Prompt:**
 ```
@@ -100,7 +100,7 @@ Young Indian woman (Kavya   dusky skin, beauty mark, maroon kameez with white co
 ```
 
 ### IMG-115: Kavya   Calling Arjun
-**File:** `kavya_calling_arjun.jpg`
+**File:** `kavya_calling_arjun.png`
 **Insertion:** `day2_kavya_main_scenes.md Scene 5`
 **Prompt:**
 ```
@@ -108,7 +108,7 @@ Young Indian woman (Kavya) sitting on a hostel bed at night, holding a cheap sma
 ```
 
 ### IMG-116: Arjun   Gym Punching Bag
-**File:** `arjun_gym_punching.jpg`
+**File:** `arjun_gym_punching.png`
 **Insertion:** `day2_arjun_npc_sidequests.md → Gym scene`
 **Prompt:**
 ```
@@ -116,7 +116,7 @@ Young Indian man (Arjun   lean build, black t-shirt soaked with sweat) mid-punch
 ```
 
 ### IMG-117: Arjun   Night Anticipation
-**File:** `arjun_anticipation_night.jpg`
+**File:** `arjun_anticipation_night.png`
 **Insertion:** `day2_arjun_main_scenes.md Scene 6` (intimate scene context)
 **Prompt:**
 ```
@@ -124,7 +124,7 @@ Young Indian man lying on his back in a dark room at night, one arm behind his h
 ```
 
 ### IMG-118: Kavya   Body Catalogue
-**File:** `kavya_body_catalogue.jpg`
+**File:** `kavya_body_catalogue.png`
 **Insertion:** `day2_kavya_main_scenes.md Scene 6` (intimate scene context)
 **Prompt:**
 ```
@@ -132,7 +132,7 @@ Young Indian woman (Kavya) lying in a hostel bed at night, moonlight casting sil
 ```
 
 ### IMG-119: Kavya   Last Coding Session
-**File:** `kavya_last_coding.jpg`
+**File:** `kavya_last_coding.png`
 **Insertion:** `day2_kavya_npc_sidequests.md → Last coding session`
 **Prompt:**
 ```
@@ -140,7 +140,7 @@ Young Indian woman in maroon salwar kameez sitting at an old desktop computer in
 ```
 
 ### IMG-120: Pataleshwar   Temple Priest
-**File:** `temple_priest.jpg`
+**File:** `temple_priest.png`
 **Insertion:** `day2_arjun_npc_sidequests.md → Temple Priest scene`
 **Prompt:**
 ```
@@ -148,7 +148,7 @@ An elderly Indian temple priest (70s, white dhoti, rudraksha bead necklace, thre
 ```
 
 ### IMG-121: Mrs. Joshi   Tense Night Rounds
-**File:** `joshi_rounds_tense.jpg`
+**File:** `joshi_rounds_tense.png`
 **Insertion:** `day2_kavya_npc_sidequests.md → Mrs. Joshi night rounds`
 **Prompt:**
 ```
@@ -169,7 +169,7 @@ not voyeurism. No explicit nudity   suggestion, shadow, cropping.
 ## NEW CHARACTER PORTRAITS
 
 ### IMG-130: Anjali (Room 308)
-**File:** `anjali_portrait.jpg`
+**File:** `anjali_portrait.png`
 **Insertion:** NPC gallery, Room 308 scenes
 **Prompt:**
 ```
@@ -177,7 +177,7 @@ Portrait bust of a young Indian woman, age 21, compact build, dark hair in a mes
 ```
 
 ### IMG-131: Dr. Mhatre
-**File:** `mhatre_portrait.jpg`
+**File:** `mhatre_portrait.png`
 **Insertion:** NPC gallery, pharmacology scenes
 **Prompt:**
 ```
@@ -185,7 +185,7 @@ Portrait bust of an Indian man in his 50s, thin build, wire-rimmed glasses, clea
 ```
 
 ### IMG-132: Gym Trainer Vikram
-**File:** `vikram_portrait.jpg`
+**File:** `vikram_portrait.png`
 **Insertion:** NPC gallery, gym scenes
 **Prompt:**
 ```
@@ -193,7 +193,7 @@ Portrait bust of a young Indian man, late 20s, 5'11", heavily muscular shoulders
 ```
 
 ### IMG-133: Kulkarni Uncle (General Store)
-**File:** `kulkarni_uncle_portrait.jpg`
+**File:** `kulkarni_uncle_portrait.png`
 **Insertion:** NPC gallery, store scenes
 **Prompt:**
 ```
@@ -201,7 +201,7 @@ Portrait bust of an elderly Indian man, 60s, bald head with grey fringe at sides
 ```
 
 ### IMG-134: Temple Priest
-**File:** `temple_priest_portrait.jpg`
+**File:** `temple_priest_portrait.png`
 **Insertion:** NPC gallery
 **Prompt:**
 ```
@@ -209,7 +209,7 @@ Portrait bust of an elderly Indian man, 70s, white beard, three horizontal ash l
 ```
 
 ### IMG-135: Auto Driver Sanjay
-**File:** `sanjay_portrait.jpg`
+**File:** `sanjay_portrait.png`
 **Insertion:** NPC gallery, tapri scene
 **Prompt:**
 ```
@@ -217,7 +217,7 @@ Portrait bust of an Indian man, 50s, handlebar mustache, weathered face, wearing
 ```
 
 ### IMG-136: Nikhil (Updated   Canteen context)
-**File:** `nikhil_expression_eager.jpg`
+**File:** `nikhil_expression_eager.png`
 **Insertion:** ICPC proposal scene
 **Prompt:**
 ```
@@ -229,49 +229,49 @@ Portrait bust of young Indian man (Nikhil   thin face, round wire-frame glasses,
 ## EXPRESSION VARIANTS   DAY 2 ADDITIONS
 
 ### IMG-140: Arjun   Shock/Hope
-**File:** `arjun_shock_hope.jpg`
+**File:** `arjun_shock_hope.png`
 **Prompt:**
 ```
 Portrait bust of Arjun (wheat skin, stubble, long wavy hair), expression: shock melting into hope   eyes wide but brightening, mouth slightly open, the moment between disbelief and belief. Toothpaste residue on chin (specific to bathroom call scene). Semi-realistic digital illustration.
 ```
 
 ### IMG-141: Arjun   Restrained Intensity
-**File:** `arjun_restrained.jpg`
+**File:** `arjun_restrained.png`
 **Prompt:**
 ```
 Portrait bust of Arjun, expression: jaw clenched, eyes burning with contained energy, the look of a man holding himself back   from speaking, from acting, from exploding. The tension visible in the tendons of his neck. Semi-realistic digital illustration.
 ```
 
 ### IMG-142: Kavya   Contract Mode
-**File:** `kavya_contract.jpg`
+**File:** `kavya_contract.png`
 **Prompt:**
 ```
 Portrait bust of Kavya (dusky skin, beauty mark, maroon dupatta), expression: businesslike, focused, one eyebrow slightly raised   the face of a woman negotiating terms she will not bend on. Mouth set in a firm line. Intelligence radiating from narrowed eyes. Semi-realistic digital illustration.
 ```
 
 ### IMG-143: Kavya   Vulnerability (Night)
-**File:** `kavya_vulnerable_night.jpg`
+**File:** `kavya_vulnerable_night.png`
 **Prompt:**
 ```
 Portrait bust of Kavya in soft moonlight, expression: guard completely down, eyes glistening, the raw face of a woman saying goodbye to her own body. Lips slightly parted. The beauty mark prominent. Hair loose and messy against a pillow. Semi-realistic digital illustration, silver-blue tones.
 ```
 
 ### IMG-144: Meera   Commander
-**File:** `meera_commander.jpg`
+**File:** `meera_commander.png`
 **Prompt:**
 ```
 Portrait bust of Meera (fair skin, braided hair, kajal eyes), expression: determined command   the quiet power of someone who's planned every detail and is now executing. Not aggressive   controlled. The dancer's composure applied to strategy. Semi-realistic digital illustration.
 ```
 
 ### IMG-145: Priya   Suspicious
-**File:** `priya_suspicious_d2.jpg`
+**File:** `priya_suspicious_d2.png`
 **Prompt:**
 ```
 Portrait bust of Priya (chubby, glasses, wheat complexion), expression: eyes narrowed behind glasses, head tilted slightly, the face of someone who's noticed something she can't quite name but won't forget. Phone still in hand, but attention fully on whoever she's looking at. Semi-realistic digital illustration.
 ```
 
 ### IMG-146: Rohit   Concerned Bro
-**File:** `rohit_concerned_d2.jpg`
+**File:** `rohit_concerned_d2.png`
 **Prompt:**
 ```
 Portrait bust of Rohit (stocky, bearded, basketball jersey), expression: brow furrowed, the comedy stripped away, genuine concern in his eyes   the face of a best friend who can see something is happening and is afraid for the person he cares about. Semi-realistic digital illustration.
@@ -282,7 +282,7 @@ Portrait bust of Rohit (stocky, bearded, basketball jersey), expression: brow fu
 ## UI ELEMENTS   DAY 2
 
 ### IMG-150: Swap Rules Document
-**File:** `swap_rules_ui.jpg`
+**File:** `swap_rules_ui.png`
 **Insertion:** Inventory system, when player views the rules artifact
 **Prompt:**
 ```
@@ -290,27 +290,11 @@ Phone screen mockup showing a notes app with the title "SWAP RULES v1.0" and nin
 ```
 
 ### IMG-151: Arjun's Alarm Screen
-**File:** `alarm_4am.jpg`
+**File:** `alarm_4am.png`
 **Insertion:** Preparation scene, alarm setting moment
 **Prompt:**
 ```
 Phone screen showing alarm set for 4:00 AM, toggle switched ON, the label reading "TEMPLE" in caps. Below it, the regular 7:00 AM alarm labeled "VIT" is toggled OFF. The phone screen is the last thing visible before darkness   the interface of a man whose tomorrow starts before dawn. Digital illustration, dark phone UI, the single bright element in a dark room.
-```
-
-### IMG-152: Map Update   New Locations
-**File:** `arjun_map_day2.jpg`
-**Insertion:** Map system overlay (updated from Day 1)
-**Prompt:**
-```
-Stylized illustrated map of Pune showing Day 1 locations PLUS new Day 2 additions highlighted with a golden "NEW" marker: Pataleshwar Cave Temple (drawn as a small carved stone structure), JM Road (bookshop and street food icons), Katraj Gym (dumbbell icon), Katraj General Store (small shop icon). Dotted path lines connecting new locations to existing network. The temple has a subtle golden glow   marking it as tomorrow's destination. Semi-realistic illustrated map, warm parchment tones, matching Day 1 map style.
-```
-
-### IMG-153: Kavya Map Update   Intel Overlay
-**File:** `kavya_map_day2.jpg`
-**Insertion:** Map system overlay (updated)
-**Prompt:**
-```
-Stylized illustrated map of the B.J. Medical Girls Hostel building, now with MORE DETAIL: Room 304 marked, Room 308 marked with a small "i" info icon, the kitchen area highlighted with a RED CIRCLE around the back window, the chowkidar's station marked, the compound wall shown with a low point marked. Time annotations: "7:30-8:00 PM   gap" near the kitchen. Mrs. Joshi's office marked on ground floor. The terrace marked with a stairway. This is Kavya's intel map   the hostel as a system with documented vulnerabilities. Semi-realistic illustrated blueprint style, warm parchment with red-ink annotations.
 ```
 
 ---

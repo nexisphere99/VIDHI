@@ -1285,7 +1285,7 @@ setup.debugGoDay = function (n) {
   if (n === V().day) { setup.restartDay(); }
   else {
     setup.beginDay(n);
-    setup.toast("swap", "DEBUG — jumped to Day " + n + ".");
+    setup.toast("swap", "DEBUG   jumped to Day " + n + ".");
   }
   return (setup.dayStart[n] && setup.dayStart[n].startPassage) || "Hub";
 };
@@ -1311,7 +1311,7 @@ setup.restartDay = function () {
   S.povUnlocked = ds.povUnlocked ? { arjun: !!ds.povUnlocked.arjun, kavya: !!ds.povUnlocked.kavya }
                                  : { arjun: true, kavya: true };
   setup.refreshObjectives();
-  setup.toast("swap", "DEBUG — Day " + d + " reset to its opening state.");
+  setup.toast("swap", "DEBUG   Day " + d + " reset to its opening state.");
   return "";
 };
 
@@ -1950,7 +1950,7 @@ setup.openLocationGuide = function () {
     });
     if (timed.length)
       h += "<div class='lg-row'><b>Timed action</b><span>" + timed.map(function (o) {
-        return "“" + o.action + "” — " + setup.fmtWindows(o.timeWindow);
+        return "“" + o.action + "”   " + setup.fmtWindows(o.timeWindow);
       }).join("<br>") + "</span></div>";
     h += "</div>";
   });

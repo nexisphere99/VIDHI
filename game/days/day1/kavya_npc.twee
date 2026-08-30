@@ -22,7 +22,7 @@ An idea detonates. //Give me an hour.//
 
 
 :: dosage_build_scene
-<<img "kavya_teaching_sneha.png" "Kavya teaching Sneha — the idea begins">>
+<<img "kavya_teaching_sneha.png" "Kavya teaching Sneha   the idea begins">>
 <<if setup.has("dosage_app_built")>>\
 The app is live on a Netlify subdomain. Sneha has already sent it to half of Section B. Nobody has asked how a medical student built it.
 <<hubreturn>>

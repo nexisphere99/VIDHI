@@ -212,6 +212,28 @@ Priya bursts back from her jog sweating and vibrating with narrative. Something 
 <<hubreturn>>
 
 
+:: EV_a2_joshi_rounds
+<<img "joshi_rounds_tense.png" "Mrs. Joshi in the doorway">>
+A knock that isn't a request. The door opens before either of you reaches it, and Mrs. Joshi fills the frame   cotton saree, reading glasses on their chain, clipboard flat against her forearm. Surprise night check. She does two or three a month and never on a schedule.
+
+Her eyes go around the room once, slow. The bolt (drawn back now, thank god). The manuscript (under Priya's mattress, out of sight). Meera sitting on her own bed with a pharmacology text open to a page she isn't reading. You at the desk.
+
+<div class="dialogue">"Priya kahan hai?"<span class="gloss-en">Where's Priya?</span></div>
+
+"Common room, ma'am. TV."
+
+<div class="dialogue">"Aur tum dono itni raat ko jaag ke kya kar rahi ho?"<span class="gloss-en">And what are you two doing up this late?</span></div>
+
+"Pharmac test tha aaj, kal viva hai."<span class="gloss-en">Had a pharmacology test today, viva tomorrow.</span> Meera doesn't even look up. Kavya's deadpan, borrowed.
+
+Mrs. Joshi holds the room another three seconds   long enough for it to be a message, not a question   ticks something on the clipboard, and pulls the door to.
+
+<div class="thought kavya">She didn't see anything. She never sees anything. But she //looked//, and tomorrow you'll be running an operation that only works if she keeps not-seeing. Rule five: if anyone gets suspicious, abort. File this under //narrowly fine.//</div>
+
+<<run setup.stat("warden_suspicion", 1)>>
+<<hubreturn>>
+
+
 :: Kavya2DayEnd [nobr]
 <<run setup.flag("kavya_day2_complete")>>
 <div class="title-screen">

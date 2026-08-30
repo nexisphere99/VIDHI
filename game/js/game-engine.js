@@ -2538,7 +2538,8 @@ setup.phoneTab = function (which, tab) {
     { day: 2, time: "14:00", character: "kavya", event: "a2_github_issue", passage: "EV_a2_github_issue" },
     { day: 2, time: "16:30", character: "kavya", event: "a2_meera_reminder", passage: "EV_a2_meera_reminder" },
     { day: 2, time: "18:30", character: "kavya", event: "a2_priya_gossip", setFlag: "priya_has_gossip", passage: "EV_a2_priya_gossip" },
-    { day: 2, time: "20:15", character: "kavya", event: "a2_priya_common", setFlag: "priya_in_common_room", passage: "EV_a2_priya_common" }
+    { day: 2, time: "20:15", character: "kavya", event: "a2_priya_common", setFlag: "priya_in_common_room", passage: "EV_a2_priya_common" },
+    { day: 2, time: "21:40", character: "kavya", event: "a2_joshi_rounds", passage: "EV_a2_joshi_rounds" }
   );
 
   /* ---- NAME / ITEM / IMAGE TABLES ---- */
@@ -2564,9 +2565,14 @@ setup.phoneTab = function (which, tab) {
     "temple_priest.png": "scenes/day2", "joshi_rounds_tense.png": "scenes/day2",
     "arjun_bed_selfplay_d2.png": "scenes/day2", "kavya_bed_selfplay_d2.png": "scenes/day2",
     "arjun_porn_d2.png": "scenes/day2", "kavya_porn_d2.png": "scenes/day2",
+    "alarm_4am.png": "scenes/day2", "swap_rules_ui.png": "scenes/day2",
     "anjali_portrait.png": "characters", "mhatre_portrait.png": "characters",
     "vikram_portrait.png": "characters", "kulkarni_uncle_portrait.png": "characters",
-    "temple_priest_portrait.png": "characters", "sanjay_portrait.png": "characters"
+    "temple_priest_portrait.png": "characters", "sanjay_portrait.png": "characters",
+    "nikhil_expression_eager.png": "characters", "arjun_shock_hope.png": "characters",
+    "arjun_restrained.png": "characters", "kavya_contract.png": "characters",
+    "kavya_vulnerable_night.png": "characters", "meera_commander.png": "characters",
+    "priya_suspicious_d2.png": "characters", "rohit_concerned_d2.png": "characters"
   });
   setup._restLocs.arjun.push("pataleshwar_temple", "jm_road", "katraj_general_store");
   setup._restLocs.kavya.push("hostel_room_308");

@@ -39,22 +39,52 @@ Loads `../dist/index.html` directly. Re-run `./build.sh` and hit
 
 ## Package installers
 
+**All three platforms in one go**, into a version folder:
+
 ```bash
 cd desktop
-npm run dist          # current OS
+npm run dist:all      # -> desktop/release/<version>/
+```
+
+or, to recompile the Twine game first and then build everything:
+
+```bash
+cd desktop
+npm run release       # runs ../build.sh, then dist:all
+```
+
+Everything lands in **`desktop/release/<version>/`** (e.g. `release/0.3.0/`),
+one folder per `version` in `package.json`:
+
+```
+release/0.3.0/
+  VIDHI-0.3.0-arm64.dmg      VIDHI-0.3.0-x64.dmg        (macOS)
+  VIDHI-0.3.0-arm64.zip      VIDHI-0.3.0-x64.zip
+  VIDHI-0.3.0-x64.exe        (Windows: NSIS installer + portable)
+  VIDHI-0.3.0-x86_64.AppImage (Linux)
+```
+
+Single-platform / faster variants:
+
+```bash
+npm run dist          # current OS only
 npm run dist:mac      # .dmg + .zip  (arm64 + x64)
 npm run dist:win      # NSIS installer + portable .exe
 npm run dist:linux    # AppImage
-npm run pack          # unpacked app dir only (fast, for testing)
+npm run pack          # unpacked app dir only (no installer)
 ```
 
-Output lands in `desktop/release/`. `electron-builder` copies `../dist`
-into the app as `Resources/dist` (see `extraResources` in `package.json`);
-`main.js` loads it from `process.resourcesPath` when packaged and from
-`../dist` in dev.
+`electron-builder` copies `../dist` into the app as `Resources/dist`
+(`extraResources` in `package.json`); `main.js` loads it from
+`process.resourcesPath` when packaged and from `../dist` in dev.
 
-Cross-compiling has the usual limits: build the Windows target on Windows
-(or with Wine), the macOS target on macOS.
+### Cross-building notes
+
+`npm run dist:all` works cleanly from one macOS host for **macOS + Linux**.
+For the **Windows** installer you also need **Wine** (`brew install --cask wine-stable`),
+otherwise skip it or build the Windows target on Windows / CI. For a
+guaranteed all-OS build with zero host setup, run `dist:all` inside the
+`electronuserland/builder` Docker image or a GitHub Actions matrix.
 
 ## Icons (optional)
 

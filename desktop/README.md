@@ -54,23 +54,30 @@ npm run release       # runs ../build.sh, then dist:all
 ```
 
 Everything lands in **`desktop/release/<version>/`** (e.g. `release/0.3.0/`),
-one folder per `version` in `package.json`:
+one folder per `version` in `package.json`.
 
-```
-release/0.3.0/
-  VIDHI-0.3.0-arm64.dmg      VIDHI-0.3.0-x64.dmg        (macOS)
-  VIDHI-0.3.0-arm64.zip      VIDHI-0.3.0-x64.zip
-  VIDHI-0.3.0-x64.exe        (Windows: NSIS installer + portable)
-  VIDHI-0.3.0-x86_64.AppImage (Linux)
-```
+### The files you actually ship
+
+| file | platform |
+|------|----------|
+| `VIDHI-<v>-mac-arm64.dmg`     | macOS, Apple Silicon |
+| `VIDHI-<v>-mac-x64.dmg`       | macOS, Intel |
+| `VIDHI-<v>-win-x64-setup.exe` | Windows installer |
+| `VIDHI-<v>-linux-x64.AppImage`| Linux, x86-64 |
+| `VIDHI-<v>-linux-arm64.AppImage`| Linux, ARM |
+
+**Ignore everything else** in the folder   `*.blockmap` (auto-update deltas),
+`builder-effective-config.yaml` (a build log), and the `*-unpacked/` /
+`mac*/` directories (intermediate app bundles). None of those are release
+artifacts.
 
 Single-platform / faster variants:
 
 ```bash
 npm run dist          # current OS only
-npm run dist:mac      # .dmg + .zip  (arm64 + x64)
-npm run dist:win      # NSIS installer + portable .exe
-npm run dist:linux    # AppImage
+npm run dist:mac      # both .dmg
+npm run dist:win      # NSIS .exe   (needs Wine, see below)
+npm run dist:linux    # both .AppImage
 npm run pack          # unpacked app dir only (no installer)
 ```
 
@@ -80,11 +87,32 @@ npm run pack          # unpacked app dir only (no installer)
 
 ### Cross-building notes
 
-`npm run dist:all` works cleanly from one macOS host for **macOS + Linux**.
-For the **Windows** installer you also need **Wine** (`brew install --cask wine-stable`),
-otherwise skip it or build the Windows target on Windows / CI. For a
-guaranteed all-OS build with zero host setup, run `dist:all` inside the
-`electronuserland/builder` Docker image or a GitHub Actions matrix.
+`npm run dist:all` from a macOS host builds **macOS + Linux** cleanly.
+The **Windows** installer additionally needs **Wine**:
+
+```bash
+brew install --cask wine-stable
+```
+
+Without it, the Windows step half-runs and leaves a stray `*.nsis.7z` (not a
+usable installer)   `dist:all` won't error, you just get no `.exe`. Build
+the Windows target on Windows, or run `dist:all` inside the
+`electronuserland/builder` Docker image / a GitHub Actions OS matrix for a
+zero-setup all-platform build.
+
+### Code signing
+
+The macOS `.dmg`s are **unsigned** (no Apple Developer ID). Users will hit
+Gatekeeper ("VIDHI is damaged / can't be opened")   they clear it with
+right-click -> Open once, or:
+
+```bash
+xattr -cr /Applications/VIDHI.app
+```
+
+Proper signing + notarization needs a paid Apple Developer account; add the
+identity to `mac.identity` / an `afterSign` notarize hook when you have one.
+Windows `.exe` is likewise unsigned (SmartScreen warning on first run).
 
 ## Icons (optional)
 

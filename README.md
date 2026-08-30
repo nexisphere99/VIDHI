@@ -40,6 +40,20 @@ node tools/sim.js              # drives a full playthrough of both characters'
 in this environment   use a real browser. `tools/sim.js` loads only the engine
 module and is the reliable regression test for the progression logic.
 
+### Desktop build (Electron)
+
+`desktop/` is a self-contained Electron shell that wraps the compiled
+`dist/`   it never touches the Twine sources.
+
+```bash
+./build.sh                 # produce dist/ first (it's what the app ships)
+cd desktop && npm install
+npm start                  # run the desktop app
+npm run dist               # build installers -> desktop/release/
+```
+
+See [`desktop/README.md`](desktop/README.md) for targets, icons and notes.
+
 ---
 
 ## Structure

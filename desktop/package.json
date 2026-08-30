@@ -11,13 +11,14 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir",
+    "version": "node scripts/version.js",
     "prune": "node scripts/prune-release.js",
-    "dist": "electron-builder && npm run prune",
-    "dist:mac": "electron-builder --mac && npm run prune",
-    "dist:win": "electron-builder --win && npm run prune",
-    "dist:linux": "electron-builder --linux && npm run prune",
-    "dist:all": "electron-builder --mac --linux --win && npm run prune",
+    "pack": "node scripts/dist.js --dir",
+    "dist": "node scripts/dist.js",
+    "dist:mac": "node scripts/dist.js --mac",
+    "dist:win": "node scripts/dist.js --win",
+    "dist:linux": "node scripts/dist.js --linux",
+    "dist:all": "node scripts/dist.js --mac --linux --win",
     "release": "(cd .. && ./build.sh) && npm run dist:all"
   },
   "devDependencies": {
@@ -52,7 +53,8 @@
       "artifactName": "${productName}-${version}-mac-${arch}.${ext}"
     },
     "dmg": {
-      "title": "${productName} ${version}"
+      "title": "${productName} ${version} ${arch}",
+      "writeUpdateInfo": false
     },
     "win": {
       "target": [

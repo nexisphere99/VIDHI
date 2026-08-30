@@ -12,11 +12,12 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "dist:mac": "electron-builder --mac",
-    "dist:win": "electron-builder --win",
-    "dist:linux": "electron-builder --linux",
-    "dist:all": "electron-builder --mac --linux --win",
+    "prune": "node scripts/prune-release.js",
+    "dist": "electron-builder && npm run prune",
+    "dist:mac": "electron-builder --mac && npm run prune",
+    "dist:win": "electron-builder --win && npm run prune",
+    "dist:linux": "electron-builder --linux && npm run prune",
+    "dist:all": "electron-builder --mac --linux --win && npm run prune",
     "release": "(cd .. && ./build.sh) && npm run dist:all"
   },
   "devDependencies": {

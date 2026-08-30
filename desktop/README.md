@@ -58,18 +58,21 @@ one folder per `version` in `package.json`.
 
 ### The files you actually ship
 
+Every `dist*` script runs `scripts/prune-release.js` at the end, which deletes
+everything from `release/<version>/` that isn't a shippable installer   the
+`*.blockmap` auto-update deltas, the `latest*.yml` update manifests, the
+`builder-*.y*ml` build logs, and the `*-unpacked/` / `mac*/` intermediate app
+bundles. What's left is exactly the release set:
+
 | file | platform |
 |------|----------|
-| `VIDHI-<v>-mac-arm64.dmg`     | macOS, Apple Silicon |
-| `VIDHI-<v>-mac-x64.dmg`       | macOS, Intel |
-| `VIDHI-<v>-win-x64-setup.exe` | Windows installer |
-| `VIDHI-<v>-linux-x64.AppImage`| Linux, x86-64 |
-| `VIDHI-<v>-linux-arm64.AppImage`| Linux, ARM |
+| `VIDHI-<v>-mac-arm64.dmg`        | macOS, Apple Silicon |
+| `VIDHI-<v>-mac-x64.dmg`          | macOS, Intel |
+| `VIDHI-<v>-win-x64-setup.exe`    | Windows installer |
+| `VIDHI-<v>-linux-x86_64.AppImage`| Linux, x86-64 |
+| `VIDHI-<v>-linux-arm64.AppImage` | Linux, ARM |
 
-**Ignore everything else** in the folder   `*.blockmap` (auto-update deltas),
-`builder-effective-config.yaml` (a build log), and the `*-unpacked/` /
-`mac*/` directories (intermediate app bundles). None of those are release
-artifacts.
+Run `npm run prune` by hand any time to clean an existing folder.
 
 Single-platform / faster variants:
 

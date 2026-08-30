@@ -30,7 +30,7 @@ Your thumb hovers over the red button. Insurance scams, political robocalls, the
 
 
 :: EV_a2_unknown_call_ring
-It stops. Ten seconds of silence. Then it buzzes again — same number. Some vertebra-level instinct makes your thumb move.
+It stops. Ten seconds of silence. Then it buzzes again   same number. Some vertebra-level instinct makes your thumb move.
 
 <div class="choices">
 <<link "Answer">><<goto "EV_a2_unknown_call_answer">><</link>>
@@ -100,15 +100,15 @@ Five-thirty. The light goes the colour of weak chai. The restlessness that's bee
 
 <div class="dialogue">"Sunday ko kal subah nahi hai. Sunday ko Sunday hai. 11 baje aa. Sheera bana rahi hoon. Pooja ne kaha tu khush lag raha hai   sach hai?"<span class="gloss-en">Sunday morning isn't tomorrow morning. Come at 11. I'm making sheera. Pooja says you seem happy   is it true?</span></div>
 
-The question sits between you. Your mother — a woman who teaches Class 4 Marathi and possesses the emotional radar of a Soviet-era early-warning system.
+The question sits between you. Your mother   a woman who teaches Class 4 Marathi and possesses the emotional radar of a Soviet-era early-warning system.
 
 <div class="choices">
 <div class="q">What do you tell her?</div>
-<<link "\"Haan, Aai. Thoda better.\" — Yes, Ma. A little better.">>
+<<link "\"Haan, Aai. Thoda better.\"   Yes, Ma. A little better.">>
 	<<run setup.flag("sunday_decision_made")>>
 	<<goto "EV_a2_aai_call_yes">>
 <</link>>
-<<link "\"Aai, main Sunday nahi aa paunga.\" — Ma, I can't make Sunday.">>
+<<link "\"Aai, main Sunday nahi aa paunga.\"   Ma, I can't make Sunday.">>
 	<<run setup.flag("sunday_decision_made")>>
 	<<goto "EV_a2_aai_call_no">>
 <</link>>
@@ -116,7 +116,7 @@ The question sits between you. Your mother — a woman who teaches Class 4 Marat
 
 
 :: EV_a2_aai_call_yes
-Silence. The kind that means she's crying — not sad, the silent grateful crying of a mother who watched her son dissolve for six months and just heard //thoda better.//
+Silence. The kind that means she's crying   not sad, the silent grateful crying of a mother who watched her son dissolve for six months and just heard //thoda better.//
 
 <div class="dialogue">"Aa Sunday ko. Bahut pyaar karta hoon, beta."<span class="gloss-en">Come Sunday. I love you so much, son.</span></div>
 

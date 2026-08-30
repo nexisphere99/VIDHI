@@ -1,12 +1,12 @@
-# DAY 4 — CODE AGENT PROMPT: Open World Integration
-## "Aadat" (Habit) — Swap #2, Growing Comfort
+# DAY 4   CODE AGENT PROMPT: Open World Integration
+## "Aadat" (Habit)   Swap #2, Growing Comfort
 ## Objective-Driven Exploration in SWAPPED BODIES (Day 2 of swap)
 
 ---
 
-## ARCHITECTURE NOTE — COMFORT CURVE
+## ARCHITECTURE NOTE   COMFORT CURVE
 
-Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in swapped bodies but the raw terror of Day 3 has evolved into competence-building. The open world should reflect this — fewer panic triggers, more nuanced interactions, deeper NPC tests, and the first genuine intimate scenes.
+Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in swapped bodies but the raw terror of Day 3 has evolved into competence-building. The open world should reflect this   fewer panic triggers, more nuanced interactions, deeper NPC tests, and the first genuine intimate scenes.
 
 **Gameplay feel shift:**
 - Day 3: Every interaction = potential disaster
@@ -14,15 +14,15 @@ Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in 
 
 ---
 
-## FILE STRUCTURE — DAY 4
+## FILE STRUCTURE   DAY 4
 
 ```
 /game/days/day4/
 ├── day4_init.tw              # Day 4 variables, carry-forward from Day 3
-├── day4_arjun_hub.tw         # Arjun-in-Kavya — hostel/B.J. Medical world
+├── day4_arjun_hub.tw         # Arjun-in-Kavya   hostel/B.J. Medical world
 ├── day4_arjun_scenes.tw      # Main story scenes
 ├── day4_arjun_npc.tw         # NPC interactions & side quests
-├── day4_kavya_hub.tw         # Kavya-in-Arjun — PG/VIT/Katraj world
+├── day4_kavya_hub.tw         # Kavya-in-Arjun   PG/VIT/Katraj world
 ├── day4_kavya_scenes.tw      # Main story scenes
 ├── day4_kavya_npc.tw         # NPC interactions & side quests
 ├── day4_shared.tw            # Synced phone calls, shared events
@@ -39,12 +39,12 @@ Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in 
 ## DAY 4 VARIABLE INITIALIZATION
 
 ```javascript
-// day4_init.tw — Swap #2, comfort growing
+// day4_init.tw   Swap #2, comfort growing
 
 <<set $swapCount to 2>>
 <<set $swapActive to true>>
 
-// COMFORT PROGRESSION — Arjun
+// COMFORT PROGRESSION   Arjun
 <<set $arjun_bra_firsttry to false>>      // Achievable today
 <<set $arjun_dupatta_natural to false>>    // Getting easier
 <<set $arjun_pee_routine to false>>       // Less panic
@@ -55,7 +55,7 @@ Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in 
 <<set $arjun_kissed_meera_d4 to false>>
 <<set $arjun_slept_with_meera to false>>   // Shared bed, not sex
 
-// COMFORT PROGRESSION — Kavya
+// COMFORT PROGRESSION   Kavya
 <<set $kavya_deodorant_mistake to false>>
 <<set $kavya_gym_failed to false>>
 <<set $kavya_masturbated_male to false>>   // FIRST male orgasm
@@ -63,7 +63,7 @@ Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in 
 <<set $kavya_marathi_exposed to false>>
 <<set $kavya_coding_hours to 0>>
 
-// SUSPICION — Escalating
+// SUSPICION   Escalating
 <<set $priya_period_math to false>>       // Period doesn't add up
 <<set $rohit_gym_concern to 0>>
 <<set $rohit_smell_noticed to false>>
@@ -78,9 +78,9 @@ Day 4 represents the shift from SURVIVAL to ADAPTATION. Characters are still in 
 
 ---
 
-## LOCATION SYSTEM — DAY 4
+## LOCATION SYSTEM   DAY 4
 
-### ARJUN (in Kavya's body) — Modifications & New
+### ARJUN (in Kavya's body)   Modifications & New
 
 ```javascript
 const arjunInKavya_locations_day4 = {
@@ -99,10 +99,10 @@ const arjunInKavya_locations_day4 = {
   },
 
   "bj_pharmacology_hall_d4": {
-    name: "Pharmacology Lecture — Day 4",
+    name: "Pharmacology Lecture   Day 4",
     unlocked: true,
     available: "09:30-12:00",
-    description: "Dr. Patwardhan on drug interactions. Surprisingly followable — it's basically if-then logic.",
+    description: "Dr. Patwardhan on drug interactions. Surprisingly followable   it's basically if-then logic.",
     objects: [
       { id: "lecture_seat_d4", action: "Sit through lecture", triggers: "pharmacology_scene_d4" },
       { id: "pseudocode_notes", action: "Take notes in pseudocode format", triggers: "pseudocode_notes_scene" },
@@ -116,7 +116,7 @@ const arjunInKavya_locations_day4 = {
   },
 
   "hostel_room_304_night": {
-    name: "Room 304 — Night Intimacy",
+    name: "Room 304   Night Intimacy",
     unlocked: false,
     unlockCondition: "time >= 23:00 AND priya_asleep",
     available: "23:00-03:00",
@@ -131,11 +131,11 @@ const arjunInKavya_locations_day4 = {
     ],
     npcs: ["meera"],
     exits: [],
-    note: "No exits — this is an enclosed intimate scene"
+    note: "No exits   this is an enclosed intimate scene"
   },
 
   "bj_canteen_d4": {
-    name: "B.J. Medical Canteen — Lunch",
+    name: "B.J. Medical Canteen   Lunch",
     modifications: {
       objects_added: [
         { id: "sit_meera_hand", action: "Hold Meera's hand under table", triggers: "hidden_handhold",
@@ -145,7 +145,7 @@ const arjunInKavya_locations_day4 = {
   },
 
   "hostel_common_room_d4": {
-    name: "Common Room — Evening",
+    name: "Common Room   Evening",
     modifications: {
       objects_added: [
         { id: "ankita_alone", action: "Talk to the first-year girl sitting alone", triggers: "ankita_side_quest",
@@ -157,7 +157,7 @@ const arjunInKavya_locations_day4 = {
 };
 ```
 
-### KAVYA (in Arjun's body) — Modifications & New
+### KAVYA (in Arjun's body)   Modifications & New
 
 ```javascript
 const kavyaInArjun_locations_day4 = {
@@ -176,21 +176,21 @@ const kavyaInArjun_locations_day4 = {
   },
 
   "katraj_gym_d4": {
-    name: "Iron Temple Gym — Chest Day Disaster",
+    name: "Iron Temple Gym   Chest Day Disaster",
     modifications: {
       description_update: "Rohit insists. Chest day. You've never lifted weights. This won't end well.",
       objects_added: [
         { id: "bench_press_d4", action: "Attempt bench press", triggers: "gym_disaster_scene" },
         { id: "arm_wrestle", action: "Challenge Rohit to arm wrestling", triggers: "arm_wrestling_recovery",
-          sidequest: true, note: "Recovery option — raw strength vs. coordination" },
+          sidequest: true, note: "Recovery option   raw strength vs. coordination" },
         { id: "punching_bag_d4", action: "Hit the bag instead", triggers: "bag_alternative",
-          note: "Safer option — avoids bench press suspicion" }
+          note: "Safer option   avoids bench press suspicion" }
       ]
     }
   },
 
   "vit_cs_lab_d4": {
-    name: "CS Lab — ML Project Continuation",
+    name: "CS Lab   ML Project Continuation",
     modifications: {
       objects_added: [
         { id: "ml_project_continue", action: "Continue the medical imaging project", triggers: "ml_coding_d4",
@@ -202,7 +202,7 @@ const kavyaInArjun_locations_day4 = {
   },
 
   "katraj_barbershop": {  // ★ NEW LOCATION
-    name: "Katraj Barbershop — Ramesh Salon",
+    name: "Katraj Barbershop   Ramesh Salon",
     unlocked: true,
     available: "08:00-21:00",
     description: "Four chairs, one barber, the smell of aftershave and small-town gossip.",
@@ -218,7 +218,7 @@ const kavyaInArjun_locations_day4 = {
   },
 
   "pune_fc_road": {  // ★ NEW LOCATION
-    name: "FC Road — Fergusson College Road",
+    name: "FC Road   Fergusson College Road",
     unlocked: true,
     available: "08:00-23:00",
     description: "Student strip. Cafes, bookshops, street food, the pulse of young Pune.",
@@ -240,7 +240,7 @@ const kavyaInArjun_locations_day4 = {
 
 ---
 
-## OBJECTIVE SYSTEM — DAY 4
+## OBJECTIVE SYSTEM   DAY 4
 
 ### ARJUN'S OBJECTIVES (in Kavya's body, Swap #2)
 
@@ -249,7 +249,7 @@ const arjunObjectives_day4 = {
   main: [
     {
       id: "obj_morning_mastery",
-      title: "Morning routine — level up",
+      title: "Morning routine   level up",
       description: "Bra on first try. Dupatta without help. You're getting better at this.",
       status: "active",
       subObjectives: [
@@ -363,7 +363,7 @@ const kavyaObjectives_day4 = {
     },
     {
       id: "obj_os_class_d4",
-      title: "OS class — absorb everything",
+      title: "OS class   absorb everything",
       description: "Process scheduling. This is your field. Don't shine TOO bright.",
       status: "locked",
       unlockCondition: "deodorant_fixed AND time >= 09:30",
@@ -461,24 +461,24 @@ const kavyaObjectives_day4 = {
 
 ---
 
-## INTIMATE SCENE PLACEMENT — DAY 4
+## INTIMATE SCENE PLACEMENT   DAY 4
 
 ```
-DAY 4 INTIMATE SCENES — Comfort growing, first real sexual content
+DAY 4 INTIMATE SCENES   Comfort growing, first real sexual content
 
 ═══════════════════════════════════════════
 ARJUN (in Kavya's body):
 ═══════════════════════════════════════════
 
-1. SHOWER — EYES OPEN (Morning, hostel bathroom)
+1. SHOWER   EYES OPEN (Morning, hostel bathroom)
    - Trigger: Morning routine, shower
    - Content: Second shower in Kavya's body. Today he LOOKS.
-     The bra comes off — three hooks, no help. Breasts free. He sees them
-     in the mirror — dusky, heavy, nipples dark and responsive to cool air.
+     The bra comes off   three hooks, no help. Breasts free. He sees them
+     in the mirror   dusky, heavy, nipples dark and responsive to cool air.
      Under the water: he washes them properly. The soap's slippery contact
-     across the nipples sends a current through the body — the skin is so
-     responsive. He washes between the legs — less panic, more awareness.
-     The vulva under his fingertips — soft, warm, the folds of skin that
+     across the nipples sends a current through the body   the skin is so
+     responsive. He washes between the legs   less panic, more awareness.
+     The vulva under his fingertips   soft, warm, the folds of skin that
      are his to maintain now. He washes with care. Dries. The towel on
      breasts, on hips, between thighs. Familiarity growing.
    - Bra ON: first try. Three hooks. Second row. The cups receive the
@@ -486,26 +486,26 @@ ARJUN (in Kavya's body):
      Done. Thirty seconds. He feels absurdly proud.
    - File: day4_intimate.tw → "arjun_shower_d4"
 
-2. PHARMACOLOGY LECTURE — KNEE CONTACT (10 AM)
+2. PHARMACOLOGY LECTURE   KNEE CONTACT (10 AM)
    - Trigger: Pharmacology scene, sitting next to Meera
-   - Content: Their knees touch under the desk. The contact radiates — Kavya's
+   - Content: Their knees touch under the desk. The contact radiates   Kavya's
      body amplifies touch. The warmth from Meera's knee spreads through his
      thigh, into his pelvis, a slow heat that isn't sexual but IS sensual.
      The female body doesn't distinguish clearly between touch-as-comfort and
      touch-as-prelude. Everything is connected.
    - File: day4_intimate.tw → "meera_knee_contact"
 
-3. LUNCH — HIDDEN HANDHOLD (12:30 PM)
+3. LUNCH   HIDDEN HANDHOLD (12:30 PM)
    - Trigger: Mess hall, sitting with Meera
    - Content: Under the table, Meera's hand finds his. Fingers interlace.
-     Her thumb traces circles on Kavya's palm. The sensation is — too much.
+     Her thumb traces circles on Kavya's palm. The sensation is   too much.
      Every circle is a love letter written on nerve endings. He almost sobs
      into the dal. Kavya's tear ducts on standby as always. The tears stay
      locked but barely.
    - First prolonged physical contact with Meera in six months.
    - File: day4_intimate.tw → "meera_handhold_mess"
 
-4. NIGHT — BED WITH MEERA (11:15 PM) — CRITICAL
+4. NIGHT   BED WITH MEERA (11:15 PM)   CRITICAL
    - Trigger: priya_asleep, time >= 23:00
    - Content: FULL SCENE. Meera slips into Kavya's bed. Single bed, narrow.
      They face each other. Six inches apart. Amber streetlight.
@@ -516,32 +516,32 @@ ARJUN (in Kavya's body):
      
      The talking stops. The touching begins.
      
-     He kisses her forehead. Her nose — the chicken pox scar. Then her lips.
-     Kavya's lips against Meera's lips — soft on soft. Fuller. No stubble.
-     The kiss is tender, tentative. Meera kisses back — she KNOWS this is
+     He kisses her forehead. Her nose   the chicken pox scar. Then her lips.
+     Kavya's lips against Meera's lips   soft on soft. Fuller. No stubble.
+     The kiss is tender, tentative. Meera kisses back   she KNOWS this is
      Arjun. The wrongness (Kavya's mouth) and the rightness (Arjun's soul)
      collide. The rightness wins.
      
-     The kiss deepens. Meera's hand on Kavya's waist — pulling closer.
+     The kiss deepens. Meera's hand on Kavya's waist   pulling closer.
      Legs tangling in the single bed. He feels Kavya's body responding:
      nipples hardening against the cotton t-shirt (no bra at night).
-     Warmth between his legs — spreading, insistent. Wetness beginning.
-     The clitoris pulsing — he feels it, a focused throb, the 8,000
+     Warmth between his legs   spreading, insistent. Wetness beginning.
+     The clitoris pulsing   he feels it, a focused throb, the 8,000
      nerve endings activated by proximity and desire.
      
-     Meera's hand on his hip. Meera's lips on his neck — Kavya's neck,
+     Meera's hand on his hip. Meera's lips on his neck   Kavya's neck,
      the sensitive column of skin where jaw meets ear. The sensation
-     cascades — goosebumps down Kavya's arm, nipples tightening further,
+     cascades   goosebumps down Kavya's arm, nipples tightening further,
      the wetness increasing.
      
-     He wants. Kavya's body WANTS — urgently, wetly, with a diffuse ache
+     He wants. Kavya's body WANTS   urgently, wetly, with a diffuse ache
      that has no off switch. But: Rule 1. No sexual activity without
      explicit permission.
      
      "Not yet," he whispers. "Kavya's rules."
      
      Meera nods. Breathing hard. Pupils blown. She understands.
-     They rearrange — his small arms around her, her face in Kavya's hair.
+     They rearrange   his small arms around her, her face in Kavya's hair.
      Two souls in the wrong arrangement falling asleep in the right embrace.
    - File: day4_intimate.tw → "meera_bed_night_d4"
 
@@ -549,71 +549,71 @@ ARJUN (in Kavya's body):
 KAVYA (in Arjun's body):
 ═══════════════════════════════════════════
 
-1. MORNING — DEODORANT MISTAKE (7:30 AM)
+1. MORNING   DEODORANT MISTAKE (7:30 AM)
    - Trigger: Morning routine, Rohit notices smell
    - Content: Brief but critical. She used Nivea floral deodorant
-     (habit from her body). Rohit sniffs — "Tu bahut fresh smell aa
+     (habit from her body). Rohit sniffs   "Tu bahut fresh smell aa
      rahi hai." She panics, grabs Rohit's Axe can, sprays aggressively.
      Over-correction. Now she smells like Axe. Boy-acceptable.
    - Body note: Arjun's armpits produce more sweat than hers.
      The deodorant is necessary, not cosmetic.
    - File: day4_intimate.tw → "kavya_deodorant_fix"
 
-2. GYM — BODY FAILURE (5 PM)
+2. GYM   BODY FAILURE (5 PM)
    - Trigger: Rohit insists on gym, bench press
-   - Content: Bench press 40kg — Arjun's warmup weight. Kavya's neural
+   - Content: Bench press 40kg   Arjun's warmup weight. Kavya's neural
      pathways don't know this motion. First rep: wobble. Second: almost
      drops it. Rohit catches. The body HAS the strength (Arjun's muscles)
      but the mind doesn't have the coordination pattern.
-     Arms on the bench: Arjun's arms, which she now feels intimately —
+     Arms on the bench: Arjun's arms, which she now feels intimately  
      the bicep engaging, the tricep firing, the chest muscles attempting
      to work. The body KNOWS this. She doesn't. The disconnect is visible.
    - Recovery option: arm wrestling. Raw grip strength doesn't need
-     trained neural pathways — just squeeze. She wins. Rohit is pacified.
+     trained neural pathways   just squeeze. She wins. Rohit is pacified.
    - File: day4_intimate.tw → "kavya_gym_disaster"
 
-3. BODY EXPLORATION — FIRST MALE MASTURBATION (7 PM) — CRITICAL
+3. BODY EXPLORATION   FIRST MALE MASTURBATION (7 PM)   CRITICAL
    - Trigger: rohit_absent (FIFA night), door locked
    - Content: FULL SCENE. Mirror. Shirt off. The lean torso. Trail of hair.
      She traces down. Hand into jeans, past boxers. The penis responds
-     to touch — immediate thickening, the blood-fills-tissue sequence.
-     She frees it. Arjun's cock in her hand. Studies it — the anatomy
+     to touch   immediate thickening, the blood-fills-tissue sequence.
+     She frees it. Arjun's cock in her hand. Studies it   the anatomy
      she knows from textbooks, now alive, warm, stiffening.
      
-     First stroke. Base to tip. Foreskin retracts. The glans exposed —
+     First stroke. Base to tip. Foreskin retracts. The glans exposed  
      slick with precome. The sensation: CONCENTRATED. A single line of
      fire from base to tip. Nothing like the diffuse spread of her
      female arousal. This is SPECIFIC. DIRECTIONAL. DEMANDING.
      
-     Faster strokes. The frenulum — the most sensitive spot. She finds
-     the rhythm. Arjun's hips thrust involuntarily — the male body
+     Faster strokes. The frenulum   the most sensitive spot. She finds
+     the rhythm. Arjun's hips thrust involuntarily   the male body
      WANTS to fuck something, the reflex built into the hardware.
      She rides the thrust, hand moving, the pleasure building like
-     voltage in a capacitor — linear, escalating, no plateau.
+     voltage in a capacitor   linear, escalating, no plateau.
      
-     Orgasm: SUDDEN. Like a circuit breaker tripping. The cock pulses —
-     three ropes of cum arc onto Arjun's stomach. She gasps — "Ffuuuck" —
+     Orgasm: SUDDEN. Like a circuit breaker tripping. The cock pulses  
+     three ropes of cum arc onto Arjun's stomach. She gasps   "Ffuuuck"  
      a deep guttural sound she didn't know Arjun's voice could produce
      in that register. The pleasure peaks and DROPS. Zero to max to zero
-     in maybe six seconds. Refractory period — the body is DONE.
+     in maybe six seconds. Refractory period   the body is DONE.
      No afterglow. No lingering waves. System reboot.
      
      She lies in aftermath. Files the report: Male orgasm. More intense
      peak. Less layered. Faster. Efficient. Like a function that returns
-     a value and terminates — no recursive after-process.
+     a value and terminates   no recursive after-process.
      
      "Efficient," she murmurs. Laughs at herself. Cleans up with tissues.
      Opens VS Code. Codes for three hours, mind crystalline.
      Interesting data.
    - File: day4_intimate.tw → "kavya_first_male_orgasm"
 
-4. AAI VIDEO CALL (9 PM) — CRITICAL
+4. AAI VIDEO CALL (9 PM)   CRITICAL
    - Trigger: Timed event, 21:00
    - Content: Video call. Sunita's face. Marathi-Hindi. The ultimate test.
      Kavya manages Arjun's voice, the casual "Haan Aai" tone. Discusses
-     food, homework. Pooja appears — asks about Python. Kavya gives
-     genuine answers (Pooja's eyes light up). The Marathi phrase — "Aai,
-     mala baryach homework aahe" — accent is off, too Tamil-precise.
+     food, homework. Pooja appears   asks about Python. Kavya gives
+     genuine answers (Pooja's eyes light up). The Marathi phrase   "Aai,
+     mala baryach homework aahe"   accent is off, too Tamil-precise.
      Sunita frowns slightly. Pooja catches it: "Dada, voice different."
      "Cold aa rahi hai." Crisis managed but just barely.
      
@@ -624,8 +624,8 @@ KAVYA (in Arjun's body):
 
 5. POST-ORGASM CODING (7:30-10:30 PM)
    - Trigger: After masturbation, before Aai call
-   - Content: Three hours of coding. The ML project grows — model training,
-     evaluation metrics, documentation. Post-orgasm male clarity —
+   - Content: Three hours of coding. The ML project grows   model training,
+     evaluation metrics, documentation. Post-orgasm male clarity  
      the brain is FOCUSED, unclouded, every neuron dedicated to code.
      She's never experienced this specific mental state in her own body.
      Female post-orgasm: floating, warm, sleepy. Male post-orgasm:
@@ -635,43 +635,43 @@ KAVYA (in Arjun's body):
 
 ---
 
-## NPC INTERACTION PLACEMENT — DAY 4
+## NPC INTERACTION PLACEMENT   DAY 4
 
 ```
 ARJUN-AS-KAVYA NPCs:
 
-1. PRIYA — Breakfast (period excuse, suspicion +2 if math catches)
-2. MEERA — Multiple (pharmacology, lunch, night)
-3. DR. PATWARDHAN — NEW NPC, pharmacology prof, less threatening than Sharma
-4. SNEHA — Study group if scheduled
-5. ANKITA — NEW NPC, first-year lonely girl, potential ally
-6. MESS DIDI — Food commentary
-7. MRS. JOSHI — Routine rounds (lower tension than Day 3)
-8. PRIYA — Evening (returns from jog, scans room)
-9. KAVYA (phone) — Check-in call
-10. HOSTEL GIRLS — Corridor, bathroom (routine encounters)
+1. PRIYA   Breakfast (period excuse, suspicion +2 if math catches)
+2. MEERA   Multiple (pharmacology, lunch, night)
+3. DR. PATWARDHAN   NEW NPC, pharmacology prof, less threatening than Sharma
+4. SNEHA   Study group if scheduled
+5. ANKITA   NEW NPC, first-year lonely girl, potential ally
+6. MESS DIDI   Food commentary
+7. MRS. JOSHI   Routine rounds (lower tension than Day 3)
+8. PRIYA   Evening (returns from jog, scans room)
+9. KAVYA (phone)   Check-in call
+10. HOSTEL GIRLS   Corridor, bathroom (routine encounters)
 
 KAVYA-AS-ARJUN NPCs:
 
-1. ROHIT — Multiple (morning deodorant, gym disaster, evening departure)
-2. PG BOYS — Chai circle (routine performance)
-3. PROF. DESAI — OS lecture
-4. NIKHIL — Notes, ICPC discussion
-5. RAMESH BARBER — NEW NPC, barbershop shave
-6. CANTEEN ANNA — Food order (routine)
-7. FC ROAD NPCs — NEW (cafe barista, bookshop owner, street food vendor)
-8. AAI SUNITA — Video call (CRITICAL)
-9. POOJA — Video call cameo + WhatsApp
-10. ARJUN (phone) — Check-in call
-11. RAJU BHAIYA — Tapri (Google engineer preview)
-12. RANDOM VIT BOYS — Routine back-slaps
+1. ROHIT   Multiple (morning deodorant, gym disaster, evening departure)
+2. PG BOYS   Chai circle (routine performance)
+3. PROF. DESAI   OS lecture
+4. NIKHIL   Notes, ICPC discussion
+5. RAMESH BARBER   NEW NPC, barbershop shave
+6. CANTEEN ANNA   Food order (routine)
+7. FC ROAD NPCs   NEW (cafe barista, bookshop owner, street food vendor)
+8. AAI SUNITA   Video call (CRITICAL)
+9. POOJA   Video call cameo + WhatsApp
+10. ARJUN (phone)   Check-in call
+11. RAJU BHAIYA   Tapri (Google engineer preview)
+12. RANDOM VIT BOYS   Routine back-slaps
 ```
 
 ---
 
 ## STATS AT END OF DAY 4
 
-### ARJUN — End of Day 4
+### ARJUN   End of Day 4
 ```javascript
 $arjun_stats_day4_end = {
   coding_skill: 88,
@@ -679,7 +679,7 @@ $arjun_stats_day4_end = {
   fem_comfort: 25,          // +10 (bra mastery, routine forming)
   sex_exp_male: 15,
   sex_exp_female: 10,       // +5 (Meera kiss, arousal experienced)
-  rel_meera: 100,           // capped — but deepening in quality
+  rel_meera: 100,           // capped   but deepening in quality
   rel_kavya: 42,            // +2 check-in call
   suspicion_priya: "variable",  // +2 from period math, potential +3
   mood: "settled_hopeful",
@@ -691,14 +691,14 @@ $arjun_stats_day4_end = {
 };
 ```
 
-### KAVYA — End of Day 4
+### KAVYA   End of Day 4
 ```javascript
 $kavya_stats_day4_end = {
   coding_skill: 90,         // +5 from continued coding
   med_knowledge: 49,
   masc_comfort: 25,         // +10 (deodorant lesson, gym survival)
   sex_exp_female: 10,
-  sex_exp_male: 20,         // +15 (FIRST male orgasm — big jump)
+  sex_exp_male: 20,         // +15 (FIRST male orgasm   big jump)
   rel_arjun: 48,            // +5 (Aai call empathy, body understanding)
   rel_meera: 90,
   suspicion_rohit: "variable",  // +5 gym, -3 arm wrestle possible
@@ -713,7 +713,7 @@ $kavya_stats_day4_end = {
 
 ---
 
-## CHARACTER SWITCH POINTS — DAY 4
+## CHARACTER SWITCH POINTS   DAY 4
 
 ```
 1. After morning routines (08:00)
@@ -721,5 +721,5 @@ $kavya_stats_day4_end = {
 3. After Kavya's gym disaster / Arjun's lunch with Meera (15:00)
 4. Evening: Kavya's body exploration / Arjun's terrace sunset (19:00)
 5. Night: Kavya's Aai call / Arjun's Meera intimacy (21:00-23:00)
-   RECOMMENDED: Play BOTH night scenes — they're the emotional core
+   RECOMMENDED: Play BOTH night scenes   they're the emotional core
 ```

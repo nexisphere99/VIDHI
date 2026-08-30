@@ -182,7 +182,7 @@ locations, `.push()`es new objects/objectives/timed-events, tags earlier finale
 objects with `dayOnly: N`, and wraps `setup.phoneData`. The earlier days' data
 literals are untouched.
 
-**Day 3 is special** — the swap is active, so each player navigates the *other*
+**Day 3 is special**   the swap is active, so each player navigates the *other*
 character's world. The day-3 module adds a fresh set of `*_d3` locations: the
 hostel / B.J. Medical ones go under `setup.locations.arjun` (Arjun is in Kavya's
 body there), the PG / VIT ones under `setup.locations.kavya`. Day 3 opens

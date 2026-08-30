@@ -1,10 +1,10 @@
-# DAY 3 — CODE AGENT PROMPT: Open World Integration
-## "Pehla Badlav" (First Change) — FIRST SWAP DAY
+# DAY 3   CODE AGENT PROMPT: Open World Integration
+## "Pehla Badlav" (First Change)   FIRST SWAP DAY
 ## Objective-Driven Exploration in SWAPPED BODIES
 
 ---
 
-## CRITICAL ARCHITECTURE NOTE — SWAPPED PERSPECTIVE
+## CRITICAL ARCHITECTURE NOTE   SWAPPED PERSPECTIVE
 
 **Day 3 is fundamentally different from Days 1-2.** Each playable character is now in the OTHER character's body, navigating the OTHER character's world. The open-world locations flip:
 
@@ -21,7 +21,7 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 
 ---
 
-## FILE STRUCTURE — DAY 3
+## FILE STRUCTURE   DAY 3
 
 ```
 /game/
@@ -50,9 +50,9 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 ## DAY 3 VARIABLE INITIALIZATION
 
 ```javascript
-// day3_init.tw — THE SWAP IS ACTIVE
+// day3_init.tw   THE SWAP IS ACTIVE
 
-// SWAP STATE — ACTIVE
+// SWAP STATE   ACTIVE
 <<set $swapActive to true>>
 <<set $swapCount to 1>>
 <<set $arjunBody to "kavya">>    // Arjun's MIND is in Kavya's BODY
@@ -60,7 +60,7 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 <<set $swapStartTime to "05:10">>
 <<set $swapEndTime to "20:00">>  // Planned swap-back
 
-// BODY DISCOVERY FLAGS — Arjun (in Kavya's body)
+// BODY DISCOVERY FLAGS   Arjun (in Kavya's body)
 <<set $arjun_felt_breasts to false>>
 <<set $arjun_felt_no_penis to false>>
 <<set $arjun_first_pee_female to false>>
@@ -71,12 +71,12 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 <<set $arjun_crying_easy to false>>
 <<set $arjun_smelled_differently to false>>
 <<set $arjun_period_awareness to false>>
-<<set $arjun_touched_vulva to false>>       // During pee — involuntary
+<<set $arjun_touched_vulva to false>>       // During pee   involuntary
 <<set $arjun_shower_female to false>>
 <<set $arjun_dressed_female to false>>
 <<set $arjun_saw_self_mirror to false>>
 
-// BODY DISCOVERY FLAGS — Kavya (in Arjun's body)
+// BODY DISCOVERY FLAGS   Kavya (in Arjun's body)
 <<set $kavya_felt_flat_chest to false>>
 <<set $kavya_felt_penis to false>>
 <<set $kavya_first_pee_male to false>>
@@ -91,7 +91,7 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 <<set $kavya_adam_apple to false>>
 <<set $kavya_stubble_felt to false>>
 
-// SUSPICION — Elevated importance today
+// SUSPICION   Elevated importance today
 <<set $priya_suspicion to $priya_suspicion>>  // Carry forward
 <<set $rohit_suspicion to $rohit_suspicion>>
 <<set $sneha_suspicion to 0>>
@@ -107,9 +107,9 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 
 ---
 
-## LOCATION SYSTEM — DAY 3
+## LOCATION SYSTEM   DAY 3
 
-### ARJUN (in Kavya's body) — HOSTEL & B.J. MEDICAL WORLD
+### ARJUN (in Kavya's body)   HOSTEL & B.J. MEDICAL WORLD
 
 **Arjun now navigates Kavya's world. He has NEVER been to most of these locations. Everything is discovery.**
 
@@ -117,7 +117,7 @@ RIGHT: "You walk into a room that isn't yours, wearing a body that isn't yours,
 const arjunInKavya_locations_day3 = {
 
   "pataleshwar_temple_swap": {
-    name: "Pataleshwar Cave Temple — Dawn",
+    name: "Pataleshwar Cave Temple   Dawn",
     unlocked: true,  // Starting location for both
     available: "04:30-06:00",
     description: "The swap point. Cold stone, pre-dawn dark, the universe about to invert.",
@@ -150,7 +150,7 @@ const arjunInKavya_locations_day3 = {
   },
 
   "hostel_entrance_d3": {
-    name: "Hostel Main Entrance — As Kavya",
+    name: "Hostel Main Entrance   As Kavya",
     unlocked: false,
     unlockCondition: "walk_to_hostel_complete",
     available: "05:30-21:00",
@@ -163,7 +163,7 @@ const arjunInKavya_locations_day3 = {
     ],
     npcs: ["chowkidar_ramesh"],
     exits: [
-      { to: "hostel_stairs", label: "Inside — stairs" }
+      { to: "hostel_stairs", label: "Inside   stairs" }
     ]
   },
 
@@ -171,7 +171,7 @@ const arjunInKavya_locations_day3 = {
   // but experiences them as a STRANGER in a borrowed body
 
   "hostel_room_304_d3": {
-    name: "Room 304 — As Kavya",
+    name: "Room 304   As Kavya",
     unlocked: false,
     unlockCondition: "entered_hostel",
     available: "00:00-23:59",
@@ -198,7 +198,7 @@ const arjunInKavya_locations_day3 = {
   },
 
   "hostel_bathroom_d3": {
-    name: "Hostel Bathroom — First Time Female",
+    name: "Hostel Bathroom   First Time Female",
     unlocked: false,
     unlockCondition: "entered_hostel",
     available: "00:00-23:59",
@@ -215,11 +215,11 @@ const arjunInKavya_locations_day3 = {
     exits: [
       { to: "hostel_corridor", label: "Back to corridor" }
     ],
-    WARNING: "Girls in towels, changing, casual nudity — Arjun must navigate without staring or panicking"
+    WARNING: "Girls in towels, changing, casual nudity   Arjun must navigate without staring or panicking"
   },
 
   "bj_anatomy_hall_d3": {
-    name: "Anatomy Dissection Hall — As Kavya",
+    name: "Anatomy Dissection Hall   As Kavya",
     unlocked: false,
     unlockCondition: "signed_out_hostel AND time >= 08:30",
     available: "08:30-16:00",
@@ -238,7 +238,7 @@ const arjunInKavya_locations_day3 = {
   },
 
   "hostel_mess_d3": {
-    name: "Hostel Mess — Eating as Kavya",
+    name: "Hostel Mess   Eating as Kavya",
     unlocked: false,
     unlockCondition: "entered_hostel",
     available: "07:00-09:00, 12:00-14:00, 19:00-21:00",
@@ -256,7 +256,7 @@ const arjunInKavya_locations_day3 = {
   },
 
   "hostel_terrace_d3": {
-    name: "Hostel Terrace — Private Space",
+    name: "Hostel Terrace   Private Space",
     unlocked: false,
     unlockCondition: "time >= 14:00 OR priya_absent",
     available: "14:00-02:00",
@@ -275,7 +275,7 @@ const arjunInKavya_locations_day3 = {
 };
 ```
 
-### KAVYA (in Arjun's body) — PG & VIT WORLD
+### KAVYA (in Arjun's body)   PG & VIT WORLD
 
 ```javascript
 const kavyaInArjun_locations_day3 = {
@@ -291,7 +291,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "ride_to_pg": {
-    name: "Riding the Pulsar — First Time",
+    name: "Riding the Pulsar   First Time",
     unlocked: false,
     unlockCondition: "swap_complete AND has_pulsar_keys",
     available: "05:15-06:30",
@@ -309,7 +309,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "katraj_pg_room_d3": {
-    name: "PG Room — As Arjun",
+    name: "PG Room   As Arjun",
     unlocked: false,
     unlockCondition: "ride_complete",
     available: "00:00-23:59",
@@ -334,7 +334,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "pg_bathroom_d3": {
-    name: "PG Bathroom — First Time Male",
+    name: "PG Bathroom   First Time Male",
     unlocked: true,
     available: "00:00-23:59",
     description: "Cracked tiles. One mirror. The urinal that awaits.",
@@ -353,7 +353,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "vit_gate_d3": {
-    name: "VIT Gate — As Arjun",
+    name: "VIT Gate   As Arjun",
     unlocked: false,
     unlockCondition: "time >= 09:00",
     available: "08:00-18:00",
@@ -372,7 +372,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "vit_cblock_d3": {
-    name: "C-Block — Data Structures with Krishnan",
+    name: "C-Block   Data Structures with Krishnan",
     unlocked: false,
     unlockCondition: "entered_vit AND time >= 09:30",
     available: "09:00-17:00",
@@ -394,7 +394,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "vit_cs_lab_d3": {
-    name: "CS Computer Lab — The Real Setup",
+    name: "CS Computer Lab   The Real Setup",
     unlocked: false,
     unlockCondition: "entered_vit AND time >= 14:00",
     available: "09:00-17:00",
@@ -412,7 +412,7 @@ const kavyaInArjun_locations_day3 = {
   },
 
   "katraj_pg_room_evening": {
-    name: "PG Room — Evening Alone",
+    name: "PG Room   Evening Alone",
     unlocked: false,
     unlockCondition: "time >= 17:00 AND rohit_at_gym",
     available: "17:00-20:00",
@@ -425,7 +425,7 @@ const kavyaInArjun_locations_day3 = {
         intimate: true, condition: "rohit_at_gym" },
       { id: "first_erection_trigger", action: "Notice something... happening", triggers: "kavya_first_erection",
         intimate: true, condition: "time >= 17:30 AND alone",
-        note: "Random erection while coding — the male body's unsolicited notifications" }
+        note: "Random erection while coding   the male body's unsolicited notifications" }
     ],
     npcs: [],
     exits: [
@@ -437,7 +437,7 @@ const kavyaInArjun_locations_day3 = {
 
 ---
 
-## OBJECTIVE SYSTEM — DAY 3
+## OBJECTIVE SYSTEM   DAY 3
 
 ### ARJUN'S OBJECTIVES (in Kavya's body)
 
@@ -502,7 +502,7 @@ const arjunObjectives_day3 = {
       description: "A student drops a jar in anatomy. Show empathy. Dr. Sharma will notice.",
       location: "bj_anatomy_hall_d3",
       reward: { med_knowledge: +3, dr_sharma_relationship: +3 },
-      risk: "None — empathy is in-character for Kavya"
+      risk: "None   empathy is in-character for Kavya"
     },
     {
       id: "sq_manuscript_organize",
@@ -685,10 +685,10 @@ const kavyaObjectives_day3 = {
 
 ---
 
-## INTIMATE SCENE PLACEMENT — DAY 3
+## INTIMATE SCENE PLACEMENT   DAY 3
 
 ```
-DAY 3 INTIMATE SCENES — THE FIRST SWAP DAY
+DAY 3 INTIMATE SCENES   THE FIRST SWAP DAY
 All scenes are FIRST-TIME body experiences. Maximize detail and emotional impact.
 
 ═══════════════════════════════════════════
@@ -702,17 +702,17 @@ ARJUN (in Kavya's body):
      Everything catalogued in shock.
    - File: day3_intimate.tw → "arjun_first_kavya_body"
 
-2. FIRST PEE — FEMALE (Hostel bathroom, ~6:45 AM)
+2. FIRST PEE   FEMALE (Hostel bathroom, ~6:45 AM)
    - Trigger: Player uses toilet_stall in hostel_bathroom_d3
    - Content: FULL SCENE. Pulling down salwar. Pulling down panty. Sitting.
      The absence where penis should be. Seeing the vulva for the first time
-     from THIS angle — attached, his. Pee flowing differently — no arc, no aim,
+     from THIS angle   attached, his. Pee flowing differently   no arc, no aim,
      warmth and proximity. Wiping front to back (Meera coached him). Fingers
-     touching folds involuntarily — a shiver. The vulnerability of sitting
+     touching folds involuntarily   a shiver. The vulnerability of sitting
      to pee, foot bracing the broken door. Washing hands fourteen times.
    - File: day3_intimate.tw → "arjun_first_pee_female"
 
-3. BREASTS — Ongoing Awareness (Throughout the day)
+3. BREASTS   Ongoing Awareness (Throughout the day)
    - Not a single scene but persistent state descriptions.
    - Walking: they bounce, he has to hold them running up stairs.
    - Sitting: they rest on his (her) ribcage, weight constant.
@@ -721,36 +721,36 @@ ARJUN (in Kavya's body):
    - Code: Insert breast-awareness lines into EVERY scene.
    - File: woven into all day3_arjun_scenes.tw passages
 
-4. SHOWER — FEMALE (Optional side quest, hostel bathroom)
+4. SHOWER   FEMALE (Optional side quest, hostel bathroom)
    - Trigger: sq_hostel_shower
-   - Content: Full shower scene. Stripping Kavya's clothes. The bra removal —
+   - Content: Full shower scene. Stripping Kavya's clothes. The bra removal  
      three hooks, the relief as compression releases, breasts settling free.
-     Seeing Kavya's body in the small mirror — dusky skin, curves, the beauty
-     mark. Washing: different body geography. Breasts — soaping them, the
+     Seeing Kavya's body in the small mirror   dusky skin, curves, the beauty
+     mark. Washing: different body geography. Breasts   soaping them, the
      nipples hardening at water temperature (involuntary), the weight when
      lifting to wash underneath. Between legs: washing the vulva, the
      sensitivity, every fold responsive. Buttocks, thighs, the different
      hair pattern. Drying off: the towel catches on curves differently.
-     Putting the bra BACK ON — the fumbling, the hooks, the adjustment.
+     Putting the bra BACK ON   the fumbling, the hooks, the adjustment.
    - File: day3_intimate.tw → "arjun_shower_kavya_body"
 
-5. MEERA INTIMACY — Terrace (Afternoon, if unlocked)
+5. MEERA INTIMACY   Terrace (Afternoon, if unlocked)
    - Trigger: sq_terrace_meera
    - Content: Alone with Meera. She looks at Kavya's face and sees Arjun's
-     eyes. She touches his (Kavya's) cheek. He feels it through Kavya's skin —
+     eyes. She touches his (Kavya's) cheek. He feels it through Kavya's skin  
      MORE sensitive, the nerve density higher. She kisses his forehead.
      The sensation radiates through Kavya's entire face. He wants to kiss her
-     mouth — PLAYER CHOICE: attempt the kiss or hold back.
+     mouth   PLAYER CHOICE: attempt the kiss or hold back.
      IF KISS: Meera kisses Kavya's lips. It's technically girl-on-girl.
-     The sensation is different — softer lips, no stubble friction, Kavya's
+     The sensation is different   softer lips, no stubble friction, Kavya's
      mouth is shaped differently. Meera's tongue against his (Kavya's) lip.
-     Arousal manifests differently — warmth between legs, not hardness.
+     Arousal manifests differently   warmth between legs, not hardness.
      A clitoral pulse. Wetness beginning. He pulls back, overwhelmed.
      IF HOLD BACK: They hold each other. His (Kavya's) head on her
      shoulder. Her hand in Kavya's hair. Tender without escalation.
    - File: day3_intimate.tw → "meera_terrace_kiss_choice"
 
-6. CRYING — Emotional Amplification (Multiple)
+6. CRYING   Emotional Amplification (Multiple)
    - Kavya's body produces tears faster, more readily.
    - Seeing Meera: instant tears (Scene 5 of bible).
    - Formalin smell: eyes water dramatically.
@@ -763,42 +763,42 @@ KAVYA (in Arjun's body):
 
 1. FIRST BODY CHECK (Temple courtyard, 5:10 AM)
    - Trigger: Immediately post-swap
-   - Content: HEIGHT. The world lower. Hands huge. Voice deep. Flat chest —
-     the freedom, the absence of bra/weight. The PRESENCE between legs —
+   - Content: HEIGHT. The world lower. Hands huge. Voice deep. Flat chest  
+     the freedom, the absence of bra/weight. The PRESENCE between legs  
      penis and testicles, warm, soft, THERE. Jeans sitting on narrow hips.
      Shoulders broad. Adam's apple. Stubble on jaw.
    - File: day3_intimate.tw → "kavya_first_arjun_body"
 
 2. BIKE BODY AWARENESS (Pulsar ride, 5:20 AM)
    - Trigger: ride_to_pg
-   - Content: Straddling the bike. Thighs parting around the tank — the
+   - Content: Straddling the bike. Thighs parting around the tank   the
      genitals pressed against the seat. Adjusting position to accommodate.
      The testicles' negotiation with the fuel tank. Wind on a face with no
      dupatta, no hair whipping. The freedom of a body built for machines.
    - File: day3_intimate.tw → "kavya_pulsar_body"
 
-3. FIRST PEE — MALE, URINAL (VIT bathroom, ~12:15 PM)
+3. FIRST PEE   MALE, URINAL (VIT bathroom, ~12:15 PM)
    - Trigger: sq_first_pee_urinal
    - Content: FULL SCENE. The men's bathroom. Row of urinals. Other boys
-     standing casually. She unzips. Reaches in. Finds the penis — warm,
-     soft, absurd. Extracts it through the fly. Aims. Releases — the stream
+     standing casually. She unzips. Reaches in. Finds the penis   warm,
+     soft, absurd. Extracts it through the fly. Aims. Releases   the stream
      arcs WRONG, hits the porcelain edge. Adjusts. Better. The sensation:
      concentrated, external, directional. Like a hose. The satisfying
      physics of aimed urination. Two shakes (the protocol). Tuck. Zip.
-     Hands washed (she's the only one who does). Walking out — realizing
+     Hands washed (she's the only one who does). Walking out   realizing
      the entire transaction took 45 seconds. In her body: 3 minutes minimum.
    - File: day3_intimate.tw → "kavya_first_pee_male"
 
 4. FIRST ERECTION (PG room evening, ~5:30 PM)
    - Trigger: sq_explore_arjun_body OR random trigger during coding
-   - Content: FULL SCENE. She's coding. Focused. In the zone. And then —
+   - Content: FULL SCENE. She's coding. Focused. In the zone. And then  
      something shifts. Between her legs, the penis begins to thicken.
-     Not from arousal — from nothing. A random erection, the male body's
+     Not from arousal   from nothing. A random erection, the male body's
      unsolicited push notification. She feels it growing against her thigh
-     inside the jeans, the fabric tightening. The sensation is bizarre —
+     inside the jeans, the fabric tightening. The sensation is bizarre  
      blood filling tissue, the organ lifting, stiffening, pressing against
-     the denim. She looks down — there's a visible bulge in the jeans.
-     She panics. Shifts in the chair. The movement makes it WORSE — the
+     the denim. She looks down   there's a visible bulge in the jeans.
+     She panics. Shifts in the chair. The movement makes it WORSE   the
      friction of denim against the sensitized head sends a jolt through
      her pelvis. She gasps. Arjun's voice, gasping.
      She sits very still. Waits. Thinks about anatomy lectures, Cockcroft-
@@ -810,18 +810,18 @@ KAVYA (in Arjun's body):
      done?
    - File: day3_intimate.tw → "kavya_first_erection"
 
-5. BODY EXPLORATION — MALE (PG room, Rohit at gym)
+5. BODY EXPLORATION   MALE (PG room, Rohit at gym)
    - Trigger: sq_explore_arjun_body, rohit_at_gym
    - Content: FULL SCENE. Door locked. She stands in front of the mirror.
-     Removes Arjun's t-shirt. His chest — flat, lean, pectoral muscles
+     Removes Arjun's t-shirt. His chest   flat, lean, pectoral muscles
      defined. No bra strap groove. No breast weight. She runs her hands
-     across — the skin is different, slightly rougher, hair on the chest
+     across   the skin is different, slightly rougher, hair on the chest
      (sparse). The nipples are smaller, flatter, less sensitive when touched.
-     She flexes — the muscles respond differently, more visibly.
+     She flexes   the muscles respond differently, more visibly.
      She unbuttons the jeans. Pulls them down. Boxer briefs underneath.
-     The bulge. She pulls the waistband forward, looks down — the penis,
+     The bulge. She pulls the waistband forward, looks down   the penis,
      resting, surrounded by dark hair. Testicles below, tucked in the
-     scrotum. She touches — gently, clinically. The penis shifts at her
+     scrotum. She touches   gently, clinically. The penis shifts at her
      touch, starts to respond (semi-erection from stimulus). She pulls
      her hand back. Not now. Not today. This is reconnaissance, not
      recreation.
@@ -830,14 +830,14 @@ KAVYA (in Arjun's body):
      of external genitalia, the different geography of a male body.
    - File: day3_intimate.tw → "kavya_body_exploration_male"
 
-6. SHOWER — MALE (PG bathroom, morning or evening)
+6. SHOWER   MALE (PG bathroom, morning or evening)
    - Trigger: Player selects shower in pg_bathroom_d3
-   - Content: Standing under the water. Arjun's body under hot spray —
+   - Content: Standing under the water. Arjun's body under hot spray  
      broad shoulders catching the stream. Soaping the flat chest, the
-     abs. Reaching his (her) cock — washing it, the foreskin, pulling
-     back, the sensitivity of the head under water. The testicles —
+     abs. Reaching his (her) cock   washing it, the foreskin, pulling
+     back, the sensitivity of the head under water. The testicles  
      they tighten in the heat, then relax. Washing between the buttocks.
-     The body hair — more of it, coarser. The ease of it — no breasts
+     The body hair   more of it, coarser. The ease of it   no breasts
      to lift and wash under, no complex folds to clean. Four minutes.
      Done. Towel. The simplicity.
    - File: day3_intimate.tw → "kavya_shower_male_body"
@@ -850,43 +850,43 @@ KAVYA (in Arjun's body):
 
 ---
 
-## NPC INTERACTION PLACEMENT — DAY 3
+## NPC INTERACTION PLACEMENT   DAY 3
 
 ```
 ARJUN-AS-KAVYA NPC SCENES:
 
-1. CHOWKIDAR RAMESH — Gate test (first suspicion check)
-2. MEERA — Reunion (CRITICAL emotional core)
-3. PRIYA — Multiple (the threat, breakfast, evening)
-4. SNEHA — Corridor (pharmacology talk — danger zone)
-5. DR. SHARMA — Anatomy (handwriting test, specimen jar)
-6. MESS DIDI — Meals (comments on "Kavya eating more today")
-7. RANDOM HOSTEL GIRLS — Bathroom/corridor (casual femininity Arjun must mimic)
-8. MRS. JOSHI — If rounds occur (highest stakes)
-9. MEERA — Afternoon alone (intimate, terrace option)
-10. KAVYA (phone) — Check-in call from Redmi
+1. CHOWKIDAR RAMESH   Gate test (first suspicion check)
+2. MEERA   Reunion (CRITICAL emotional core)
+3. PRIYA   Multiple (the threat, breakfast, evening)
+4. SNEHA   Corridor (pharmacology talk   danger zone)
+5. DR. SHARMA   Anatomy (handwriting test, specimen jar)
+6. MESS DIDI   Meals (comments on "Kavya eating more today")
+7. RANDOM HOSTEL GIRLS   Bathroom/corridor (casual femininity Arjun must mimic)
+8. MRS. JOSHI   If rounds occur (highest stakes)
+9. MEERA   Afternoon alone (intimate, terrace option)
+10. KAVYA (phone)   Check-in call from Redmi
 
 KAVYA-AS-ARJUN NPC SCENES:
 
-1. ROHIT — Morning PG (first test — can she be Arjun?)
-2. PG CHAI BOYS — Common area (performing masculinity)
-3. AMIT — PG boy, laptop virus (side quest)
-4. RAJU BHAIYA — Tapri (free chai follow-up)
-5. SECURITY GUARD PATIL — VIT gate
-6. PROF. KRISHNAN — Lecture (the brilliant answer scene)
-7. ROHIT — Canteen (sustained test, lunch conversation)
-8. NIKHIL — ICPC prep (coding conversation)
-9. CANTEEN ANNA — Food order (test: does she know Arjun's usual?)
-10. LAB ASSISTANT — CS lab access
-11. RANDOM VIT BOYS — Back-slapping, casual masculinity
-12. ARJUN (phone) — Check-in call
+1. ROHIT   Morning PG (first test   can she be Arjun?)
+2. PG CHAI BOYS   Common area (performing masculinity)
+3. AMIT   PG boy, laptop virus (side quest)
+4. RAJU BHAIYA   Tapri (free chai follow-up)
+5. SECURITY GUARD PATIL   VIT gate
+6. PROF. KRISHNAN   Lecture (the brilliant answer scene)
+7. ROHIT   Canteen (sustained test, lunch conversation)
+8. NIKHIL   ICPC prep (coding conversation)
+9. CANTEEN ANNA   Food order (test: does she know Arjun's usual?)
+10. LAB ASSISTANT   CS lab access
+11. RANDOM VIT BOYS   Back-slapping, casual masculinity
+12. ARJUN (phone)   Check-in call
 ```
 
 ---
 
 ## STATS AT END OF DAY 3
 
-### ARJUN — End of Day 3
+### ARJUN   End of Day 3
 ```javascript
 $arjun_stats_day3_end = {
   coding_skill: 88,
@@ -909,7 +909,7 @@ $arjun_stats_day3_end = {
 };
 ```
 
-### KAVYA — End of Day 3
+### KAVYA   End of Day 3
 ```javascript
 $kavya_stats_day3_end = {
   coding_skill: 85,         // +10 from real coding session

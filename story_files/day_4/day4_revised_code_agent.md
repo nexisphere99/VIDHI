@@ -1,27 +1,27 @@
-# DAY 4 — CODE AGENT PROMPT (REVISED)
-## "Doosri Chamdi" (Second Skin) — Swap #2, HALF DAY (5:30 AM – 5:30 PM)
+# DAY 4   CODE AGENT PROMPT (REVISED)
+## "Doosri Chamdi" (Second Skin)   Swap #2, HALF DAY (5:30 AM – 5:30 PM)
 ## Temple Swap/Swap-Back Bookends
 
 ---
 
 ## CRITICAL STRUCTURE CHANGE
 
-Day 4 is a HALF-DAY swap — NOT a full day. The day starts with both characters sneaking out to Pataleshwar Temple at dawn, swapping, living in each other's bodies for 12 hours, then returning to the temple at 5:30 PM to swap back.
+Day 4 is a HALF-DAY swap   NOT a full day. The day starts with both characters sneaking out to Pataleshwar Temple at dawn, swapping, living in each other's bodies for 12 hours, then returning to the temple at 5:30 PM to swap back.
 
 ```
-04:30 AM — Arjun sneaks out of PG (Rohit sleeping)
-04:45 AM — Kavya lies her way out of hostel ("temple pooja, seven days")
-05:30 AM — SWAP at Pataleshwar Temple
-05:30 AM – 5:30 PM — Swapped bodies (Arjun→hostel, Kavya→VIT)
-05:30 PM — SWAP BACK at Pataleshwar Temple
-06:00 PM — Both return to their own locations in own bodies
+04:30 AM   Arjun sneaks out of PG (Rohit sleeping)
+04:45 AM   Kavya lies her way out of hostel ("temple pooja, seven days")
+05:30 AM   SWAP at Pataleshwar Temple
+05:30 AM – 5:30 PM   Swapped bodies (Arjun→hostel, Kavya→VIT)
+05:30 PM   SWAP BACK at Pataleshwar Temple
+06:00 PM   Both return to their own locations in own bodies
 ```
 
 **Each character needs TWO bookend scenes:** sneaking out + temple swap AND temple swap-back + returning.
 
 ---
 
-## FILE STRUCTURE — DAY 4 (REVISED)
+## FILE STRUCTURE   DAY 4 (REVISED)
 
 ```
 /game/days/day4/
@@ -76,14 +76,14 @@ Day 4 is a HALF-DAY swap — NOT a full day. The day starts with both characters
 
 ---
 
-## LOCATION SYSTEM — DAY 4
+## LOCATION SYSTEM   DAY 4
 
 ### ARJUN'S LOCATIONS (Pre-swap: own body)
 
 ```javascript
 const arjun_preSWAP_d4 = {
   "katraj_pg_room_predawn": {
-    name: "PG Room — 4:30 AM, Sneaking Out",
+    name: "PG Room   4:30 AM, Sneaking Out",
     objects: [
       { id: "rohit_sleeping", action: "Check if Rohit is asleep", triggers: "rohit_sleep_check" },
       { id: "get_dressed_quiet", action: "Get dressed silently", triggers: "arjun_silent_dress" },
@@ -100,7 +100,7 @@ const arjun_preSWAP_d4 = {
 ```javascript
 const kavya_preSWAP_d4 = {
   "hostel_room_304_predawn": {
-    name: "Room 304 — 4:45 AM, The Excuse",
+    name: "Room 304   4:45 AM, The Excuse",
     objects: [
       { id: "meera_awake", action: "Signal Meera", triggers: "meera_signal" },
       { id: "priya_check", action: "Check Priya's status", triggers: "priya_sleeping_check" },
@@ -125,7 +125,7 @@ const arjun_inKavya_d4 = {
           timeWindow: "07:30-09:00 AND 14:00-17:00",
           note: "Extended holding, near-kiss, possible breast touch" },
         { id: "read_pharmacology", action: "Read Kavya's textbook",
-          triggers: "pharmacology_reading", note: "Priya sees this — anomaly" }
+          triggers: "pharmacology_reading", note: "Priya sees this   anomaly" }
       ]
     }
   },
@@ -135,7 +135,7 @@ const arjun_inKavya_d4 = {
       objects_added: [
         { id: "second_pee", action: "Use the toilet (second time)",
           triggers: "arjun_pee_d4", intimate: true,
-          note: "Less panic. Notices body awareness during wipe — labia sensitivity" }
+          note: "Less panic. Notices body awareness during wipe   labia sensitivity" }
       ]
     }
   }
@@ -166,7 +166,7 @@ const kavya_inArjun_d4 = {
 
 ---
 
-## OBJECTIVE SYSTEM — DAY 4
+## OBJECTIVE SYSTEM   DAY 4
 
 ### ARJUN
 
@@ -190,7 +190,7 @@ const arjunObjectives_day4 = {
     },
     {
       id: "obj_bra_mastery",
-      title: "Bra on first try — solo",
+      title: "Bra on first try   solo",
       description: "Yesterday took four minutes and help. Today: do it yourself.",
       status: "locked",
       unlockCondition: "swap_complete",
@@ -198,7 +198,7 @@ const arjunObjectives_day4 = {
     },
     {
       id: "obj_survive_anatomy_d4",
-      title: "Anatomy lecture — 40% comprehension target",
+      title: "Anatomy lecture   40% comprehension target",
       description: "Meera is your lifeline. Copy her. Don't die of formalin.",
       status: "locked",
       unlockCondition: "morning_routine_done",
@@ -266,7 +266,7 @@ const kavyaObjectives_day4 = {
     },
     {
       id: "obj_pulsar_improvement",
-      title: "Ride the Pulsar — day 2",
+      title: "Ride the Pulsar   day 2",
       description: "Better today. Clutch is becoming intuitive. Enjoy the wind.",
       status: "locked",
       unlockCondition: "swap_complete",
@@ -274,7 +274,7 @@ const kavyaObjectives_day4 = {
     },
     {
       id: "obj_cs_class_d4",
-      title: "Data Structures — Red-Black Trees",
+      title: "Data Structures   Red-Black Trees",
       description: "Krishnan. RB-tree insertion. Restrain yourself. ONE answer only.",
       status: "locked",
       unlockCondition: "ride_done AND time >= 09:30",
@@ -323,7 +323,7 @@ const kavyaObjectives_day4 = {
 
 ---
 
-## INTIMATE SCENE PLACEMENT — DAY 4
+## INTIMATE SCENE PLACEMENT   DAY 4
 
 ```
 ═══════════════════════════════════════════
@@ -331,8 +331,8 @@ ARJUN (in Kavya's body):
 ═══════════════════════════════════════════
 
 1. SNEAKING OUT (4:30 AM, own body, PG room)
-   - Content: Dark room. Rohit face-down, snoring. Arjun dresses silently —
-     jeans, t-shirt, shoes in hand (put on outside). The door SQUEAKS —
+   - Content: Dark room. Rohit face-down, snoring. Arjun dresses silently  
+     jeans, t-shirt, shoes in hand (put on outside). The door SQUEAKS  
      he freezes. Rohit mumbles "bhai... Maggi..." but doesn't wake.
      Down the stairs, shoes on at the gate. Pulsar started fifty meters
      from the PG so the engine noise doesn't carry. Heart pounding.
@@ -342,24 +342,24 @@ ARJUN (in Kavya's body):
      First try. Twenty seconds. The pride is real.
    - Safety-pins the dying left strap to the kameez.
 
-3. SECOND PEE — BODY AWARENESS (6:30 AM)
+3. SECOND PEE   BODY AWARENESS (6:30 AM)
    - Less terror. Familiar routine. But today NOTICES: the wiping touches
-     labia that RESPOND. Not sexually — but with heightened awareness.
+     labia that RESPOND. Not sexually   but with heightened awareness.
      Warm, slightly puffy from sleep, the tissue alive and sensing.
      The body is always ON between the legs. Always aware. New data.
 
-4. MEERA INTIMATE — HOLDING, NEAR-KISS, BREAST PROXIMITY (2:00 PM)
+4. MEERA INTIMATE   HOLDING, NEAR-KISS, BREAST PROXIMITY (2:00 PM)
    - FULL SCENE. Room 304. Priya at library.
-   - Sitting cross-legged. Hands held. The "stone in water" speech —
+   - Sitting cross-legged. Hands held. The "stone in water" speech  
      every touch TRAVELS in this body.
    - Meera asks: "Can I hold you?"
    - Extended embrace: five minutes. Not sexual. Bodies pressed chest to hip.
      Meera's heartbeat against Kavya's breastbone. His face in her hair.
    - The near-kiss: foreheads touching, noses almost, breath warm.
-     Meera's hand on Kavya's waist. Slides upward — ribs, the side
-     curve of the breast through the kameez. She stops. Not grabbing —
+     Meera's hand on Kavya's waist. Slides upward   ribs, the side
+     curve of the breast through the kameez. She stops. Not grabbing  
      resting. Her palm against the outer curve of Kavya's breast through
-     cotton. The warmth radiates. The nipple responds — tightening against
+     cotton. The warmth radiates. The nipple responds   tightening against
      the bra cup. He inhales sharply. She feels it.
    - "Is this okay?" Meera whispers.
    - "...yes." But he doesn't go further. Not today. The touch is enough.
@@ -375,29 +375,29 @@ KAVYA (in Arjun's body):
 
 1. HOSTEL EXCUSE (4:45 AM, own body, hostel)
    - Content: Pre-dawn. Priya asleep. Meera awake, helping.
-     Kavya dresses — salwar kameez, dupatta. Goes downstairs.
+     Kavya dresses   salwar kameez, dupatta. Goes downstairs.
      Chowkidar Ramesh: "Itni subah?"
      Kavya: "Temple mein pooja hai. Saat din ki pooja shuru ki hai.
-     Subah 5 baje jaana padta hai." Seven-day pooja — the excuse that
+     Subah 5 baje jaana padta hai." Seven-day pooja   the excuse that
      covers the entire week of pre-dawn temple visits.
      Ramesh nods. Religious excuse = unquestionable in Indian context.
      Signs out. Walks to temple.
 
-2. BODY CATALOG — NON-GENITAL (3:00 PM, PG room, Rohit at lab)
+2. BODY CATALOG   NON-GENITAL (3:00 PM, PG room, Rohit at lab)
    - FULL SCENE. Shirt off. Mirror.
    - Systematic: shoulders (broader +15cm, deltoids visible, clean rotation),
      chest (flat, pectorals shift, nipples = sharp ping not wave),
      arms (veins visible, bicep modest, forearm for keyboards),
      abdomen (four-pack faint, hair trail, V-lines unexpectedly sensitive),
      hips (narrow, iliac crests visible, different pelvic angle).
-   - She STOPS at the waistband. Yesterday was Day 3 — urgent first
+   - She STOPS at the waistband. Yesterday was Day 3   urgent first
      masturbation. Today she catalogs everything ELSE. The rest of the
      body. The architecture. The foundation.
 
-3. AROUSAL DISCOVERY — RANDOM ERECTION (3:30 PM, during coding)
-   - FULL SCENE. She's coding — VS Code, the ML project. Deep in flow state.
+3. AROUSAL DISCOVERY   RANDOM ERECTION (3:30 PM, during coding)
+   - FULL SCENE. She's coding   VS Code, the ML project. Deep in flow state.
      And then: something shifts between her legs. The penis THICKENS.
-     Not from arousal — from NOTHING. Random. The body's unsolicited
+     Not from arousal   from NOTHING. Random. The body's unsolicited
      push notification.
    - She looks down: visible bulge in jeans. Feels it pressing against
      the denim, the fabric tightening. The sensation: concentrated,
@@ -407,11 +407,11 @@ KAVYA (in Arjun's body):
      against cotton. She pulls the waistband forward and LOOKS.
    - It's fully erect. Five and a half inches, standing away from the
      body, the head darkened, a bead of pre-cum at the tip. She studies
-     it — the anatomy she knows from cadavers, now ALIVE, warm, pulsing.
-   - She touches it. One finger. The shaft — warm, firm, the skin
+     it   the anatomy she knows from cadavers, now ALIVE, warm, pulsing.
+   - She touches it. One finger. The shaft   warm, firm, the skin
      softer than she expected. The cock TWITCHES at the contact.
-     She wraps her fingers around it — briefly, the grip tentative.
-     The sensation is CONCENTRATED — a single line of fire.
+     She wraps her fingers around it   briefly, the grip tentative.
+     The sensation is CONCENTRATED   a single line of fire.
    - She releases. Not today. Not NOW. This is reconnaissance, not
      recreation. She pulls the jeans back up (uncomfortable over the
      erection), waits four minutes, thinks about pharmacology, and the

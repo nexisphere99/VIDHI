@@ -226,7 +226,7 @@ Neither of them knows the other exists yet. Your story begins with the boy   his
 <span class="inv-chip">₹<<= setup.money()>></span>\
 <<if $swapActive and $discoveries[$pov].length gt 0>>\
 <h3>Body   what you've learned</h3>\
-<<for _d range $discoveries[$pov]>><span class="inv-chip">— <<= _d>></span><</for>>\
+<<for _d range $discoveries[$pov]>><span class="inv-chip">  <<= _d>></span><</for>>\
 <</if>>\
 <img class="mandala" src="images/mandala.svg" alt="">
 

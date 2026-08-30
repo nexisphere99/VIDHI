@@ -1,7 +1,7 @@
 {
   "name": "vidhi-desktop",
   "productName": "VIDHI",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "VIDHI   The Body Swap Chronicles (desktop build). Thin Electron shell around dist/.",
   "private": true,
   "license": "UNLICENSED",

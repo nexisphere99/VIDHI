@@ -1023,7 +1023,8 @@ setup.dayFullyDone = function () {
 setup.dayEnd = {
   1: { screen: "Day1Complete" },
   2: { screen: "Day2Complete" },
-  3: { screen: "Day3Complete" }
+  3: { screen: "Day3Complete" },
+  4: { screen: "Day4Complete" }
 };
 setup.locations.arjun.katraj_pg_room.objects.push(
   { id: "sleep_next_day", action: "Sleep   end the day", triggers: "DayWrap", unlockCondition: "mains_done", quest: "main" }
@@ -1102,9 +1103,12 @@ setup.atom = function (a, who) {
   if (a === "not_priya_out") return !V().flags.priya_out_jogging && !V().flags.priya_in_common_room && !V().flags.priya_left_for_class;
   /* Arjun may not leave for the swap-back until he's had real time alone with Meera   the whole point of the day. Kavya is unaffected. */
   if (a === "arjun_had_meera_time") return who !== "arjun" || !!S.flags.meera_close_d3;
+  if (a === "arjun_had_meera_time_d4") return who !== "arjun" || !!S.flags.meera_hold_d4;
   /* Day 3 swap-back is a shared finale: neither thread can trigger it until BOTH
      have finished their day's essential work. */
   if (a === "day3_both_done") return !!(S.flags.arjun_day_survived_d3 && S.flags.meera_close_d3 && S.flags.real_coding_done);
+  /* Day 4 swap-back is the same shared-finale gate, one day on. */
+  if (a === "day4_both_done") return !!(S.flags.arjun_day_survived_d4 && S.flags.meera_hold_d4 && S.flags.real_coding_done_d4);
   if (a === "has_bike_keys") return setup.hasItem("bike_keys");
   if (a === "has_biscuit") return setup.hasItem("biscuit");
   if (a === "has_redmi_phone") return setup.hasItem("redmi_phone");
@@ -1236,6 +1240,11 @@ setup.refreshWorld = function () {
       && S.flags.anatomy_done_d3 && !S.flags.arjun_day_survived_d3) {
     S.flags.arjun_day_survived_d3 = true;
   }
+  /* Day 4 derived: settled second day   bra solo + second pee + anatomy again */
+  if (S.day === 4 && S.flags.arjun_bra_solo_d4 && S.flags.arjun_pee_d4
+      && S.flags.anatomy_done_d4 && !S.flags.arjun_day_survived_d4) {
+    S.flags.arjun_day_survived_d4 = true;
+  }
 };
 
 /* ritual swap bookkeeping (Day 1 test = swap #1) */
@@ -1318,6 +1327,39 @@ setup.dayStart = {
       ].forEach(function (f) { delete S.flags[f]; });
       S.mood.arjun = "terrified, electric";
       S.mood.kavya = "clinical, alive";
+    }
+  },
+  4: {
+    pov: "arjun", title: "Doosri Chamdi", startPassage: "Day4Start",
+    loc: { arjun: "katraj_predawn_d4", kavya: "hostel_predawn_d4" },
+    time: { arjun: 265, kavya: 280 },   /* 04:25 / 04:40 */
+    mood: { arjun: "second time, half-asleep, resolved", kavya: "second time, hungry for it" },
+    onBegin: function (S) {
+      /* Day 4 opens BEFORE the swap, same as Day 3   both in their own bodies. */
+      S.body = { arjun: "arjun", kavya: "kavya" };
+      S.swapActive = false;
+      /* the swap-back at the end of Day 3 leaves Arjun with the keys and Kavya
+         with the Redmi   the exact pre-swap loadout Day 4 wants. Backfill it
+         in case the player jumped here via debug. */
+      if (!setup.hasItem("bike_keys", "arjun")) setup.addItem("bike_keys", "arjun");
+      if (setup.hasItem("bike_keys", "kavya")) setup.removeItem("bike_keys", "kavya");
+      if (!setup.hasItem("redmi_phone", "kavya")) setup.addItem("redmi_phone", "kavya");
+      if (setup.hasItem("redmi_phone", "arjun")) setup.removeItem("redmi_phone", "arjun");
+      ["swap_complete", "swap_back_complete", "swap_back_ready",
+       "arjun_at_temple_d4", "kavya_at_temple_d4", "arjun_snuck_out_d4", "kavya_excuse_d4",
+       "day4_briefed", "arjun_first_kavya_body_d4", "entered_hostel_d4", "signed_out_d4",
+       "chowkidar_passed_d4", "meera_reunion_d4", "meera_coached_d4", "arjun_bra_solo_d4",
+       "arjun_pee_d4", "anatomy_done_d4", "in_dissection_d4", "arjun_day_survived_d4",
+       "priya_out_d4", "meera_hold_d4", "meera_anatomy_helped_d4", "arjun_terrace_d4_done",
+       "terrace_cat_fed_d4", "sneha_handwriting_d4", "priya_phone_covered_d4", "mess_didi_d4_done",
+       "ride_complete_d4", "rohit_pg_passed_d4", "entered_vit_d4", "rb_lecture_done_d4",
+       "in_lecture_d4", "kavya_rb_answered_d4", "real_coding_done_d4", "body_catalog_d4",
+       "erection_seen_d4", "maggi_done_d4", "raju_supplier_d4", "nikhil_bonus_d4",
+       "kavya_peed_male_d4", "arjun_home_d4", "kavya_home_d4", "arjun_slept_d4",
+       "kavya_slept_d4", "day5_swap_planned"
+      ].forEach(function (f) { delete S.flags[f]; });
+      S.mood.arjun = "second time, resolved";
+      S.mood.kavya = "second time, hungry for it";
     }
   }
 };
@@ -1660,6 +1702,20 @@ setup.actionTime = function (trigger) {
     pg_chai_circle_d3: 15, amit_laptop_d3: 15, raju_d3: 12, kavya_vit_wonder_d3: 10,
     patil_d3: 5, ds_lecture_d3: 90, kavya_brilliant_answer_d3: 10, krishnan_corridor_d3: 12, nikhil_icpc_d3: 20,
     anna_order_d3: 10, rohit_canteen_d3: 25, kavya_coding_ecstasy_d3: 90,
+    /* ---- Day 4 ---- */
+    arjun_predawn_d4: 15, arjun_ride_temple_d4: 25, kavya_predawn_d4: 15,
+    kavya_walk_temple_d4: 30, day4_swap: 15, day4_briefing: 12, day4_swapback: 25,
+    day4_gohome: 35, day4_sleep: 0, day4_temple_wait: 20, day4_temple_wait_back: 20,
+    arjun_sneak_out_d4: 12, kavya_hostel_excuse_d4: 8,
+    arjun_first_kavya_body_d4: 8, arjun_bra_mastery_d4: 15, arjun_second_pee_d4: 10,
+    meera_holding_d4: 60, arjun_anatomy_d4: 60, meera_anatomy_guide_d4: 20,
+    arjun_terrace_d4: 15, terrace_cat_d4: 8, check_in_call_d4: 12,
+    ramesh_gate_d4: 5, priya_phone_anomaly_d4: 10, sneha_handwriting_d4: 8, mess_didi_d4: 10,
+    kavya_first_arjun_body_d4: 8, kavya_pulsar_improved_d4: 12, kavya_maggi_d4: 15,
+    rb_lecture_d4: 90, kavya_rb_answer_d4: 10, kavya_body_catalog_d4: 25,
+    kavya_erection_discovery_d4: 25, raju_supplier_d4: 20, rohit_morning_d4: 12,
+    nikhil_bonus_d4: 20, anna_eating_d4: 10, patil_gate_d4: 5,
+    kavya_first_pee_male_d4: 8, EV_a4_pooja_wa: 8, EV_a4_aai_call: 8,
     arjun_shower_d2: 15, arjun_stress_pee_d2: 3, kavya_shower_d2: 15, kavya_period_planning_d2: 3,
     os_lecture_d2: 60, pharmacology_lecture_d2: 60, mhatre_test_d2: 30, margin_coding_d2: 20,
     meera_full_plan_d2: 25, swap_rules_d2: 20, chant_practice_d2: 20, schedule_study_d2: 20, journal_d2: 15,
@@ -2001,7 +2057,25 @@ setup.humanCond = function (expr) {
     ride_complete_d3: "after the Pulsar ride",
     real_coding_done: "after your real coding session",
     arjun_had_meera_time: "after your time alone with Meera",
-    arjun_day_survived_d3: "once you've got through the day as Kavya"
+    arjun_day_survived_d3: "once you've got through the day as Kavya",
+    /* Day 4 */
+    arjun_at_temple_d4: "once you've reached the temple",
+    kavya_at_temple_d4: "once Kavya has reached the temple",
+    arjun_first_kavya_body_d4: "after you've taken stock of the body",
+    entered_hostel_d4: "after signing into the hostel as Kavya",
+    signed_out_d4: "after signing out of the hostel for college",
+    meera_reunion_d4: "after finding Meera in Room 304",
+    meera_hold_d4: "after the afternoon Meera held you",
+    priya_out_d4: "once Priya has left for the library",
+    entered_vit_d4: "after showing Arjun's ID at the VIT gate",
+    rb_lecture_done_d4: "after the Red-Black Trees lecture",
+    rohit_pg_passed_d4: "after getting past Rohit at the PG",
+    real_coding_done_d4: "after your coding session",
+    arjun_had_meera_time_d4: "after the afternoon with Meera",
+    arjun_day_survived_d4: "once you've got through the day as Kavya",
+    day4_both_done: "once both of your days are finished",
+    arjun_bra_solo_d4: "after you've got the bra on solo",
+    ride_complete_d4: "after the Pulsar ride"
   };
   var SKIP_NOT = /^(has_bike_keys|has_redmi_phone|.*_complete)$/;
   var out = [];
@@ -2038,13 +2112,14 @@ setup.openLocationGuide = function () {
     });
   });
   var name = pov === "arjun" ? "Arjun" : "Kavya";
-  var d3swapped = V().day === 3 && V().swapActive;
-  var d3done = V().day === 3 && V().flags.swap_back_complete;
+  var swapDay = V().day >= 3;
+  var d3swapped = swapDay && V().swapActive;
+  var d3done = swapDay && V().flags.swap_back_complete;
   var lead = d3done
-    ? "Back in your own body   Day 3 is winding down. All that's left is to sleep. "
+    ? "Back in your own body   the day is winding down. All that's left is to sleep. "
     : d3swapped
     ? "Where you can go today, in " + (pov === "arjun" ? "Kavya's body around the B.J. Medical hostel" : "Arjun's body around VIT and Katraj") + ". "
-    : V().day === 3
+    : swapDay
     ? "Before the swap   you're heading for Pataleshwar at dawn. "
     : "Everywhere " + name + " can go, ";
   var h = "<div class='loc-guide'><p class='lg-intro'>" + lead +
@@ -2052,10 +2127,10 @@ setup.openLocationGuide = function () {
   Object.keys(locs).forEach(function (id) {
     var L = locs[id];
     if (L.dayOnly && L.dayOnly !== V().day) return;
-    /* Day 3: you're living the other person's day   only their world is real */
-    if (V().day === 3 && L.dayOnly !== 3) return;
+    /* Day 3+: you're living the other person's day   only their world is real */
+    if (swapDay && L.dayOnly !== V().day) return;
     /* after the swap-back the day's over   only your own room is left */
-    if (d3done && !/night_d3$/.test(id)) return;
+    if (d3done && !/night_d\d+$/.test(id)) return;
     var unlocked = !L.unlockCondition || setup.cond(L.unlockCondition, pov);
     var openNow = setup.locAvailable(L, pov);
     var badge = id === here ? "<span class='lg-badge here'>you are here</span>"
@@ -3313,6 +3388,616 @@ setup.phoneTab = function (which, tab) {
       /* Day 3 swaps each player into the OTHER world   tag every *_d3 place so
          the Places guide (and anything else day-scoped) hides the day-1/2 map */
       if (/_d3$/.test(lid)) L[pov][lid].dayOnly = 3;
+      (L[pov][lid].objects || []).forEach(function (o) {
+        if (setup._questTag.main.indexOf(o.id) !== -1) o.quest = "main";
+        else if (setup._questTag.side.indexOf(o.id) !== -1) o.quest = "side";
+      });
+    });
+    setup.objectives[pov].main.concat(setup.objectives[pov].side).forEach(function (o) {
+      if (!o.day) o.day = 1;
+    });
+  });
+
+})();
+
+/* ============================================================
+   DAY 4   "Doosri Chamdi" (Second Skin)   THE SECOND SWAP
+   Same bookended half-day as Day 3   sneak out, swap at dawn,
+   twelve hours in the other's life, swap back at 5:30 PM.
+   Settled, not panicked: bra solo, Meera holds him, Kavya
+   catalogs the body and meets the erection head-on.
+   ============================================================ */
+(function day4() {
+
+  var L = setup.locations;
+
+  /* ---- the temple (both pov maps: both start here) ---- */
+  var temple = {
+    name: "Pataleshwar Cave Temple   Pre-dawn",
+    available: "04:00-06:30,17:00-20:00",
+    description: "The same basalt, the same one perpetual lamp. The second time up this hill the ritual geometry is familiar   red powder, kalava thread, the printed sheet   and the wrench recovers faster.",
+    objects: [
+      { id: "swap_circle", action: "Sit in the kumkum circle. Again.", triggers: "day4_swap", quest: "main", unlockCondition: "arjun_at_temple_d4 AND kavya_at_temple_d4 AND not swap_complete" },
+      { id: "swap_back_circle", action: "Sit in the circle. Reverse it.", triggers: "day4_swapback", quest: "main", unlockCondition: "swap_complete AND not swap_back_complete AND time >= 17:00 AND day4_both_done" },
+      { id: "temple_wait", action: "Wait. Watch the sky. You know this now.", triggers: "day4_temple_wait", unlockCondition: "not swap_complete" },
+      { id: "temple_wait_back", action: "Sit on the steps and wait for the other one", triggers: "day4_temple_wait_back", unlockCondition: "swap_complete AND not swap_back_complete AND not day4_both_done" },
+      { id: "temple_leave_done", action: "It's done. Head home.", triggers: "day4_gohome", quest: "main", unlockCondition: "swap_back_complete" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "pataleshwar_dawn.png"
+  };
+  L.arjun.pataleshwar_temple_d4 = temple;
+  L.kavya.pataleshwar_temple_d4 = Object.assign({}, temple, {
+    exits: [ { to: "katraj_street_d4", label: "Ride back down (come back by 5:30)", unlockCondition: "not swap_back_complete" } ]
+  });
+  temple.exits = [ { to: "hostel_entrance_d4", label: "Walk back down (come back by 5:30)", unlockCondition: "not swap_back_complete" } ];
+
+  /* ---- ARJUN (in Kavya's body): the hostel & B.J. Medical world ---- */
+  Object.assign(L.arjun, {
+    "hostel_walk_d4": {
+      name: "Walking to B.J. Medical   in Kavya's Body (Day 2)",
+      unlockCondition: "swap_complete",
+      available: "05:00-07:30",
+      description: "You know the physics now. The hips still rotate, the dupatta still slides, the hair is still a weather system   but you're not fighting it, you're riding it. Twenty-five minutes.",
+      objects: [
+        { id: "walk_body_check_d4", action: "Take stock. Second morning in this body.", triggers: "arjun_first_kavya_body_d4", intimate: true, quest: "main" }
+      ],
+      npcs: ["early_jogger", "milk_delivery_man"],
+      exits: [ { to: "hostel_entrance_d4", label: "The hostel gate" } ]
+    },
+    "hostel_entrance_d4": {
+      name: "Hostel Gate   As Kavya (Day 2)",
+      unlockCondition: "arjun_first_kavya_body_d4",
+      available: "05:00-21:30",
+      description: "Chowkidar Ramesh, thermos at half. He waved 'Kavya' out at 4:55 for the seven-day pooja; you coming back at six fits the story he's already told himself.",
+      objects: [
+        { id: "chowkidar_pass_d4", action: "Walk past Ramesh (the pooja cover holds)", triggers: "ramesh_gate_d4", quest: "main" },
+        { id: "signin_d4", action: "Sign the register (going in)", triggers: "signin_d4", unlockCondition: "chowkidar_passed_d4 AND not entered_hostel_d4" },
+        { id: "signout_d4", action: "Sign out for college", triggers: "signout_d4", unlockCondition: "meera_reunion_d4 AND not signed_out_d4" }
+      ],
+      npcs: ["chowkidar_ramesh"],
+      exits: [
+        { to: "hostel_stairs_d4", label: "Inside   the stairs", unlockCondition: "entered_hostel_d4" },
+        { to: "bj_campus_path_d4", label: "Out to the campus", unlockCondition: "signed_out_d4" }
+      ]
+    },
+    "hostel_stairs_d4": {
+      name: "Hostel Stairwell   As Kavya (Day 2)",
+      unlockCondition: "entered_hostel_d4",
+      available: "00:00-23:59",
+      description: "Third floor. The thigh-brush on every step is a known quantity now   still no male equivalent, still noted, no longer alarming.",
+      objects: [],
+      npcs: [],
+      exits: [
+        { to: "hostel_corridor_d4", label: "Third-floor corridor" },
+        { to: "hostel_mess_d4", label: "Mess hall (ground floor)" },
+        { to: "hostel_entrance_d4", label: "Down to the entrance" }
+      ]
+    },
+    "hostel_corridor_d4": {
+      name: "Third-Floor Corridor   As Kavya (Day 2)",
+      unlockCondition: "entered_hostel_d4",
+      available: "00:00-23:59",
+      description: "Girls in towels, the 6 AM half-nudity of a women's hostel. Yesterday you had to not-blink. Today you don't blink.",
+      objects: [
+        { id: "sneha_corridor_d4", action: "Sneha wants the pathology notes", triggers: "sneha_handwriting_d4", quest: "side", unlockCondition: "meera_reunion_d4 AND time >= 12:00" }
+      ],
+      npcs: ["random_hostel_girls", "sneha_302"],
+      exits: [
+        { to: "hostel_room_304_d4", label: "Room 304" },
+        { to: "hostel_bathroom_d4", label: "Bathroom" },
+        { to: "hostel_stairs_d4", label: "Stairs" },
+        { to: "hostel_terrace_d4", label: "Terrace (up)", unlockCondition: "meera_reunion_d4" }
+      ]
+    },
+    "hostel_room_304_d4": {
+      name: "Room 304   As Kavya (Day 2)",
+      unlockCondition: "entered_hostel_d4",
+      available: "00:00-23:59",
+      description: "Three cots. Meera on the middle one, awake, braid undone   she's had all night to wait for her boyfriend to walk in wearing Kavya's face for the second time.",
+      objects: [
+        { id: "meera_reunion_d4", action: "Look at Meera", triggers: "meera_reunion_d4", quest: "main", unlockCondition: "not meera_reunion_d4" },
+        { id: "room304_meera_coach_d4", action: "Let Meera drill the essentials (Priya still asleep)", triggers: "meera_coaches_d4", quest: "side", intimate: true, timeWindow: "05:00-09:30", unlockCondition: "meera_reunion_d4 AND not meera_coached_d4" },
+        { id: "room304_pharma_d4", action: "Read Kavya's pathology textbook (Priya's prop)", triggers: "arjun_pharma_read_d4", unlockCondition: "meera_reunion_d4" },
+        { id: "room304_meera_hold_d4", action: "Bolt the door. Let Meera hold you.", triggers: "meera_holding_d4", quest: "main", intimate: true, unlockCondition: "meera_reunion_d4 AND priya_out_d4 AND not meera_hold_d4" },
+        { id: "room304_manuscript_d4", action: "Help Meera organise the manuscript", triggers: "manuscript_organize_d4", quest: "side", unlockCondition: "meera_hold_d4" },
+        { id: "room304_priya_phone_d4", action: "Fix the phone-on-the-desk habit before Priya clocks it", triggers: "priya_phone_anomaly_d4", quest: "side", unlockCondition: "meera_reunion_d4 AND time >= 07:30 AND not priya_out_d4" }
+      ],
+      npcs: ["meera", "priya"],
+      exits: [ { to: "hostel_corridor_d4", label: "Corridor" } ],
+      image: "room_304_arjun_pov.png"
+    },
+    "hostel_bathroom_d4": {
+      name: "Hostel Bathroom   Second Time (Day 2)",
+      unlockCondition: "entered_hostel_d4",
+      available: "00:00-23:59",
+      description: "Three stalls, wet tiles, the strobing tube. Yesterday it was the most frightening room in the building. Today it's just a bathroom you happen to use sitting down.",
+      objects: [
+        { id: "bra_d4", action: "Put the bra on   solo, first try", triggers: "arjun_bra_mastery_d4", intimate: true, quest: "side" },
+        { id: "toilet_d4", action: "Use the toilet (body awareness)", triggers: "arjun_second_pee_d4", intimate: true, quest: "side", unlockCondition: "arjun_bra_solo_d4" },
+        { id: "bathroom_mirror_d4", action: "Look at yourself   no panic this time", triggers: "arjun_mirror_d4", unlockCondition: "arjun_bra_solo_d4" }
+      ],
+      npcs: ["random_hostel_girls"],
+      exits: [ { to: "hostel_corridor_d4", label: "Back to the corridor" } ]
+    },
+    "hostel_mess_d4": {
+      name: "Hostel Mess   As Kavya (Day 2)",
+      unlockCondition: "entered_hostel_d4",
+      available: "07:00-09:00,12:00-14:00,19:00-21:00",
+      description: "Steel plates, thin dal, Mess Didi Savita with the ladle and the romantic radar.",
+      objects: [
+        { id: "mess_didi_d4", action: "Get food   Savita will read your face", triggers: "mess_didi_d4", quest: "side" }
+      ],
+      npcs: ["mess_didi_savita", "meera", "priya"],
+      exits: [ { to: "hostel_stairs_d4", label: "Back to the stairs" } ]
+    },
+    "hostel_terrace_d4": {
+      name: "Hostel Terrace   Private (Day 2)",
+      unlockCondition: "meera_reunion_d4",
+      available: "12:00-23:00",
+      description: "The water tank, the washing lines, the one orange cat. The only private square metres in the building.",
+      objects: [
+        { id: "terrace_cat_d4", action: "Sit with Nandu the cat", triggers: "terrace_cat_d4", quest: "side" },
+        { id: "terrace_call_d4", action: "Call Kavya on the Redmi (midday check-in)", triggers: "check_in_call_d4", quest: "side" },
+        { id: "terrace_reflect_d4", action: "Lean on the railing and just feel it", triggers: "arjun_terrace_d4", intimate: true }
+      ],
+      npcs: [],
+      exits: [ { to: "hostel_corridor_d4", label: "Back downstairs" } ]
+    },
+    "bj_campus_path_d4": {
+      name: "B.J. Medical Campus Path   As Kavya (Day 2)",
+      unlockCondition: "signed_out_d4",
+      available: "07:00-18:00",
+      description: "Neem trees, white coats, puddles. Everyone here has seen Kavya a thousand times and none of them look twice.",
+      objects: [],
+      npcs: ["random_mbbs_students"],
+      exits: [
+        { to: "hostel_entrance_d4", label: "Back to the hostel" },
+        { to: "bj_anatomy_hall_d4", label: "Anatomy building" }
+      ]
+    },
+    "bj_anatomy_hall_d4": {
+      name: "Anatomy Dissection Hall   As Kavya (Day 2)",
+      unlockCondition: "signed_out_d4 AND time >= 08:30",
+      available: "08:30-13:30",
+      description: "Formalin again. Cadavers under damp cloth. Meera at the next table, running the cough protocol   one cough wrong angle, two coughs damage done.",
+      objects: [
+        { id: "anatomy_table_d4", action: "Work the upper-limb dissection (Meera guiding)", triggers: "arjun_anatomy_d4", quest: "main", timeWindow: "09:00-13:00" },
+        { id: "anatomy_meera_d4", action: "Follow Meera's coded corrections", triggers: "meera_anatomy_guide_d4", quest: "side", unlockCondition: "in_dissection_d4" }
+      ],
+      npcs: ["dr_sharma", "meera", "sneha_302"],
+      exits: [ { to: "bj_campus_path_d4", label: "Out to the campus path" } ]
+    }
+  });
+
+  /* ---- KAVYA (in Arjun's body): the PG / VIT / Katraj world ---- */
+  Object.assign(L.kavya, {
+    "pulsar_ride_d4": {
+      name: "The Pulsar   Second Ride",
+      unlockCondition: "swap_complete",
+      available: "05:00-07:30",
+      description: "The clutch is intuitive now. The friction zone lives under your left fingers without you looking for it. Sixty on the empty stretch past the snake park, first pink light on the Katraj hills.",
+      objects: [
+        { id: "ride_body_check_d4", action: "Look down at this body   day two", triggers: "kavya_first_arjun_body_d4", intimate: true, quest: "main" },
+        { id: "ride_open_d4", action: "Open the throttle. You've earned this bit.", triggers: "kavya_pulsar_improved_d4", intimate: true }
+      ],
+      npcs: [],
+      exits: [
+        { to: "katraj_pg_room_d4", label: "Arrive at the PG" },
+        { to: "vit_gate_d4", label: "Ride straight to VIT", unlockCondition: "time >= 08:30" }
+      ]
+    },
+    "katraj_pg_room_d4": {
+      name: "PG Room   As Arjun (Day 2)",
+      unlockCondition: "swap_complete",
+      available: "00:00-23:59",
+      description: "Axe, stale Maggi, gym-bag musk. Rohit surfacing into consciousness one organ at a time. The laptop, the mechanical keyboard, the dual monitors on the desk.",
+      objects: [
+        { id: "pg_rohit_d4", action: "Handle Rohit's morning interrogation", triggers: "rohit_morning_d4", quest: "main", timeWindow: "06:00-09:00", unlockCondition: "not rohit_pg_passed_d4" },
+        { id: "pg_maggi_d4", action: "Attempt to make Maggi for Rohit", triggers: "kavya_maggi_d4", quest: "side", unlockCondition: "rohit_pg_passed_d4 AND time >= 17:00" },
+        { id: "pg_phone_d4", action: "Check Arjun's phone", triggers: "samsung_phone_menu" },
+        { id: "pg_body_catalog_d4", action: "Lock the door. Catalog this body   properly, top to bottom.", triggers: "kavya_body_catalog_d4", quest: "side", intimate: true, unlockCondition: "rb_lecture_done_d4 AND time >= 14:30 AND not body_catalog_d4" },
+        { id: "pg_erection_d4", action: "Sit down to code", triggers: "kavya_erection_discovery_d4", quest: "side", intimate: true, unlockCondition: "body_catalog_d4 AND not erection_seen_d4" },
+        { id: "pg_evening_code_d4", action: "Solve Krishnan's bonus problem on real hardware", triggers: "kavya_evening_code_d4", quest: "main", unlockCondition: "rb_lecture_done_d4 AND time >= 14:30 AND not real_coding_done_d4" }
+      ],
+      npcs: ["rohit"],
+      exits: [
+        { to: "pg_bathroom_d4", label: "Bathroom" },
+        { to: "pg_stairs_d4", label: "Downstairs" }
+      ],
+      image: "pg_room_kavya_pov.png"
+    },
+    "pg_bathroom_d4": {
+      name: "PG Bathroom   As Arjun (Day 2)",
+      unlockCondition: "swap_complete",
+      available: "00:00-23:59",
+      description: "Old-teeth tiles, one scratched mirror, the urinal. Second day standing up.",
+      objects: [
+        { id: "urinal_d4", action: "Use the urinal (you've got the arc figured out)", triggers: "kavya_first_pee_male_d4", intimate: true, quest: "side" },
+        { id: "pg_mirror_d4", action: "Check the stubble   it's coming in", triggers: "kavya_mirror_d4" }
+      ],
+      npcs: ["random_pg_boy"],
+      exits: [ { to: "katraj_pg_room_d4", label: "Back to the room" } ]
+    },
+    "pg_stairs_d4": {
+      name: "PG Landing   As Arjun (Day 2)",
+      unlockCondition: "swap_complete",
+      available: "06:00-23:00",
+      description: "Plastic chairs, the ₹3 chai stove, the chai-circle boys.",
+      objects: [],
+      npcs: ["random_pg_boys"],
+      exits: [
+        { to: "katraj_pg_room_d4", label: "Back upstairs" },
+        { to: "tapri_chai_d4", label: "Raju's tapri" },
+        { to: "katraj_street_d4", label: "Out to the street" }
+      ]
+    },
+    "tapri_chai_d4": {
+      name: "Raju Bhaiya's Tapri   As Arjun (Day 2)",
+      unlockCondition: "swap_complete",
+      available: "06:00-22:00",
+      description: "The cutting chai slides across before you order. Raju's mustache is in philosophical mode   something heavier than chai on his mind today.",
+      objects: [
+        { id: "tapri_raju_d4", action: "Help Raju find a new tea supplier", triggers: "raju_supplier_d4", quest: "side" }
+      ],
+      npcs: ["raju_bhaiya"],
+      exits: [ { to: "pg_stairs_d4", label: "Back to the PG" }, { to: "katraj_street_d4", label: "To the street" } ]
+    },
+    "katraj_street_d4": {
+      name: "Katraj Main Road   As Arjun (Day 2)",
+      unlockCondition: "swap_complete",
+      available: "05:00-23:00",
+      description: "The road you rode in on, at an eye level that's stopped surprising you.",
+      objects: [],
+      npcs: ["random_commuters"],
+      exits: [ { to: "pg_stairs_d4", label: "To the PG" } ],
+      travelDestinations: [
+        { to: "vit_gate_d4", travelTime: 15, method: "pulsar", label: "Ride to VIT (15 min)" },
+        { to: "pataleshwar_temple_d4", travelTime: 20, method: "pulsar", label: "Ride to Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" }
+      ]
+    },
+    "vit_gate_d4": {
+      name: "VIT Gate   As Arjun (Day 2)",
+      unlockCondition: "swap_complete AND time >= 08:30",
+      available: "08:00-18:00",
+      description: "Guard Patil, the daily ID recitation. Two days of early arrival now   he's noticed, and early is GOOD behaviour, so it lowers suspicion instead of raising it.",
+      objects: [
+        { id: "vit_id_d4", action: "Show Arjun's ID to Patil", triggers: "patil_gate_d4", quest: "main" }
+      ],
+      npcs: ["security_guard_patil"],
+      exits: [
+        { to: "vit_cblock_d4", label: "C-Block (lectures)", unlockCondition: "entered_vit_d4" },
+        { to: "vit_canteen_d4", label: "Canteen", unlockCondition: "entered_vit_d4" },
+        { to: "vit_cs_lab_d4", label: "CS Lab", unlockCondition: "entered_vit_d4 AND time >= 14:00" },
+        { to: "katraj_street_d4", label: "Exit   ride back" }
+      ]
+    },
+    "vit_cblock_d4": {
+      name: "C-Block   Red-Black Trees with Krishnan",
+      unlockCondition: "entered_vit_d4 AND time >= 09:30",
+      available: "09:00-17:00",
+      description: "Room C-204. Krishnan at the board: rotations, recolouring, uncle-node checks. A language you SPEAK   and have to pretend you're only just learning.",
+      objects: [
+        { id: "cblock_lecture_d4", action: "Sit through the RB-tree lecture (restrain yourself)", triggers: "rb_lecture_d4", quest: "main", timeWindow: "09:30-12:00" },
+        { id: "cblock_answer_d4", action: "Answer ONE question   at Arjun-level", triggers: "kavya_rb_answer_d4", quest: "side", unlockCondition: "in_lecture_d4" },
+        { id: "cblock_nikhil_d4", action: "Take Krishnan's bonus problem from Nikhil", triggers: "nikhil_bonus_d4", quest: "side", unlockCondition: "rb_lecture_done_d4" }
+      ],
+      npcs: ["prof_krishnan", "rohit", "nikhil_classmate"],
+      exits: [
+        { to: "vit_canteen_d4", label: "To the canteen" },
+        { to: "vit_cs_lab_d4", label: "CS Lab", unlockCondition: "time >= 14:00" },
+        { to: "vit_gate_d4", label: "To the gate" }
+      ]
+    },
+    "vit_canteen_d4": {
+      name: "VIT Canteen   As Arjun (Day 2)",
+      unlockCondition: "entered_vit_d4",
+      available: "08:00-17:30",
+      description: "Canteen Anna, the cached dosa order, and the confiding sixty-year-old-uncle register when he wants to tell you something.",
+      objects: [
+        { id: "canteen_anna_d4", action: "Order from Anna (he's noticed you eat slow now)", triggers: "anna_eating_d4", quest: "side" }
+      ],
+      npcs: ["rohit", "nikhil_classmate", "canteen_anna"],
+      exits: [
+        { to: "vit_cblock_d4", label: "Back to C-Block" },
+        { to: "vit_gate_d4", label: "Main gate" }
+      ]
+    },
+    "vit_cs_lab_d4": {
+      name: "CS Computer Lab   As Arjun (Day 2)",
+      unlockCondition: "entered_vit_d4 AND time >= 14:00",
+      available: "09:00-17:00",
+      description: "Rows of dual-monitor Dells, mechanical keyboards, the AC that mostly works. You know where the light switch is now.",
+      objects: [
+        { id: "lab_code_d4", action: "Solve Krishnan's bonus problem here", triggers: "kavya_lab_code_d4", quest: "main", unlockCondition: "not real_coding_done_d4" }
+      ],
+      npcs: ["lab_assistant_suresh"],
+      exits: [ { to: "vit_cblock_d4", label: "Back to C-Block" }, { to: "vit_gate_d4", label: "To the gate" } ]
+    }
+  });
+
+  /* ---- PRE-DAWN: both still in their own bodies, converging on Pataleshwar ---- */
+  L.arjun.katraj_predawn_d4 = {
+    name: "PG Room 12   4:25 AM",
+    available: "00:00-06:30",
+    description: "Vibration alarm under the pillow. Rohit is a geological formation, the snore cycling through its phases. Clothes prepped on the chair, shoes under the bed to skip the creaky floorboard. The door is going to squeak. It always squeaks.",
+    objects: [
+      { id: "predawn_go_a_d4", action: "Dress in the dark. Navigate the obstacle course. Go.", triggers: "arjun_sneak_out_d4", quest: "main", unlockCondition: "not arjun_at_temple_d4" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "katraj_pg_night.png"
+  };
+  L.kavya.hostel_predawn_d4 = {
+    name: "Room 304   4:40 AM",
+    available: "00:00-06:30",
+    description: "Priya under forest ASMR, dead to the world until 6:30. Meera awake since 4:15, watching you dress. The maroon salwar   your exit uniform now. The seven-day pooja cover means Ramesh won't blink.",
+    objects: [
+      { id: "predawn_go_k_d4", action: "Dress. Down the stairs. The pooja line for Ramesh.", triggers: "kavya_hostel_excuse_d4", quest: "main", unlockCondition: "not kavya_at_temple_d4" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "hostel_304_night.png"
+  };
+
+  /* ---- POST-SWAP-BACK: each mind home in its own body ---- */
+  L.arjun.katraj_pg_room_night_d4 = {
+    name: "PG Room 12   Home Again (Day 2)",
+    available: "00:00-23:59",
+    unlockCondition: "swap_back_complete",
+    description: "Your own room, own body, own bed. Rohit's still out. The relief of the flat chest, and under it the small sharp loss of the sensitivity you had all day.",
+    objects: [
+      { id: "d4_arjun_sleep", action: "Lie down. Alarm at 4:15. End Day 4.", triggers: "day4_sleep", quest: "main" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "pg_room_kavya_pov.png"
+  };
+  L.kavya.hostel_room_304_night_d4 = {
+    name: "Room 304   Home Again (Day 2)",
+    available: "00:00-23:59",
+    unlockCondition: "swap_back_complete",
+    description: "Your own body, the underwire back where it lives. The keyboard reach gone from nine inches to seven. Meera's breathing gone even. The habit is forming; the second skin is fitting.",
+    objects: [
+      { id: "d4_kavya_sleep", action: "Lie down. Alarm at 4:15. End Day 4.", triggers: "day4_sleep", quest: "main" }
+    ],
+    npcs: [],
+    exits: [],
+    image: "room_304_arjun_pov.png"
+  };
+
+  /* swap-back reachable from the hostel gate / campus path too */
+  L.arjun.hostel_entrance_d4.exits.push({ to: "pataleshwar_temple_d4", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" });
+  L.arjun.bj_campus_path_d4.exits.push({ to: "pataleshwar_temple_d4", label: "Leave for Pataleshwar (swap-back)", unlockCondition: "swap_complete AND time >= 17:00" });
+
+  /* ---- OBJECTIVES ---- */
+  var A = setup.objectives.arjun, K = setup.objectives.kavya;
+
+  A.main.push(
+    { id: "a4_obj_sneak", title: "Sneak out of the PG", pov: "arjun", day: 4, status: "active",
+      description: "4:25 AM. The Maggi tower, the gym-bag tripwire, the squeaky door. Don't wake Rohit.",
+      completionTrigger: "arjun_at_temple_d4",
+      hint: { where: "Out of PG Room 12, down the stairs, Pulsar started fifty metres away.", when: "4:25 AM.", who: "Rohit, face-down, snoring.", how: "Dress silently, shoes in hand, ride to Pataleshwar." } },
+    { id: "a4_obj_swap", title: "Swap at the temple", pov: "arjun", day: 4,
+      description: "5:30 AM. Pataleshwar. The circle. Become Kavya again.",
+      unlockCondition: "arjun_at_temple_d4 AND kavya_at_temple_d4", completionTrigger: "swap_complete",
+      lockNote: "Both of you have to reach the temple   switch POV and walk Kavya there too.",
+      hint: { where: "The kumkum circle.", when: "~5:30 AM, once you're both there.", who: "Kavya, with the period briefing.", how: "Sit. Chant. The wrench recovers faster the second time." } },
+    { id: "a4_obj_hostel", title: "Get into the hostel as Kavya", pov: "arjun", day: 4,
+      description: "Past Ramesh (the pooja cover holds), sign the register, up to 304.",
+      unlockCondition: "swap_complete", completionTrigger: "entered_hostel_d4",
+      lockNote: "After the swap.",
+      hint: { where: "Walk to B.J. Medical, then the hostel gate.", when: "~6 AM.", who: "Chowkidar Ramesh.", how: "Take stock of the body first, then the gate, then the register." } },
+    { id: "a4_obj_meera", title: "Find Meera", pov: "arjun", day: 4,
+      description: "Room 304. She's been awake since 4:15, waiting for you.",
+      unlockCondition: "entered_hostel_d4", completionTrigger: "meera_reunion_d4",
+      hint: { where: "Room 304.", when: "Before Priya's alarm.", who: "Meera.", how: "Just look at her." } },
+    { id: "a4_obj_survive", title: "Get through the day as Kavya", pov: "arjun", day: 4,
+      description: "Bra solo. Bathroom. Anatomy again, Meera's cough protocol. Keep the cover.",
+      unlockCondition: "meera_reunion_d4", completionTrigger: "arjun_day_survived_d4",
+      lockNote: "After the reunion.",
+      hint: { where: "Hostel bathroom (bra + toilet), then B.J. anatomy hall (sign out first).", when: "Morning into early afternoon.", who: "Meera at the next table.", how: "Get the bra on solo, use the toilet, survive one dissection. Then you're clear." } },
+    { id: "a4_obj_meera_time", title: "The afternoon Meera holds you", pov: "arjun", day: 4,
+      description: "Priya's at the library for hours. The door bolts. This is the entire reason there's a plan.",
+      unlockCondition: "meera_reunion_d4 AND priya_out_d4", completionTrigger: "meera_hold_d4",
+      reward: { rel_meera: 6, trust_meera: 3 },
+      lockNote: "Wait for Priya to leave for the library   early afternoon.",
+      hint: { where: "Room 304, door bolted.", when: "Afternoon, Priya out (~1:45 onward).", who: "Meera.", how: "Sit. Be held. Her hand finds the outer curve of a breast that isn't hers, through the kameez. You don't go further. You don't need to. You can't leave for the swap-back until you've had this." } },
+    { id: "a4_obj_swapback", title: "Return for the swap-back", pov: "arjun", day: 4,
+      description: "5:30 PM. Pataleshwar. Twelve hours exactly. The circle only reverses once BOTH days are done.",
+      unlockCondition: "day4_both_done AND time >= 17:00", completionTrigger: "swap_back_complete",
+      lockNote: "Unlocks once BOTH threads finish   you: survived + the afternoon with Meera; Kavya: the coding. From 5 PM.",
+      hint: { where: "From 5 PM, the hostel gate and campus path get a 'Leave for Pataleshwar' option.", when: "Circle reverses at 5:30. Still locked at the temple? Kavya's day isn't done   switch POV.", who: "Kavya.", how: "Sit in the circle. Reverse the chant." } },
+    { id: "a4_obj_home", title: "Ride home to Katraj", pov: "arjun", day: 4,
+      description: "Own body, own bike, own bed.",
+      unlockCondition: "swap_back_complete", completionTrigger: "arjun_home_d4",
+      hint: { where: "Straight through from the swap-back.", when: "Right after the circle.", who: "Rohit's still out.", how: "Follow it through." } },
+    { id: "a4_obj_sleep", title: "Sleep", pov: "arjun", day: 4,
+      description: "Lie down. Alarm at 4:15. Tomorrow, again.",
+      unlockCondition: "arjun_home_d4", completionTrigger: "arjun_slept_d4",
+      hint: { where: "The cot in the PG room.", when: "Now.", who: " .", how: "Close your eyes." } }
+  );
+  A.side.push(
+    { id: "a4_sq_bra", title: "The bra   solo, first try", pov: "arjun", day: 4,
+      description: "Yesterday: four minutes and Meera's help. Today: wrap at the waist, hook at the front, rotate, pull the straps up. Twenty seconds.",
+      unlockCondition: "entered_hostel_d4", completionTrigger: "arjun_bra_solo_d4",
+      reward: { fem_comfort: 5 },
+      hint: { where: "Hostel bathroom stall.", when: "Morning routine, after the shower.", who: "Just you.", how: "Meera's trick: cups at the back, hooks at the front where your fingers can see. Then rotate the whole thing around. Safety-pin the dying left strap." } },
+    { id: "a4_sq_pee", title: "Body awareness", pov: "arjun", day: 4,
+      description: "Less panic this time. Enough bandwidth to notice: the tissue RESPONDS to the wipe. Not sexually   with attention. This body is always on between the legs.",
+      unlockCondition: "arjun_bra_solo_d4", completionTrigger: "arjun_pee_d4",
+      reward: { sex_f: 2, fem_comfort: 2 },
+      hint: { where: "Hostel bathroom, third stall.", when: "After the bra.", who: "Just you.", how: "The squat is automatic now. Front to back. Notice what you were too panicked to notice yesterday." } },
+    { id: "a4_sq_meera_coach", title: "Meera's drill", pov: "arjun", day: 4,
+      description: "Twenty minutes before Priya wakes: Meera runs the essentials again   peeing, the bra, clothes, sitting, hair   faster now, with corrections.",
+      unlockCondition: "meera_reunion_d4", completionTrigger: "meera_coached_d4",
+      reward: { fem_comfort: 4, rel_meera: 3 },
+      hint: { where: "Room 304, right after the reunion.", when: "05:00-09:30, before Priya's alarm.", who: "Meera, zero embarrassment.", how: "Sit. Listen. She demonstrates the bra on her own." } },
+    { id: "a4_sq_meera_anatomy", title: "Meera's cough protocol", pov: "arjun", day: 4,
+      description: "The dissection-hall telepathy: one cough for a wrong scalpel angle, two coughs for damage done, a hand on her own hand for the correct position.",
+      unlockCondition: "in_dissection_d4", completionTrigger: "meera_anatomy_helped_d4",
+      reward: { med_knowledge: 2, rel_meera: 2 },
+      hint: { where: "Anatomy hall, adjacent tables.", when: "During the 9 AM session.", who: "Meera.", how: "Watch her hands. Mirror them. Dr. Sharma will compliment 'Kavya's' technique   it's Meera's." } },
+    { id: "a4_sq_manuscript", title: "Reorganise the manuscript", pov: "arjun", day: 4,
+      description: "More of the Sanskrit-into-API-docs work with Meera. Ritual becomes error-handling.",
+      unlockCondition: "meera_hold_d4", completionTrigger: "manuscript_organized_d4",
+      reward: { rel_meera: 4, trust_meera: 2 },
+      hint: { where: "Room 304, Priya out.", when: "Afternoon, after the closeness.", who: "Meera.", how: "System architecture meets fourteenth-century magic." } },
+    { id: "a4_sq_cat", title: "Nandu the terrace cat", pov: "arjun", day: 4,
+      description: "The orange cat you named yesterday, synchronised to your schedule. Chapati for purring. The one creature who doesn't care whose body you're in.",
+      unlockCondition: "meera_reunion_d4", completionTrigger: "terrace_cat_fed_d4",
+      reward: { fem_comfort: 1 },
+      hint: { where: "Hostel terrace.", when: "Any break in the day.", who: "Nandu.", how: "Tear a piece of mess chapati. Sit still." } },
+    { id: "a4_sq_sneha", title: "The handwriting problem", pov: "arjun", day: 4,
+      description: "Under stress your writing reverts to engineering block capitals. Sneha noticed. The gel-pen excuse holds   this time.",
+      unlockCondition: "meera_reunion_d4 AND time >= 12:00", completionTrigger: "sneha_handwriting_d4",
+      reward: {},
+      hint: { where: "Corridor outside the mess.", when: "Around 12:30.", who: "Sneha, wanting the brachial-plexus diagram.", how: "'New pen   gel instead of ballpoint.' Coincidentally true. Practise Kavya's script tonight." } },
+    { id: "a4_sq_priya_phone", title: "The phone-on-the-desk habit", pov: "arjun", day: 4,
+      description: "Kavya's Redmi lives propped against the pencil holder every morning for three years. You put it under the pillow. Priya clocked the absence.",
+      unlockCondition: "meera_reunion_d4 AND time >= 07:30", completionTrigger: "priya_phone_covered_d4",
+      reward: {},
+      hint: { where: "Room 304.", when: "After Priya's back from yoga (~7:45).", who: "Priya, planted observer, running a behavioural audit.", how: "'Charge pe laga hua hai.' Then move the phone to the desk and ask Kavya for a full room-layout briefing." } }
+  );
+
+  K.main.push(
+    { id: "k4_obj_excuse", title: "Get out of the hostel", pov: "kavya", day: 4, status: "active",
+      description: "The seven-day pooja line for Ramesh. Sign out in your own hand. Walk to the temple.",
+      completionTrigger: "kavya_at_temple_d4",
+      hint: { where: "Down the stairs, past Ramesh's booth, out the gate.", when: "4:40 AM.", who: "Chowkidar Ramesh   the pooja cover is already established, just hold it.", how: "Sign the register, say it plain, walk (the auto's a coin-flip)." } },
+    { id: "k4_obj_swap", title: "Swap at the temple", pov: "kavya", day: 4,
+      description: "Become Arjun. Keys, bike, life   twelve hours.",
+      unlockCondition: "arjun_at_temple_d4 AND kavya_at_temple_d4", completionTrigger: "swap_complete",
+      lockNote: "Arjun has to reach the temple too   switch POV.",
+      hint: { where: "The kumkum circle.", when: "~5:30 AM.", who: "Arjun, three minutes late because the door squeaked.", how: "Sit. Chant. Brace." } },
+    { id: "k4_obj_ride", title: "Ride the Pulsar   day two", pov: "kavya", day: 4,
+      description: "The clutch is intuitive now. Take the Sinhagad Road route and open it up on the empty stretch.",
+      unlockCondition: "swap_complete", completionTrigger: "ride_complete_d4",
+      reward: { masc_comfort: 3 },
+      hint: { where: "The road from the temple.", when: "5:35 AM.", who: "Nobody   empty roads.", how: "Sit straighter than Arjun does. The bike corners tighter for it." } },
+    { id: "k4_obj_pg", title: "Survive the PG and Rohit", pov: "kavya", day: 4,
+      description: "Second early departure = a PATTERN. Rohit's pattern-detection is sharp under the gym-bro exterior.",
+      unlockCondition: "ride_complete_d4", completionTrigger: "rohit_pg_passed_d4",
+      lockNote: "After the ride.",
+      hint: { where: "The PG room.", when: "~6:30 AM.", who: "Rohit, 40% booted.", how: "'Raju's first batch is best at 5:30.' Verifiable Katraj lore. Axe only   no Nivea." } },
+    { id: "k4_obj_cs", title: "Data Structures   Red-Black Trees", pov: "kavya", day: 4,
+      description: "Krishnan. RB-tree insertion, the five cases, the three rotations. You've solved this on LeetCode at 2 AM. Restrain yourself.",
+      unlockCondition: "rohit_pg_passed_d4 AND time >= 09:15", completionTrigger: "rb_lecture_done_d4",
+      reward: { coding_skill: 3 },
+      hint: { where: "VIT → C-Block → C-204.", when: "Lecture 09:30-12:00.", who: "Krishnan; Rohit and Nikhil in the row.", how: "ONE answer, at Arjun-level. 'Uncle node's colour, sir.' Right enough to be respectable, simple enough to be Arjun." } },
+    { id: "k4_obj_code", title: "Solve the bonus problem for real", pov: "kavya", day: 4,
+      description: "Krishnan's RB-tree deletion edge case. On real hardware. With ONE deliberate mistake and a two-submission trail that looks like learning.",
+      unlockCondition: "rb_lecture_done_d4", completionTrigger: "real_coding_done_d4",
+      reward: { coding_skill: 5 },
+      hint: { where: "VIT CS lab (after 2 PM), or Arjun's laptop at the PG once Rohit's out.", when: "Afternoon   ride for the temple by 5.", who: "Nobody   flow state.", how: "Version 1: correct approach, one wrong rotation direction. Version 2: 'fixed rotation bug.' The trail sells the learning narrative." } },
+    { id: "k4_obj_swapback", title: "Return for the swap-back", pov: "kavya", day: 4,
+      description: "5:30 PM. Pataleshwar. Twelve hours. The circle only reverses once BOTH days are done.",
+      unlockCondition: "day4_both_done AND time >= 17:00", completionTrigger: "swap_back_complete",
+      lockNote: "Unlocks once BOTH threads finish   Kavya: the coding; Arjun: survived + the afternoon with Meera. From 5 PM.",
+      hint: { where: "From 5 PM, Katraj Main Road gets a 'Ride to Pataleshwar (swap-back)' option.", when: "Circle reverses at 5:30. Locked at the temple? Arjun's day isn't done   switch POV.", who: "Arjun.", how: "Sit. Reverse the chant." } },
+    { id: "k4_obj_home", title: "Get back to Room 304", pov: "kavya", day: 4,
+      description: "Sign in at the gate in your own hand. Climb to your own bed.",
+      unlockCondition: "swap_back_complete", completionTrigger: "kavya_home_d4",
+      hint: { where: "Straight through from the swap-back.", when: "Right after the circle.", who: "Ramesh at the gate.", how: "Follow it through." } },
+    { id: "k4_obj_sleep", title: "Sleep", pov: "kavya", day: 4,
+      description: "Lie down. Alarm at 4:15. Tomorrow, again.",
+      unlockCondition: "kavya_home_d4", completionTrigger: "kavya_slept_d4",
+      hint: { where: "Your cot in Room 304.", when: "Now.", who: " .", how: "Close your eyes." } }
+  );
+  K.side.push(
+    { id: "k4_sq_body_catalog", title: "Catalog Arjun's body", pov: "kavya", day: 4,
+      description: "Shirt off, mirror, systematic. Shoulders, chest, arms, abdomen, hips   the non-genital architecture. Yesterday was the urgent first masturbation; today is the foundation.",
+      unlockCondition: "rb_lecture_done_d4 AND time >= 14:30", completionTrigger: "body_catalog_d4",
+      reward: { masc_comfort: 5 },
+      hint: { where: "PG room, door locked.", when: "After 2:30, Rohit at Mechanical lab till 5.", who: "Just you.", how: "The medical eye, the CS precision. Nipples are buzzers, not speakers. The V-lines are unexpectedly sensitive. Stop at the waistband." } },
+    { id: "k4_sq_erection", title: "The erection, head-on", pov: "kavya", day: 4,
+      description: "Coding   deep in pooling operations, nothing erotic   and the body thickens anyway. Uninvited. You look. You study it. You touch it once. Reconnaissance, not recreation.",
+      unlockCondition: "body_catalog_d4", completionTrigger: "erection_seen_d4",
+      reward: { sex_m: 4, masc_comfort: 3 },
+      hint: { where: "PG room, at the laptop.", when: "Straight after the catalog.", who: "Just you and a body with its own agenda.", how: "Blood fills tissue you can feel expanding. Visible bulge in the jeans. Unbutton, look, touch one finger   it twitches. Release. Four minutes of pharmacology to make it subside. File under: revisit soon." } },
+    { id: "k4_sq_maggi", title: "Make Maggi for Rohit", pov: "kavya", day: 4,
+      description: "You've never cooked. Boil water, noodles, tastemaker. Three steps. How hard can it be.",
+      unlockCondition: "rohit_pg_passed_d4 AND time >= 17:00", completionTrigger: "maggi_done_d4",
+      reward: { rel_rohit: 2 },
+      hint: { where: "PG room.", when: "Evening.", who: "Rohit, whose friendship transcends culinary competence.", how: "It comes out al dente. 'Italian style.' He laughs   worth the disaster." } },
+    { id: "k4_sq_raju", title: "Help Raju find a tea supplier", pov: "kavya", day: 4,
+      description: "Gupta ji from Kothrud cut Raju off over a payment fight. Three days of stock left. A supply-chain problem, not an algorithms one.",
+      unlockCondition: "swap_complete", completionTrigger: "raju_supplier_d4",
+      reward: { rel_raju: 5 },
+      hint: { where: "Raju's tapri.", when: "Morning.", who: "Raju, mustache in philosophical mode.", how: "Google wholesale tea suppliers, filter by reviews, give him three options. He closes a deal on the spot   a MONTH of free chai." } },
+    { id: "k4_sq_nikhil", title: "Krishnan's bonus problem", pov: "kavya", day: 4,
+      description: "RB-tree deletion, two children, replacement also red   the double-red violation most students miss. Nikhil wants in on the solution.",
+      unlockCondition: "rb_lecture_done_d4", completionTrigger: "nikhil_bonus_d4",
+      reward: { coding_skill: 3 },
+      hint: { where: "C-Block corridor after the lecture.", when: "Midday.", who: "Nikhil, competitive and collegial.", how: "You know this cold. Solve it Arjun-level, deliberate mistake included. This IS the coding objective   solving it counts." } },
+    { id: "k4_sq_urinal", title: "The urinal, day two", pov: "kavya", day: 4,
+      description: "You've got the arc figured out now. Still standing, still aiming, still faintly absurd.",
+      unlockCondition: "swap_complete", completionTrigger: "kavya_peed_male_d4",
+      reward: { masc_comfort: 3 },
+      hint: { where: "PG or VIT bathroom.", when: "A few hours in.", who: "Other boys, unbothered.", how: "Adjust for the arc. It's routine by the second day." } },
+    { id: "k4_sq_anna", title: "Canteen Anna clocks the slow eating", pov: "kavya", day: 4,
+      description: "Arjun eats fast   fuel, minimum table time. You savour. Anna noticed, and telling a cook his food deserves TIME is the highest praise in his world.",
+      unlockCondition: "entered_vit_d4", completionTrigger: "anna_eating_d4",
+      reward: {},
+      hint: { where: "VIT canteen.", when: "Lunch.", who: "Canteen Anna, confiding register.", how: "'Taste karne layak hai, Anna.' Eat three dosas   Arjun's furnace metabolism can take it." } }
+  );
+
+  /* ---- TIMED EVENTS ---- */
+  setup.timedEvents.push(
+    { day: 4, time: "13:00", character: "arjun", event: "a4_priya_out", setFlag: "priya_out_d4", passage: "EV_a4_priya_out" },
+    { day: 4, time: "12:15", character: "arjun", event: "a4_checkin", passage: "EV_a4_checkin_arjun" },
+    { day: 4, time: "16:45", character: "arjun", event: "a4_swapback_call", setFlag: "swap_back_ready", passage: "EV_a4_swapback_reminder_a" },
+    { day: 4, time: "08:15", character: "kavya", event: "k4_pooja_wa", passage: "EV_a4_pooja_wa" },
+    { day: 4, time: "15:30", character: "kavya", event: "k4_aai_call", passage: "EV_a4_aai_call" },
+    { day: 4, time: "14:15", character: "kavya", event: "k4_rohit_lab", setFlag: "rohit_at_lab_d4", passage: "EV_a4_rohit_lab" },
+    { day: 4, time: "16:45", character: "kavya", event: "k4_swapback_call", setFlag: "swap_back_ready", passage: "EV_a4_swapback_reminder_k" }
+  );
+
+  /* ---- IMAGES ---- */
+  Object.assign(setup.imgDir, {
+    "arjun_sneaking_out.png": "scenes/day4", "kavya_hostel_excuse.png": "scenes/day4",
+    "arjun_bra_mastery_d4.png": "scenes/day4", "meera_holding_d4.png": "scenes/day4",
+    "arjun_anatomy_meera_guide.png": "scenes/day4", "kavya_rbtree.png": "scenes/day4",
+    "kavya_body_catalog.png": "scenes/day4", "temple_swapback_d4.png": "scenes/day4",
+    /* Day 4 expression busts   catalogued, not shown in-scene */
+    "arjun_kavya_settled_d4.png": "characters", "kavya_arjun_restrained_d4.png": "characters",
+    "arjun_kavya_tears_d4.png": "characters", "kavya_arjun_erection_alarm.png": "characters"
+  });
+  Object.assign(setup.npcNames, { terrace_cat_nandu: "Nandu (the terrace cat)" });
+  setup._restLocs.arjun.push("hostel_room_304_d4", "hostel_terrace_d4", "bj_campus_path_d4", "pataleshwar_temple_d4");
+  setup._restLocs.kavya.push("katraj_pg_room_d4", "tapri_chai_d4", "vit_canteen_d4", "pataleshwar_temple_d4");
+
+  /* ---- PHONE: Day 4 keeps the Day 3 swapped-device layout, with a few
+     Day-4-specific threads. Only active while swapped. ---- */
+  var _pd4 = setup.phoneData;
+  setup.phoneData = function () {
+    var d = _pd4();
+    if (V().day === 4 && V().swapActive) {
+      d.samsung = {
+        title: "Arjun's Phone", tabs: ["WhatsApp", "Calls"],
+        whatsapp: [
+          { name: "Meera ❤️", last: "Papa ne phone le liya.", locked: true, note: "one-way" },
+          { name: "Rohit Sala", last: "bhai tu subah phir gayab tha", passage: "PH_a4_rohit" },
+          { name: "Pooja Pagal 🙄", last: "BHAIYA CODING IS MAGIC", passage: "PH_a4_pooja" },
+          { name: "Nikhil DBMS", last: "Krishnan ka bonus problem dekha?", passage: "PH_a4_nikhil" }
+        ],
+        calls: [{ name: "Aai ❤️", type: "incoming", time: "today 15:30" }]
+      };
+      d.kavya = d.samsung;
+      if (d.arjun) d.arjun.whatsapp = [
+        { name: "Meera", last: "❤️ come up to the terrace before you go", passage: "PH_a4_meera" },
+        { name: "Sneha", last: "brachial plexus diagram bhej de", locked: true, note: "later" },
+        { name: "Papa", last: "Pharmacology marks?", locked: true, note: "not now" }
+      ];
+    }
+    return d;
+  };
+
+  /* ---- taggers: scope every *_d4 place to Day 4 ---- */
+  ["arjun", "kavya"].forEach(function (pov) {
+    Object.keys(L[pov]).forEach(function (lid) {
+      if (/_d4$/.test(lid)) L[pov][lid].dayOnly = 4;
       (L[pov][lid].objects || []).forEach(function (o) {
         if (setup._questTag.main.indexOf(o.id) !== -1) o.quest = "main";
         else if (setup._questTag.side.indexOf(o.id) !== -1) o.quest = "side";

@@ -1,0 +1,183 @@
+:: ramesh_gate_d4
+Ramesh's thermos is at half-capacity, the morning chai consumption on schedule. He looks up from the crossword.
+
+<<dl "\"Kavya didi, itni subah? Pooja se waapas?\"" "Kavya didi, this early? Back from the pooja?">>
+
+He KNOWS. "Kavya" signed out at 4:48 for temple pooja; back at 6:00 is exactly a one-hour prayer visit. The cover holds without you saying anything else.
+
+<<dl "\"Haan, Ramesh ji. Saat din ki pooja. Subah paanch baje.\"" "Yes, Ramesh ji. Seven-day pooja. Five in the morning.">>
+
+<<dl "\"Acchi baat hai. Bhagwaan ka kaam.\"" "Good. God's work.">> He nods with the approving energy of a man who considers early-morning devotion the gold standard of young-woman behaviour. Temple-going girls are the BEST category in the chowkidar's moral taxonomy   devout, responsible, certainly not involved in anything requiring his attention.
+\
+<<run setup.flag("chowkidar_passed_d4")>>
+<<hubreturn>>
+
+
+:: signin_d4
+You sign the register: //K. Iyer   6:04 AM.// The handwriting   you're getting better at rounding the letters, softening the angles. Not perfect Kavya-script, but close enough for a register nobody scrutinises.
+\
+<<run setup.flag("entered_hostel_d4")>>
+<<hubreturn>>
+
+
+:: signout_d4
+//K. Iyer   out   college.// You sign it, hand the pen back, and step out toward the campus path. The dupatta's already sliding off your left shoulder. You've stopped resenting it.
+\
+<<run setup.flag("signed_out_d4")>>
+<<hubreturn>>
+
+
+:: meera_reunion_d4
+<<img "meera_reunion.png" "Room 304, Meera on the middle cot">>
+Meera's bed is the middle one. She's sitting up against the wall in a white kurta, braid undone, and she's been awake since 4:15 waiting for your face to walk in wearing Kavya's.
+
+Yesterday this reunion cracked you both open. Today it's quieter and somehow larger   the shock is gone, so what's left is just the fact of it: she's here, you're here, and the swap worked twice.
+
+<div class="dialogue">"Second time," she says. Very soft. "I keep thinking it'll stop feeling like a miracle. It hasn't."</div>
+
+"Give it a week."
+
+<div class="dialogue">"Don't say that." A pause. "Don't stop saying that either."</div> She reaches over and squeezes Kavya's hand   your hand   once. <div class="dialogue">"Priya's got yoga at seven. When she's gone, come back up here. Properly. I've been rationing today since three in the morning."</div>
+\
+<<run setup.flag("meera_reunion_d4")>>\
+<<run setup.stat("rel_arjun_meera", 3, "arjun")>>\
+<<run setup.discover("a reunion that's stopped being a shock and started being a habit worth protecting", "arjun")>>
+<<hubreturn>>
+
+
+:: sneha_handwriting_d4
+Sneha intercepts you outside the mess with the focused energy of a woman on an academic mission.
+
+<<dl "\"Kavya, tera anatomy notes dikha   brachial plexus wala diagram chahiye.\"" "Kavya, show me your anatomy notes   I need the brachial plexus diagram.">>
+
+You hand over the notebook. She flips to the page   the labelled drawing you copied from Meera's book. She pauses. Studies the labels. The handwriting: yours, attempting Kavya's script, but under this morning's stress (the scalpel, the formalin) it reverted to default   angular, engineering-block, the lettering of someone who draws circuit diagrams.
+
+<<dl "\"Teri handwriting aaj alag hai. Neat   but different. Jaise kisi aur ne likha ho.\"" "Your handwriting's different today. Neater   but different. Like someone else wrote it.">>
+
+Ice in your veins. "New pen. Gel instead of ballpoint   it changes the stroke." You hold up a Cello Gripper. It IS a different pen from Kavya's usual Pilot V5 (you know this from her desk). The difference is coincidentally true and functionally saves you.
+
+<<dl "\"Oh. Haan, gel pen se writing change hoti hai. Acchi lagi   neater.\"" "Oh. Yeah, gel pens change your writing. Looks good   neater.">>
+
+She photographs the diagram and leaves. The crisis passes. But the handwriting gap is a systemic vulnerability   you need to practise Kavya's script tonight, with the Pilot, until it's in fingers that aren't yours.
+\
+<<run setup.flag("sneha_handwriting_d4")>>\
+<<run setup.stat("kavya_suspicion", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: mess_didi_d4
+Savita ladles rice with the authority of a woman calibrated to the gram, adds the thin eternal dal, and squints at you through the steam.
+
+<<dl "\"Kavya! Aaj kuch zyada khush lag rahi hai. Kya hua?\"" "Kavya! You look a bit too happy today. What happened?">>
+
+<<dl "\"Kuch nahi, didi. Acchi neend aayi.\"" "Nothing, didi. Slept well.">>
+
+<<dl "\"Neend se chehra nahi chamakta. Ladka mila kya?\"" "Sleep doesn't make a face glow. Did you meet a boy?">>
+
+Two girls at the next table giggle. Mess didi's romantic radar is famous   she's called more crushes than any astrologer in Pune.
+
+<<dl "\"Nahi didi, bas subah pooja ki thi.\"" "No didi, just did the morning pooja.">>
+
+<<dl "\"Pooja!\"" "Pooja!">> She ladles extra sabzi   the reward for devotion. <<dl "\"Acchi baat hai. Bhagwaan se accha ladka maango.\"" "Good. Ask God for a good boy.">>
+
+The irony. The boy you want is currently inside the body she's looking at. You take the blessing with the gratitude it deserves   institutional care, surrogate mothering, food when the real mother is hours away.
+\
+<<run setup.flag("mess_didi_d4_done")>>\
+<<run setup.stat("k_energy", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: priya_phone_anomaly_d4
+Priya returns from her 7 AM yoga at 7:45   high ponytail, the specific glow of forty-five minutes of sun salutations and moral superiority. She enters. Scans. The Priya radar, sweeping left to right.
+
+Kavya's bed: you, textbook open. Fine. Kavya's desk: the Redmi is NOT there. Its usual position   propped against the pencil holder, screen visible, notification light blinking   is empty. Because you're not Kavya and you don't know the Redmi lives on the desk during morning hours. You put it under the pillow. Arjun's habit, translated into Kavya's space.
+
+<<dl "\"Kavya, tera phone kahan hai?\"" "Kavya, where's your phone?">> Casual. Observational. But the question has TEETH   she's noticed the absence of a device that's been in the same spot every morning for three years.
+
+"Charge pe laga hua hai." Quick. The Redmi does have a cable, plugged in beside the bed. The excuse works physically even if it violates Kavya's pattern.
+
+<<dl "\"Tu aise charge karti hai? Usually desk pe rakhke.\"" "You charge it like that? You usually leave it on the desk.">> Light. But LOGGED. Another entry in Priya's running behavioural audit.
+
+"Kal raat phone lekar hi so gayi."
+
+She shrugs, returns to Instagram. After she leaves for breakfast you move the Redmi to the desk, propped at the angle you estimate from the dust outline.
+
+<div class="thought arjun">Note to self: ask Kavya for a complete room-layout briefing. Every object's default position. Every habit's default execution. The small things are the dangerous things.</div>
+\
+<<run setup.flag("priya_phone_covered_d4")>>\
+<<run setup.stat("priya_suspicion", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: terrace_cat_d4
+The terrace, between the anatomy hall and the afternoon with Meera. Thirty minutes to breathe. The orange cat   Nandu, as you named him yesterday   appears from behind the water tank with the punctuality of a creature who's synchronised his schedule with yours.
+
+You tear a piece of mess chapati. The exchange is wordless: food for warmth, chapati for purring. Nandu settles against Kavya's ankle and the silver anklet vibrates with it   the tiny precise frequency of a small body making maximum contentment from minimum investment.
+
+"Nandu," you tell him, "you are the only living creature in this building who doesn't care whose body I'm in."
+
+He purrs louder. Interpretation: correct, and also, more chapati.
+\
+<<run setup.flag("terrace_cat_fed_d4")>>\
+<<run setup.stat("a_femComfort", 1, "arjun")>>
+<<hubreturn>>
+
+
+:: check_in_call_d4
+<div class="alert-popup swap" style="position:static;max-width:none;margin-bottom:1rem;">📞 Arjun (VIT)</div>
+
+You call the Redmi number. He picks up   your own voice, coming back through the phone.
+
+<div class="dialogue">"Anatomy on the cough protocol. One cough: wrong angle. Two coughs: damage done. Meera directed every cut through the invisible language of roommates who've built their own TCP/IP stack."</div>
+
+"How's my body?"
+
+<div class="dialogue">"The bra was first try today. Twenty seconds."</div>
+
+A beat. Then quietly: "I'm proud of you."
+
+<div class="dialogue">"I'm proud of me too. How's the erection situation?"</div>
+
+"...we're not discussing that on the phone."
+
+<div class="dialogue">"Data request denied?"</div>
+
+"Data request DEFERRED to in-person debrief. Bring vocabulary   I need words for what happened and the cadaver-lab terminology feels wrong when it's happening TO me."
+
+<div class="dialogue">"Temple at 5:30. Don't be late."</div>
+
+"You're always late. Your body's clock runs three minutes behind."
+\
+<<run setup.stat("rel_arjun_kavya", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_anatomy_d4
+<<img "arjun_anatomy_meera_guide.png" "the dissection hall, day two">>
+Formalin again, amplified by a nose that is not yours into a chemical weapon. Cadavers under damp cloth. Meera at the next table   close enough for whispered guidance, far enough that two roommates near each other is unremarkable.
+
+Today's dissection: continued upper limb, the muscle attachments around the humerus. You work slowly, and Meera's coded guidance keeps you from cutting things that shouldn't be cut. She coughs once   you look   she's touching her own left hand with her right, thumb on the thenar eminence. The signal: you're pressing too hard. You lighten the pressure and the tissue separates cleanly.
+
+<<dl "\"Kavya, acchi technique hai,\"" "Kavya, good technique,">> Dr. Sharma says, passing behind you. The compliment is Meera's   she directed every cut through coughs and touches and the specific telepathy of roommates who've been each other's lifeline for three years.
+
+You gag twice on the formalin and your eyes water, both at once, the way they did yesterday. You get through the session.
+\
+<<run setup.flag("in_dissection_d4")>>\
+<<run setup.flag("anatomy_done_d4")>>\
+<<run setup.stat("a_med", 2, "arjun")>>\
+<<run setup.discover("surviving anatomy on Meera's cough protocol", "arjun")>>
+<<hubreturn>>
+
+
+:: meera_anatomy_guide_d4
+Between cuts, Meera runs the whole protocol once more under her breath, for the record:
+
+<<dl "\"Ek khaansi   galat angle. Do khaansi   ho gaya nuksaan. Haath apne haath pe   sahi position. Aur agar main naak pochhun toh matlab Sharma peeche aa raha hai.\"" "One cough   wrong angle. Two coughs   damage done. Hand on my own hand   correct position. And if I wipe my nose, Sharma's coming up behind you.">>
+
+"We built a dissection API."
+
+<<dl "\"Hum engineers hain. Galat department mein bhi, hum engineer karte hain.\"" "We're engineers. Even in the wrong department, we engineer.">>
+\
+<<run setup.flag("meera_anatomy_helped_d4")>>\
+<<run setup.stat("rel_arjun_meera", 2, "arjun")>>
+<<hubreturn>>

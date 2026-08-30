@@ -530,6 +530,147 @@ function sideReport(who) {
 console.log("\n--- side quest summary ---");
 sideReport("arjun"); sideReport("kavya");
 
+/* ================= DAY 4   THE SECOND SWAP ================= */
+console.log("\n=== DAY 4   beginDay(4) ===");
+setup.beginDay(4);
+console.log("  day", S.day, "pov", S.pov, "arjun@", S.loc.arjun, setup.clockStr("arjun"),
+  "| kavya@", S.loc.kavya, setup.fmtHM(S.time.kavya), "| bodies", JSON.stringify(S.body));
+if (S.loc.arjun !== "katraj_predawn_d4" || S.loc.kavya !== "hostel_predawn_d4")
+  fail("Day 4 should start both pre-dawn in their own rooms");
+if (!setup.hasItem("bike_keys", "arjun")) fail("Day 4: Arjun should start with the Pulsar keys");
+if (!setup.hasItem("redmi_phone", "kavya")) fail("Day 4: Kavya should start with the Redmi");
+
+const D4 = {
+  arjun_sneak_out_d4: () => { setup.flag("arjun_at_temple_d4"); S.loc.arjun = "pataleshwar_temple_d4"; S.time.arjun = 300; },
+  kavya_hostel_excuse_d4: () => { setup.flag("kavya_at_temple_d4"); S.loc.kavya = "pataleshwar_temple_d4"; S.time.kavya = 315; },
+  day4_swap: () => {
+    setup.setBody("arjun", "kavya"); setup.setBody("kavya", "arjun");
+    setup.flag("swap_complete"); setup.doSwap(); S.swapActive = true;
+    setup.removeItem("bike_keys", "arjun"); setup.addItem("bike_keys", "kavya");
+    setup.removeItem("redmi_phone", "kavya"); setup.addItem("redmi_phone", "arjun");
+    S.time.arjun = 330; S.time.kavya = 330;
+    S.loc.arjun = "hostel_walk_d4"; S.loc.kavya = "pulsar_ride_d4";
+  },
+  day4_swapback: () => {
+    setup.setBody("arjun", "arjun"); setup.setBody("kavya", "kavya");
+    setup.flag("swap_back_complete"); S.swapActive = false;
+    setup.removeItem("bike_keys", "kavya"); setup.addItem("bike_keys", "arjun");
+    setup.removeItem("redmi_phone", "arjun"); setup.addItem("redmi_phone", "kavya");
+    setup.flag("arjun_day4_complete"); setup.flag("kavya_day4_complete");
+    S.time.arjun = 1050; S.time.kavya = 1050;
+  },
+  day4_gohome: () => { setup.flag("arjun_home_d4"); setup.flag("kavya_home_d4"); },
+  day4_sleep: () => { setup.flag("arjun_slept_d4"); setup.flag("kavya_slept_d4"); },
+  arjun_first_kavya_body_d4: () => setup.flag("arjun_first_kavya_body_d4"),
+  ramesh_gate_d4: () => setup.flag("chowkidar_passed_d4"),
+  signin_d4: () => setup.flag("entered_hostel_d4"),
+  signout_d4: () => setup.flag("signed_out_d4"),
+  meera_reunion_d4: () => setup.flag("meera_reunion_d4"),
+  meera_coaches_d4: () => setup.flag("meera_coached_d4"),
+  arjun_bra_mastery_d4: () => setup.flag("arjun_bra_solo_d4"),
+  arjun_second_pee_d4: () => setup.flag("arjun_pee_d4"),
+  arjun_anatomy_d4: () => { setup.flag("in_dissection_d4"); setup.flag("anatomy_done_d4"); },
+  meera_anatomy_guide_d4: () => setup.flag("meera_anatomy_helped_d4"),
+  meera_holding_d4: () => setup.flag("meera_hold_d4"),
+  manuscript_organize_d4: () => setup.flag("manuscript_organized_d4"),
+  terrace_cat_d4: () => setup.flag("terrace_cat_fed_d4"),
+  sneha_handwriting_d4: () => setup.flag("sneha_handwriting_d4"),
+  priya_phone_anomaly_d4: () => setup.flag("priya_phone_covered_d4"),
+  mess_didi_d4: () => setup.flag("mess_didi_d4_done"),
+  kavya_first_arjun_body_d4: () => setup.flag("kavya_first_arjun_body_d4"),
+  kavya_pulsar_improved_d4: () => setup.flag("ride_complete_d4"),
+  rohit_morning_d4: () => setup.flag("rohit_pg_passed_d4"),
+  kavya_maggi_d4: () => setup.flag("maggi_done_d4"),
+  raju_supplier_d4: () => setup.flag("raju_supplier_d4"),
+  patil_gate_d4: () => setup.flag("entered_vit_d4"),
+  rb_lecture_d4: () => { setup.flag("in_lecture_d4"); setup.flag("rb_lecture_done_d4"); },
+  kavya_rb_answer_d4: () => setup.flag("kavya_rb_answered_d4"),
+  nikhil_bonus_d4: () => { setup.flag("nikhil_bonus_d4"); setup.flag("real_coding_done_d4"); },
+  kavya_evening_code_d4: () => setup.flag("real_coding_done_d4"),
+  kavya_lab_code_d4: () => setup.flag("real_coding_done_d4"),
+  kavya_body_catalog_d4: () => setup.flag("body_catalog_d4"),
+  kavya_erection_discovery_d4: () => setup.flag("erection_seen_d4"),
+  kavya_first_pee_male_d4: () => setup.flag("kavya_peed_male_d4"),
+  anna_eating_d4: () => setup.flag("anna_eating_d4"),
+};
+Object.assign(EFFECTS, D4);
+
+console.log("\n--- Pre-dawn: getting to the temple ---");
+pov("arjun"); use("predawn_go_a_d4"); assertObj("a4_obj_sneak");
+pov("kavya"); use("predawn_go_k_d4"); assertObj("k4_obj_excuse");
+
+console.log("\n--- Arjun (in Kavya's body) ---");
+pov("arjun");
+use("swap_circle"); assertObj("a4_obj_swap");
+use("walk_body_check_d4");
+go("hostel_entrance_d4"); use("chowkidar_pass_d4"); use("signin_d4");
+assertObj("a4_obj_hostel");
+go("hostel_stairs_d4"); go("hostel_corridor_d4"); go("hostel_room_304_d4");
+use("meera_reunion_d4"); assertObj("a4_obj_meera");
+use("room304_meera_coach_d4");
+go("hostel_corridor_d4"); go("hostel_bathroom_d4");
+use("bra_d4"); use("toilet_d4");
+S.time.arjun = 7 * 60 + 45;
+go("hostel_corridor_d4"); go("hostel_room_304_d4");
+use("room304_priya_phone_d4");
+go("hostel_corridor_d4"); go("hostel_stairs_d4"); go("hostel_entrance_d4");
+use("signout_d4");
+S.time.arjun = 9 * 60 + 30;
+go("bj_campus_path_d4"); go("bj_anatomy_hall_d4");
+use("anatomy_table_d4"); use("anatomy_meera_d4");
+if (!S.flags.arjun_day_survived_d4) fail("arjun_day_survived_d4 not derived");
+assertObj("a4_obj_survive");
+go("bj_campus_path_d4"); go("hostel_entrance_d4");
+S.time.arjun = 12 * 60 + 30;
+go("hostel_stairs_d4"); go("hostel_corridor_d4");
+use("sneha_corridor_d4");
+S.time.arjun = 13 * 60 + 5; drainEvents();
+go("hostel_room_304_d4");
+use("room304_meera_hold_d4"); assertObj("a4_obj_meera_time");
+use("room304_manuscript_d4");
+go("hostel_corridor_d4"); go("hostel_terrace_d4"); use("terrace_cat_d4");
+console.log("  arjun thread done; day4_both_done =", setup.cond("day4_both_done"));
+
+console.log("\n--- Kavya (in Arjun's body) ---");
+pov("kavya");
+if (!setup.hasItem("bike_keys", "kavya")) fail("Kavya lost the Pulsar keys before her thread");
+use("ride_body_check_d4"); use("ride_open_d4"); assertObj("k4_obj_ride");
+go("katraj_pg_room_d4");
+S.time.kavya = 6 * 60 + 30;
+use("pg_rohit_d4"); assertObj("k4_obj_pg");
+go("pg_bathroom_d4"); use("urinal_d4");
+go("katraj_pg_room_d4"); go("pg_stairs_d4"); go("tapri_chai_d4"); use("tapri_raju_d4");
+go("katraj_street_d4");
+S.time.kavya = 9 * 60 + 30;
+go("vit_gate_d4"); use("vit_id_d4");
+S.time.kavya = 9 * 60 + 45;
+go("vit_cblock_d4");
+use("cblock_lecture_d4"); assertObj("k4_obj_cs");
+use("cblock_answer_d4"); use("cblock_nikhil_d4"); assertObj("k4_obj_code");
+go("vit_canteen_d4"); use("canteen_anna_d4");
+go("vit_gate_d4"); go("katraj_street_d4"); go("pg_stairs_d4"); go("katraj_pg_room_d4");
+S.time.kavya = 14 * 60 + 40;
+use("pg_body_catalog_d4"); use("pg_erection_d4");
+S.time.kavya = 17 * 60 + 5;
+use("pg_maggi_d4");
+console.log("  kavya thread done; day4_both_done =", setup.cond("day4_both_done"));
+if (!setup.cond("day4_both_done")) fail("day4_both_done should be true once both threads finish");
+
+console.log("\n--- Swap-back (both days done) ---");
+pov("kavya"); S.time.kavya = 17 * 60 + 40;
+go("pg_stairs_d4"); go("katraj_street_d4"); go("pataleshwar_temple_d4");
+const circK4 = findObj("kavya", "pataleshwar_temple_d4", "swap_back_circle");
+if (!circK4 || !setup.objVisible(circK4)) fail("Day 4 swap_back_circle should be visible once both days done + 5:30");
+use("swap_back_circle");
+EFFECTS.day4_gohome(); EFFECTS.day4_sleep(); setup.refreshObjectives();
+["a4_obj_sneak","a4_obj_swap","a4_obj_hostel","a4_obj_meera","a4_obj_survive","a4_obj_meera_time","a4_obj_swapback","a4_obj_home","a4_obj_sleep"].forEach(assertObj);
+["k4_obj_excuse","k4_obj_swap","k4_obj_ride","k4_obj_pg","k4_obj_cs","k4_obj_code","k4_obj_swapback","k4_obj_home","k4_obj_sleep"].forEach(assertObj);
+if (!setup.dayFullyDone()) fail("dayFullyDone() should be true after the full Day 4 epilogue");
+console.log("  arjun body:", S.body.arjun, "| kavya body:", S.body.kavya,
+  "| fem_comfort", S.stats.a_femComfort, "| k_coding", S.stats.k_coding, "| masc_comfort", S.stats.k_mascComfort);
+console.log("\n--- Day 4 side quest summary ---");
+sideReport("arjun"); sideReport("kavya");
+
 /* inventory is per-character and must not bleed across */
 (() => {
   const a = S.inventory.arjun || [], k = S.inventory.kavya || [];

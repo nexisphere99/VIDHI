@@ -10,11 +10,12 @@ run parallel threads on the same day. Kavya's perspective unlocks after Arjun's
 morning routine; from then on the header toggle switches between them freely.
 Day 1 ends with Kavya's body-swap ritual   the hinge the rest of the story turns on.
 
-> **Version 0.3** covers **Days 1–3**. Day 1 "Qaid", Day 2 "Saazish", and Day 3
-> "Pehla Badlav"   the first full cross-gender swap: Arjun spends the day in
-> Kavya's body at the hostel and B.J. Medical, Kavya spends it in Arjun's body
-> at the PG and VIT. Day 3 closes on the v0.3 end screen. Support the work at
-> <https://www.patreon.com/c/vidhidevs>.
+> **Version 0.4** covers **Days 1–4**. Day 1 "Qaid", Day 2 "Saazish", Day 3
+> "Pehla Badlav"   the first full cross-gender swap   and Day 4 "Doosri Chamdi"
+> (Second Skin), the second swap: same bookended half-day, but settled instead of
+> panicked. Arjun gets the bra on solo, Meera holds him through an afternoon,
+> Kavya catalogs Arjun's body and meets the erection head-on. Day 4 closes on the
+> v0.4 end screen. Support the work at <https://www.patreon.com/c/vidhidevs>.
 
 > **Adult content (18+).** Explicit sexual content, nudity and body description are
 > part of the narrative and appear in context as you explore. A content warning

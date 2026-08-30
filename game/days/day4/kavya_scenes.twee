@@ -1,0 +1,86 @@
+:: kavya_hostel_excuse_d4
+<<img "kavya_hostel_excuse.png" "4:40 AM   the pooja cover, day two">>
+4:40. The Samsung vibrates under the pillow   the official phone, the father-inspected phone   because the Redmi's already in your kameez pocket, live, Telegram silenced.
+
+Priya sleeps under forest ASMR, the white-noise cocoon that makes her dead to the world until 6:30. Meera's been awake since 4:15; you catch the glint of her eyes in the pre-dawn grey. She gives you the small nod. //Go.//
+
+You dress in the dark. Maroon salwar kameez   your exit uniform now. Dupatta pinned. Chappals in hand, barefoot on cold stone until the stairs, because the corridor amplifies sound like an amphitheatre.
+
+Ground floor. Ramesh in his booth, thermos, the transistor murmuring All India Radio's pre-dawn prayers. He blinks at you.
+
+<<dl "\"Itni subah, Kavya didi? Pooja se?\"" "This early, Kavya didi? For the pooja?">>
+
+You don't oversell it. Matter-of-fact, faintly annoyed to be awake:
+
+<<dl "\"Haan, Ramesh ji. Saat din ki pooja   teesra din aaj. Subah 5 baje jaana padta hai. Saade sacch tak wapas.\"" "Yes, Ramesh ji. Seven-day pooja   third day today. Have to go at 5 AM. Back by 5:30-ish.">>
+
+He nods. He set this story himself yesterday and you're just confirming it. //"Sign out kar do."// You sign, your own round flowing hand, nothing to forge: //K. Iyer   4:48 AM   Pataleshwar   Pooja (7 days).//
+
+The gate. The street. Pre-dawn Pune, damp and orange under the sodium lights. The auto at the corner is a coin-flip and today it loses   nobody there. You walk. Past Sassoon, past the Deccan Gymkhana, the city stripped of traffic and performance, just buildings and road and the grey lightening at the eastern edge.
+
+You reach the temple courtyard. Ancient stone. And the Pulsar's headlight sweeping around the bend   Arjun, from Katraj, three minutes late because his door squeaked.
+\
+<<run setup.flag("kavya_at_temple_d4")>>\
+<<run setup.discover("the seven-day pooja cover is holding all week", "kavya")>>\
+<<run $loc.kavya = "pataleshwar_temple_d4">>\
+<<run $time.kavya = 315>>
+<div class="continue-nav"><<link "Wait for him in the courtyard">><<goto "Hub">><</link>></div>
+
+
+:: kavya_first_arjun_body_d4
+<<img "kavya_first_arjun_body.png" "day two in the good body">>
+You open Arjun's eyes and the world drops. Height arrives. The hands are large. The chest is flat. The penis sits in the boxers, soft, warm, present   day two with it, and it barely registers now.
+
+You test the voice. "Testing." It resonates in a sternum wider and deeper than yours.
+
+<div class="thought kavya">Yesterday this was a country you'd barely entered. Today you know a few streets.</div>
+\
+<<run setup.flag("kavya_first_arjun_body_d4")>>\
+<<run setup.discover("Arjun's body is stopping being a shock and starting being a place", "kavya")>>
+<<hubreturn "Start the bike">>
+
+
+:: kavya_pulsar_improved_d4
+<<img "kavya_pulsar_ride.png" "Sinhagad Road, first light">>
+The clutch is intuitive now. The left hand knows where the friction zone lives without you looking for it   the gradual release from idle to motion, no buck-and-stall.
+
+You take the Sinhagad Road route, longer but empty at this hour, curving through Katraj's outskirts. You sit STRAIGHTER than Arjun does   core engaged, elbows in, spine upright where his slouches forward   and the Pulsar responds: tighter cornering, smoother braking, the body-machine interface optimising in real time.
+
+You open the throttle on the empty stretch past the snake park. Sixty. Seventy. Wind on a face with no dupatta, no hair whipping, the air moving over an aerodynamic frame. The Katraj hills catch the first pink light.
+
+For thirty seconds you're not a medical student pretending to be an engineering student on a motorcycle. You're just VELOCITY   a body built for speed, a machine built for speed, and the road between them.
+\
+<<run setup.flag("ride_complete_d4")>>\
+<<run setup.stat("k_mascComfort", 3, "kavya")>>\
+<<run setup.discover("what the Pulsar is actually for, at seventy, on an empty road", "kavya")>>
+<<hubreturn "Ride to the PG">>
+
+
+:: kavya_evening_code_d4
+<<img "kavya_rbtree.png" "Arjun's laptop, the bonus problem">>
+Rohit's at Mechanical lab until five. You lock the door, sit at the laptop, open VS Code. Krishnan's bonus problem: RB-tree deletion, delete a node with two children where the replacement is also red. Most of the class will apply the standard algorithm and miss the double-red violation.
+
+You know this. You've solved variants on three competitive platforms. The clean solution: after replacement, check the red-red violation, single rotation and recolouring, O(1) additional operations.
+
+But it has to look ARJUN-level. So: version one, correct approach, one deliberate error   left rotation instead of right after the replacement. Submit. Then version two, corrected, comment reads //fixed rotation bug//. Submit. The two-submission trail is the try-fail-learn cycle professors find more convincing than perfection.
+
+Ninety seconds to flow state. The keyboard under nine inches of reach. You lose an hour and barely feel it go.
+\
+<<run setup.flag("real_coding_done_d4")>>\
+<<run setup.stat("k_coding", 5, "kavya")>>\
+<<run setup.discover("faking the learning curve is its own skill, and you're good at it", "kavya")>>
+<<hubreturn "Save. Close the lid.">>
+
+
+:: kavya_lab_code_d4
+<<img "kavya_rbtree.png" "the CS lab, real hardware">>
+You take a terminal in the CS lab   dual monitors, a mechanical keyboard that doesn't wheeze, the AC that mostly works. Suresh the lab assistant doesn't look up.
+
+Krishnan's bonus problem, on a real setup: RB-tree deletion, replacement also red, the double-red violation. You write the clean solution   check the red-red before touching anything, single rotation, recolour   then deliberately break the rotation direction in version one so the submission history reads like a student learning, not a student who already knew.
+
+Version two: //fixed rotation bug.// Submit. It looks exactly like Arjun getting marginally better.
+\
+<<run setup.flag("real_coding_done_d4")>>\
+<<run setup.stat("k_coding", 5, "kavya")>>\
+<<run setup.discover("a real lab, a real keyboard, and a problem you could solve in your sleep", "kavya")>>
+<<hubreturn "Log out">>

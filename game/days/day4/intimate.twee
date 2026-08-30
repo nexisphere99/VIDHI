@@ -1,0 +1,247 @@
+:: arjun_bra_mastery_d4
+<div class="intimate"><span class="tag">Intimate · body discovery</span>
+<<img "arjun_bra_mastery_d4.png" "the teal Clovia, solo">>
+The bra. The teal Clovia. Yesterday: four minutes, Meera's patient hands, language unsuitable for polite company. Today: solo, locked in the stall, Kavya's body in the strip of mirror, skin still damp, the breasts hanging free and the nipples tightened by the cool air.
+
+Meera taught you a TRICK. Don't reach behind. Wrap the band around the waist with cups at the BACK, hooks at the FRONT where your fingers can see. Hook there. Then rotate the whole thing around the body, cups travelling from back to front, settling under the breasts. Then the straps up over the shoulders.
+
+You execute. Wrap. Hooks in front   you look down. Three hooks, three eyes. You pinch the first: it catches. Second: catches. Third: catches. The band is secure.
+
+You rotate. The band slides around Kavya's waist, the underwire passing from back, around the side, arriving at the front. The cups receive the breasts as they turn into position   the tissue settling into shaped fabric, the weight redistributing from free-hang to structured support. Straps over the shoulders. The left strap   the dying elastic   you safety-pin to the inside of the kameez so it can't slide.
+
+Adjust. Tug the band down at the back. The left cup needs a manual nudge to centre the nipple; the right settles on its own. You've learned that.
+
+Done. First try. Twenty seconds. No help. No Meera. Just you, a body you're learning, and a garment you've conquered.
+
+<div class="thought arjun">The pride is absurd and completely earned. If there were a certificate for cross-gender undergarment proficiency you would frame it and hang it above your bed. Both beds.</div>
+</div>\
+<<run setup.flag("arjun_bra_solo_d4")>>\
+<<run setup.discover("the bra, solo, first try, twenty seconds", "arjun")>>\
+<<run setup.stat("fem_comfort", 5, "arjun")>>
+<<hubreturn>>
+
+
+:: arjun_second_pee_d4
+<div class="intimate"><span class="tag">Intimate · explicit · body awareness</span>
+Third stall from the left. The bolt that needs push-lift-slide   your borrowed fingers do it without thinking now.
+
+Salwar down. Panty down   pink Jockey, the same style, Kavya's drawer holds seven identical pairs because Kavya is a woman who has systemised even underwear. Squat. One foot braces the door. The posture is automatic.
+
+The pee comes, less alien today   the warmth, the proximity, the diffuse release without arc or aim. Not comfortable exactly, but ACCUSTOMED. The way you get used to a new keyboard layout: the fingers still reach wrong occasionally, but the speed's improved.
+
+The wiping. Front to back. And today, with less panic, there's bandwidth to notice what you missed yesterday: the outer labia are WARM. Slightly puffy from sleep, the tissue engorged with overnight blood flow, plump and sensitive. The tissue RESPONDS to the wipe. Not sexually   not arousal, not pleasure   but with heightened attention. Each pass registers as information: direction, pressure, texture. A small conversation between your fingers and the skin.
+
+The clitoris   you don't touch it directly, the wipe passes above it, across the mons. But the PROXIMITY produces a faint pulse. Like walking past a speaker and feeling the bass in your chest without standing in front of it. The nerve endings don't need contact to announce themselves. They just need to know something is NEARBY.
+
+<div class="thought arjun">This body is always ON between the legs. Always sensing. Your penis was a thing you carried   present but unremarkable, like keys in a pocket. This is a thing that LIVES. Present and vigilant, constantly monitoring its own state, constantly reporting.</div>
+
+You finish. Wash hands. Exit. No walls walked into. The progress continues.
+</div>\
+<<run setup.flag("arjun_pee_d4")>>\
+<<run setup.discover("this body is always on between the legs, always reporting", "arjun")>>\
+<<run setup.stat("sex_f", 2, "arjun")>>\
+<<run setup.stat("fem_comfort", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: meera_coaches_d4
+<div class="intimate"><span class="tag">Intimate · Meera · body coaching</span>
+Priya's still under, one arm over her face, breathing slow. Meera bolts the door anyway and turns to you with the brisk energy of a woman who has twenty minutes and a syllabus.
+
+<<dl "\"Chal. Bees minute. Kal se tez. Baith   pair andar, ghutne saath. Ladki ki tarah nahi, bas jagah ghero mat. Tu Kavya hai, senior, thaki hui, chidchidi.\"" "Come on. Twenty minutes. Faster than yesterday. Sit   feet in, knees together. Not 'like a girl,' just don't sprawl. You're Kavya. Senior, tired, irritable.">>
+
+She runs it clean, correcting as she goes. Peeing: <<t "\"front se back, har baar, chahe jaldi ho.\"" "front to back, every time, even in a hurry.">> Walking: <<t "\"kandhe seedhe, kadam chhote, dupatta baayein   girega, uthate rehna.\"" "shoulders straight, small steps, dupatta on the left   it'll fall, keep lifting it.">> Hair: she stands behind you, gathers Kavya's hair off your neck, twists it into the low knot Kavya wears, pins it. <<t "\"Do pin. Ek yahan, ek yahan. Din bhar chalega.\"" "Two pins. One here, one here. Lasts all day.">>
+
+Then the bra. She doesn't make it a lesson in modesty   she reaches under her own kurta, unhooks her own, works it out one sleeve at a time, and holds it up flat between you like a diagram.
+
+<<dl "\"Dekh. Hook aage, cup peeche, phir ghuma. Kal tune peeche haath daala aur pandrah minute lagaye. Idhar dekh, jaanu   ungliyan dikhti hain toh kaam aasaan.\"" "Look. Hooks in front, cups at the back, then rotate. Yesterday you reached behind and took fifteen minutes. Look here, love   when your fingers can see, the job's easy.">>
+
+There's nothing performed about it. Kavya has undressed in front of Meera a hundred times over three years; a bra is a female thing, not a private thing. She hooks hers back on without looking and tugs her kurta straight.
+
+You watch her hands and try it once and get it. She squeezes your shoulder.
+
+<<dl "\"Accha. Ab tu bees ghante mujhse kam sharminda hai apne aap se. Jaa, din shuru kar.\"" "Good. Now for twenty hours you're less embarrassed of yourself than I am. Go, start the day.">>
+</div>\
+<<run setup.flag("meera_coached_d4")>>\
+<<run setup.discover("Meera's drill, faster the second time, done without a trace of shame", "arjun")>>\
+<<run setup.stat("fem_comfort", 4, "arjun")>>\
+<<run setup.stat("rel_arjun_meera", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: meera_holding_d4
+<div class="intimate"><span class="tag">Intimate · Meera · the point of the day</span>
+<<img "meera_holding_d4.png" "Room 304, door bolted, afternoon light">>
+Priya's chappals recede down the corridor at 12:45   two hours minimum, the library has AC and the common room doesn't and Priya follows comfort the way rivers follow gravity. The lock engages. Room 304, twenty square metres, the September sky hazy and warm and indifferent in the window.
+
+You sit on Meera's bed, cross-legged, facing each other   the mirror image of the swap-circle position, without kumkum or thread. Just two people. One in the wrong body. One in love with the wrong body's eyes.
+
+Meera takes both your hands. Kavya's hands in hers   small, warm, softer than the hands she's used to holding. Her thumb settles against the inside of the wrist, where the pulse runs close to the surface.
+
+<<dl "\"Bata. Sab. Meri duniya andar se kaisi lagti hai?\"" "Tell me. Everything. What does my world feel like from inside her?">>
+
+And you do. The bra   the engineering marvel, contain and constrain at once. The breasts   the constant weight, the shift when you move, the hum beneath the surface even through cotton. The peeing, the wiping protocol, the way the body is aware of itself between the legs in a way that makes your male anatomy seem disconnected by comparison. The height   shorter, the world looming, a physical smallness that creates a psychological shrinking you have to fight. The smells   everything amplified, formalin worse, sandalwood better.
+
+<<dl "\"Sabse alag cheez,\"" "The most different thing,">> you say carefully, in Kavya's voice, <<dl "\"feelings hain. Yeh body zor se mehsoos karti hai. Kal class mein tune mere ghutne ko chhua   woh travel kar gaya. Jaise paani mein pathar. Ripples   jaangh se, kamar tak, seene tak. Mere body mein ek ghutna sirf ek ghutna hota hai. Yahan woh baat ki shuruaat hai.\"" "The feelings. This body feels loud. Yesterday you touched my knee in class and it travelled. Like a stone in water. Ripples   through the thigh, the hip, the chest. In my body a knee is just a knee. Here it's the opening line of a conversation.">>
+
+Meera's thumb traces a slow circle on Kavya's palm. The stone drops. The ripple spreads   exactly as described, palm to wrist to forearm to the space behind your sternum where the heart sits.
+
+<<dl "\"Aur kya travel karta hai?\"" "What else travels?">> Voice lower. Not secrecy   proximity.
+
+"Everything. Your voice, coming in through these ears. The warmth of this room. The way you're looking at me   I can feel your eyes on the skin. Not as a figure of speech. Physically. Like heat off a lamp."
+
+She leans in and presses her forehead to yours   Kavya's forehead, the beauty mark under her thumb. Noses almost touching. Her breath is chai and toothpaste and underneath it the specific scent of Meera Kulkarni that you'd know blind, deaf, in any body, because it isn't processed by the nose. It's processed somewhere lower and older.
+
+<<dl "\"Kuch poochhna hai. Kal se poochhna chahti thi.\"" "I want to ask you something. I've wanted to since yesterday.">>
+
+"Poochh."
+
+<<dl "\"Main tujhe pakad sakti hoon? Kavya ki roommate ki tarah nahi. Ek friend ki tarah nahi jo support kar rahi ho. Jaise koi jisne chhe mahine se apne pyaar ko nahi pakda. Bas... pakad loon?\"" "Can I hold you? Not as Kavya's roommate. Not as a friend being supportive. As someone who hasn't held the person she loves in six months. Can I just... hold you?">>
+
+You nod. Your throat too tight for words. Kavya's tear ducts loading ammunition.
+
+She wraps her arms around you. Slim arms around a smaller frame   the geometry inverted from every embrace you've shared. In your body you hold her, chin on her head, the man enveloping the woman. In this body she holds YOU. You tuck into her chest. Your face presses her shoulder. Her chin rests on the top of Kavya's head. The woman enveloping the woman-who-is-a-man.
+
+The hug is total. Bodies pressed from chest to hip. Meera's heartbeat against Kavya's breastbone, through two layers of cotton   the rhythmic percussion of a heart that's been beating alone for six months and just found its other instrument.
+
+Five minutes without speaking. The room silent except for breathing and heartbeats and a hostel that doesn't know what's happening inside its walls.
+
+Her hand moves. Not dramatically   a small adjustment. From the centre of your back, her palm slides down and then laterally, along the curve of the ribcage, around the side. Her fingertips trace the line where rib becomes breast   the outer curve, the transition from flat to round that starts below the armpit.
+
+Her hand rests. On the outside curve of Kavya's breast. Through the kameez, through the bra. Not grabbing   resting. The palm flat against the cotton that covers the cotton that covers the flesh. Warmth radiates inward, through fabric, through the thin padding, into the tissue underneath.
+
+The nipple responds. Autonomously   without your permission, without your involvement. It tightens against the cup, the areola contracting, a small peak of sensation announcing itself the way female nipples do: not a ping but a PULSE. A ripple that starts at the nipple and spreads through the breast tissue, down through the ribcage, settling in the abdomen.
+
+You inhale sharply. She feels it   the ribcage expanding under her arm, the catch in the breath, the small involuntary sound in Kavya's throat. "Nh   "
+
+<<dl "\"Theek hai? Bol de agar nahi.\"" "Is this okay? Tell me if it's not.">> Whispered into Kavya's hair.
+
+"...haan." Barely audible. Kavya's voice at its lowest register.
+
+She doesn't move her hand further. Doesn't squeeze. Doesn't explore. The hand STAYS   warm, present, resting on the outer curve of a breast that belongs to a woman who isn't here, touched by a woman who loves the person inside it. The geometry is impossible. The sensation is real.
+
+You hold. Another five minutes. Her hand on the breast, your face on her shoulder, the nipple's pulse fading from acute to ambient   still recording, but folded into the general warmth of the embrace rather than commanding it.
+
+When you pull apart, Kavya's eyes are wet. These tear ducts   zero latency, hair trigger.
+
+"Hormones," you say, wiping them with the back of Kavya's hand.
+
+<<dl "\"Bakwaas.\"" "Bullshit.">> Gently. Her own eyes are wet too, at their own slower pace. <<dl "\"Woh tere hain, Arjun. Body isliye roti hai kyunki TU mehsoos karta hai. Hormone nahi bolte.\"" "Those are yours, Arjun. The body cries because YOU feel. Not because the hormones tell it to.">>
+
+She's right. The tears aren't Kavya's body responding to estrogen. They're your response to being held by the person you love, in a body that amplifies every emotion, in a room where you have two stolen hours and six months of accumulated need.
+
+You wipe the last one. She takes your hand. You sit in the aftermath   foreheads touching, breathing synced, the room holding you both the way the temple holds the stone.
+
+<<dl "\"Baaki sab kal, parson, jitne din yeh chalega,\"" "The rest another day, and the day after, as long as this lasts,">> she says. <<dl "\"Aaj bas itna. Yeh bhi bahut hai.\"" "Today just this. This is already a lot.">>
+</div>\
+<<run setup.flag("meera_hold_d4")>>\
+<<run setup.discover("being the small one in the embrace, and what this body does when Meera holds it", "arjun")>>\
+<<run setup.stat("sex_f", 3, "arjun")>>\
+<<run setup.stat("fem_comfort", 3, "arjun")>>\
+<<run setup.stat("rel_arjun_meera", 8, "arjun")>>\
+<<run setup.stat("trust_meera", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: manuscript_organize_d4
+Priya's still out. You and Meera sit over the manuscript   her Sanskrit translation on one side, your structured documentation on the other. System architecture meets fourteenth-century magic.
+
+Today you get through the warnings section: the ritual's failure modes, rewritten as error-handling. //If the circle is broken before count 97: abort, both minds return, expect nosebleed.// //If only one participant completes the chant: partial transfer, unstable, reverse immediately.// Meera reads each line back in the original and checks your gloss against it.
+
+<<dl "\"Chhe sau saal purana, aur tu ise API docs bana raha hai.\"" "Six hundred years old, and you're turning it into API docs.">>
+
+"That's the nicest thing anyone's said to it in six hundred years."
+\
+<<run setup.flag("manuscript_organized_d4")>>\
+<<run setup.stat("rel_arjun_meera", 4, "arjun")>>\
+<<run setup.stat("trust_meera", 2, "arjun")>>
+<<hubreturn>>
+
+
+:: kavya_body_catalog_d4
+<div class="intimate"><span class="tag">Intimate · explicit · body catalog</span>
+<<img "kavya_body_catalog.png" "Arjun's mirror, shirt off">>
+Rohit's at Mechanical lab until five. You close the door, lock it, stand in front of Arjun's small wall-mounted mirror   your inventory screen for the body you're borrowing.
+
+Shirt off. Arms cross, grip the hem, pull up. The fabric clears the flat chest without snagging because there is NOTHING to snag on. Two days in and that fact still delivers a small daily miracle.
+
+You catalog. Systematically. The medical eye, the CS precision, the curiosity of someone who wants to understand a body the way she understands a codebase   not just the output, the architecture.
+
+<b>Shoulders.</b> Broader than yours by about fifteen centimetres. The deltoids cap the joint visibly   swimmer's lean, not gym bulk. You rotate them, full circles. Similar range to yours but the FEEL is different: no bra-strap friction, no tissue weight pulling the joint forward. Clean   bone, muscle, tendon, space. Nothing else.
+
+<b>Chest.</b> Flat. The pectorals are lean muscle under skin; you press and feel the fibres shift. The nipples: small, darker than yours. You test one   a pinch, the same pressure that produces a radiating WAVE in your body. Here: a sharp, direct signal. A PING. It travels nowhere. It stays at the nipple, reports its finding, goes silent. Your nipples are speakers. His are buzzers.
+
+<b>Arms.</b> Visible forearm veins   the vascularity of a lower body-fat percentage. The bicep is modest, defined, the swimmer's arm that powers through water. You spread the fingers again: nine inches, thumb to pinkie. These hands reach Ctrl-Shift-K without repositioning. The thought is sensual in a way that has nothing to do with sex.
+
+<b>Abdomen.</b> Flat, a faint four-pack when you flex. The trail of dark hair from the navel to the waistband   you trace it with a fingertip and the skin tightens, goosebumps rising in the wake of the touch. The V-lines, the inguinal grooves framing the lower abdomen, are unexpectedly sensitive; you trace both and a SHIVER runs through the pelvis. Filed: //erogenous zone, explore later.//
+
+<b>Hips.</b> Narrow. The iliac crests are visible   the pelvic bones that frame the lower body. In your body these are hidden under soft tissue and wider anatomy. Here they're ARCHITECTURAL: visible supports, the scaffolding of a pelvis built for a different job.
+
+You STOP at the waistband. Yesterday was the urgent first masturbation, the "efficient" verdict. Today you catalog the REST   the foundation, the architecture that isn't genital and is equally unfamiliar.
+</div>\
+<<run setup.flag("body_catalog_d4")>>\
+<<run setup.discover("the non-genital architecture of a male body, mapped like a codebase", "kavya")>>\
+<<run setup.stat("masc_comfort", 5, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_erection_discovery_d4
+<div class="intimate"><span class="tag">Intimate · explicit · arousal discovery</span>
+<<img "kavya_arjun_erection_alarm.png" "the body has its own agenda">>
+Shirt back on. You sit at the laptop, open VS Code, the ML project. Code flows   flow state in ninety seconds.
+
+Twenty minutes in. Deep in the convolutional layer architecture, fully absorbed in pooling operations and stride calculations. 2x2 max-pooling with stride 2, halving the feature map. Nothing about this is erotic.
+
+And then   something shifts. Between your legs. A warmth. A THICKENING. The penis   soft, resting, unremarkable for three hours   begins to change. Not from arousal. Not from a sexual thought. You're thinking about POOLING OPERATIONS.
+
+But the penis doesn't care about your cognitive state. It has its own agenda. Blood fills the erectile tissue in increments and you feel each stage: the shaft stiffening, the head swelling, the organ lifting from its resting position against your left thigh. The boxer-brief fabric tightens. The jeans   buttoned, zipped   create a constraint it pushes against.
+
+You look down. There is a BULGE in the jeans where three minutes ago there was flat fabric. The outline is discernible   the shaft pressing leftward, a ridge against the seam.
+
+The SENSATION is bizarre. Concentrated. Insistent. A gathering of blood in tissue you can FEEL expanding   the corpus cavernosum filling, the anatomy you've dissected in cadaver labs now ALIVE inside a body you're wearing.
+
+You unbutton the jeans. The pressure releases. Through the boxers the outline is MORE visible: the shaft straining grey cotton, the head pressing a darkened spot of pre-cum into the fabric. You pull the waistband forward and look.
+
+Fully erect. Standing away from the body at about seventy degrees, shaft rigid, head swollen and darkened   a deeper shade of the wheat complexion, flushed with concentrated blood. A bead of pre-cum at the tip, clear, viscous, catching the window light. Dorsal veins visible, pulsing with Arjun's heartbeat.
+
+You KNOW this anatomy. You've held cadaver penises, identified the dorsal nerve, the deep dorsal vein, the corpus cavernosum in cross-section. But cadaver penises are grey, deflated, formalin-preserved. This is alive. Warm. The skin softer than you expected.
+
+You touch it. One finger. The index finger of Arjun's right hand against the shaft, midway between base and glans.
+
+The cock TWITCHES   a visible muscular contraction, the bulbospongiosus responding, the reflex so immediate it bypasses conscious processing. A spike of sensation through the pelvis: concentrated, specific, a single line of information from shaft to brain: //more.//
+
+You wrap your fingers around it. Briefly. Arjun's hand, larger, the palm warmer, calluses against smooth shaft skin. The sensation is CONCENTRATED   a focused point that registers as a CHANNEL, not a field. The pleasure lives in the shaft, the head, the frenulum. It doesn't spread. It stays.
+
+You release. Not today. Not now. This is RECONNAISSANCE, not recreation. The body is ready   willing, insistent, the erection throbbing in the open air like a question mark made of flesh   but the mind is cataloging, not consuming. You need to UNDERSTAND before you indulge.
+
+You pull the boxers back up, tuck the erection uncomfortably against the thigh, button the jeans. It takes four minutes to subside   FOUR MINUTES   and only after you think hard about Cockcroft-Gault equations and digoxin toxicity and the Phase I metabolism lecture that bored you into near-unconsciousness. Slowly the blood retreats. The penis softens.
+
+A new variable in your mental workspace:
+
+<div class="thought kavya">erection_response_time = "instantaneous" · cause = "random / ambient / proximity of hand" · sensation = "concentrated, channel, demanding" · duration = "indefinite unless actively suppressed" · note = "revisit soon. very soon."</div>
+</div>\
+<<run setup.flag("erection_seen_d4")>>\
+<<run setup.discover("male arousal arrives uninvited, departs when ignored, and the responsiveness is absurd", "kavya")>>\
+<<run setup.stat("sex_m", 4, "kavya")>>\
+<<run setup.stat("masc_comfort", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_first_pee_male_d4
+<div class="intimate"><span class="tag">Intimate · body discovery</span>
+Second day at the urinal. You've got the arc figured out now   the parabola you were completely unprepared for yesterday. Unzip, aim, adjust for the trajectory, and it's almost routine.
+
+Almost. There's still the strangeness of doing this standing, in a room with other people doing the same thing an arm's length away, entirely unbothered. The efficiency of it   no sitting, no protocol, thirty seconds start to finish   remains faintly offensive to a lifetime of hostel bathroom queues.
+
+Shake. Zip. Wash. Out.
+</div>\
+<<run setup.flag("kavya_peed_male_d4")>>\
+<<run setup.stat("masc_comfort", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_mirror_d4
+Arjun's scratched bathroom mirror. The stubble is coming in along the jaw   you can feel it under your thumb, a texture that wasn't there this morning. Arjun would shave. You consider it, decide the stubble reads as "engineering student who overslept" rather than a tell, and leave it.
+
+The face in the mirror is his. Two days in and you've stopped flinching at it.
+<<hubreturn>>

@@ -1,0 +1,68 @@
+:: arjun_sneak_out_d4
+<<img "arjun_sneaking_out.png" "4:25 AM   the obstacle course">>
+The alarm is vibration only, pressed under the pillow so the buzz transmits through cotton and foam into your skull and nowhere else. 4:25. Five minutes before you have to move.
+
+Rohit is a geological formation. Face-down, one arm off the cot, the snore cycling through its phases   the deep rumble, the peak, the terrifying three-second silence, the resume. The Axe Dark Temptation from last night has mixed with sleep-sweat into a biological event.
+
+You sit up slowly   weight to the rigid edge of the frame, not the traitor springs. Clothes prepped on the chair last night: jeans, t-shirt, shoes stashed //under// the bed so the pickup doesn't put you over the creaky zone. T-shirt over the head. Jeans   button, zip, belt buckle held steady so the metal doesn't clink, which in this silence would be roughly a gunshot.
+
+Shoes in hand. Not on feet. Three metres of floor between you and the door, and on it: Rohit's gym bag (strap extended like a tripwire), the Maggi tower (one bump and it avalanches), his basketball shoes at the exact toe-catching angle.
+
+Left foot past the gym bag. Right foot between the Maggi tower and the desk. Left foot around the basketball shoes. Hand on the handle.
+
+The door SQUEAKS.
+
+You freeze. Rohit mumbles. <<t "\"Bhai... Maggi...\"" "Bhai... Maggi...">>
+
+You don't breathe. The Redmi buzzes in your pocket   Kavya: //Stop being dramatic and just OPEN it.// Rohit's mumble dissolves back into a snore. You pull the door in one motion, ripping the bandage, and slip through.
+
+Corridor. Dark. Down the stairs, shoes on at the front door. Outside the air is cool, September's monsoon residue in the pre-dawn humidity. You walk the Pulsar fifty metres down the street before you start it   the engine carries, and the PG walls are thinner than your cover story.
+
+The Pulsar growls to life. Headlight cutting the dark. Katraj is sleeping. You ride toward Pataleshwar.
+\
+<<run setup.flag("arjun_at_temple_d4")>>\
+<<run setup.discover("sneaking out of your own room like a burglar", "arjun")>>\
+<<run $loc.arjun = "pataleshwar_temple_d4">>\
+<<run $time.arjun = 300>>
+<div class="continue-nav"><<link "Pataleshwar   she's already there">><<goto "Hub">><</link>></div>
+
+
+:: arjun_first_kavya_body_d4
+<<img "arjun_first_kavya_body.png" "second morning in this body">>
+You open Kavya's eyes and the world has settled into its shorter, curvier dimensions   and this time there's no lurch to it. The temple walls are above you. The ground is closer. The hair falls across your face and you push it back without thinking about it as a foreign object.
+
+The breasts announce themselves   weight, warmth, the braless morning state where they hang free under the cotton nightie she wore to travel. Yesterday that was a klaxon. Today it's information: //bra, first thing, before anything else.//
+
+You start the walk to the hostel. Twenty-five minutes of physics you never studied   the hips rotating, the dupatta on its schedule, the smaller stride. You're not fighting the body anymore. You're riding it. Like a hotel room on the second night: you know where the light switch is.
+
+<div class="thought arjun">Not yours. Not close to yours. But familiar. That's a strange word for it, and it's the right one.</div>
+\
+<<run setup.flag("arjun_first_kavya_body_d4")>>\
+<<run setup.discover("the body is starting to feel like a place, not a costume", "arjun")>>
+<<hubreturn "Keep walking">>
+
+
+:: arjun_pharma_read_d4
+You sit on Kavya's cot with Robbins Pathology open on your knees   the eternal prop, the thing Kavya does at this hour. You actually read a page. Apoptosis: programmed, tidy, the cell shrinks and packages itself. Necrosis: the messy one, the cell swells and bursts and the neighbourhood gets inflamed.
+
+You retain maybe forty percent. But forty percent is enough to survive a corridor quiz from Sneha, and the posture is right   this is what Kavya's body is supposed to be doing at 7 AM, not scrolling.
+<<hubreturn>>
+
+
+:: arjun_mirror_d4
+The bathroom mirror. Kavya's face, damp from the shower, the beauty mark under the cheekbone. Yesterday you stared at this face like it was an accusation. Today you check your teeth, tuck a strand of hair, and move on.
+
+The bra's on   your own work, first try. The kameez sits right. You look like a medical student running slightly late, which is exactly the target.
+
+<div class="thought arjun">Twenty-one years in one body and two mornings in another, and the second one is already less strange. That should probably worry you more than it does.</div>
+<<hubreturn>>
+
+
+:: arjun_terrace_d4
+<<img "meera_holding_d4.png" "the terrace railing, afternoon">>
+You lean on the terrace railing in Kavya's body and let yourself just feel it for a minute. The warmth of the September sun on skin that reports more than yours does. The way the noise of the hostel   two hundred girls, radios, buckets   comes in through ears calibrated a notch higher.
+
+Meera's manuscript is downstairs. Priya's at the library. The swap-back is at half five. For this one minute none of it needs anything from you.
+
+<div class="thought arjun">Six days on the countdown now. Five after tonight. You don't let yourself think about what four means.</div>
+<<hubreturn>>

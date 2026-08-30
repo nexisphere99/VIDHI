@@ -1,0 +1,427 @@
+:: Day4Start [nobr]
+<div class="title-screen">
+<div class="th">दूसरी चमड़ी</div>
+<div class="te">Day 4   Doosri Chamdi · Second Skin</div>
+
+<p class="lede">The alarm at 4:15 wasn't a surprise this time. You lay awake for most of the hour before it anyway. Second swap. Same circle, same thread, same 1,500-year-old rock   and the two of you have done this once, which turns out to change everything and nothing.</p>
+
+<p class="lede">Arjun has to get out of the PG past a sleeping Rohit and a door that has never once opened quietly. Kavya walks out of the hostel on the seven-day pooja cover she planted yesterday   Ramesh has already told himself the story. Swap at 5:30, twelve hours, back at 5:30 sharp.</p>
+
+<p class="lede">You play both threads. Kavya mentioned a countdown on the swap this morning   day 22 of a cycle, six days of buffer   and then said "not today, focus on today." So: today.</p>
+
+<div class="start-btn">
+<<link "4:25 AM   move">><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: day4_temple_wait
+<<img "pataleshwar_dawn.png" "Pataleshwar, pre-dawn">>
+You sit on the cold steps. You know this sky now   the way it doesn't lighten so much as thin, paper against a lamp.
+
+<<if $pov is "arjun">>Kavya checks the kumkum tin, the thread, the printed sheet, twice, in the same order as yesterday. <div class="dialogue">"You're three minutes late again. Your body's clock runs behind, I've decided that's a hardware fault, not a you fault."</div>
+<<else>>Arjun's knee is going, but slower than yesterday. He catches you looking and stops it himself. "Second time," he says. "It's still real. I checked."<</if>>
+
+<<hubreturn "Sit in the circle">>
+
+
+:: day4_temple_wait_back
+<<img "pataleshwar_dawn.png" "Pataleshwar, waiting">>
+You're back in the courtyard but the circle won't do anything yet   it needs both of you here and both of your days actually finished.
+
+<<if $pov is "arjun">>You sit on the warm evening stone in Kavya's body, re-pinning the dupatta out of habit, watching the road. Across the city there's still a version of your own face with coding left to do.
+
+<div class="thought arjun">Switch over. Get Kavya's day closed   the bonus problem   and bring her here.</div>
+<<else>>You sit on the steps in Arjun's body, legs sprawled the way his want to. No maroon salwar on the path yet. Arjun still has the afternoon with Meera to finish over there.
+
+<div class="thought kavya">Switch over. Let him have his hours. Then this works.</div>
+<</if>>
+
+<<hubreturn>>
+
+
+:: day4_swap
+<div class="intimate"><span class="tag">The swap   again</span>
+<<img "pataleshwar_dawn.png" "the kumkum circle, second time">>
+<<if $pov is "arjun">>She's on the steps in the pre-dawn grey when the Pulsar's headlight sweeps the courtyard. Salwar, dupatta wound tight, the Redmi lighting her face from below.
+
+"You're three minutes late."
+
+"The door squeaked."
+
+<div class="dialogue">"I heard about the door. Through the text you didn't answer because you were being a spy in your own PG."</div>
+
+You zip the Pulsar key into the jacket pocket and pat it once   the handover's a routine now.
+<<else>>Arjun rolls in on the Pulsar three minutes after you'd have liked. He kills the engine, and before the circle he zips the key into the jacket pocket and pats it, the same motion as yesterday.
+
+<div class="dialogue">"You're three minutes late."</div>
+
+"The door squeaked."
+
+<div class="dialogue">"I heard about the door."</div>
+<</if>>
+
+You sit cross-legged inside the kumkum circle, knees almost touching. The thread goes around both right wrists. <<if $pov is "arjun">>Kavya<<else>>You<</if>> loop it taut.
+
+<<if $pov is "kavya">>Then the briefing, delivered clinical, the medical student reporting on the body she's lending out.
+
+<div class="dialogue">"My left bra strap is dying. Safety-pin it to the kameez from inside   I showed you. And Arjun."</div> You hold his gaze until it's steady. <div class="dialogue">"My body got its period last week. Day 22 of the cycle. You have about six days before the next one. When it's closer I'll walk you through the whole thing   pads, cramps, the logistics. For today you're safe. Just   know the countdown is running."</div>
+
+His face   your face   goes the pale that happens when blood heads for fight-or-flight. "Period. As in blood, cramps   "
+
+"As in NOT today. Six days. Focus on today."
+<<else>>Then Kavya, clinical, briefing you on the body she's handing over:
+
+<div class="dialogue">"Left bra strap's dying   safety-pin it to the kameez from inside, the way I showed you. And one more thing."</div> She waits until you're looking at her properly. <div class="dialogue">"My body had its period last week. Day 22. You've got about six days of buffer before the next one. When it's close I'll brief you properly   pads, cramps, all of it. Today you're clear. Just know it's coming."</div>
+
+The word arrives in your chest like a cold front. "Period. As in   "
+
+<div class="dialogue">"As in not today. Six days. Focus on today."</div>
+
+Six days of buffer between you and the single most fundamentally female experience you cannot currently imagine. A background process starts up in the back of your mind, counting down.
+<</if>>
+
+The chant begins   the same printed sheet, Kavya leading, the other half a beat behind and clicked back on line. Second time through, the words come easier. The dark around the lamp leans in the same way.
+
+Count 50   heartbeat. Count 80   the thread warms. Count 90   the headache at light speed.
+
+Count 97   <b>THE WRENCH.</b> You brace for it this time, jumping into cold water the second time. It's still awful   still being hauled through a keyhole backwards   but the recovery is faster. Ten seconds of black, not thirty.
+
+Black.
+</div>
+\
+<<run setup.setBody("arjun", "kavya")>>\
+<<run setup.setBody("kavya", "arjun")>>\
+<<run setup.flag("swap_complete")>>\
+<<run setup.doSwap()>>\
+<<set $swapActive to true>>\
+<<run setup.removeItem("bike_keys", "arjun")>>\
+<<run setup.addItem("bike_keys", "kavya")>>\
+<<run setup.removeItem("redmi_phone", "kavya")>>\
+<<run setup.addItem("redmi_phone", "arjun")>>\
+<<run setup.stat("rel_arjun_kavya", 2, "arjun")>>\
+<<run setup.stat("rel_kavya_arjun", 2, "kavya")>>\
+<<run $time.arjun = 330>>\
+<<run $time.kavya = 330>>\
+<<run $loc.arjun = "hostel_walk_d4">>\
+<<run $loc.kavya = "pulsar_ride_d4">>\
+<<set $mood.arjun to "settled into the wrong side of the mirror">>\
+<<set $mood.kavya to "back in the good body">>
+
+<div class="continue-nav"><<link "Sit up. Faster this time.">><<goto "day4_briefing">><</link>></div>
+
+
+:: day4_briefing
+<div class="intimate"><span class="tag">The handover   short version</span>
+<<img "day3_briefing.png" "two strangers wearing familiar faces, take two">>
+Colour bleeds back. You're breathing hard in the circle and three feet away your own face is looking at you with an expression you've now seen twice.
+
+<<if $pov is "arjun">>"It's you again," you say, in Kavya's voice. "That's my face. On you." You turn Kavya's small ringed hand over and it obeys. "Yesterday I couldn't believe it. Today I just   know it. That's worse, somehow. It's a thing that happens to us now."
+
+<div class="dialogue">"That's the correct amount of alarm. Keep it. Priya has a 7 AM yoga class   she'll be out when you reach. Meera's waiting."</div>
+<<else>>Arjun does the hand-check   turns your hands over, presses them to his (your) face, hair, throat   but it's five seconds this time, not five minutes.
+
+<div class="dialogue">"Second time. That's my face on you and I'm not coming apart about it, which is somehow more disturbing."</div>
+
+"That's the right amount of disturbed," you tell him, in your own lower voice. "Keep it. Priya's got 7 AM yoga   she'll be gone when you get there. Meera's up."
+<</if>>
+
+The notes exchange is quick   yesterday's pages, updated in the margins. Ramesh at the gate (the pooja cover holds all week). Rohit's the sensor. Don't be brilliant in Krishnan's class. Pooja texts fast, three words or nothing. The one hard rule doesn't need saying again, but <<if $pov is "arjun">>Kavya says it anyway, one line: "You do not touch my body. Same as yesterday. Yes?"
+
+"Yes. Nothing it doesn't need. Go."
+<<else>>you say it anyway, one line: "You do not touch my body. Same terms. Yes?"
+
+<div class="dialogue">"Yes. Nothing it doesn't need. Go."</div>
+<</if>>
+
+<<if $pov is "arjun">>Kavya swings onto the Pulsar, stalls it once out of muscle memory, catches it on the second try, and rides into the Pune dawn wearing your face. "Back here, 5:30 sharp," she calls over the engine. "Clean window. Don't lose my body."
+<<else>>You swing onto the Pulsar, stall it once, catch it on the second, and ride out. "Back here, 5:30 sharp," you call over your shoulder in his voice. "Don't lose my body."
+<</if>>
+
+You touch your borrowed face once and walk out in opposite directions. Twelve hours.
+</div>
+\
+<<run setup.flag("day4_briefed")>>\
+<<run setup.discover("the second swap   faster, quieter, more frightening for being ordinary", $pov)>>
+<div class="continue-nav"><<link "Open your eyes on the day">><<goto "Hub">><</link>></div>
+
+
+:: EV_a4_priya_out
+Priya gathers her laptop and two pathology textbooks at 12:45 and heads for the library, chasing the AC. The door closes. The lock engages.
+
+The room is yours. Meera's already sitting up straighter.
+
+<<hubreturn>>
+
+
+:: EV_a4_checkin_arjun
+<div class="alert-popup swap" style="position:static;max-width:none;margin-bottom:1rem;">📞 Arjun (VIT, corridor)</div>
+
+You call. He picks up in your own voice.
+
+<div class="dialogue">"Red-Black trees. Krishnan. Insertion cases. I answered ONE question. ONE. 'Uncle node's colour, sir.' Then I sat on my hands for forty minutes. It's like being a sprinter made to walk."</div>
+
+"Good restraint."
+
+<div class="dialogue">"Good restraint has a cost. How's my body?"</div>
+
+"The bra was first try today. Twenty seconds, no Meera."
+
+A beat. Then, quietly, in your voice: <div class="dialogue">"I'm proud of you."</div>
+
+"I'm proud of me too. Also I noticed something in the bathroom this time. Your body's always   on. Between the legs. Always sensing. Mine's a thing I carry; yours is a thing that lives."
+
+<div class="dialogue">"Twenty-one years of continuous monitoring. You're welcome. The erection situation   we're not doing that on the phone."</div>
+
+"Deferred to the temple. Bring vocabulary."
+
+<<run setup.stat("rel_arjun_kavya", 3, "arjun")>>
+<<hubreturn>>
+
+
+:: EV_a4_swapback_reminder_a
+The Redmi buzzes. Kavya: //Temple. 5:30   twelve hours to the minute. Last clean window for the hostel. I want my hands back and you want yours.//
+
+You look at Kavya's hands. The silver ring. The short shaped nails you've stopped fumbling with. A small flicker of something like loss, again.
+
+<<hubreturn>>
+
+
+:: EV_a4_pooja_wa
+<div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">💬 Pooja Pagal 🙄</div>
+
+<div class="chat-log">
+<div class="msg them">Bhaiya how was the morning walk. Wait. ANOTHER one?? Two days in a row??</div>
+<div class="msg them">Are you training for something. Or running FROM something 🤔</div>
+<div class="msg them">Also I made a CALCULATOR. Codecademy. It adds and subtracts. I feel like a HACKER</div>
+<div class="msg me">python can do everything. sunday i'll show you. multiplication is just * instead of +</div>
+<div class="msg them">I TRIED IT. IT WORKS. BHAIYA CODING IS MAGIC</div>
+<div class="msg them">wait i broke it. division by zero gives an error. what is a ZeroDivisionError. is the computer angry at me</div>
+<div class="msg me">not angry. confused. add: if b == 0: print("can't divide by zero") BEFORE the division line</div>
+<div class="msg them">OHHH error handling!! i googled it. i feel like i'm learning a secret language machines speak. and now i speak it too</div>
+</div>
+
+A seventeen-year-old googled "error handling" on her own initiative. Nobody planted that seed for you   you grew yours off bathroom floors and a stolen phone. Hers grows off Codecademy and a brother who isn't her brother.
+
+<<run setup.stat("rel_kavya_arjun", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: EV_a4_aai_call
+<div class="alert-popup danger" style="position:static;max-width:none;margin-bottom:1rem;">📞 Aai ❤️</div>
+
+Arjun always answers his mother.
+
+<<dl "\"Beta, kha liya? ... Teen dosa? Accha. Kha, bada ho. Pooja bol rahi hai tu use computer sikha raha hai   computer se paise aate hain?\"" "Son, have you eaten? ... Three dosas? Good. Eat, grow. Pooja says you're teaching her computers   does that bring money?">>
+
+"Bahut aate hain, Aai."<span class="gloss-en">A lot, Aai.</span>
+
+<<dl "\"Hmm. Theek hai. Sunday aa raha hai na? Mutton le lungi. Paatla disto.\"" "Hmm. Alright. You're coming Sunday? I'll get mutton. You look thin.">>
+
+"Aa raha hoon, Aai."<span class="gloss-en">I'm coming, Aai.</span>
+
+Sixty seconds. Maximum love per unit time. She heard nothing wrong in your voice   or she did, and filed it, the way mothers do.
+
+<<run setup.stat("aai_suspicion", 1, "kavya")>>
+<<hubreturn>>
+
+
+:: EV_a4_rohit_lab
+Rohit stands, stretches, announces "Mechanical lab, four hours, kill me" as if his own timetable had personally wronged him, and leaves. The door closes. His footsteps recede.
+
+The room is yours. The laptop is yours. Until five.
+
+<<hubreturn>>
+
+
+:: EV_a4_swapback_reminder_k
+Arjun's phone buzzes. Meera, via the Samsung: //5:30. Pataleshwar. Twelve hours exactly, last clean hour for Kavya's hostel. He needs his body and you need yours. And Kavya   thank you. For the classes. For treating my world like it matters.//
+
+You look at the clock on the borrowed screen. The keyboard under your hands. Soon this stops.
+
+<<hubreturn>>
+
+
+:: day4_swapback
+<div class="intimate"><span class="tag">The swap-back</span>
+<<img "pataleshwar_dawn.png" "Pataleshwar, golden hour">>
+The circle again, in the flat gold light of half past five, the courtyard empty in the lull before evening aarti. The thread. The mantra in reverse. The wrench   braced for, endured, over.
+
+Black. White. Colours resolving.
+
+<<if $pov is "arjun">>You open your eyes and the first thing is your cock, right there, the familiar weight. Flat chest. Full lungs. Taller   the temple walls back at eye level.
+
+Then the loss, immediate and sharp: the sensitivity is gone. You touch your own arm and it's just skin on skin. No ripples, no stone-in-water, no conversation. Meera's hug replays in your head and your body stores it flat now   a photograph, where twelve hours ago it was a room you could stand inside.
+
+<div class="dialogue">"How was VIT?"</div>
+
+"Heaven. How was my body?" Kavya's patting herself down   face, chest, hips, the property audit.
+
+"Complicated."
+
+<div class="dialogue">"...did you cry?"</div>
+
+"...maybe."
+
+<div class="dialogue">"Day 2 in my body and you're already more emotional than I am. Sit. Full debrief."</div>
+<<else>>You open your eyes and your breasts are back   two familiar masses settling onto the ribcage, the Clovia underwire that Arjun hooked this morning still holding, clamping down. Twelve hours flat and free, and the whole production returns. The world drops. You're small again. And between your legs, the absence where a warm ridiculous weight used to be   not wrong, just newly noticeable.
+
+"Your laptop is beautiful," you tell Arjun, and the tears come, Kavya's zero-latency system firing. "I solved the bonus problem. Two submissions, one fake bug. It looked exactly like learning." You wipe your face with a hand that's yours again. "Sit. Full debrief. Rule seven."
+
+<div class="dialogue">"Also your Pulsar corners better when I ride it. I sit straighter than you do."</div>
+<</if>>
+
+You sit on the cooling stone and do the thing the rules demand.
+
+<<if $pov is "kavya">>You go first.<<else>>Kavya goes first.<</if>>
+
+<div class="dialogue">"CS: I attended, I understood every word, I answered exactly one question at the right IQ. Then I solved Krishnan's deletion edge case on real hardware   the double-red violation   and buried a deliberate mistake in version one so the trail reads try, fail, learn. Nikhil's got a copy. Rohit's on the 'since when do you know this' setting; I gave him the Meera-wake-up story and he half-bought it again."</div>
+
+<div class="dialogue">"Raju's chai supplier collapsed   I Googled him three wholesalers, he closed a deal at the counter, I have a month of free chai in your name. Your sister built a calculator and then googled 'error handling.' Aai asked if computers bring money. Pooja is going to be a programmer, Arjun, and she doesn't know it yet."</div>
+
+Then <<if $pov is "arjun">>your<<else>>Arjun's<</if>> turn.
+
+<<if $pov is "arjun">>You give her the shape of Meera   the door bolted, two hours, Meera's arms around a smaller frame with the geometry inverted, her hand coming to rest on the outer curve of a breast that isn't hers, through the kameez, and stopping there. The nipple's autonomous answer. The crying. Your hands where they belonged and nowhere else. She nods once, approving, doesn't ask for the rest.
+
+Then the survival log: the bra solo in twenty seconds; the second pee and what the tissue does during the wipe; the anatomy hall on Meera's cough protocol, Dr. Sharma complimenting "Kavya's" technique that was entirely Meera's; Sneha clocking the handwriting again; Priya clocking the phone in the wrong place. Crying maybe three times, down from six.
+
+<div class="dialogue">"Three. Improvement."</div>
+
+"Your tear ducts still have no latency. I've just stopped fighting them."
+<<else>>Arjun gives you the shape of Meera   bolted door, two hours, the inversion of every embrace you've shared, her hand on the outer curve of your breast through the kameez and no further. What your body does near Meera that his doesn't. His hands where they belonged.
+
+Then the survival log: bra solo, twenty seconds; the second pee and the tissue-awareness thing; anatomy on Meera's cough protocol; Sneha on the handwriting; Priya on the phone position. Three cries, down from six.
+
+<div class="dialogue">"Three. That's progress."</div>
+
+"Your tear ducts still have no latency. I've stopped fighting them."
+<</if>>
+
+You both laugh, real, in your own voices, off 1,500-year-old stone.
+
+Then Kavya, practical, because that's her at rest.
+
+<div class="dialogue">"Same again tomorrow. 5 AM, this circle. Krishnan's symposium is still hanging, ICPC's Saturday, Meera's expecting you, and the period countdown is at five days now   which we deal with when it's four. Alarm at 4:15. Don't sleep well."</div>
+
+<<if $pov is "arjun">>"Every day," you say, before the arithmetic finishes.<<else>>"Every day," Arjun says, too fast, the way he says yes to anything with Meera in it.<</if>>
+
+The second skin is fitting. That's the part that should frighten you more than the wrench does.
+</div>\
+<<run setup.setBody("arjun", "arjun")>>\
+<<run setup.setBody("kavya", "kavya")>>\
+<<run setup.flag("swap_back_complete")>>\
+<<run setup.doSwap()>>\
+<<set $swapActive to false>>\
+<<run setup.removeItem("bike_keys", "kavya")>>\
+<<run setup.addItem("bike_keys", "arjun")>>\
+<<run setup.removeItem("redmi_phone", "arjun")>>\
+<<run setup.addItem("redmi_phone", "kavya")>>\
+<<run setup.flag("arjun_day4_complete")>>\
+<<run setup.flag("kavya_day4_complete")>>\
+<<run $time.arjun = 1050>>\
+<<run $time.kavya = 1050>>\
+<<run setup.stat("rel_arjun_kavya", 5, "arjun")>>\
+<<run setup.stat("rel_kavya_arjun", 5, "kavya")>>
+<div class="continue-nav"><<link "Get on the bike. Go home.">><<goto "day4_gohome">><</link>></div>
+
+
+:: day4_gohome
+<div class="intimate"><span class="tag">The ride home</span>
+<<if $pov is "arjun">>You wheel the Pulsar out of the temple lot   your bike, your hands, your weight over the tank   and ride down into Pune's evening. Katraj is forty minutes of horns and diesel and a body that does exactly what you tell it. Rohit's still out. The PG room is dark and yours and smells of Axe and stale Maggi, and it looks fine. It looks good.
+
+Across the city, Kavya signs back into the B.J. hostel in her own round hand   //K. Iyer, in, 18:05, temple//   nods at Ramesh, climbs to 304, where Meera is holding a book she isn't reading.
+<<else>>You sign back into the hostel yourself   //K. Iyer, in, 18:05, temple//, your own round hand, nothing to forge   nod at Ramesh, climb to 304. Meera looks up from a book she isn't reading. Priya isn't. You're home, in your own skin.
+
+Across the city, Arjun rides the Pulsar back to Katraj in his own body, in a helmet that fits, toward a dark PG room that smells of Axe and stale Maggi.
+<</if>>
+
+You each carry the same thing home: a second day that happened, and a 4:15 alarm.
+</div>\
+<<run setup.flag("arjun_home_d4")>>\
+<<run setup.flag("kavya_home_d4")>>\
+<<run $time.arjun = 1085>>\
+<<run $time.kavya = 1085>>\
+<<run $loc.arjun = "katraj_pg_room_night_d4">>\
+<<run $loc.kavya = "hostel_room_304_night_d4">>
+<div class="continue-nav"><<link "You're home. Get inside.">><<goto "Hub">><</link>></div>
+
+
+:: day4_sleep
+<div class="intimate"><span class="tag">The end of Day 4</span>
+<<if $pov is "arjun">>You lie down on the cot that's yours. You keep feeling the ghost of the dupatta on your left shoulder and reaching for hair that isn't there   less than yesterday, but still. You think about Meera's arms and the geometry inverted, the small one for once. You set the alarm for 4:15 and turn it face-down under the pillow.
+<<else>>You lie down in Room 304, underwire back where it lives, the pathology reading you're still behind on glowing on Priya's side. Meera's breathing has gone even. You can still feel where the tank sat between your knees, and the exact shape of a problem you solved with nine inches of reach you no longer have.
+
+You set the alarm for 4:15.
+<</if>>
+
+Tomorrow, before dawn, again. It's a pattern now. Patterns get noticed.
+</div>\
+<<run setup.flag("arjun_slept_d4")>>\
+<<run setup.flag("kavya_slept_d4")>>\
+<<run setup.flag("day5_swap_planned")>>
+<div class="continue-nav">[[Close your eyes|DayWrap]]</div>
+
+
+:: Day4Complete [nobr]
+<div class="title-screen">
+<div class="th">दूसरी चमड़ी पूरी</div>
+<div class="te">End of Day 4</div>
+
+<p class="lede">Arjun is back in Katraj replaying two hours of being held. Kavya is in Room 304, grieving a keyboard again, the underwire back in its usual argument with gravity. The second swap is complete and it felt almost routine   which is its own kind of alarm.</p>
+
+<p class="lede">Nobody's cover broke. Priya logged the phone in the wrong place, Sneha logged the handwriting again, Rohit logged a second dawn absence. Small things. Individually meaningless. Cumulatively pointing somewhere.</p>
+
+<div class="thought arjun">ARJUN   Coding <<= $stats.a_coding>> · Fem-comfort <<= $stats.a_femComfort>> · Rel Meera <<= $stats.rel_arjun_meera>> · Rel Kavya <<= $stats.rel_arjun_kavya>> · Drawn to female frame <<= $stats.a_sexF>></div>
+<div class="thought kavya">KAVYA   Coding <<= $stats.k_coding>> · Masc-comfort <<= $stats.k_mascComfort>> · Rel Arjun <<= $stats.rel_kavya_arjun>> · Drawn to male frame <<= $stats.k_sexM>></div>
+
+<p class="lede">Swaps: <<= $swapCount>> · barrier <<= $barrierIntegrity>>%. Discoveries logged: <<= ($discoveries.arjun.length + $discoveries.kavya.length)>>. Period countdown: five days.</p>
+
+<div class="version-note">
+<p class="lede"><b>This is the end of the version 0.4 content.</b></p>
+<p class="lede">Thank you for playing VIDHI. To see more of this story   or just support the work   you can back the project on Patreon:</p>
+<p class="lede"><a href="https://www.patreon.com/c/vidhidevs" target="_blank" rel="noopener">patreon.com/c/vidhidevs</a></p>
+</div>
+
+<div class="start-btn">
+<<link "Keep exploring Day 4">><<goto "Hub">><</link>>
+</div>
+</div>
+
+
+:: PH_a4_meera
+<div class="chat-log">
+<div class="msg them">second time. you walked in wearing her face and my whole chest did something</div>
+<div class="msg me">mine too. different equipment, same reaction, turns out</div>
+<div class="msg them">come up to the terrace before you leave. i need thirty seconds of you that isn't performance</div>
+<div class="msg me">ok</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a4_rohit
+<div class="chat-log">
+<div class="msg them">bhai tu subah phir gayab tha. do din se</div>
+<div class="msg them">agar yeh sab Meera wali call ki wajah se hai toh mujhe credit chahiye. biryani. Friday.<span class="gloss-en">If this is all because of the Meera call, I want credit. Biryani. Friday.</span></div>
+<div class="msg me">Friday. teri treat.<span class="gloss-en">Friday. Your treat.</span></div>
+<div class="msg them">MERI treat?! ...tere arguments zyada acche ho rahe hain bhai. pehle tu Pooja se bhi haar jaata tha<span class="gloss-en">MY treat?! ...your arguments are getting better. you used to lose to Pooja.</span></div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a4_pooja
+<div class="chat-log">
+<div class="msg them">bhaiya i made the calculator do multiply AND divide. in twenty minutes. i am UNSTOPPABLE</div>
+<div class="msg them">can python do colours?? sunday?? bring your laptop</div>
+<div class="msg me">python can do colours. sunday. bring yours</div>
+<div class="msg them">🫡</div>
+</div>
+<<hubreturn>>
+
+
+:: PH_a4_nikhil
+<div class="chat-log">
+<div class="msg them">bhai Krishnan ka bonus problem   RB deletion, replacement bhi red. most log double-red violation miss karenge</div>
+<div class="msg me">single rotation + recolour after the swap. check the red-red before you touch anything</div>
+<div class="msg them">...bhai two days ago tu "thoda thoda" bolta tha. ab tu solution bata raha hai before i finish typing</div>
+</div>
+<<hubreturn>>

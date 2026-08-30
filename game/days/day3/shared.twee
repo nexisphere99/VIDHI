@@ -453,13 +453,8 @@ Tomorrow, before dawn, you do it again.
 
 <p class="lede">Swaps: <<= $swapCount>> · barrier <<= $barrierIntegrity>>%. Discoveries logged: <<= ($discoveries.arjun.length + $discoveries.kavya.length)>>. The Colonel still visits Sunday.</p>
 
-<div class="version-note">
-<p class="lede"><b>This is the end of the version 0.3 content.</b></p>
-<p class="lede">Thank you for playing VIDHI. If you'd like to see more of this story   or just support the work   you can back the project on Patreon:</p>
-<p class="lede"><a href="https://www.patreon.com/c/vidhidevs" target="_blank" rel="noopener">patreon.com/c/vidhidevs</a></p>
-</div>
-
 <div class="start-btn">
+<<link "Sleep   begin Day 4 (Day 3 can't be revisited)">><<run setup.beginDay(4)>><<goto "Day4Start">><</link>>
 <<link "Keep exploring Day 3">><<goto "Hub">><</link>>
 </div>
 </div>

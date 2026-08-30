@@ -1,0 +1,164 @@
+:: rohit_morning_d4
+Rohit is transitioning from unconscious to semi-conscious, upright on his cot, protein shake in hand (today's batch fresh, no curdling, a rare win), brain boot sequence about 40% complete.
+
+<<dl "\"Bhai, subah paanch baje kahan gaya tha?\"" "Bhai, where'd you go at 5 AM?">>
+
+Casual   but it has a predecessor. Yesterday's "morning walk." Two consecutive early departures make a PATTERN, and Rohit's pattern-detection is sharp under the gym-bro exterior.
+
+<<dl "\"Tapri. Raju ki subah 5:30 wali fresh batch best hoti hai.\"" "The tapri. Raju's 5:30 fresh batch is the best.">> Layered   explains the early departure AND gives a verifiable detail (Raju's first batch IS at 5:30, known Katraj lore).
+
+<<dl "\"Hmm.\"" "Hmm.">> He sips. <<dl "\"Kal se tu subah uth raha hai, coding accha kar raha hai, gym form bhi change. Agar yeh sab Meera wali call ki wajah se hai   toh mujhe credit milna chahiye. Maine bola tha 'move on, do something.'\"" "Since yesterday you're waking up early, coding better, gym form's changed too. If this is all because of the Meera call   I should get credit. I told you 'move on, do something.'">>
+
+"Biryani Friday. Teri treat."
+
+<<dl "\"MERI treat?! Maine bola main deserve karta hoon   \"" "MY treat?! I said I deserve   ">>
+
+"Tu deserve karta hai biryani DENE ka mauka. It's a privilege, Rohit."
+
+He stares. Opens his mouth. Closes it. <<dl "\"...tere arguments zyada acche ho rahe hain. Pehle tu Pooja se bhi haar jaata tha.\"" "...your arguments are getting better. You used to lose to Pooja.">>
+
+Because the person debating him is a woman with a tongue honed by three years of hostel life and medical-school verbal sparring. Another data point for Rohit's file: the arguments are BETTER. Filed alongside deodorant, coding, morning walks, gym form.
+\
+<<run setup.flag("rohit_pg_passed_d4")>>\
+<<run setup.stat("susp_rohit", 1, "kavya")>>\
+<<run setup.stat("rel_arjun_rohit", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: raju_supplier_d4
+The cutting chai slides across the counter   automatic, Arjun's order, two years of patronage in one wordless transaction. Raju bhaiya's mustache is in philosophical mode, tips slightly drooped.
+
+<<dl "\"Arjun baba, ek baat   mera chai supplier, Gupta ji from Kothrud, usne supply band kar di. Paise ka jhagda. Ab mera stock teen din ka bacha hai. Agar tu koi wholesale supplier dhundh sake, phone pe, toh bahut madad hogi.\"" "Arjun baba, one thing   my tea supplier, Gupta ji from Kothrud, cut off supply. Money dispute. Now I've got three days of stock. If you could find a wholesale supplier on the phone, it'd help a lot.">>
+
+A side quest that is not CS, not algorithms   a SUPPLY CHAIN problem. You pull out Arjun's phone. //wholesale tea leaf supplier Pune.// IndiaMart, JustDial, a wholesaler in Market Yard, another in Shivaji Nagar. You filter by reviews, cross-reference prices, find three with good ratings and delivery.
+
+<<dl "\"Raju bhaiya, yeh teen options. Market Yard sabse sasta, delivery charge zyada. Shivaji Nagar wala moderate, free delivery over 5,000. Aur yeh online wala   directly Assam se.\"" "Raju bhaiya, three options. Market Yard cheapest, high delivery charge. Shivaji Nagar moderate, free delivery over 5,000. And this online one   direct from Assam.">>
+
+He stares at the screen. Then at you. His mustache achieves a configuration you haven't seen   both tips lifted in wonder.
+
+<<dl "\"Arjun baba, tu toh chai ka consultant ban gaya. Pehle tu chai pee ke chala jaata tha. Aaj business plan bana raha hai. Kuch ho gaya hai tujhe.\"" "Arjun baba, you've become a chai consultant. You used to drink and leave. Today you're making a business plan. Something's happened to you.">>
+
+He calls the Shivaji Nagar supplier on the spot. Free delivery. ₹4,800 for a month's supply. Deal closed over the counter while the next batch boils.
+
+<<dl "\"Arjun baba, tujhe free chai   poora MAHINA. Not ek hafta. POORA MAHINA.\"" "Arjun baba, free chai for you   a whole MONTH. Not one week. A whole MONTH.">>
+\
+<<run setup.flag("raju_supplier_d4")>>\
+<<run setup.stat("rel_arjun_raju", 5, "kavya")>>
+<<hubreturn>>
+
+
+:: patil_gate_d4
+Patil takes Arjun's card. Squints at it. Squints at you. Returns it.
+
+<<dl "\"Arjun Deshmukh. CSE. Third year. Aaj jaldi aaya. Kal bhi jaldi aaya tha.\"" "Arjun Deshmukh. CSE. Third year. Came early today. Came early yesterday too.">>
+
+"Padhai ka schedule change kiya, Patil sir."
+
+<<dl "\"Hmm. Acchi baat hai. Attendance improve hogi. Ja.\"" "Hmm. Good. Your attendance will improve. Go.">>
+
+Two days of early arrival, and Patil has noticed   but early arrival is GOOD behaviour. It earns approval. The pre-dawn temple schedule has an unintended benefit: it makes "Arjun" look dedicated, which LOWERS suspicion instead of raising it.
+\
+<<run setup.flag("entered_vit_d4")>>
+<<hubreturn>>
+
+
+:: rb_lecture_d4
+<<img "kavya_rbtree.png" "C-204, Red-Black Trees">>
+Prof. Krishnan. Red-Black Tree insertion. The whiteboard fills with the choreography of self-balancing binary search trees   rotations, recolouring, uncle-node checks. Each chalk click is a heartbeat in a language you SPEAK.
+
+Your mind DEVOURS it. You've solved RB-tree problems on LeetCode (1382, 1569), on Codeforces (contest 1834, problem D), on the back of a pharmacology worksheet during a lecture about diuretics. You know the five insertion cases, the three rotations. You know the DELETION cases, harder, which Krishnan hasn't covered yet, which you're already itching to discuss.
+
+You restrain. It's like being a concert pianist made to play "Twinkle Twinkle" and pretend it's hard. The full solution   optimised rebalancing, amortised O(1) rotation bound, the Sedgewick simplification   sits in your brain like a caged animal. You can HEAR it wanting out. You hold the cage closed because letting it out ends everything.
+
+Nikhil nudges you. <<dl "\"Bhai, tujhe yeh samajh aaya? Red-black rotations?\"" "Bhai, you get this? Red-black rotations?">>
+
+"Thoda thoda."
+
+<<dl "\"Mere ko toh KUCH nahi. Notes share karega?\"" "I got NOTHING. Share notes?">>
+
+You share. Arjun's messy notebook plus your cleaner annotations between his scrawl. The hybrid looks like a student getting marginally better. Not suspicious. Just improved.
+\
+<<run setup.flag("in_lecture_d4")>>\
+<<run setup.flag("rb_lecture_done_d4")>>\
+<<run setup.stat("k_coding", 3, "kavya")>>\
+<<run setup.discover("sitting on both hands through your favourite subject", "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_rb_answer_d4
+Krishnan scans the room. "What determines whether we rotate left or right?"
+
+You let your hand go up   once, and you calibrate the answer down to Arjun-level: competent, not transcendent. In Arjun's voice, Arjun's casual confidence:
+
+"Uncle node's colour, sir. Red uncle means recolour. Black uncle means rotate."
+
+<div class="dialogue">"Correct."</div> And he moves on. No raised eyebrows. No suspicion spike. Right enough to be respectable, simple enough to be Arjun.
+
+The BURN of restraint costs something. Your brain is screaming. It's like being a sprinter forced to walk.
+\
+<<run setup.flag("kavya_rb_answered_d4")>>\
+<<run setup.stat("k_coding", 2, "kavya")>>
+<<hubreturn>>
+
+
+:: nikhil_bonus_d4
+Nikhil catches you in the corridor with his notebook   the legendary colour-coded artifact.
+
+<<dl "\"Krishnan ne bonus problem post kiya. Portal pe. RB-tree deletion edge case: delete a node with two children where the replacement is also red. Most log double-red violation miss karenge.\"" "Krishnan posted a bonus problem. On the portal. RB-tree deletion edge case: delete a node with two children where the replacement is also red. Most people will miss the double-red violation.">>
+
+You know this problem. You've solved variants on three platforms. The solution: after replacement, check the red-red violation, single rotation, recolour, O(1) additional operations.
+
+But it must look ARJUN-level. Include one deliberate mistake. Submit. Then "correct" it in a revised submission   simulating the try-fail-learn cycle professors find more convincing than perfection.
+
+<<dl "\"Main attempt karunga. Solution bhejun?\"" "I'll try it. Send you the solution?">>
+
+<<dl "\"Bhej. Agar sahi hai toh.\"" "Send it. If it's right.">> He grins. <<dl "\"Aur agar galat hai toh at least partial marks together milenge.\"" "And if it's wrong, at least we get partial marks together.">>
+
+That evening you solve it on Arjun's laptop. Version one: correct approach, one deliberate error (left rotation instead of right). Submit. Version two: corrected, comment //fixed rotation bug//. Submit. The two-submission trail looks like learning. Krishnan will see it and think: Arjun tried, failed, learned, succeeded.
+\
+<<run setup.flag("nikhil_bonus_d4")>>\
+<<run setup.flag("real_coding_done_d4")>>\
+<<run setup.stat("k_coding", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: anna_eating_d4
+<<dl "\"Arjun! Masala dosa? Do?\"" "Arjun! Masala dosa? Two?">>
+
+"Haan, Anna. Teen."
+
+The order is cached   but three, not two. Anna ladles, sizzles, folds. Then, sliding the third plate, his voice drops to the confiding register, the sixty-year-old South Indian uncle's version of intimate conversation:
+
+<<dl "\"Beta, tu aaj kal canteen mein zyada time baithta hai. Pehle three minutes, plate, done, gone. Ab tu pandrah minute baithke khaata hai.\"" "Son, you sit in the canteen longer these days. Before: three minutes, plate, done, gone. Now you sit and eat for fifteen.">>
+
+Arjun eats FAST   food as fuel, minimum table time. You eat SLOWLY   the flavours, the texture, a woman's higher taste-bud density and the habit of savouring.
+
+"Khaana taste karne layak hai, Anna."
+
+He beams. Telling a cook his food deserves TIME is the highest praise in his value system. <<dl "\"Pandrah saal se main yeh bol raha hoon. Koi sunta nahi.\"" "Fifteen years I've been saying this. Nobody listens.">>
+
+"Main sun raha hoon. Toh teen dosa."
+
+You eat three. Arjun's metabolism is a furnace   twenty-one, built by swimming, maintained by walking. In your own body two would be excessive.
+\
+<<run setup.flag("anna_eating_d4")>>\
+<<run setup.stat("k_energy", 3, "kavya")>>
+<<hubreturn>>
+
+
+:: kavya_maggi_d4
+Rohit asked you to make Maggi   his turn, but he's got a plumbing assignment. You have never made Maggi. Your hostel has a mess. Your mother's kitchen is staffed by Amma, who considers letting her daughter near a stove an abandonment of maternal duty. Your cooking experience: boiling water for chai (supervised), and once microwaving a samosa that exploded.
+
+But Maggi   boil water, add noodles, add tastemaker. Three steps. The simplest algorithm in Indian college cuisine.
+
+The result: undercooked. The noodles have the texture of resilient plastic. The tastemaker is unevenly distributed   some bites flavour-nuclear, others taste of nothing. Rohit eats it with the stoic acceptance of a man whose friendship transcends culinary competence.
+
+<<dl "\"Bhai, yeh Maggi al dente hai.\"" "Bhai, this Maggi is al dente.">>
+
+"Italian style," you offer.
+
+He laughs   the full Rohit laugh, teeth showing, belly shaking, the sound that fills the room and makes the Maggi tower vibrate sympathetically. Worth the disaster.
+\
+<<run setup.flag("maggi_done_d4")>>\
+<<run setup.stat("rel_arjun_rohit", 2, "kavya")>>
+<<hubreturn>>

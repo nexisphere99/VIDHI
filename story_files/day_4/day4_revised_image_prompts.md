@@ -7,7 +7,7 @@
 ## SCENE ILLUSTRATIONS
 
 ### IMG-R300: Arjun Sneaking Out
-**File:** `arjun_sneaking_out.jpg`
+**File:** `arjun_sneaking_out.png`
 **Insertion:** `day4_revised_arjun_main.md Scene 1`
 **Prompt:**
 ```
@@ -15,7 +15,7 @@ A dark PG room at 4:30 AM — a young Indian man (Arjun — wheat skin, wavy hai
 ```
 
 ### IMG-R301: Kavya Hostel Exit — The Excuse
-**File:** `kavya_hostel_excuse.jpg`
+**File:** `kavya_hostel_excuse.png`
 **Insertion:** `day4_revised_kavya_main.md Scene 1`
 **Prompt:**
 ```
@@ -23,7 +23,7 @@ Pre-dawn hostel entrance — a young Indian woman (Kavya — dusky, maroon kamee
 ```
 
 ### IMG-R302: Bra Mastery — Day 4 Method
-**File:** `arjun_bra_mastery_d4.jpg`
+**File:** `arjun_bra_mastery_d4.png`
 **Insertion:** `day4_revised_arjun_main.md Scene 3`
 **Prompt:**
 ```
@@ -31,7 +31,7 @@ Close-up of a young Indian woman's hands (Kavya's — dusky, silver ring) hookin
 ```
 
 ### IMG-R303: Meera Holding — The Intimate Afternoon
-**File:** `meera_holding_d4.jpg`
+**File:** `meera_holding_d4.png`
 **Insertion:** `day4_revised_arjun_main.md Scene 5` (CRITICAL intimate scene)
 **Prompt:**
 ```
@@ -39,7 +39,7 @@ Two young Indian women in a hostel room, afternoon light through partially close
 ```
 
 ### IMG-R304: Anatomy with Meera's Guidance
-**File:** `arjun_anatomy_meera_guide.jpg`
+**File:** `arjun_anatomy_meera_guide.png`
 **Insertion:** `day4_revised_arjun_npc.md → Anatomy NPC scene`
 **Prompt:**
 ```
@@ -47,7 +47,7 @@ Anatomy dissection hall — two adjacent tables. At one, a young woman (Kavya's 
 ```
 
 ### IMG-R305: Kavya — RB-Tree Lecture
-**File:** `kavya_rbtree.jpg`
+**File:** `kavya_rbtree.png`
 **Insertion:** `day4_revised_kavya_main.md Scene 4`
 **Prompt:**
 ```
@@ -55,7 +55,7 @@ A young Indian man (Arjun's body) in a lecture hall, leaning forward with barely
 ```
 
 ### IMG-R306: Kavya — Body Catalog + Erection Discovery
-**File:** `kavya_body_catalog.jpg`
+**File:** `kavya_body_catalog.png`
 **Insertion:** `day4_revised_kavya_main.md Scene 5`
 **Prompt:**
 ```
@@ -63,7 +63,7 @@ A young Indian man (Arjun's body) standing shirtless in front of a small wall mi
 ```
 
 ### IMG-R307: Temple Swap-Back — Golden Hour
-**File:** `temple_swapback_d4.jpg`
+**File:** `temple_swapback_d4.png`
 **Insertion:** `day4_revised_arjun_main.md Scene 6`
 **Prompt:**
 ```
@@ -75,28 +75,28 @@ Pataleshwar temple courtyard at golden hour (5:30 PM) — two young people stand
 ## NEW CHARACTER EXPRESSIONS
 
 ### IMG-R310: Arjun-in-Kavya — Settled Concentration
-**File:** `arjun_kavya_settled_d4.jpg`
+**File:** `arjun_kavya_settled_d4.png`
 **Prompt:**
 ```
 Portrait bust of Kavya's face (dusky, beauty mark, wavy hair neatly pinned), expression: calm concentration — the panic of Day 3 replaced by steady inhabitation. A bra strap visible at the kameez neckline, worn without thought. The eyes still carry Arjun's specific intensity but the face has relaxed into the borrowed features. Semi-realistic, warm tones.
 ```
 
 ### IMG-R311: Kavya-in-Arjun — Restrained Hunger
-**File:** `kavya_arjun_restrained_d4.jpg`
+**File:** `kavya_arjun_restrained_d4.png`
 **Prompt:**
 ```
 Portrait bust of Arjun's face (wheat skin, stubble growing, wavy hair), expression: intellectual hunger barely contained — the jaw set against the urge to speak, the eyes tracking something with predatory focus, one eyebrow slightly lifted. The face of a person who KNOWS the answer and is DYING not to give it. Semi-realistic.
 ```
 
 ### IMG-R312: Arjun-in-Kavya — Tears
-**File:** `arjun_kavya_tears_d4.jpg`
+**File:** `arjun_kavya_tears_d4.png`
 **Prompt:**
 ```
 Portrait bust of Kavya's face with tears tracking down both cheeks — not distressed crying but OVERWHELMED crying, the kind that comes from too much feeling in a body that doesn't have emotional brakes. The beauty mark prominent. The expression behind the tears is tenderness, not sorrow. Semi-realistic, warm intimate tones.
 ```
 
 ### IMG-R313: Kavya-in-Arjun — Erection Alarm
-**File:** `kavya_arjun_erection_alarm.jpg`
+**File:** `kavya_arjun_erection_alarm.png`
 **Prompt:**
 ```
 Portrait bust of Arjun's face, expression: startled confusion — wide eyes, slight blush on wheat cheeks, mouth forming an "oh" — the specific face of someone experiencing an unexpected physical event they didn't cause and can't control. The bewilderment is distinctly feminine — more analytical than embarrassed. Semi-realistic, warm room tones. Tasteful — the expression tells the complete story.

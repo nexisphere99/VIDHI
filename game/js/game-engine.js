@@ -3960,9 +3960,11 @@ setup.phoneTab = function (which, tab) {
     "arjun_bra_mastery_d4.png": "scenes/day4", "meera_holding_d4.png": "scenes/day4",
     "arjun_anatomy_meera_guide.png": "scenes/day4", "kavya_rbtree.png": "scenes/day4",
     "kavya_body_catalog.png": "scenes/day4", "temple_swapback_d4.png": "scenes/day4",
-    /* Day 4 expression busts   catalogued, not shown in-scene */
+    /* kavya_arjun_erection_alarm is used in the erection-discovery scene; the
+       other three Day 4 busts are catalogued for a future gallery, not shown */
+    "kavya_arjun_erection_alarm.png": "characters",
     "arjun_kavya_settled_d4.png": "characters", "kavya_arjun_restrained_d4.png": "characters",
-    "arjun_kavya_tears_d4.png": "characters", "kavya_arjun_erection_alarm.png": "characters"
+    "arjun_kavya_tears_d4.png": "characters"
   });
   Object.assign(setup.npcNames, { terrace_cat_nandu: "Nandu (the terrace cat)" });
   setup._restLocs.arjun.push("hostel_room_304_d4", "hostel_terrace_d4", "bj_campus_path_d4", "pataleshwar_temple_d4");

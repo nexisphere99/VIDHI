@@ -267,7 +267,7 @@ Pre-dawn / handover additions:
 
 ## Day 4   "Doosri Chamdi"  (prompts: story_files/day_4/day4_revised_image_prompts.md)
 
-Day 4 scene illustrations -> `scenes/day4/`  (all wired; art pending):
+Day 4 scene illustrations -> `scenes/day4/`  (all wired):
 ```
 arjun_sneaking_out.png       IMG-R300    kavya_hostel_excuse.png      IMG-R301
 arjun_bra_mastery_d4.png     IMG-R302    meera_holding_d4.png         IMG-R303
@@ -280,9 +280,10 @@ Reused from Day 3 (no new art needed): `pataleshwar_dawn.png`,
 `katraj_pg_night.png`, `hostel_304_night.png`, `room_304_arjun_pov.png`,
 `pg_room_kavya_pov.png`.
 
-Expression busts (catalogued, not shown in-scene   `characters/`):
-`arjun_kavya_settled_d4.png`, `kavya_arjun_restrained_d4.png`,
-`arjun_kavya_tears_d4.png`, `kavya_arjun_erection_alarm.png`   IMG-R310–313.
+Expression busts (`characters/`, IMG-R310–313): `kavya_arjun_erection_alarm.png`
+is used in the erection-discovery scene; `arjun_kavya_settled_d4.png`,
+`kavya_arjun_restrained_d4.png`, `arjun_kavya_tears_d4.png` are catalogued for a
+future gallery, not shown in-scene.
 
 Priority: meera_holding (the emotional heart), arjun_sneaking_out (comedy +
 tension), kavya_hostel_excuse (the lie), temple_swapback_d4 (golden-hour
